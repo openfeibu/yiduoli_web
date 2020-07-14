@@ -92,18 +92,65 @@ body{background: #f5f5f5;}
     float: right;
     margin-top: 5px;
 }
-.login{width:500px;height:400px;background:#fff;position:absolute;top:50%;margin-top:-250px;left:50%;margin-left:-250px;border-radius:10px;}
-.login-bg{background: -webkit-linear-gradient(#1a4299, #1783c3); /* Safari 5.1 - 6.0 */
-    background: -o-linear-gradient(#1a4299, #1783c3); /* Opera 11.1 - 12.0 */
-    background: -moz-linear-gradient(#1a4299, #1783c3); /* Firefox 3.6 - 15 */
-    background: linear-gradient(#1a4299, #1783c3); /* 标准的语法 */}
-.login-con{width:100%;height:100%;position:relative;}
-.login-con .login-con-title{padding:30px 0;font-size:16px;text-align:center;line-height:50px;color:#00c1de}
+.login{width:800px;height:400px;background:#fff;position:absolute;top:50%;margin-top:-250px;left:50%;margin-left:-400px;border-radius:10px;z-index:99;overflow:hidden}
+.login-bg{background:url(../img/loginBg.jpg) no-repeat center/cover}
+
+.login-bg:after{
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left:0;
+	top:0;
+	background: inherit;
+	filter: blur(5px);
+z-index: 1;}
+.login-bg:before{
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left:0;
+	top:0;
+	background: rgba(255,255,255,0.1);
+z-index: 2;}
+.login-left{width:450px;height:100%;float:left;background:url(../img/loginBg.jpg) no-repeat center/cover;position:relative}
+.login-right{margin-left:450px}
+.login-left:before{
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left:0;
+	top:0;
+	background: rgba(0,0,0,0.3);
+z-index: 2;}
+.login-left p{font-size:28px;color:#fff;margin:120px 20px 0 20px;position:relative;z-index:3;font-weight:bold;}
+.login-left p:after {
+    content: "";
+    width: 300px;
+    height: 8px;
+    background: #05DFA6;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    z-index: -1;
+}
+.login-left span{font-size:24px;color:#fff;margin:40px 20px 0 20px;position:relative;z-index:3;line-height:60px;font-weight:bold}
+.login-con{width:100%;height:100%;position:relative;z-index:2}
+.login-con{width:100%;height:100%;position:relative;z-index:2}
+.login-con .login-con-title{padding:90px 0 30px 0;font-size:16px;text-align:center;line-height:50px;color:#05DFA6}
+.login-con-title{background:url(../img/logo.png) no-repeat center 30px /auto 60px;}
 .login-con .login-con-title img{width:80px;height:80px;margin:0 auto;display:block;}
-.login-con form{width:320px;position:absolute;top:160px;right:85px;}
+.login-con form{width:300px;position:absolute;top:140px;right:25px;}
 .form-title{height:50px;color:#349fff;line-height:50px;text-align:center;border-bottom:2px solid #349fff;font-size:16px;margin-bottom:30px;}
 .login-con form .layui-input{width:100%;height:50px;border:none;border-bottom:1px solid #bbb;margin:10px 0}
-.login-con form .login_btn{width:180px !important;height:40px;border-radius:40px;background:#00c1de;color:#fff;margin:30px auto 0 auto;display:block;border:none;cursor:pointer;}
+.login-con form .login_btn{width:180px !important;height:40px;border-radius:40px;display:block;cursor:pointer;position:absolute;background:none;z-index:3;border:none;color:#333}
+.login_btn-box{width:180px !important;height:40px;border-radius:40px;position:relative;margin:40px auto 0 auto;background:#fff;overflow:hidden;border:1px solid #333;color:#333;transition:all 0.5s;-webkit-transition:0.5s}
+.login_btn-box:hover{border:1px solid #05DFA6;background:#05DFA6;color:#fff;}
+.login_btn-box:hover .login_btn{color:#fff}
+
+
 .layui-alert {
     padding: 15px;
     margin-bottom: 20px;
