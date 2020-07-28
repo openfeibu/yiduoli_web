@@ -109,22 +109,22 @@
                 <div class="power-box-con">
                     <div class="power-box-item layui-col-md2">
                         <a href="{{ guard_url('order/create') }}">
-                            添加订单
+                            {{ trans('app.add') }}订单
                         </a>
                     </div>
                     <div class="power-box-item layui-col-md2">
                         <a href="{{ guard_url('customer/create') }}">
-                            添加客户
+                            {{ trans('app.add') }}客户
                         </a>
                     </div>
                     <div class="power-box-item layui-col-md2">
                         <a href="{{ guard_url('new_customer/create') }}">
-                            添加收集客户
+                            {{ trans('app.add') }}收集客户
                         </a>
                     </div>
                     <div class="power-box-item layui-col-md2">
                         <a href="{{ guard_url('goods/create') }}">
-                            添加产品
+                            {{ trans('app.add') }}产品
                         </a>
                     </div>
                     <div class="power-box-item layui-col-md2">

@@ -4,6 +4,7 @@ namespace App\Repositories\Eloquent;
 
 use App\Repositories\Eloquent\NavRepositoryInterface;
 use App\Repositories\Eloquent\BaseRepository;
+use Route;
 
 class NavRepository extends BaseRepository implements NavRepositoryInterface
 {
@@ -31,6 +32,16 @@ class NavRepository extends BaseRepository implements NavRepositoryInterface
     {
         return $this->where(['parent_id' => 0,'category_id' =>$category_id])->orderBy('order','asc')->orderBy('id','asc')->get();
     }
+
+    public function topParent($id)
+    {
+        $nav = $this->where(['id' => $id])->first();
+        if($nav->parent_id)
+        {
+            return $this->topParent($nav->parent_id);
+        }
+        return $nav;
+    }
     public function children($parent_id)
     {
         return $this->where(['parent_id' => $parent_id])->orderBy('order','asc')->orderBy('id','asc')->get();
@@ -39,6 +50,59 @@ class NavRepository extends BaseRepository implements NavRepositoryInterface
     {
         return $this->orderBy('order','asc')->orderBy('id','asc')->get();
     }
+    /**
+     * Permission Menus
+     * @return array
+     */
+    public function navs($category_id)
+    {
+        $menus = [];
+        $father =$this->top($category_id);
+
+        if($father) {
+            foreach ($father as $item) {
+                $item->active = ($item->slug == Route::currentRouteName()) ? true : false;
+                $item = $this->sub($item);
+                $menus[] = $item;
+            }
+        }
+
+        return $menus;
+    }
+    public function sub($item)
+    {
+        $sub = $this->children($item->id);
+        if(!$sub->isEmpty())
+        {
+            foreach ($sub as $key => $sub_item)
+            {
+                $sub_item->active = $sub_item->slug == Route::currentRouteName() ? true : false;
+                $sub_item->sub = $this->sub($sub_item);
+                $item->active ? true : $item->active  = $sub_item->active;
+            }
+            $item->sub = $sub;
+        }
+        return $item;
+    }
+    public function navList($id,$list=[])
+    {
+        $nav = $this->model->where('id',$id)->first();
+        if(!$nav)
+        {
+            return $list;
+        }
+        array_unshift($list,$nav);
+        if($nav->parent_id)
+        {
+            return $this->navList($nav->parent_id,$list);
+        }
+        return $list;
+    }
+    public function navTab($parent_id)
+    {
+        return $this->children($parent_id);
+    }
+    /*
     public function navs($category_id)
     {
         $navs = [];
@@ -68,4 +132,5 @@ class NavRepository extends BaseRepository implements NavRepositoryInterface
 
         return $menus;
     }
+    */
 }

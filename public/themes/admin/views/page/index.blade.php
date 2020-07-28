@@ -4,8 +4,8 @@
 
     </div>
     <xblock>
-        <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>
-        <button class="layui-btn" onclick="x_admin_show('添加用户','./order-add.html')"><i class="layui-icon"></i>添加</button>
+        <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量{{ trans('app.delete') }}</button>
+        <button class="layui-btn" onclick="x_admin_show('{{ trans('app.add') }}用户','./order-add.html')"><i class="layui-icon"></i>{{ trans('app.add') }}</button>
         <span class="x-right" style="line-height:40px">共有数据：88 条</span>
     </xblock>
     <table class="layui-table">
@@ -36,10 +36,10 @@
                 <td>{{ $val['order'] }}</td>
                 <td>{{ $val['updated_at'] }}</td>
                 <td class="td-manage">
-                    <a title="查看"  onclick="x_admin_show('编辑','{!!guard_url('page/page')!!}/{{ $val['id'] }}')" href="javascript:;">
+                    <a title="查看"  onclick="x_admin_show('{{ trans('app.edit') }}','{!!guard_url('page/page')!!}/{{ $val['id'] }}')" href="javascript:;">
                         <i class="layui-icon">&#xe63c;</i>
                     </a>
-                    <a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
+                    <a title="{{ trans('app.delete') }}" onclick="member_del(this,'要{{ trans('app.delete') }}的id')" href="javascript:;">
                         <i class="layui-icon">&#xe640;</i>
                     </a>
                 </td>
@@ -74,12 +74,12 @@
         });
     });
 
-    /*用户-删除*/
+    /*用户-{{ trans('app.delete') }}*/
     function member_del(obj,id){
-        layer.confirm('确认要删除吗？',function(index){
-            //发异步删除数据
+        layer.confirm('确认要{{ trans('app.delete') }}吗？',function(index){
+            //发异步{{ trans('app.delete') }}数据
             $(obj).parents("tr").remove();
-            layer.msg('已删除!',{icon:1,time:1000});
+            layer.msg('已{{ trans('app.delete') }}!',{icon:1,time:1000});
         });
     }
 
@@ -89,9 +89,9 @@
 
         var data = tableCheck.getData();
 
-        layer.confirm('确认要删除吗？'+data,function(index){
-            //捉到所有被选中的，发异步进行删除
-            layer.msg('删除成功', {icon: 1});
+        layer.confirm('确认要{{ trans('app.delete') }}吗？'+data,function(index){
+            //捉到所有被选中的，发异步进行{{ trans('app.delete') }}
+            layer.msg('{{ trans('app.delete') }}成功', {icon: 1});
             $(".layui-form-checked").not('.header').parents('tr').remove();
         });
     }

@@ -31,7 +31,7 @@ return [
             'slugs'         => [],
             'dates'         => ['created_at', 'updated_at', 'deleted_at', 'dob'],
             'appends'       => [],
-            'fillable'      => ['user_id', 'name', 'email', 'parent_id', 'password', 'api_token', 'remember_token', 'sex', 'dob', 'designation', 'mobile', 'phone', 'address', 'street', 'city', 'district', 'state', 'country', 'photo', 'web', 'permissions'],
+            'fillable'      => ['user_id', 'name','username', 'email', 'parent_id', 'password', 'api_token', 'remember_token', 'sex', 'dob', 'designation', 'mobile', 'phone', 'address', 'street', 'city', 'district', 'state', 'country', 'photo', 'web', 'permissions'],
             'translate'     => [],
 
             'upload_folder' => 'user/user',
@@ -49,6 +49,7 @@ return [
             'revision'      => [],
             'perPage'       => '20',
             'search'        => [
+                'username'    => 'like',
                 'name'        => 'like',
                 'email'       => 'like',
                 'sex'         => 'like',

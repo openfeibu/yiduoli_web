@@ -27,21 +27,19 @@ class Page extends BaseModel
      * @param  string  $value
      * @return void
      */
-    public function setNameAttribute($value)
+    public function setTitleAttribute($value)
     {
-        $this->attributes['name']        = $value;
         $this->attributes['title']       = $value;
         $this->attributes['meta_title']  = $value;
-        $this->attributes['heading']     = $value;
-        $this->attributes['sub_heading'] = $value;
     }
-
+    public function setDescriptionAttribute($value)
+    {
+        $this->attributes['description']  = $value;
+        $this->attributes['meta_description']  = $value;
+    }
     public function category()
     {
         return $this->belongsTo('App\Models\PageCategory', 'category_id');
     }
-    public function getHomeRecommendAttribute()
-    {
-        return $this->recommend_type == 'home' ? true : false;
-    }
+
 }

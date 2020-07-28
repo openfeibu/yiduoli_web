@@ -7,13 +7,13 @@
 
             @if($files)
             <hr/>
-            <div class="">
+            <div class="layui-upload-view">
 
                 <img id="image_{!!$field!!}" src="{!!url("/image/original".$files['path'])!!}" style="max-width: 196px">
             </div>
             @else
             <hr/>
-            <div class="layui-hide">
+            <div class="layui-hide layui-upload-view">
                 <img id="image_{!!$field!!}" src="" style="max-width: 196px">
             </div>
             @endif

@@ -86,6 +86,7 @@ return [
     'source'         => '来源',
     'author'         => '作者',
     'views'          => '阅读量',
+    'views_count'    => '阅读量',
     'video'          => '视频',
     'date'           => '日期',
     'slug'           => '标识',
@@ -102,6 +103,7 @@ return [
         'updated' => '已成功更新。',
         'deleted' => '已成功删除。',
         'changed' => '已被 :status。',
+        'action' => '操作成功',
     ],
 
     'error'         => [
@@ -115,4 +117,11 @@ return [
     'English' => '英文',
     'upload' => '上传',
     'file' => '文件',
+
+    'home_recommend'   => '首页推荐',
+    'hot_recommend'    => '头条推荐',
+    'download' => '下载',
+    'year' => '年',
+    'month' => '月',
+
 ];

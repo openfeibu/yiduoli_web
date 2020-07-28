@@ -1,16 +1,22 @@
 <div class="main">
     {!! Theme::widget('breadcrumb')->render() !!}
     <div class="main_full">
+        {!! Theme::partial('message') !!}
         <div class="layui-col-md12">
             <div class="tabel-message">
                 <div class="layui-inline tabel-btn">
-                    <button class="layui-btn layui-btn-warm "><a href="{{guard_url('admin_user/create')}}">添加{{ trans("admin_user.name") }}</a></button>
-                    <button class="layui-btn layui-btn-primary " data-type="del" data-events="del">删除</button>
+                    <button class="layui-btn layui-btn-warm "><a href="{{guard_url('admin_user/create')}}">{{ trans('app.add') }}</a></button>
+                    <button class="layui-btn layui-btn-primary " data-type="del" data-events="del">{{ trans('app.delete') }}</button>
                 </div>
                 <div class="layui-inline">
-                    <input class="layui-input search_key" name="email" id="demoReload" placeholder="邮箱" autocomplete="off">
+                    <input class="layui-input search_key" name="username" id="demoReload" placeholder="{!! trans('admin_user.label.username')!!}" autocomplete="off">
                 </div>
-                <button class="layui-btn" data-type="reload">搜索</button>
+                <div class="layui-inline">
+                    <input class="layui-input search_key" name="email" id="demoReload" placeholder="{!! trans('admin_user.label.email')!!}" autocomplete="off">
+                </div>
+                <div class="layui-inline">
+                    <button class="layui-btn" data-type="reload">{{ trans('app.search') }}</button>
+                </div>
             </div>
 
             <table id="fb-table" class="layui-table"  lay-filter="fb-table">
@@ -21,8 +27,8 @@
 </div>
 
 <script type="text/html" id="barDemo">
-    <a class="layui-btn layui-btn-sm" lay-event="edit">编辑</a>
-    <a class="layui-btn layui-btn-danger layui-btn-sm" lay-event="del">删除</a>
+    <a class="layui-btn layui-btn-sm" lay-event="edit">{{ trans('app.edit') }}</a>
+    <a class="layui-btn layui-btn-danger layui-btn-sm" lay-event="del">{{ trans('app.delete') }}</a>
 </script>
 
 
@@ -39,9 +45,10 @@
             ,cols: [[
                 {checkbox: true, fixed: true}
                 ,{field:'id',title:'ID', width:80, sort: true}
+                ,{field:'username',title:'{!! trans('admin_user.label.username')!!}'}
                 ,{field:'email',title:'{!! trans('admin_user.label.email')!!}'}
                 ,{field:'role_names',title:'{!! trans('admin_user.label.roles')!!}'}
-                ,{field:'score',title:'操作', width:200, align: 'right',toolbar:'#barDemo'}
+                ,{field:'score',title:'{{ trans('app.actions') }}', width:200, align: 'right',toolbar:'#barDemo'}
             ]]
             ,id: 'fb-table'
             ,page: true

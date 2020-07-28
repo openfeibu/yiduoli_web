@@ -92,7 +92,7 @@
                             <th>服务器地址</th>
                             <td>x.xuebingsi.com</td></tr>
                         <tr>
-                            <th>操作系统</th>
+                            <th>{{ trans('app.actions') }}系统</th>
                             <td>WINNT</td></tr>
                         <tr>
                             <th>运行环境</th>

@@ -14,7 +14,7 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label">{{ trans('permission.label.slug') }}</label>
                         <div class="layui-input-inline">
-                            <input type="text" name="slug" lay-verify="required" autocomplete="off" placeholder="请输入{{ trans('permission.label.slug') }}" class="layui-input" value="">
+                            <input type="text" name="slug" autocomplete="off" placeholder="请输入{{ trans('permission.label.slug') }}" class="layui-input" value="">
                         </div>
                     </div>
                     <div class="layui-form-item">
@@ -48,17 +48,17 @@
                         </div>
                     </div>
                     <div class="layui-form-item">
-                        <label class="layui-form-label">是否含以下操作</label>
+                        <label class="layui-form-label">是否含以下{{ trans('app.actions') }}</label>
                         <div class="layui-input-block">
                             <input type="checkbox" name="subs[create]" title="创建" value="创建">
-                            <input type="checkbox" name="subs[show]" title="编辑" value="编辑">
-                            <input type="checkbox" name="subs[destroy]" title="删除" value="删除">
-                            <input type="checkbox" name="subs[destroy_all]" title="批量删除" value="批量删除">
+                            <input type="checkbox" name="subs[show]" title="{{ trans('app.edit') }}" value="{{ trans('app.edit') }}">
+                            <input type="checkbox" name="subs[destroy]" title="{{ trans('app.delete') }}" value="{{ trans('app.delete') }}">
+                            <input type="checkbox" name="subs[destroy_all]" title="批量{{ trans('app.delete') }}" value="批量{{ trans('app.delete') }}">
                         </div>
                     </div>
                     <div class="layui-form-item">
                         <div class="layui-input-block">
-                            <button class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
+                            <button class="layui-btn" lay-submit="" lay-filter="demo1">{{ trans('app.submit_now') }}</button>
                         </div>
                     </div>
                     {!!Form::token()!!}

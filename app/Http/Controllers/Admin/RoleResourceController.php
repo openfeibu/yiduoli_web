@@ -118,7 +118,7 @@ class RoleResourceController extends BaseController
             return $this->response->message(trans('messages.success.created', ['Module' => trans('role.name')]))
                 ->code(0)
                 ->status('success')
-                ->url(guard_url('role/' . $role->id))
+                ->url(guard_url('role'))
                 ->redirect();
         } catch (Exception $e) {
             return $this->response->message($e->getMessage())
@@ -166,7 +166,7 @@ class RoleResourceController extends BaseController
             return $this->response->message(trans('messages.success.updated', ['Module' => trans('role.name')]))
                 ->code(0)
                 ->status('success')
-                ->url(guard_url('role/' . $role->id))
+                ->url(guard_url('role'))
                 ->redirect();
         } catch (Exception $e) {
             return $this->response->message($e->getMessage())

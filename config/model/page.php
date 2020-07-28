@@ -2,10 +2,6 @@
 
 return [
 
-/*
- * Provider .
- */
-    'provider' => 'litecms',
 
 /*
  * Package .
@@ -31,14 +27,13 @@ return [
         'hidden'       => [],
         'visible'      => [],
         'guarded'      => ['*'],
-        'slugs'        => ['slug' => 'name'],
+        'slugs'        => [],
         'dates'        => ['deleted_at'],
-        'fillable'     => ['heading', 'meta_title', 'meta_keyword','name','title', 'category_id','slug', 'order', 'view', 'compile', 'status',
-                           'upload_folder', 'image','description','content',  'abstract','recommend_type'],
-        'translate'    => ['name', 'heading', 'content', 'meta_title', 'meta_keyword', 'meta_description'],
+        'fillable'     => ['meta_title', 'meta_keyword','meta_description','title', 'category_id','slug', 'order', 'view', 'compile', 'status','upload_folder','file', 'image','images','description','content','recommend_type','home_recommend','hot_recommend'],
+        'translate'    => [],
         'upload_folder' => '/page/page',
         'uploads'      => [
-            'banner' => [
+            'image' => [
                 'count' => 1,
                 'type'  => 'image',
             ],
@@ -48,18 +43,14 @@ return [
             ],
         ],
         'casts'        => [
-            'banner' => 'array',
+            'image' => 'array',
             'images' => 'array',
         ],
         'encrypt'      => ['id'],
         'revision'     => ['name', 'title'],
         'perPage'      => '20',
         'search'        => [
-            'name'  => 'like',
             'title'  => 'like',
-            'heading'  => 'like',
-            'slug'  => 'like',
-            'order'  => 'like'
         ],
     ],
     'category' => [

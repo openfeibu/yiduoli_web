@@ -26,7 +26,7 @@ class PageBaseResourceController extends BaseController
         parent::__construct();
         $this->repository = $page;
         $this->category_repository = $category_repository;
-        $this->category_slug = $this->main_url = '';
+        $this->category_slug = $this->main_url = $this->view_folder = '';
     }
     public function index(PageRequest $request){
         $limit = $request->input('limit',config('app.limit'));
@@ -43,6 +43,7 @@ class PageBaseResourceController extends BaseController
             $data = $this->repository
                 ->setPresenter(\App\Repositories\Presenter\PageListPresenter::class)
                 ->orderBy('order','desc')
+                ->orderBy('updated_at','desc')
                 ->orderBy('id','desc')
                 ->getDataTable($limit);
             return $this->response
@@ -51,7 +52,7 @@ class PageBaseResourceController extends BaseController
                 ->data($data['data'])
                 ->output();
         }
-        return $this->response->title(trans('app.admin.panel'))
+        return $this->response->title(trans($this->category_slug.'.name'))
             ->view($this->category_slug.'.index')
             ->output();
     }
@@ -61,8 +62,8 @@ class PageBaseResourceController extends BaseController
 
         $category_childs = $this->category_repository->where(['parent_id' => $this->category_id])->get()->toArray();
 
-        return $this->response->title(trans('app.admin.panel'))
-            ->view($this->category_slug.'.create')
+        return $this->response->title(trans($this->category_slug.'.name'))
+            ->view($this->view_folder.'.create')
             ->data(compact('page','category_childs'))
             ->output();
     }
@@ -70,15 +71,17 @@ class PageBaseResourceController extends BaseController
     {
         try {
             $attributes = $request->all();
+
             $attributes['category_id'] = isset($attributes['category_id']) && !empty($attributes['category_id']) ? $attributes['category_id'] : $this->category_id;
-            $attributes['recommend_type'] = isset($attributes['home_recommend']) && $attributes['home_recommend'] == 'on' ? 'home' : "";
+            //$attributes['recommend_type'] = isset($attributes['home_recommend']) && $attributes['home_recommend'] == 'on' ? 'home' : "";
+
 
             $page = $this->repository->create($attributes);
 
             return $this->response->message(trans('messages.success.created', ['Module' => trans($this->category_slug.'.name')]))
                 ->code(0)
                 ->status('success')
-                ->url(guard_url($this->main_url.'/' . $page->id))
+                ->url(guard_url($this->main_url))
                 ->redirect();
         } catch (Exception $e) {
             return $this->response->message($e->getMessage())
@@ -91,9 +94,9 @@ class PageBaseResourceController extends BaseController
     public function show(PageRequest $request,Page $page)
     {
         if ($page->exists) {
-            $view = $this->category_slug.'.show';
+            $view = $this->view_folder.'.show';
         } else {
-            $view = $this->category_slug.'.create';
+            $view = $this->view_folder.'.create';
         }
 
         $category_childs = $this->category_repository->where(['parent_id' => $this->category_id])->get()->toArray();
@@ -108,13 +111,13 @@ class PageBaseResourceController extends BaseController
         try {
             $attributes = $request->all();
             $attributes['category_id'] = isset($attributes['category_id']) && !empty($attributes['category_id']) ? $attributes['category_id'] : $this->category_id;
-            $attributes['recommend_type'] = isset($attributes['home_recommend']) && $attributes['home_recommend'] == 'on' ? 'home' : "";
+
             $page->update($attributes);
 
-            return $this->response->message(trans('messages.success.created', ['Module' => trans($this->category_slug.'.name')]))
+            return $this->response->message(trans('messages.success.updated', ['Module' => trans($this->category_slug.'.name')]))
                 ->code(0)
                 ->status('success')
-                ->url(guard_url($this->main_url.'/' . $page->id))
+                ->url(guard_url($this->main_url))
                 ->redirect();
         } catch (Exception $e) {
             return $this->response->message($e->getMessage())
@@ -169,10 +172,21 @@ class PageBaseResourceController extends BaseController
     public function updateRecommend(PageRequest $request)
     {
         $attributes = $request->all();
-        $data['recommend_type'] = isset($attributes['home_recommend']) && $attributes['home_recommend'] == "true" ? 'home' : "";
-        $this->repository->update($data,$attributes['id']);
 
-        return $this->response->message('')
+        if(isset($attributes['home_recommend']))
+        {
+            $data['home_recommend'] = $attributes['home_recommend'] ? 1 : 0;
+        }
+        if(isset($attributes['hot_recommend']))
+        {
+            $data['hot_recommend'] = $attributes['hot_recommend'] ? 1 : 0;
+        }
+        if(isset($data) && $data)
+        {
+            $this->repository->update($data,$attributes['id']);
+        }
+
+        return $this->response->message(trans('app.success.action'))
             ->success()
             ->redirect();
     }

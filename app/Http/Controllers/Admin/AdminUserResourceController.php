@@ -1,12 +1,16 @@
 <?php
 namespace App\Http\Controllers\Admin;
 
+use App\Exceptions\OutputServerMessageException;
+use App\Exceptions\RequestSuccessException;
 use App\Http\Controllers\Admin\ResourceController as BaseController;
 use App\Models\AdminUser;
 use App\Repositories\Eloquent\PermissionRepositoryInterface;
 use App\Repositories\Eloquent\RoleRepositoryInterface;
 use App\Http\Requests\AdminUserRequest;
+use Illuminate\Http\Request;
 use App\Repositories\Eloquent\AdminUserRepositoryInterface;
+use Validator;
 
 /**
  * Resource controller class for user.
@@ -115,6 +119,23 @@ class AdminUserResourceController extends BaseController
     {
         try {
             $attributes              = $request->all();
+            $rules = [
+                'username' => "required|unique:admin_users|regex:/^[a-zA-Z0-9_\x80-\xff\\s·]+$/",
+            ];
+            $messages = [
+                'username.required' => '账号必填！',
+                'username.unique' => '已有该账号！',
+                'username.regex' => '账号不能有特殊字符！',
+            ];
+            $validator = Validator::make($attributes, $rules,$messages);
+
+            if ($validator->fails()) {
+                return redirect()
+                    ->back()
+                    ->withErrors($validator)
+                    ->withInput();
+            }
+
             $roles          = $request->get('roles');
             $attributes['user_id']   = user_id();
             $attributes['user_type'] = user_type();
@@ -217,5 +238,23 @@ class AdminUserResourceController extends BaseController
                 ->url(guard_url('admin_user'))
                 ->redirect();
         }
+    }
+    public function validateData(Request $request)
+    {
+        $attributes              = $request->all();
+        $rules = [
+            'username' => "required|unique:admin_users|regex:/^[a-zA-Z0-9_\x80-\xff\\s·]+$/",
+        ];
+        $messages = [
+            'username.required' => '账号必填！',
+            'username.unique' => '已有该账号！',
+            'username.regex' => '账号不能有特殊字符！',
+        ];
+        $validator = Validator::make($attributes, $rules,$messages);
+
+        if ($validator->fails()) {
+            throw new OutputServerMessageException($validator->errors()->first());
+        }
+        throw new RequestSuccessException();
     }
 }

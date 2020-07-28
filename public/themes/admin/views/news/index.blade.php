@@ -5,13 +5,15 @@
         <div class="layui-col-md12">
             <div class="tabel-message">
                 <div class="layui-inline tabel-btn">
-                    <button class="layui-btn layui-btn-warm "><a href="{{guard_url('news/create')}}">添加新闻动态</a></button>
-                    <button class="layui-btn layui-btn-primary " data-type="del" data-events="del">删除</button>
+                    <button class="layui-btn layui-btn-warm "><a href="{{guard_url('news/create')}}">{{ trans('app.add') }}</a></button>
+                    <button class="layui-btn layui-btn-primary " data-type="del" data-events="del">{{ trans('app.delete') }}</button>
                 </div>
                 <div class="layui-inline">
-                    <input class="layui-input search_key" name="title" id="demoReload" placeholder="搜索标题" autocomplete="off">
+                    <input class="layui-input search_key" name="title" id="demoReload" placeholder="{{ trans('app.search') }}{{ trans('page.label.title') }}" autocomplete="off">
                 </div>
-                <button class="layui-btn" data-type="reload">搜索</button>
+                <div class="layui-inline">
+                    <button class="layui-btn" data-type="reload">{{ trans('app.search') }}</button>
+                </div>
             </div>
 
             <table id="fb-table" class="layui-table"  lay-filter="fb-table">
@@ -20,12 +22,15 @@
         </div>
     </div>
 </div>
-<script type="text/html" id="checkboxTEM">
-    <input type="checkbox" name="home_recommend" value="@{{d.id}}" lay-skin="switch" lay-text="首页|否" lay-filter="lock" @{{ d.home_recommend == true ? 'checked' : '' }}>
+<script type="text/html" id="checkboxHomeRecommendTEM">
+    <input type="checkbox" name="home_recommend" value="@{{d.id}}" lay-skin="switch" lay-text="是|否" lay-filter="home_recommend" @{{ d.home_recommend ? 'checked' : '' }}>
+</script>
+<script type="text/html" id="checkboxHotRecommendTEM">
+    <input type="checkbox" name="hot_recommend" value="@{{d.id}}" lay-skin="switch" lay-text="是|否" lay-filter="hot_recommend" @{{ d.hot_recommend ? 'checked' : '' }}>
 </script>
 <script type="text/html" id="barDemo">
-    <a class="layui-btn layui-btn-sm" lay-event="edit">编辑</a>
-    <a class="layui-btn layui-btn-danger layui-btn-sm" lay-event="del">删除</a>
+    <a class="layui-btn layui-btn-sm" lay-event="edit">{{ trans('app.edit') }}</a>
+    <a class="layui-btn layui-btn-danger layui-btn-sm" lay-event="del">{{ trans('app.delete') }}</a>
 </script>
 <script type="text/html" id="imageTEM">
     <img src="@{{d.image}}" alt="" height="28">
@@ -44,16 +49,20 @@
             ,cols: [[
                 {checkbox: true, fixed: true}
                 ,{field:'id',title:'ID', width:80, sort: true}
-                ,{field:'title',title:'标题', width:200}
-                ,{field:'image',title:'封面', toolbar:'#imageTEM'}
-                ,{field:'home_recommend',title:'首页推荐', width:200,toolbar:'#checkboxTEM' }
+                ,{field:'title',title:'{{ trans('page.label.title') }}',edit:'text' , width:280}
+                ,{field:'description',title:'{{ trans('page.label.description') }}',edit:'text' , width:280}
+                ,{field:'image',title:'{{ trans('page.label.image') }}', toolbar:'#imageTEM', width:120}
+                ,{field:'home_recommend',title:'{{ trans('app.home_recommend') }}', width:120,toolbar:'#checkboxHomeRecommendTEM' }
+                ,{field:'hot_recommend',title:'{{ trans('app.hot_recommend') }}', width:120,toolbar:'#checkboxHotRecommendTEM' }
 //                ,{field:'order',title:'排序', width:80, sort: true}
-                ,{field:'score',title:'操作', width:200, align: 'right',fixed: 'right',toolbar:'#barDemo'}
+                ,{field:'updated_at',title:'{{ trans('app.updated_at') }}', width:250}
+                ,{field:'score',title:'{{ trans('app.actions') }}', width:200, align: 'right',fixed: 'right',toolbar:'#barDemo'}
             ]]
             ,id: 'fb-table'
             ,page: true
             ,limit: 20
             ,height: 'full-200'
+            ,cellMinWidth:200
             ,error: function(e,t){
                 console.log(e);
                 $.ajax_table_error(e);
@@ -61,13 +70,29 @@
         });
 
         //监听锁定
-        form.on('switch(lock)', function(obj){
-            $.post("{{guard_url('news/updateRecommend')}}",{"id":this.value,"home_recommend":obj.elem.checked,'_token':"{!! csrf_token() !!}" },function(){
-
+        form.on('switch(home_recommend)', function(obj){
+            var  value = obj.elem.checked ? 1 : 0;
+            var load = layer.load();
+            $.post("{{guard_url('news/updateRecommend')}}",{"id":this.value,"home_recommend":value,'_token':"{!! csrf_token() !!}" },function(){
+                layer.close(load);
+                if(data.code != 0)
+                {
+                    layer.msg(data.message);
+                }
             })
-            // layer.tips(this.value + ' ' + this.name + '：'+ obj.elem.checked, obj.othis);
         });
-
+        //监听锁定
+        form.on('switch(hot_recommend)', function(obj){
+            var  value = obj.elem.checked ? 1 : 0;
+            var load = layer.load();
+            $.post("{{guard_url('news/updateRecommend')}}",{"id":this.value,"hot_recommend":value,'_token':"{!! csrf_token() !!}" },function(){
+                layer.close(load);
+                if(data.code != 0)
+                {
+                    layer.msg(data.message);
+                }
+            })
+        });
     });
 </script>
 {!! Theme::partial('common_handle_js') !!}

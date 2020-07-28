@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Repositories\Eloquent\PermissionRepository;
 use Tree,Auth;
 use App\Http\Controllers\Admin\ResourceController as BaseController;
 use App\Http\Requests\PermissionRequest;
@@ -13,14 +14,7 @@ use App\Models\Permission;
 class PermissionResourceController extends BaseController
 {
 
-    /**
-     * Initialize permission resource controller.
-     *
-     * @param type PermissionRepositoryInterface $permission
-     *
-     * @return null
-     */
-    public function __construct(PermissionRepositoryInterface $permission)
+    public function __construct(PermissionRepository $permission)
     {
         parent::__construct();
         $this->repository = $permission;

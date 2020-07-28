@@ -76,8 +76,11 @@ trait Filer
                 }
 
             }
+            if($files)
+            {
+                $this->setFiles($field, $files);
+            }
 
-            $this->setFiles($field, $files);
         }
 
     }
@@ -266,13 +269,12 @@ trait Filer
         if (empty($files)) {
             return [];
         }
-
-        if($multiple)
+        if($multiple && !is_array($files) && !is_object($files))
         {
             $files = explode(',',$files);
         }
 
-        if(!is_array($files)){
+        if(!is_array($files) && !is_object($files)){
             return [
                 'url' => url("{$prefix}/" . $files),
                 'path' => $files,

@@ -2,11 +2,12 @@
     {!! Theme::widget('breadcrumb')->render() !!}
 
     <div class="main_full">
+        {!! Theme::partial('message') !!}
         <div class="layui-col-md12">
             <div class="tabel-message">
                 <div class="layui-inline tabel-btn">
-                    <button class="layui-btn layui-btn-warm " data-type="add" data-events="add">添加分类</button>
-                    <button class="layui-btn layui-btn-primary " data-type="del" data-events="del">删除</button>
+                    <button class="layui-btn layui-btn-warm " data-type="add" data-events="add">{{ trans('app.add') }}分类</button>
+                    <button class="layui-btn layui-btn-primary " data-type="del" data-events="del">{{ trans('app.delete') }}</button>
                 </div>
             </div>
 
@@ -18,7 +19,7 @@
 </div>
 <script type="text/html" id="barDemo">
 
-    <a class="layui-btn layui-btn-danger layui-btn-sm" lay-event="del">删除</a>
+    <a class="layui-btn layui-btn-danger layui-btn-sm" lay-event="del">{{ trans('app.delete') }}</a>
 </script>
 <script type="text/html" id="imageTEM">
     <img src="@{{d.image}}" alt="" height="28">
@@ -37,7 +38,7 @@
                 {checkbox: true, fixed: true}
                 ,{field:'id',title:'ID', width:80, sort: true}
                 ,{field:'name',title:'分类名称',edit: 'text', minWidth:100}
-                ,{field:'score',title:'操作', width:200, align: 'right',toolbar:'#barDemo'}
+                ,{field:'score',title:'{{ trans('app.actions') }}', width:200, align: 'right',toolbar:'#barDemo'}
             ]]
             ,id: 'fb-table'
             ,page: false
@@ -48,9 +49,9 @@
             var data = obj.data;
             data['_token'] = "{!! csrf_token() !!}";
             if(obj.event === 'detail'){
-                layer.msg('ID：'+ data.id + ' 的查看操作');
+                layer.msg('ID：'+ data.id + ' 的查看{{ trans('app.actions') }}');
             } else if(obj.event === 'del'){
-                layer.confirm('真的删除行么', function(index){
+                layer.confirm('真的{{ trans('app.delete') }}行么', function(index){
                     layer.close(index);
                     var load = layer.load();
                     $.ajax({
@@ -111,11 +112,11 @@
                 var i = 0;
                 data.forEach(function(v){ data_id_obj[i] = v.id; i++});
                 data.length == 0 ?
-                        layer.msg('请选择要删除的数据', {
+                        layer.msg('请选择要{{ trans('app.delete') }}的数据', {
                             time: 2000 //2秒关闭（如果不配置，默认是3秒）
                         })
                         :
-                        layer.confirm('是否删除已选择的数据',{title:'提示'},function(index){
+                        layer.confirm('是否{{ trans('app.delete') }}已选择的数据',{title:'提示'},function(index){
                             layer.close(index);
                             var load = layer.load();
                             $.ajax({

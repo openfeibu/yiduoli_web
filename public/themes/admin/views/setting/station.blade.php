@@ -1,8 +1,8 @@
 <div class="main">
     {!! Theme::widget('breadcrumb')->render() !!}
     <div class="main_full">
+        {!! Theme::partial('message') !!}
         <div class="layui-col-md12">
-            {!! Theme::partial('message') !!}
             <div class="fb-main-table">
                 <form class="layui-form" action="{{guard_url('setting/updateStation')}}" method="post" lay-filter="fb-form">
                     <div class="layui-form-item">
@@ -26,7 +26,7 @@
                     </div>
                     <div class="layui-form-item">
                         <div class="layui-input-block">
-                            <button class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
+                            <button class="layui-btn" lay-submit="" lay-filter="demo1">{{ trans('app.submit_now') }}</button>
                         </div>
                     </div>
                 </form>

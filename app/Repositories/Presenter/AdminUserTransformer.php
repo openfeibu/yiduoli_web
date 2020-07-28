@@ -13,6 +13,7 @@ class AdminUserTransformer extends TransformerAbstract
             //'id'                => $user->getRouteKey(),
             'id' => $user->id,
             'name'              => $user->name,
+            'username'          => $user->username,
             'email'             => $user->email,
             'parent_id'         => $user->parent_id,
             'api_token'         => $user->api_token,

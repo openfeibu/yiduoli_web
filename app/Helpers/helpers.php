@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Request;
 use App\Facades\Hashids;
 use App\Facades\Trans;
+use Illuminate\Support\Facades\Route;
 
 if (!function_exists('hashids_encode')) {
     /**
@@ -833,5 +834,13 @@ if (!function_exists('guard_prefix')) {
     function guard_prefix()
     {
         return empty(getenv('guard')) ? 'user' : current(explode(".", getenv('guard')));
+    }
+}
+if (!function_exists('get_nav')) {
+    function get_nav()
+    {
+        $route_name = Route::currentRouteName();
+        $nav = app(\App\Repositories\Eloquent\NavRepository::class)->where('slug',$route_name)->first();
+        return $nav;
     }
 }

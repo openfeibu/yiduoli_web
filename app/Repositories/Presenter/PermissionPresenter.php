@@ -40,7 +40,11 @@ class PermissionPresenter extends FractalPresenter
 
             foreach ($menus as $menu) {
 
-                if(($menu->slug !== '#') && !Route::has($menu->slug) && !$menu->is_menu) {
+                if(!$menu->is_menu)
+                {
+                    continue;
+                }
+                if(($menu->slug !== '#') && !Route::has($menu->slug)) {
                     continue;
                 }
 
@@ -51,7 +55,7 @@ class PermissionPresenter extends FractalPresenter
                 }
 
                 $html .= '<li class="layui-nav-item '.$class.'">';
-                $href = ($menu->slug == '#') ? 'javascript:;' : route($menu->slug);
+                $href = ($menu->slug == '#') || (!Route::has($menu->slug)) ? 'javascript:;' : route($menu->slug);
                 $html .= sprintf('<a href="%s">%s %s</a>', $href, $menu->icon_html, $menu->name);
 
                 if(!isset($menu->sub)) {

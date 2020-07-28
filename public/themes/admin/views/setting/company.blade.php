@@ -1,6 +1,7 @@
 <div class="main">
     {!! Theme::widget('breadcrumb')->render() !!}
     <div class="main_full">
+        {!! Theme::partial('message') !!}
         <div class="layui-col-md12">
             <div class="fb-main-table">
                 <form class="layui-form" action="{{guard_url('setting/updateCompany')}}" method="post" lay-filter="fb-form">
@@ -47,7 +48,7 @@
                         <label class="layui-form-label">获取点位</label>
                         <div class="layui-input-inline">
                             <input id="keyword" type="textbox"  class="layui-input"  value="">
-                            <input type="button" value="搜索" class="layui-button-mapsearch"  onclick="searchKeyword()">
+                            <input type="button" value="{{ trans('app.search') }}" class="layui-button-mapsearch"  onclick="searchKeyword()">
                             <div class="layui-form-mid layui-word-aux">点击地图快速获取经纬度</div>
                         </div>
 
@@ -56,7 +57,7 @@
 
                     <div class="layui-form-item">
                         <div class="layui-input-block">
-                            <button class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
+                            <button class="layui-btn" lay-submit="" lay-filter="demo1">{{ trans('app.submit_now') }}</button>
                         </div>
                     </div>
                 </form>

@@ -1,16 +1,17 @@
 <div class="main">
     {!! Theme::widget('breadcrumb')->render() !!}
     <div class="main_full">
+        {!! Theme::partial('message') !!}
         <div class="layui-col-md12">
             <div class="tabel-message">
                 <div class="layui-inline tabel-btn">
-                    <button class="layui-btn layui-btn-warm "><a href="{{ url('/admin/banner/create') }}">添加轮播图</a></button>
-                    <button class="layui-btn layui-btn-primary " data-type="del" data-events="del">删除</button>
+                    <button class="layui-btn layui-btn-warm "><a href="{{ url('/admin/banner/create') }}">{{ trans('app.add') }}轮播图</a></button>
+                    <button class="layui-btn layui-btn-primary " data-type="del" data-events="del">{{ trans('app.delete') }}</button>
                 </div>
                 <!--  <div class="layui-inline">
-                   <input class="layui-input" name="id" id="demoReload" placeholder="搜索轮播图" autocomplete="off">
+                   <input class="layui-input" name="id" id="demoReload" placeholder="{{ trans('app.search') }}轮播图" autocomplete="off">
                  </div>
-                 <button class="layui-btn" data-type="reload">搜索</button> -->
+                 <button class="layui-btn" data-type="reload">{{ trans('app.search') }}</button> -->
             </div>
 
             <table id="fb-table" class="layui-table"  lay-filter="fb-table">
@@ -20,8 +21,8 @@
     </div>
 </div>
 <script type="text/html" id="barDemo">
-    <a class="layui-btn layui-btn-sm" lay-event="edit">编辑</a>
-    <a class="layui-btn layui-btn-danger layui-btn-sm" lay-event="del">删除</a>
+    <a class="layui-btn layui-btn-sm" lay-event="edit">{{ trans('app.edit') }}</a>
+    <a class="layui-btn layui-btn-danger layui-btn-sm" lay-event="del">{{ trans('app.delete') }}</a>
 </script>
 <script type="text/html" id="imageTEM">
     <img src="@{{d.image}}" alt="" height="28">
@@ -42,7 +43,7 @@
                 ,{field:'image',title:'图片', width:200,toolbar:'#imageTEM',}
                 ,{field:'url',title:'路径', sort: true}
                 ,{field:'order',title:'排序', sort: true}
-                ,{field:'score',title:'操作', width:200, align: 'right',toolbar:'#barDemo'}
+                ,{field:'score',title:'{{ trans('app.actions') }}', width:200, align: 'right',toolbar:'#barDemo'}
             ]]
             ,id: 'fb-table'
             ,height: 'full-200'

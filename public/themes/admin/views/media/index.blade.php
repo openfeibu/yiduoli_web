@@ -10,9 +10,9 @@
                 </div>
                 <!--
                 <div class="layui-inline">
-                    <input class="layui-input search_key" name="title" id="demoReload" placeholder="搜索标题" autocomplete="off">
+                    <input class="layui-input search_key" name="title" id="demoReload" placeholder="{{ trans('app.search') }}标题" autocomplete="off">
                 </div>
-                <button class="layui-btn" data-type="reload">搜索</button>
+                <button class="layui-btn" data-type="reload">{{ trans('app.search') }}</button>
                 -->
             </div>
             <div class="media-nav layui-breadcrumb" lay-filter="breadcrumb" style="visibility: visible;">
@@ -154,7 +154,7 @@
             var data = obj.data;
             data['_token'] = "{!! csrf_token() !!}";
             if(obj.event === 'detail'){
-                layer.msg('ID：'+ data.id + ' 的查看操作');
+                layer.msg('ID：'+ data.id + ' 的查看{{ trans('app.actions') }}');
             } else if(obj.event === 'del'){
                 layer.confirm('{{ trans('messages.confirm_delete') }}', function(index){
                     layer.close(index);
@@ -217,7 +217,7 @@
             var data = obj.data;
             data['_token'] = "{!! csrf_token() !!}";
             if(obj.event === 'detail'){
-                layer.msg('ID：'+ data.id + ' 的查看操作');
+                layer.msg('ID：'+ data.id + ' 的查看{{ trans('app.actions') }}');
             } else if(obj.event === 'del'){
                 layer.confirm('{{ trans('messages.confirm_delete') }}', function(index){
                     layer.close(index);
@@ -318,11 +318,11 @@
                 var i = 0;
                 data.forEach(function(v){ data_id_obj[i] = v.id; i++});
                 data.length == 0 ?
-                        layer.msg('请选择要删除的数据', {
+                        layer.msg('请选择要{{ trans('app.delete') }}的数据', {
                             time: 2000 //2秒关闭（如果不配置，默认是3秒）
                         })
                         :
-                        layer.confirm('是否删除已选择的数据',{title:'提示'},function(index){
+                        layer.confirm('是否{{ trans('app.delete') }}已选择的数据',{title:'提示'},function(index){
                             layer.close(index);
                             var load = layer.load();
                             $.ajax({

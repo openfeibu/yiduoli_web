@@ -14,7 +14,7 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label">{{ trans('permission.label.slug') }}</label>
                         <div class="layui-input-inline">
-                            <input type="text" name="slug" lay-verify="required" autocomplete="off" placeholder="请输入{{ trans('permission.label.slug') }}" class="layui-input" value="{{$permission->slug}}">
+                            <input type="text" name="slug" autocomplete="off" placeholder="请输入{{ trans('permission.label.slug') }}" class="layui-input" value="{{$permission->slug}}">
                         </div>
                     </div>
                     <div class="layui-form-item">
@@ -49,7 +49,7 @@
                     </div>
                     <div class="layui-form-item">
                         <div class="layui-input-block">
-                            <button class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
+                            <button class="layui-btn" lay-submit="" lay-filter="demo1">{{ trans('app.submit_now') }}</button>
                         </div>
                     </div>
                     {!!Form::token()!!}
