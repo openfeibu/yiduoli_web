@@ -1,15 +1,10 @@
 <div class="banner">
     <div class="swiper-container swiper-container-banner">
         <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <a href="#"><img src="{!! theme_asset('images/banner.png') !!}" width="100%"></a>
-            </div>
-            <div class="swiper-slide">
-                <a href="#"><img src="{!! theme_asset('images/banner.png') !!}" width="100%"></a>
-            </div>
-            <div class="swiper-slide">
-                <a href="#"><img src="{!! theme_asset('images/banner.png') !!}" width="100%"></a>
-            </div>
+            @foreach($banners as $key => $banner_item)
+                <div class="swiper-slide"><a href="@if($banner_item['url']){{ $banner_item['url'] }}@else javascript:;@endif"><img src="{{ url('image/original/'.$banner_item['image']) }}" width="100%" alt=""></a></div>
+            @endforeach
+           
         </div>
         <div class="swiper-pagination swiper-pagination-banner"></div>
     </div>

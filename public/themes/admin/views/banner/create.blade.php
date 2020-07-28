@@ -22,7 +22,7 @@
                         <div class="layui-input-inline">
                             <input type="text" name="url" placeholder="请输入路径" autocomplete="off" class="layui-input">
                         </div>
-                        <div class="layui-form-mid layui-word-aux">路径为小程序路径</div>
+                        <div class="layui-form-mid layui-word-aux">必须含https://或http://</div>
                     </div>
                     <div class="layui-form-item">
                         <label class="layui-form-label">排序</label>

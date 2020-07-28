@@ -1,15 +1,10 @@
 <div class="banner">
     <div class="swiper-container swiper-container-banner">
         <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <a href="#"><img src="<?php echo theme_asset('images/banner.png'); ?>" width="100%"></a>
-            </div>
-            <div class="swiper-slide">
-                <a href="#"><img src="<?php echo theme_asset('images/banner.png'); ?>" width="100%"></a>
-            </div>
-            <div class="swiper-slide">
-                <a href="#"><img src="<?php echo theme_asset('images/banner.png'); ?>" width="100%"></a>
-            </div>
+            <?php $__currentLoopData = $banners; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $banner_item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <div class="swiper-slide"><a href="<?php if($banner_item['url']): ?><?php echo e($banner_item['url']); ?><?php else: ?> javascript:;<?php endif; ?>"><img src="<?php echo e(url('image/original/'.$banner_item['image'])); ?>" width="100%" alt=""></a></div>
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+           
         </div>
         <div class="swiper-pagination swiper-pagination-banner"></div>
     </div>
