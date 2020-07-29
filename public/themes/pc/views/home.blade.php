@@ -73,21 +73,10 @@
         </div>
         <div class="product-con ">
 
-            @foreach(app('product_repository')->orderBy('updated_at','desc')->limit(4)->get() as $key => $product)
+
             <div class="product-item col-lg-3 col-md-3 col-sm-6 col-xs-6 wow bounceIn animated" data-wow-duration=".6s" data-wow-delay=".4s">
                 <div class="product-item-box">
-                    <a href="{{ route('pc.product.show',$product->id) }}">
-                        <div class="img" ><img class="transition500"  src="{!! '/image/original'.$product->image !!}" alt=""></div>
-                        <p class="transition500">{{ get_substr($product->title,20) }}</p>
-                        <span>{{ get_substr($product->description,20) }}</span>
-                    </a>
-                </div>
-            </div>
-            @endforeach
-            <!--
-            <div class="product-item col-lg-3 col-md-3 col-sm-6 col-xs-6 wow bounceIn animated" data-wow-duration=".6s" data-wow-delay=".4s">
-                <div class="product-item-box">
-                    <a href="">
+                    <a href="/product">
                         <div class="img" ><img class="transition500"  src="{!! theme_asset('images/p1.png') !!}" alt=""></div>
                         <p class="transition500">生物农牧</p>
                         <span>根据畜禽饲料的原料结构，应用现代固体发酵，液体发酵等生物工程技术和先进的配方剂型技术</span>
@@ -96,32 +85,32 @@
             </div>
             <div class="product-item col-lg-3 col-md-3 col-sm-6 col-xs-6 wow bounceIn animated" data-wow-duration=".6s" data-wow-delay=".5s">
                 <div class="product-item-box">
-                    <a href="">
+                    <a href="/product">
                         <div class="img"><img  class="transition500" src="{!! theme_asset('images/p2.png') !!}" alt=""></div>
-                        <p class="transition500">生物农牧</p>
+                        <p class="transition500">生物医药</p>
                         <span>根据畜禽饲料的原料结构，应用现代固体发酵，液体发酵等生物工程技术和先进的配方剂型技术</span>
                     </a>
                 </div>
             </div>
             <div class="product-item col-lg-3 col-md-3 col-sm-6 col-xs-6 wow bounceIn animated" data-wow-duration=".6s" data-wow-delay=".6s">
                 <div class="product-item-box">
-                    <a href="">
+                    <a href="/product">
                         <div class="img"><img  class="transition500" src="{!! theme_asset('images/p3.png') !!}" alt=""></div>
-                        <p class="transition500">生物农牧</p>
+                        <p class="transition500">生物酶制剂（工业酶）</p>
                         <span>根据畜禽饲料的原料结构，应用现代固体发酵，液体发酵等生物工程技术和先进的配方剂型技术</span>
                     </a>
                 </div>
             </div>
             <div class="product-item col-lg-3 col-md-3 col-sm-6 col-xs-6 wow bounceIn animated" data-wow-duration=".6s" data-wow-delay=".7s">
                 <div class="product-item-box">
-                    <a href="">
+                    <a href="/product">
                         <div class="img"><img  class="transition500" src="{!! theme_asset('images/p4.png') !!}" alt=""></div>
                         <p class="transition500">生物农牧</p>
                         <span>根据畜禽饲料的原料结构，应用现代固体发酵，液体发酵等生物工程技术和先进的配方剂型技术</span>
                     </a>
                 </div>
             </div>
-            -->
+
         </div>
     </div>
 </div>
