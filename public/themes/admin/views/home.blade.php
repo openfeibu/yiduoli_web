@@ -1,7 +1,9 @@
 <div class="main">
     <div class="main_full" style="margin-top: 15px;">
         <div class="layui-col-md12">
+            <!--
             <div class="layui-card-box layui-col-space15  fb-clearfix">
+
                 <div class="layui-col-sm6 layui-col-md3">
                     <div class="layui-card">
                         <div class="layui-card-header">
@@ -104,32 +106,31 @@
                     </div>
                 </div>
             </div>
+            -->
             <div class="power-box  fb-clearfix">
                 <p>常用功能</p>
                 <div class="power-box-con">
                     <div class="power-box-item layui-col-md2">
-                        <a href="{{ guard_url('order/create') }}">
-                            {{ trans('app.add') }}订单
+                        <a href="{{ guard_url('news') }}">
+                            {{ trans('news.name') }}
                         </a>
                     </div>
+
                     <div class="power-box-item layui-col-md2">
-                        <a href="{{ guard_url('customer/create') }}">
-                            {{ trans('app.add') }}客户
+                        <a href="{{ guard_url('video') }}">
+                            {{ trans('video.name') }}
                         </a>
                     </div>
+
                     <div class="power-box-item layui-col-md2">
-                        <a href="{{ guard_url('new_customer/create') }}">
-                            {{ trans('app.add') }}收集客户
+                        <a href="{{ guard_url('product') }}">
+                            {{ trans('product.name') }}
                         </a>
                     </div>
+
                     <div class="power-box-item layui-col-md2">
-                        <a href="{{ guard_url('goods/create') }}">
-                            {{ trans('app.add') }}产品
-                        </a>
-                    </div>
-                    <div class="power-box-item layui-col-md2">
-                        <a href="#">
-                            营销邮箱
+                        <a href="{{ guard_url('page/scientific_research_team') }}">
+                            {{ trans('scientific_research_team.name') }}
                         </a>
                     </div>
                 </div>
