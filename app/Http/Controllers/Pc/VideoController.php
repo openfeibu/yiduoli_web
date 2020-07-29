@@ -39,7 +39,7 @@ class videoController extends BaseController
             ->orderBy('order','desc')
             ->orderBy('updated_at','desc')
             ->orderBy('id','desc')
-            ->paginate(10);
+            ->paginate(9);
 
         return $this->response->title(trans('video.name'))
             ->view('video.index')
