@@ -227,8 +227,8 @@ Route::group([
     Route::get('/customer_service/service_network','CustomerServiceController@service_network')->name('service_network');
     Route::get('/customer_service/product_information','ProductInformationController@index')->name('product_information');
     Route::get('/customer_service/contact_us','CustomerServiceController@contact_us')->name('contact_us');
-    Route::get('/customer_service/feedback','CustomerServiceController@feedback')->name('feedback');
-
+    Route::get('/feedback','FeedBackController@index')->name('feedback.index');
+    Route::post('/feedback','FeedBackController@store')->name('feedback.store');
 
     Route::get('/hr',function (){
         return redirect('/hr/join_us');

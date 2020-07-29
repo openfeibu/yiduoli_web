@@ -4,7 +4,7 @@
             <?php $__currentLoopData = $banners; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $banner_item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <div class="swiper-slide"><a href="<?php if($banner_item['url']): ?><?php echo e($banner_item['url']); ?><?php else: ?> javascript:;<?php endif; ?>"><img src="<?php echo e(url('image/original/'.$banner_item['image'])); ?>" width="100%" alt=""></a></div>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-           
+
         </div>
         <div class="swiper-pagination swiper-pagination-banner"></div>
     </div>

@@ -49,9 +49,6 @@ class CustomerServiceController extends BaseController
     }
     public function feedback()
     {
-        $nav = get_nav();
-        return $this->response->title($nav['name'])
-            ->view('customer_service.feedback')
-            ->output();
+
     }
 }

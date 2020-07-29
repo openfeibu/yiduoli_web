@@ -56,7 +56,7 @@
             var that = $(this);
             $.ajax({
                 url : "{{ route('pc.product.index') }}",
-                data : {'page':page,'product_category_id' : category_id,'token':"{!! csrf_token() !!}"},
+                data : {'page':page,'product_category_id' : category_id,'_token':"{!! csrf_token() !!}"},
                 type : 'get',
                 dataType : "json",
                 success : function (data) {
@@ -101,7 +101,7 @@
             var that = $(this);
             $.ajax({
                 url : "{{ route('pc.product.index') }}",
-                data : {'page':page,'product_category_id' : category_id,'token':"{!! csrf_token() !!}"},
+                data : {'page':page,'product_category_id' : category_id,'_token':"{!! csrf_token() !!}"},
                 type : 'get',
                 dataType : "json",
                 success : function (data) {
@@ -146,7 +146,7 @@
             var that = $(this);
             $.ajax({
                 url : "{{ route('pc.product.index') }}",
-                data : {'page':page,'product_category_id' : category_id,'token':"{!! csrf_token() !!}"},
+                data : {'page':page,'product_category_id' : category_id,'_token':"{!! csrf_token() !!}"},
                 type : 'get',
                 dataType : "json",
                 success : function (data) {
@@ -190,7 +190,7 @@
             var that = $(this);
             $.ajax({
                 url : "{{ route('pc.product.index') }}",
-                data : {'page':page,'product_category_id' : category_id,'token':"{!! csrf_token() !!}"},
+                data : {'page':page,'product_category_id' : category_id,'_token':"{!! csrf_token() !!}"},
                 type : 'get',
                 dataType : "json",
                 success : function (data) {
@@ -220,7 +220,7 @@
             }
             $.ajax({
                 url : ajax_href,
-                data : {'product_category_id' : category_id,'token':"{!! csrf_token() !!}"},
+                data : {'product_category_id' : category_id,'_token':"{!! csrf_token() !!}"},
                 type : 'get',
                 dataType : "json",
                 success : function (data) {
