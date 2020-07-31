@@ -7,7 +7,7 @@ use Route,Auth;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Pc\Controller as BaseController;
 
-class videoController extends BaseController
+class VideoController extends BaseController
 {
     public function __construct(VideoRepository $repository)
     {
