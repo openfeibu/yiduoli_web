@@ -1,6 +1,6 @@
 
 <!-- 内容 -->
-<div class="main pageMain">
+<div class="main ">
     <div class="container w1400">
         {!! Theme::widget('WebBreadcrumb')->render() !!}
 

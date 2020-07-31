@@ -8,10 +8,10 @@ $(function(){
     }
     if(t != 0){
       if(!$(".headerBg").hasClass("active")){
-        $(".headerBg").addClass("active")
+        $(".headerBg,header").addClass("active")
       }
     }else{
-      $(".headerBg").removeClass("active")
+      $(".headerBg,header").removeClass("active")
     }
 
     if(t > 100){

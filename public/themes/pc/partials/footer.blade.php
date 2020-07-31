@@ -33,7 +33,7 @@
         <div class="container w1400">
             <div class="footer-copy clearfix  wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".5s">
                 <div class="pull-left">© 广东溢多利生物科技股份有限公司 粤ICP备09215897号 <span>股票代码：300381</span> </div>
-                <div class="pull-right">技术支持：<a href="http:www.feibu.info">飞步科技</a></div>
+                <div class="pull-right">技术支持：<a href="http://www.feibu.info">飞步科技</a></div>
             </div>
         </div>
     </div>
