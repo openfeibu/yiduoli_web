@@ -111,7 +111,7 @@ header.active{height: 60px;}
 header.active .logo{padding-top:5px;width: 100px;}
 header.active .headerRight{margin-top:5px}
 
-#allmap{height:400px;border-radius:10px;box-shadow:0 5px 10px #eee;}
+#allmap{margin-top:100px;height:300px;border-radius:10px;box-shadow:0 5px 10px #eee;border:1px solid #eee}
 .BMap_Marker img{width:auto !important}
 .lang{position: relative;}
 .lang  dl{background-color: #f9f9f9;color: #333;position: absolute;top: 50px;width: 120px;padding:10px 20px;left: 50%;margin-left: -60px;text-align: center;border-radius: 5px;display: none;}

@@ -133,7 +133,7 @@
                     <div class="number">
                         <span >1</span>所
                     </div>
-                    <div class="name">国家院士工作站</div>
+                    <div class="name">院士工作站</div>
                 </div>
                 <div class="innovate-item col-lg-3 col-md-3 col-sm-6 col-xs-6 wow bounceIn animated" data-wow-duration=".6s" data-wow-delay="0.6s">
                     <div class="number">
@@ -181,7 +181,7 @@
     <div class="container w1400">
         <div class="con-title tip-title wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".3s">
             <span  class="transition500">BTRANCH</span>
-            <h1>集团分/子公司</h1>
+            <h1>溢多利旗下公司</h1>
         </div>
         <div class="branch-con">
             <div class="branch-item col-lg-3 col-md-3 col-sm-6 col-xs-6 wow bounceIn animated" data-wow-duration=".6s" data-wow-delay=".4s">
