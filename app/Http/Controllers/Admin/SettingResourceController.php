@@ -30,7 +30,13 @@ class SettingResourceController extends BaseController
         $company_params = $this->repository->where(['category' => 'company'])->get()->toArray();
         foreach ($company_params as $key => $param)
         {
-            $company[$param['slug']] = $param['value'];
+            if($param['type'] == 'text')
+            {
+                $company[$param['slug']] = $param['value'];
+            }else if($param['type'] == 'image'){
+                $company[$param['slug']] = $this->repository->find($param['id']);
+            }
+
         }
         return $this->response->title('公司信息管理')
             ->view('setting.company')

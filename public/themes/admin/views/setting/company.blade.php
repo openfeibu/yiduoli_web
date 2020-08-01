@@ -8,40 +8,90 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label">公司名称</label>
                         <div class="layui-input-inline">
-                            <input type="text" name="company_name" lay-verify="companyName" autocomplete="off" placeholder="请输入公司名称" class="layui-input" value="{{$company['company_name']}}">
+                            <input type="text" name="company_name" lay-verify="required" autocomplete="off" placeholder="" class="layui-input" value="{{$company['company_name']}}">
                         </div>
                     </div>
                     <div class="layui-form-item">
+                        <label class="layui-form-label">公司缩写</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="company_abb_name" lay-verify="required" autocomplete="off" placeholder="" class="layui-input" value="{{$company['company_abb_name']}}">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">二维码</label>
+                        {!! $company['wechat_qr_code']->files('value')->field('wechat_qr_code')
+                        ->url($company['wechat_qr_code']->getUploadUrl('value'))
+                        ->uploader()!!}
+                    </div>
+
+                    <div class="layui-form-item">
                         <label class="layui-form-label">地址</label>
                         <div class="layui-input-inline">
-                            <input type="text" name="address" lay-verify="address" autocomplete="off" placeholder="请输入地址" class="layui-input" value="{{$company['address']}}">
+                            <input type="text" name="address" lay-verify="required" autocomplete="off" placeholder="" class="layui-input" value="{{$company['address']}}">
                         </div>
                     </div>
                     <div class="layui-form-item">
                         <label class="layui-form-label">电话</label>
                         <div class="layui-input-inline">
-                            <input type="text" name="tel" lay-verify="tel" autocomplete="off" placeholder="请输入电话" class="layui-input" value="{{$company['tel']}}">
+                            <input type="text" name="tel" lay-verify="tel" autocomplete="off" placeholder="" class="layui-input" value="{{$company['tel']}}">
                         </div>
                     </div>
                     <div class="layui-form-item">
                         <label class="layui-form-label">邮箱</label>
                         <div class="layui-input-inline">
-                            <input type="text" name="email" lay-verify="email" autocomplete="off" placeholder="请输入邮箱" class="layui-input" value="{{$company['email']}}">
+                            <input type="text" name="email" lay-verify="email" autocomplete="off" placeholder="" class="layui-input" value="{{$company['email']}}">
                         </div>
                     </div>
                     <div class="layui-form-item">
-                        <label class="layui-form-label">QQ</label>
+                        <label class="layui-form-label">邮政编码</label>
                         <div class="layui-input-inline">
-                            <input type="text" name="qq" lay-verify="qq" autocomplete="off" placeholder="请输入QQ" class="layui-input" value="{{$company['qq']}}">
+                            <input type="text" name="zip_code" lay-verify="required" autocomplete="off" placeholder="" class="layui-input" value="{{$company['zip_code']}}">
                         </div>
                     </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">传真</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="fax" lay-verify="required" autocomplete="off" placeholder="" class="layui-input" value="{{$company['fax']}}">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">证券部联系方式</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="bond_tel" lay-verify="tel" autocomplete="off" placeholder="" class="layui-input" value="{{$company['bond_tel']}}">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">证券部邮箱</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="bond_email" lay-verify="email" autocomplete="off" placeholder="" class="layui-input" value="{{$company['bond_email']}}">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">人力资源部联系方式</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="hr_tel" lay-verify="tel" autocomplete="off" placeholder="" class="layui-input" value="{{$company['hr_tel']}}">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">人力资源部邮箱</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="hr_email" lay-verify="email" autocomplete="off" placeholder="" class="layui-input" value="{{$company['hr_email']}}">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">营销服务中心传真</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="marketing_center_fax" lay-verify="required" autocomplete="off" placeholder="" class="layui-input" value="{{$company['marketing_center_fax']}}">
+                        </div>
+                    </div>
+
                     <div class="layui-form-item">
                         <label class="layui-form-label">经纬度</label>
                         <div class="layui-input-inline">
-                            <input type="text" name="longitude" lay-verify="longitude" autocomplete="off" placeholder="请输入经度" class="layui-input" value="{{$company['longitude']}}">
+                            <input type="text" name="longitude" lay-verify="required" autocomplete="off" placeholder="请输入经度" class="layui-input" value="{{$company['longitude']}}">
                         </div>
                         <div class="layui-input-inline">
-                            <input type="text" name="latitude" lay-verify="latitude" autocomplete="off" placeholder="请输入纬度" class="layui-input" value="{{$company['latitude']}}">
+                            <input type="text" name="latitude" lay-verify="required" autocomplete="off" placeholder="请输入纬度" class="layui-input" value="{{$company['latitude']}}">
                         </div>
                     </div>
                     <div class="layui-form-item">

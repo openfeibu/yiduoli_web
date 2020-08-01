@@ -6,7 +6,7 @@
     </div>
     <div class="fixed-nav-item">
         <div class="fixed-nav-item-code">
-            <div class="code-img"><img src="{!! theme_asset('images/code.jpg') !!}" alt=""></div>
+            <div class="code-img"><img src="/image/original/{{ setting('wechat_qr_code') }}" alt=""></div>
         </div>
     </div>
     <div class="fixed-nav-item">
