@@ -41,11 +41,26 @@ class ProductResourceController extends BaseController
     public function index(Request $request)
     {
         $limit = $request->input('limit',config('app.limit'));
-
+        $search = $request->get('search',[]);
         if ($this->response->typeIs('json')) {
 
-            $products = $this->repository
-                ->orderBy('id','asc')
+            $products = Product::join('product_categories','product_categories.id','=','products.product_category_id')
+                ->when($search ,function ($query) use ($search){
+                    foreach($search as $field => $value)
+                    {
+                        if($field == 'product_category_id')
+                        {
+                            $query->where(function ($query) use ($value){
+                                $query->whereRaw(" FIND_IN_SET ('".$value."',`product_categories`.`category_ids`)")->orWhere('product_categories.id',$value);
+                            });
+
+                        }else{
+                            $query->where('products.'.$field,'like','%'.$value.'%');
+                        }
+                    }
+                })
+                ->orderBy('products.updated_at','desc')
+                ->orderBy('products.id','desc')
                 ->paginate($limit);
 
             return $this->response

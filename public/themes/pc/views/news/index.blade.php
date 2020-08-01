@@ -43,7 +43,7 @@
 
 
         </div>
-        {!! $news->links('common.pagination') !!}
+        {!! $news->appends(['search_key' => $search_key])->links('common.pagination') !!}
 
 
     </div>

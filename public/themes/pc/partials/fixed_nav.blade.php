@@ -20,6 +20,17 @@
         </div>
     </div>
 </div>
+@if(Route::currentRouteName() == 'pc.news.index' || Route::currentRouteName() == 'pc.news.show')
+    <div class="fixed-search">
+        <div class="fixed-search-close"></div>
+        <div class="fixed-search-form">
+            <form action="{{ route('pc.news.index') }}" method="get">
+                <div class="fixed-search-form-input"><input type="text" placeholder="请输入搜索的内容" name="search_key"></div>
+                <div class="fixed-search-form-submit"><button type="submit">搜索</button></div>
+            </form>
+        </div>
+    </div>
+@else
 <div class="fixed-search">
     <div class="fixed-search-close"></div>
     <div class="fixed-search-form">
@@ -29,3 +40,4 @@
         </form>
     </div>
 </div>
+@endif

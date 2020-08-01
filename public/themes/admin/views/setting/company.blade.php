@@ -54,7 +54,7 @@
 
                         <div id="map"></div>
                     </div>
-
+                    {!!Form::token()!!}
                     <div class="layui-form-item">
                         <div class="layui-input-block">
                             <button class="layui-btn" lay-submit="" lay-filter="demo1">{{ trans('app.submit_now') }}</button>

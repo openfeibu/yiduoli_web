@@ -8056,7 +8056,7 @@ UE.Editor.defaultOptions = function(editor){
         readonly: false,
         zIndex: 999,
         imagePopup: true,
-        enterTag: 'p',
+        enterTag: '',
         customDomain: false,
         lang: 'zh-cn',
         langPath: _url + 'lang/',
@@ -10148,15 +10148,15 @@ UE.plugins['defaultfilter'] = function () {
         root.traversal(function (node) {
             if (node.type == 'element') {
 
-                if (me.options.autoClearEmptyNode && dtd.$inline[node.tagName] && !dtd.$empty[node.tagName] && (!node.attrs || utils.isEmptyObject(node.attrs))) {
-
-                    if (!node.firstChild()) node.parentNode.removeChild(node);
-                    else if (node.tagName == 'span' && (!node.attrs || utils.isEmptyObject(node.attrs))) {
-                        /*修改*/
-                        //node.parentNode.removeChild(node, true)
-                    }
-                    return;
-                }
+                // if (me.options.autoClearEmptyNode && dtd.$inline[node.tagName] && !dtd.$empty[node.tagName] && (!node.attrs || utils.isEmptyObject(node.attrs))) {
+                //
+                //     if (!node.firstChild()) node.parentNode.removeChild(node);
+                //     else if (node.tagName == 'span' && (!node.attrs || utils.isEmptyObject(node.attrs))) {
+                //         /*修改*/
+                //         //node.parentNode.removeChild(node, true)
+                //     }
+                //     return;
+                // }
                 switch (node.tagName) {
                     case 'div':
                         if (val = node.getAttr('cdata_tag')) {

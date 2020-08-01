@@ -25,9 +25,12 @@ class NewsController extends BaseController
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $news = $this->page_repository
+        $search_key = $request->get('search_key',"");
+        $news = app(Page::class)->when($search_key,function ($query) use ($search_key){
+                return $query->where('title','like','%'.$search_key.'%');
+            })
             ->where(['category_id' => $this->category_id])
             ->orderBy('hot_recommend','desc')
             ->orderBy('order','desc')
@@ -37,7 +40,7 @@ class NewsController extends BaseController
 
         return $this->response->title(trans('news.name'))
             ->view('news.index')
-            ->data(compact('news'))
+            ->data(compact('news','search_key'))
             ->output();
     }
     public function show(Request $request ,Page $news)

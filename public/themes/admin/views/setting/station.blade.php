@@ -18,10 +18,11 @@
                         ->url($setting['logo']->getUploadUrl('value'))
                         ->uploader()!!}
                     </div>
+
                     <div class="layui-form-item">
                         <label class="layui-form-label">版权声明</label>
-                        <div class="layui-input-inline">
-                            <input type="text" name="right" lay-verify="companyName" autocomplete="off" placeholder="版权" class="layui-input" value="{{$setting['right']}}">
+                        <div class="layui-input-block">
+                            <script type="text/plain" id="content" name="right" style="height:240px;">{!! $setting['right'] !!}</script>
                         </div>
                     </div>
                     <div class="layui-form-item">
@@ -35,6 +36,11 @@
         </div>
     </div>
 </div>
+{!! Theme::asset()->container('ueditor')->scripts() !!}
+<script>
+    var ue = getUe();
+</script>
+
 <script>
     layui.use(['jquery','element','form','table','upload'], function(){
         var form = layui.form;
@@ -44,6 +50,8 @@
             data = JSON.stringify(data.field);
             data = JSON.parse(data);
             data['_token'] = "{!! csrf_token() !!}";
+            data['content'] = UE.getEditor('content').getContent();
+            //console.log(UE.getEditor('content').getContent());return false;
             var load = layer.load();
             $.ajax({
                 url : "{{guard_url('setting/updateStation')}}",

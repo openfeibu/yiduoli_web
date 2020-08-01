@@ -15,4 +15,10 @@ class AcademicReport extends BaseModel
 
     protected $config = 'model.product.academic_report';
 
+    protected $appends = ['product'];
+
+    public function getProductAttribute()
+    {
+        return $this->attributes ? Product::where('id',$this->attributes['product_id'])->first(['id','product_category_id','title']) : '';
+    }
 }
