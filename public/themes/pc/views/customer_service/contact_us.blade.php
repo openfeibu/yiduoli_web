@@ -80,9 +80,9 @@
 <script type="text/javascript" src="http://api.map.baidu.com/getscript?v=2.0&amp;ak=5jCnjnCesElvVDufg6yjGMrlYimVXk5f&amp;services=&amp;t=20200327103013"></script>
 
 <script>
-let sContent =`<h4 style='margin:0 0 5px 0;padding:0.2em 0;font-size:18px'>广东溢多利生物科技股份有限公司</h4><p style='margin:0;line-height:1.5;font-size:13px;text-indent:2em;color:#bbb'>广东省珠海市南屏科技工业园屏北一路8号</p>`
+let sContent =`<h4 style='margin:0 0 5px 0;padding:0.2em 0;font-size:18px'>{{ setting('company_name') }}</h4><p style='margin:0;line-height:1.5;font-size:13px;text-indent:2em;color:#bbb'>{{ setting('address') }}</p>`
 let map = new BMap.Map("allmap");
-	let point2 = new BMap.Point(113.494480,22.226770);
+	let point2 = new BMap.Point("{{ setting('longitude') }}","{{ setting('latitude') }}");
     let marker2 = new BMap.Marker(point2);
 	map.addControl(new BMap.OverviewMapControl());              //添加缩略地图控件
 	map.enableScrollWheelZoom();                            //启用滚轮放大缩小
