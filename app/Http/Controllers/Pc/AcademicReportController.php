@@ -38,7 +38,8 @@ class AcademicReportController extends BaseController
             return $this->product_academic_report($request,$product_id);
         }
         $top_categories = $this->category_repository->getListCategories(0);
-        $product_category_id = $request->get('product_category_id','');
+        $product_category_id = $request->get('product_category_id','0');
+        $search_key = $request->get('search_key',"");
         $products = app(Product::class)->join('academic_reports','academic_reports.product_id','=','products.id');
         if($product_category_id)
         {
@@ -79,7 +80,7 @@ class AcademicReportController extends BaseController
         }
         return $this->response->title(trans('academic_report.name'))
             ->view('academic_report.index')
-            ->data(compact('products','top_categories'))
+            ->data(compact('products','top_categories','product_category_id','search_key'))
             ->output();
 
     }

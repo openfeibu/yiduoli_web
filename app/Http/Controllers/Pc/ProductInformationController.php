@@ -33,7 +33,8 @@ class ProductInformationController extends BaseController
     public function index(Request $request)
     {
         $top_categories = $this->category_repository->getListCategories(0);
-        $product_category_id = $request->get('product_category_id','');
+        $product_category_id = $request->get('product_category_id','0');
+        $search_key = $request->get('search_key',"");
         $products = app(Product::class);
         if($product_category_id)
         {
@@ -68,7 +69,7 @@ class ProductInformationController extends BaseController
 
         return $this->response->title(trans('product_information.name'))
             ->view('product_information.index')
-            ->data(compact('products','top_categories'))
+            ->data(compact('products','top_categories','product_category_id','search_key'))
             ->output();
 
     }

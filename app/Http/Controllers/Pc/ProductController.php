@@ -33,14 +33,21 @@ class ProductController extends BaseController
     public function index(Request $request)
     {
         $top_categories = $this->category_repository->getListCategories(0);
-        $product_category_id = $request->get('product_category_id','');
+        $product_category_id = $request->get('product_category_id','0');
+        $search_key = $request->get('search_key',"");
         $products = app(Product::class);
+        $children = [];
         if($product_category_id)
         {
             $ids = $this->category_repository->getSubIds($product_category_id);
             array_unshift($ids,$product_category_id);
             $products = $products->whereIn('product_category_id',$ids);
+
+            $children = $this->category_repository->getListCategories($product_category_id);
         }
+        $products = $products->when($search_key,function ($query) use ($search_key){
+            return $query->where('title','like','%'.$search_key.'%');
+        });
         $products = $products->orderBy('order','desc')
             ->orderBy('updated_at','desc')
             ->orderBy('id','desc')
@@ -50,13 +57,8 @@ class ProductController extends BaseController
             $data['content'] = $this->response->layout('render')
                 ->view('product.list')
                 ->data(compact('products'))->render()->getContent();
-            if($product_category_id)
-            {
-                $categories = $this->category_repository->getListCategories($product_category_id)->toArray();
-            }else{
-                $categories = [];
-            }
-            $data['categories'] = $categories;
+
+            $data['categories'] = $children;
 
             return $this->response
                 ->success()
@@ -66,7 +68,7 @@ class ProductController extends BaseController
 
         return $this->response->title(trans('product.name'))
             ->view('product.index')
-            ->data(compact('products','top_categories'))
+            ->data(compact('products','top_categories','product_category_id','children','search_key'))
             ->output();
 
     }
