@@ -28,11 +28,7 @@
                             <input type="text" name="date" class="layui-input" id="date" value="{{ $course->year }}-{{ $course->month }}">
                         </div>
                     </div>
-                    <div class="layui-form-item">
-                        <div class="layui-input-block">
-                            <button class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
-                        </div>
-                    </div>
+                    <div class="layui-form-item button-group"><div class="layui-input-block"><button class="layui-btn layui-btn-normal layui-btn-lg" lay-submit="" lay-filter="demo1">{{ trans('app.submit_now') }}</button></div></div>
                     {!!Form::token()!!}
                     <input type="hidden" name="_method" value="PUT">
                 </form>
