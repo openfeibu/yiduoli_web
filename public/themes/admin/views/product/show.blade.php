@@ -17,10 +17,10 @@
                             <input type="text" name="title" lay-verify="required" autocomplete="off" placeholder="请输入{!! trans('app.title')!!}" class="layui-input" value="{{$product->title}}">
                         </div>
                     </div>
-                    <div class="layui-form-item">
-                        <label class="layui-form-label">{!! trans('product.label.vid')!!}</label>
-                        <div class="layui-input-inline">
-                            <input type="text" name="vid" placeholder="请输入{!! trans('product.label.vid')!!}" autocomplete="off" class="layui-input" value="{{$product->vid}}">
+                    <div class="layui-form-item layui-form-text">
+                        <label class="layui-form-label">{{ trans('app.description') }}</label>
+                        <div class="layui-input-block">
+                            <textarea name="description" placeholder="请输入{{ trans('app.description') }}" class="layui-textarea layui-block-textarea">{{$product->description}}</textarea>
                         </div>
                     </div>
                     <div class="layui-form-item">
@@ -30,21 +30,11 @@
                         ->deleteUrl( guard_url('product/destroy_image') )
                         ->uploaders()!!}
                     </div>
-                    <div class="layui-form-item">
-                        <label class="layui-form-label">{!! trans('product.label.parameters')!!}</label>
-                        <div class="layui-input-block parameters" >
-                            @foreach($product->parameters as $name => $parameter)
-                                <div class="parameters_group">
-                                    <input type="text" name="parameters_name[]" autocomplete="off" placeholder="参数名" class="layui-input" value="{{ $name }}">:
-                                    <input type="text" name="parameters_value[]" autocomplete="off" placeholder="参数值" class="layui-input" value="{{ $parameter }}">
-                                </div>
-                            @endforeach
-                            @for($i=0;$i<10-count($product->parameters);$i++)
-                                <div class="parameters_group">
-                                    <input type="text" name="parameters_name[]" autocomplete="off" placeholder="参数名" class="layui-input" >:
-                                    <input type="text" name="parameters_value[]" autocomplete="off" placeholder="参数值" class="layui-input" >
-                                </div>
-                            @endfor
+                   
+					<div class="layui-form-item">
+                        <label class="layui-form-label">{!! trans('product.label.vid')!!}</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="vid" placeholder="请输入{!! trans('product.label.vid')!!}" autocomplete="off" class="layui-input" value="{{$product->vid}}">
                         </div>
                     </div>
                     <div class="layui-form-item">
@@ -60,15 +50,27 @@
                         ->exts('pdf')
                         ->uploaderFile()!!}
                     </div>
-                    <div class="layui-form-item layui-form-text">
-                        <label class="layui-form-label">{{ trans('app.description') }}</label>
-                        <div class="layui-input-block">
-                            <textarea name="description" placeholder="请输入{{ trans('app.description') }}" class="layui-textarea">{{$product->description}}</textarea>
+					 <div class="layui-form-item">
+                        <label class="layui-form-label">{!! trans('product.label.parameters')!!}</label>
+                        <div class="layui-input-block parameters" >
+                            @foreach($product->parameters as $name => $parameter)
+                                <div class="parameters_group">
+                                    <input type="text" name="parameters_name[]" autocomplete="off" placeholder="参数名" class="layui-input" value="{{ $name }}"> :
+                                    <input type="text" name="parameters_value[]" autocomplete="off" placeholder="参数值" class="layui-input" value="{{ $parameter }}">
+                                </div>
+                            @endforeach
+                            @for($i=0;$i<10-count($product->parameters);$i++)
+                                <div class="parameters_group">
+                                    <input type="text" name="parameters_name[]" autocomplete="off" placeholder="参数名" class="layui-input" > :
+                                    <input type="text" name="parameters_value[]" autocomplete="off" placeholder="参数值" class="layui-input" >
+                                </div>
+                            @endfor
                         </div>
                     </div>
+                    
                     <div class="layui-form-item layui-form-text">
                         <label class="layui-form-label">{{ trans('app.content') }}</label>
-                        <div class="layui-input-block">
+                        <div class="layui-input-block "style="width:800px">
                             <script type="text/plain" id="content" name="content" style="height:240px;">{!! $product->content !!}</script>
                         </div>
                     </div>
