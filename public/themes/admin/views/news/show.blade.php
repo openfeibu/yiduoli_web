@@ -20,7 +20,7 @@
                     <div class="layui-form-item layui-form-text">
                         <label class="layui-form-label">{{ trans('app.description') }}</label>
                         <div class="layui-input-block">
-                            <textarea name="description" placeholder="请输入{{ trans('app.description') }}" class="layui-textarea">{{$page->description}}</textarea>
+                            <textarea name="description" placeholder="请输入{{ trans('app.description') }}" class="layui-textarea layui-block-textarea">{{$page->description}}</textarea>
                         </div>
                     </div>
                     <div class="layui-form-item layui-form-text">
@@ -46,7 +46,7 @@
 
                     <div class="layui-form-item">
                         <div class="layui-input-block">
-                            <button class="layui-btn" lay-submit="" lay-filter="demo1">{{ trans('app.submit_now') }}</button>
+                            <button class="layui-btn layui-btn-normal layui-btn-lg" lay-submit="" lay-filter="demo1">{{ trans('app.submit_now') }}</button>
                         </div>
                     </div>
                     {!!Form::token()!!}
