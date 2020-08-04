@@ -14,7 +14,7 @@
                     <div class="layui-form-item layui-form-text">
                         <label class="layui-form-label">{{ trans('app.description') }}</label>
                         <div class="layui-input-block">
-                            <script type="text/plain" id="content" name="description" style="height:240px;">{!! $course->content !!}</script>
+                            <script type="text/plain" id="content" name="description" style="height:240px;">{!! $course->description !!}</script>
                         </div>
                     </div>
                     <div class="layui-form-item">
