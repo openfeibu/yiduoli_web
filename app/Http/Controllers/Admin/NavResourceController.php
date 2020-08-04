@@ -96,7 +96,7 @@ class NavResourceController extends BaseController
                 Nav::where('id',$attributes['parent_id'])->update(['child_ids' => implode(',',$child_id_arr)]);
             }
             return $this->response->message(trans('messages.success.created', ['Module' => trans('nav.name')]))
-                ->code(204)
+                ->http_code(204)
                 ->status('success')
                 ->url(guard_url('nav/nav/'))
                 ->redirect();
@@ -163,7 +163,7 @@ class NavResourceController extends BaseController
 
             $nav->update($attributes);
             return $this->response->message(trans('messages.success.updated', ['Module' => trans('nav.name')]))
-                ->code(204)
+                ->http_code(204)
                 ->status('success')
                 ->url(guard_url('nav/nav/' . $nav->id))
                 ->redirect();
@@ -192,7 +192,7 @@ class NavResourceController extends BaseController
 
             return $this->response->message(trans('messages.success.deleted', ['Module' => trans('nav.name')]))
                 ->status("success")
-                ->code(202)
+                ->http_code(202)
                 ->url(guard_url('nav/nav'))
                 ->redirect();
 
@@ -214,7 +214,7 @@ class NavResourceController extends BaseController
 
             return $this->response->message(trans('messages.success.deleted', ['Module' => trans('nav.name')]))
                 ->status("success")
-                ->code(202)
+                ->http_code(202)
                 ->url(guard_url('nav/nav'))
                 ->redirect();
 

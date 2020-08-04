@@ -102,7 +102,7 @@ class SubsidiaryResourceController extends BaseController
 
             return $this->response->message(trans('messages.success.deleted', ['Module' => trans('subsidiary.name')]))
                 ->status("success")
-                ->code(202)
+                ->http_code(202)
                 ->url(guard_url('subsidiary'))
                 ->redirect();
 
@@ -124,7 +124,7 @@ class SubsidiaryResourceController extends BaseController
 
             return $this->response->message(trans('messages.success.deleted', ['Module' => trans('subsidiary.name')]))
                 ->status("success")
-                ->code(202)
+                ->http_code(202)
                 ->url(guard_url('subsidiary'))
                 ->redirect();
 

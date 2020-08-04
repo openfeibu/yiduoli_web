@@ -111,7 +111,7 @@ class CourseResourceController extends BaseController
 
             return $this->response->message(trans('messages.success.deleted', ['Module' => trans('course.name')]))
                 ->status("success")
-                ->code(202)
+                ->http_code(202)
                 ->url(guard_url('course'))
                 ->redirect();
 
@@ -133,7 +133,7 @@ class CourseResourceController extends BaseController
 
             return $this->response->message(trans('messages.success.deleted', ['Module' => trans('course.name')]))
                 ->status("success")
-                ->code(202)
+                ->http_code(202)
                 ->url(guard_url('course'))
                 ->redirect();
 

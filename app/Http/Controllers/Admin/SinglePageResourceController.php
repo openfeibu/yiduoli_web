@@ -31,7 +31,7 @@ class SinglePageResourceController extends BaseController
             $page = $this->repository->create($attributes);
 
             return $this->response->message(trans('messages.success.created', ['Module' => $this->title]))
-                ->code(204)
+                ->http_code(204)
                 ->status('success')
                 ->url($this->url)
                 ->redirect();
@@ -70,7 +70,7 @@ class SinglePageResourceController extends BaseController
 
             $page->update($attributes);
             return $this->response->message(trans('messages.success.updated', ['Module' => $this->title]))
-                ->code(204)
+                ->http_code(204)
                 ->status('success')
                 ->url($this->url)
                 ->redirect();
