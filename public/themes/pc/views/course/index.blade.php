@@ -9,7 +9,7 @@
                 @foreach($courses as $key => $course)
                 <div class="course-item">
                     <div class="time">{{ $course['year'] }}年{{ $course['month'] ? $course['month'].'月' : '' }}</div>
-                    <div class="con">{{ $course['description'] }}</div>
+                    <div class="con">{!! $course['description'] !!}</div>
                 </div>
                 @endforeach
             </div>
