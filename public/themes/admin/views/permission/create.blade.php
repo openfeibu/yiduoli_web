@@ -56,11 +56,7 @@
                             <input type="checkbox" name="subs[destroy_all]" title="批量{{ trans('app.delete') }}" value="批量{{ trans('app.delete') }}">
                         </div>
                     </div>
-                    <div class="layui-form-item">
-                        <div class="layui-input-block">
-                            <button class="layui-btn layui-btn-normal layui-btn-lg" lay-submit="" lay-filter="demo1">{{ trans('app.submit_now') }}</button>
-                        </div>
-                    </div>
+                    <div class="layui-form-item button-group"><div class="layui-input-block"><button class="layui-btn layui-btn-normal layui-btn-lg" lay-submit="" lay-filter="demo1">{{ trans('app.submit_now') }}</button></div></div>
                     {!!Form::token()!!}
                 </form>
             </div>

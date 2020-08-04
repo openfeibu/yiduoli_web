@@ -25,11 +25,7 @@
                             <script type="text/plain" id="content" name="right" style="height:240px;">{!! $setting['right'] !!}</script>
                         </div>
                     </div>
-                    <div class="layui-form-item">
-                        <div class="layui-input-block">
-                            <button class="layui-btn layui-btn-normal layui-btn-lg" lay-submit="" lay-filter="demo1">{{ trans('app.submit_now') }}</button>
-                        </div>
-                    </div>
+                    <div class="layui-form-item button-group"><div class="layui-input-block"><button class="layui-btn layui-btn-normal layui-btn-lg" lay-submit="" lay-filter="demo1">{{ trans('app.submit_now') }}</button></div></div>
                 </form>
             </div>
 
