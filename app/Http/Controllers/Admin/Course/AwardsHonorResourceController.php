@@ -33,17 +33,17 @@ class AwardsHonorResourceController extends BaseController
         $this->repository = $this->repository
             ->pushCriteria(\App\Repositories\Criteria\RequestCriteria::class);
     }
-    public function show(Request $request,Course $enterprise_honor)
+    public function show(Request $request,Course $awards_honor)
     {
-        return parent::show($request,$enterprise_honor);
+        return parent::show($request,$awards_honor);
     }
-    public function update(Request $request,Course $enterprise_honor)
+    public function update(Request $request,Course $awards_honor)
     {
-        return parent::update($request,$enterprise_honor);
+        return parent::update($request,$awards_honor);
     }
-    public function destroy(Request $request,Course $enterprise_honor)
+    public function destroy(Request $request,Course $awards_honor)
     {
-        return parent::destroy($request,$enterprise_honor);
+        return parent::destroy($request,$awards_honor);
     }
 
 }
