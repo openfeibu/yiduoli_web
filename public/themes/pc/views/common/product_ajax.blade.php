@@ -11,7 +11,7 @@
             var type = $(this).attr('type');
             var that = $(this);
             var this_index = $(".screen ul").index($(this).parent());
-
+			showLoading();
             $.ajax({
                 url : url,
                 data : {'page':page,'product_category_id' : category_id,'search_key':"{{ $search_key }}",'_token':"{!! csrf_token() !!}"},
@@ -19,6 +19,7 @@
                 dataType : "json",
                 success : function (data) {
                     var html = data.data.content;
+					hideLoading();
                     if(html)
                     {
                         $(".product-list").html(html);

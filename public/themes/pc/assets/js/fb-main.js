@@ -98,4 +98,15 @@ $(function(){
   $(".fixed-search-close").on("click",function(){
     $(".fixed-search").fadeOut(200)
   })
+  
+  
+ 
 })
+ //显示加载
+  function showLoading(){
+	  $(".fb-loading").fadeIn(200)
+  }
+    //隐藏加载
+  function hideLoading(){
+	  $(".fb-loading").fadeOut(200)
+  }

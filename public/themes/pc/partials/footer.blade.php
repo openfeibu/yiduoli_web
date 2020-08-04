@@ -37,5 +37,11 @@
             </div>
         </div>
     </div>
-
+	
+</div>
+<div class="fb-loading">
+	<div class="loader-inner ball-clip-rotate-pulse">
+			<div></div>
+			<div></div>
+	</div>
 </div>
