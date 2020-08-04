@@ -133,7 +133,7 @@ header.active .headerRight{margin-top:5px}
 
 /* 关于我们 */
 .about,.product,.innovate,.new{
-    margin: 80px 0;
+    margin: 125px 0;
 }
 .branch{
     margin: 120px 0;
@@ -254,7 +254,7 @@ header.active .headerRight{margin-top:5px}
 .footer-con-left:after{content: "";width: 2px;height: 279px;background: rgba(255,255,255,0.2);position: absolute;right: 30px;top: 0;z-index: 1;}
 .footer-con-left .footer-logo{width: 190px;}
 .footer-con-left .footer-logo img{width: 100%;}
-.footer-con-left .footer-info{font-size: 16px;color: #fff;line-height: 32px;margin-top: 20px;padding-right: 50px;}
+.footer-con-left .footer-info{font-size: 14px;color: #fff;line-height: 32px;margin-top: 20px;padding-right: 50px;}
 .footer-con-right{}
 .footer-con-right .footer-link{float: left;width:14.28%;padding-left: 16px;}
 .footer-con-right .footer-link .footer-link-t{color: #fff;font-size: 16px;position: relative;} 

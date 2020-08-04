@@ -1,7 +1,7 @@
 <div class="footer clearfix">
     <div class="footer-vision">
         <div class="container w1400">
-            <div class="vision-left col-lg-10 col-md-10 col-sm-12 col-xs-12  wow flipInY animated" data-wow-duration="1s" data-wow-delay=".3s">
+            <div class="vision-left col-lg-10 col-md-10 col-sm-12 col-xs-12  wow fadeInUp animated" data-wow-duration="1s" data-wow-delay=".3s">
                 <div class="vision-tip"><span>To Be One of Word-leading Biotech Enterprises</span></div>
                 <div class="vision-span">成为世界领先的生物技术企业</div>
             </div>

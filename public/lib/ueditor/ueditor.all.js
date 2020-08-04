@@ -17558,8 +17558,8 @@ UE.plugins['autofloat'] = function() {
                 flag = false;
                 toolbarBox.style.left =  domUtils.getXY(toolbarBox).x - document.documentElement.getBoundingClientRect().left+2  + 'px';
             }
-            if(toolbarBox.style.position != 'fixed'){
-                toolbarBox.style.position = 'fixed';
+            if(toolbarBox.style.position != 'absolute'){
+                toolbarBox.style.position = 'absolute';
                 toolbarBox.style.top = topOffset +"px";
                 ((origalFloat == 'absolute' || origalFloat == 'relative') && parseFloat(origalLeft)) && (toolbarBox.style.left = toobarBoxPos.x + 'px');
             }
