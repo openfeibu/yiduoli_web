@@ -28,7 +28,7 @@
 </div>
 
 <script type="text/html" id="barDemo">
-    <a class="layui-btn layui-btn-sm layui-btn-primary" href="{{ guard_url('academic_report') }}?product_id=@{{ d.id }}">{{ trans('academic_report.name') }}</a>
+    <a class="layui-btn layui-btn-sm layui-btn-normal" href="{{ guard_url('academic_report') }}?product_id=@{{ d.id }}">{{ trans('academic_report.name') }}</a>
     <a class="layui-btn layui-btn-sm" lay-event="edit">{{ trans('app.edit') }}</a>
     <a class="layui-btn layui-btn-danger layui-btn-sm" lay-event="del">{{ trans('app.delete') }}</a>
 </script>

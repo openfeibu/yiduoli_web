@@ -335,7 +335,7 @@ button.layui-close{
     float: left;
     line-height: 30px;
     height: 30px;
-    border: none;
+    border: none;	
     text-align: center;
     border-left: 1px solid #dcdcdc;
     border-right: 1px solid #dcdcdc;
@@ -367,3 +367,5 @@ button.layui-close{
 .demo-tree-box{background:#fff;border-radius:5px;padding:20px;}
 .parameters_group{display: inline;margin-right: 5px}
 .parameters input{display: inline;width: 80px;margin-top:4px;}
+
+.button-group{padding:30px 0}
