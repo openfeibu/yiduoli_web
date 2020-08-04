@@ -11,10 +11,10 @@
                             <input type="text" name="date" class="layui-input" id="date" value="{{ $course->year }}-{{ $course->month }}">
                         </div>
                     </div>
-                    <div class="layui-form-item">
+                    <div class="layui-form-item layui-form-text">
                         <label class="layui-form-label">{{ trans('app.description') }}</label>
                         <div class="layui-input-block">
-                            <textarea name="description"  placeholder="请输入{{  trans('app.description') }}"  class="layui-textarea">{{ $course->description }}</textarea>
+                            <script type="text/plain" id="content" name="description" style="height:240px;">{!! $course->content !!}</script>
                         </div>
                     </div>
                     <div class="layui-form-item">
@@ -30,7 +30,9 @@
         </div>
     </div>
 </div>
+{!! Theme::asset()->container('ueditor')->scripts() !!}
 <script>
+    var ue = getUe();
     layui.use('laydate', function(){
         var laydate = layui.laydate;
 

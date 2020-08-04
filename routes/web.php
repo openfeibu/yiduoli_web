@@ -171,6 +171,13 @@ Route::group([
 
     Route::resource('academic_report', 'AcademicReportResourceController');
     Route::post('/academic_report/destroyAll', 'AcademicReportResourceController@destroyAll')->name('academic_report.destroy_all');
+
+    Route::resource('subsidiary', 'SubsidiaryResourceController');
+    Route::post('/subsidiary/destroyAll', 'SubsidiaryResourceController@destroyAll')->name('subsidiary.destroy_all');
+
+
+
+
 });
 
 Route::group([

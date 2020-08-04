@@ -14,7 +14,7 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label">{{ trans('app.description') }}</label>
                         <div class="layui-input-block">
-                            <textarea name="description"  placeholder="请输入{{ trans('app.description') }}"  class="layui-textarea"></textarea>
+                            <script type="text/plain" id="content" name="description" style="height:240px;"></script>
                         </div>
                     </div>
 
@@ -30,7 +30,9 @@
         </div>
     </div>
 </div>
+{!! Theme::asset()->container('ueditor')->scripts() !!}
 <script>
+    var ue = getUe();
     layui.use('laydate', function(){
         var laydate = layui.laydate;
 
