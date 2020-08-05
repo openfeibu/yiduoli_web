@@ -58,7 +58,7 @@ class JoinUsResourceController extends BaseController
                 ->data($data['data'])
                 ->output();
         }
-        return $this->response->title(trans('app.admin.panel'))
+        return $this->response->title(trans('join_us.name'))
             ->view($this->category_slug.'.index')
             ->output();
     }
