@@ -1,30 +1,30 @@
 <div class="main">
     <div class="main_full" style="margin-top: 15px;">
         <div class="layui-col-md12">
-            <!--
+            
             <div class="layui-card-box layui-col-space15  fb-clearfix">
 
                 <div class="layui-col-sm6 layui-col-md3">
                     <div class="layui-card">
                         <div class="layui-card-header">
-                            <b>今日销售额</b>
-                            <label>(昨日$)</label>
-                            <span class="layui-badge layui-bg-blue layuiadmin-badge">日</span>
-                        </div>
-                        <div class="layui-card-body layuiadmin-card-list">
-                            <p class="layuiadmin-big-font">$1<span class="c2">(2)</span></p>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="layui-col-sm6 layui-col-md3">
-                    <div class="layui-card">
-                        <div class="layui-card-header">
-                            <b>总销售额</b>
+                            <b>产品总数</b>
+                           
                             <span class="layui-badge layui-bg-blue layuiadmin-badge">总</span>
                         </div>
                         <div class="layui-card-body layuiadmin-card-list">
-                            <p class="layuiadmin-big-font">$1</p>
+                            <p class="layuiadmin-big-font">212</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-col-sm6 layui-col-md3">
+                    <div class="layui-card">
+                        <div class="layui-card-header">
+                            <b>新闻总数</b>
+                            <span class="layui-badge layui-bg-blue layuiadmin-badge">总</span>
+                        </div>
+                        <div class="layui-card-body layuiadmin-card-list">
+                            <p class="layuiadmin-big-font">12</p>
 
                         </div>
                     </div>
@@ -33,12 +33,12 @@
                 <div class="layui-col-sm6 layui-col-md3">
                     <div class="layui-card">
                         <div class="layui-card-header">
-                            <b>今日订单量</b>
-                            <label>(昨日1)</label>
-                            <span class="layui-badge layui-bg-blue layuiadmin-badge">日</span>
+                            <b>视频总量</b>
+                            <label>(个)</label>
+                            <span class="layui-badge layui-bg-blue layuiadmin-badge">总</span>
                         </div>
                         <div class="layui-card-body layuiadmin-card-list">
-                            <p class="layuiadmin-big-font">1<span class="c2">(2)</span></p>
+                            <p class="layuiadmin-big-font">1</p>
 
                         </div>
                     </div>
@@ -106,7 +106,7 @@
                     </div>
                 </div>
             </div>
-            -->
+           
             <div class="power-box  fb-clearfix">
                 <p>常用功能</p>
                 <div class="power-box-con">
