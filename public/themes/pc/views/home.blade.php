@@ -186,28 +186,28 @@
         <div class="branch-con">
             <div class="branch-item col-lg-3 col-md-3 col-sm-6 col-xs-6 wow bounceIn animated" data-wow-duration=".6s" data-wow-delay=".4s">
 
-                <a href="">
+                <a href="http://www.micolta.cn/index.html">
                     <div class="img"><img class="transition500" src="{!! theme_asset('images/logo1.jpg') !!}" alt=""></div>
 
                 </a>
             </div>
             <div class="branch-item col-lg-3 col-md-3 col-sm-6 col-xs-6 wow bounceIn animated" data-wow-duration=".6s" data-wow-delay=".5s">
 
-                <a href="">
+                <a href="http://www.kyfpharm.com/">
                     <div class="img"><img class="transition500" src="{!! theme_asset('images/logo2.png') !!}" alt=""></div>
 
                 </a>
             </div>
             <div class="branch-item col-lg-3 col-md-3 col-sm-6 col-xs-6 wow bounceIn animated" data-wow-duration=".6s" data-wow-delay=".6s">
 
-                <a href="">
+                <a href="http://www.norchem-pharma.com/">
                     <div class="img"><img class="transition500" src="{!! theme_asset('images/logo3.png') !!}" alt=""></div>
 
                 </a>
             </div>
             <div class="branch-item col-lg-3 col-md-3 col-sm-6 col-xs-6 wow bounceIn animated" data-wow-duration=".6s" data-wow-delay=".7s">
 
-                <a href="">
+                <a href="http://www.hnlihua.com/">
                     <div class="img"><img class="transition500" src="{!! theme_asset('images/logo4.png') !!}" alt=""></div>
 
                 </a>

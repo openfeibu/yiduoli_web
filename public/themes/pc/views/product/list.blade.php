@@ -13,5 +13,9 @@
             </a>
         </div>
     @endforeach
+	<div class="nodata">
+		 <div class="img "><img class="transition500" src="{{ '/themes/pc/assets/images/logo.png' }}" alt=" "></div>
+		 <div class="test">该分类没有产品，如有任何问题请联系我们</div>
+	</div>
 </div>
 {!! $products->links('common.ajax_pagination') !!}
