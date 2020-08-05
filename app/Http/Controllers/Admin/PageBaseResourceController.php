@@ -75,7 +75,6 @@ class PageBaseResourceController extends BaseController
             $attributes['category_id'] = isset($attributes['category_id']) && !empty($attributes['category_id']) ? $attributes['category_id'] : $this->category_id;
             //$attributes['recommend_type'] = isset($attributes['home_recommend']) && $attributes['home_recommend'] == 'on' ? 'home' : "";
 
-
             $page = $this->repository->create($attributes);
 
             return $this->response->message(trans('messages.success.created', ['Module' => trans($this->category_slug.'.name')]))

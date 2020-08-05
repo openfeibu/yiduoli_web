@@ -21,6 +21,8 @@ class Page extends BaseModel
      */
     protected $config = 'model.page.page';
 
+    protected $appends = ['image_url'];
+
     /**
      * Set the pages title and heading.
      *
@@ -41,5 +43,15 @@ class Page extends BaseModel
     {
         return $this->belongsTo('App\Models\PageCategory', 'category_id');
     }
-
+    public function getImageUrlAttribute()
+    {
+        if(isset($this->attributes['image']) && !empty($this->attributes['image']))
+        {
+            if (strpos( $this->attributes['image'], 'http') === false) {
+                return url("image/original"). $this->attributes['image'];
+            }
+            return  $this->attributes['image'];
+        }
+        return '';
+    }
 }
