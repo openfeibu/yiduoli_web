@@ -37,7 +37,7 @@
                     </a>
                 </li>
                 <li class="col-lg-1-5 col-md-1-5 col-sm-1-5 col-xs-1-5">
-                    <a href="/product">
+                    <a href="/about/profile/170">
                         <img class="transition500" src="{!! theme_asset('images/i3.png') !!}" alt="">
                         <p>产业布局</p>
                     </a>
