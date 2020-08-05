@@ -9,7 +9,7 @@
             <hr/>
             <div class="layui-upload-view">
 
-                <img id="image_{!!$field!!}" src="{!!url("/image/original".$files['path'])!!}" style="max-width: 196px">
+                <img id="image_{!!$field!!}" src="{!! $files['url'] !!}" style="max-width: 196px">
             </div>
             @else
             <hr/>

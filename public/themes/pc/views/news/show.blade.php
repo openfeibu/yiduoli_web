@@ -30,7 +30,7 @@
                     @foreach($hot_recommend_news as $key => $news_item)
                     <div class="news-detail-right-c-item clearfix">
                         <a class="clearfix" href="{{ route('pc.news.show',$news_item->id) }}">
-                            <div class="img"><img class="transition500" src="{{ '/image/original'.$news_item->image }}" alt=""></div>
+                            <div class="img"><img class="transition500" src="{{ $news_item->image_url }}" alt=""></div>
                             <div class="test">
                                 <p class="fb-overflow-2">{{ get_substr($news_item->title,50) }}</p>
                                 <span>{{ $news_item->updated_at->format('Y-m-d') }}</span>

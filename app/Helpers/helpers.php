@@ -514,6 +514,7 @@ if (!function_exists('handle_image_url')) {
         return $image_url;
     }
 }
+
 if (!function_exists('first_image')) {
     function first_image($content)
     {

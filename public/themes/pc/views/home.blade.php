@@ -230,7 +230,7 @@
                 <div class="new-left col-lg-6 col-md-6 col-sm-12 col-xs-12  wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".4s">
                     <div class="new-big-item transition500">
                         <a href="{{ route('pc.news.show',$news->id) }}">
-                            <div class="img"><img class="transition500" src="{!! '/image/original'.$news->image !!}" alt=""></div>
+                            <div class="img"><img class="transition500" src="{!! $news->image_url !!}" alt=""></div>
                             <div class="test">
                                 <div class="title fb-overflow-2 transition500">{{ $news->title }}</div>
                                 <div class="des">
@@ -250,7 +250,7 @@
                     @if($key != 0)
                     <div class="new-item transition500 col-lg-6 col-md-6 col-sm-6 col-xs-6">
                         <a href="{{ route('pc.news.show',$news->id) }}">
-                            <div class="img"><img class="transition500"  src="{!! '/image/original'.$news->image !!}" alt=""></div>
+                            <div class="img"><img class="transition500"  src="{!! $news->image_url !!}" alt=""></div>
                             <div class="title transition500 ">
 								<div class="t-name  fb-overflow-2">{{ $news->title }}</div>
 							</div>

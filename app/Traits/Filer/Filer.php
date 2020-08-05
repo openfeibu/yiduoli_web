@@ -264,7 +264,7 @@ trait Filer
     {
         $files = $this->$field;
 
-        $prefix = ($download) ? 'original' : 'download';
+        $prefix = ($download) ? 'image/download' : 'image/original';
 
         if (empty($files)) {
             return [];
@@ -276,7 +276,7 @@ trait Filer
 
         if(!is_array($files) && !is_object($files)){
             return [
-                'url' => url("{$prefix}/" . $files),
+                'url' => strpos($files, 'http') === false ? url("{$prefix}" . $files) : $files,
                 'path' => $files,
             ];
         }
@@ -284,7 +284,7 @@ trait Filer
         $data = [];
 
         foreach ($files as $key => $file) {
-            $data[$key]['url'] = url("{$prefix}/" . $file);
+            $data[$key]['url'] =strpos($file, 'http') === false ? url("{$prefix}" . $file) : $file;
             $data[$key]['path'] = $file;
         }
 
