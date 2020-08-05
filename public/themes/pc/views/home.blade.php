@@ -225,7 +225,7 @@
             <h1>新闻中心</h1>
         </div>
         <div class="new-con clearfix">
-            @foreach(app('page_repository')->where('category_id',1)->where('hot_recommend',1)->orderBy('updated_at','desc')->limit(5)->get() as $key => $news)
+            @foreach(app('page_repository')->where('category_id',1)->where('home_recommend',1)->orderBy('updated_at','desc')->limit(5)->get() as $key => $news)
             @if($key == 0)
                 <div class="new-left col-lg-6 col-md-6 col-sm-12 col-xs-12  wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".4s">
                     <div class="new-big-item transition500">
@@ -246,7 +246,7 @@
             @endif
             @endforeach
             <div class="new-right col-lg-6 col-md-6 col-sm-12 col-xs-12  wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".5s">
-                @foreach(app('page_repository')->where('category_id',1)->where('hot_recommend',1)->orderBy('updated_at','desc')->limit(5)->get() as $key => $news)
+                @foreach(app('page_repository')->where('category_id',1)->where('home_recommend',1)->orderBy('updated_at','desc')->limit(5)->get() as $key => $news)
                     @if($key != 0)
                     <div class="new-item transition500 col-lg-6 col-md-6 col-sm-6 col-xs-6">
                         <a href="{{ route('pc.news.show',$news->id) }}">
