@@ -36,9 +36,9 @@
             ,cols: [[
                 {checkbox: true, fixed: true}
                 ,{field:'id',title:'ID', width:80, sort: true}
-                ,{field:'name',title:'{{ trans('subsidiary.label.name') }}', sort: true}
+                ,{field:'name',title:'{{ trans('subsidiary.label.name') }}', edit:'text'}
                 ,{field:'image',title:'{{ trans('app.image') }}', width:200,toolbar:'#imageTEM',}
-                ,{field:'url',title:'{{ trans('app.url') }}', sort: true,templet:'<div><a href="@{{ d.url }}" target="_blank">@{{ d.url }}</a></div>'}
+                ,{field:'url',title:'{{ trans('app.url') }}',templet:'<div><a href="@{{ d.url }}" target="_blank">@{{ d.url }}</a></div>'}
                 ,{field:'order',title:'{{ trans('app.order') }}', sort: true}
                 ,{field:'score',title:'{{ trans('app.actions') }}', width:200, align: 'right',toolbar:'#barDemo'}
             ]]
