@@ -8,7 +8,7 @@
                     <div class="layui-card">
                         <div class="layui-card-header">
                             <b>产品总数</b>
-                           
+                           <label>(个)</label>
                             <span class="layui-badge layui-bg-blue layuiadmin-badge">总</span>
                         </div>
                         <div class="layui-card-body layuiadmin-card-list">
@@ -21,6 +21,7 @@
                     <div class="layui-card">
                         <div class="layui-card-header">
                             <b>新闻总数</b>
+							<label>(条)</label>
                             <span class="layui-badge layui-bg-blue layuiadmin-badge">总</span>
                         </div>
                         <div class="layui-card-body layuiadmin-card-list">
@@ -46,95 +47,99 @@
                 <div class="layui-col-sm6 layui-col-md3">
                     <div class="layui-card">
                         <div class="layui-card-header">
-                            <b>总订单量</b>
+                            <b>公告总数</b>
+                            <label>(条)</label>
                             <span class="layui-badge layui-bg-blue layuiadmin-badge">总</span>
                         </div>
                         <div class="layui-card-body layuiadmin-card-list">
-                            <p class="layuiadmin-big-font">2</p>
+                            <p class="layuiadmin-big-font">12</p>
 
                         </div>
                     </div>
                 </div>
-                <div class="layui-col-sm6 layui-col-md3">
-                    <div class="layui-card">
-                        <div class="layui-card-header">
-                            客户数
-                            <span class="layui-badge layui-bg-blue layuiadmin-badge">总</span>
-                        </div>
-                        <div class="layui-card-body layuiadmin-card-list">
-                            <p class="layuiadmin-big-font">2</p>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="layui-col-sm6 layui-col-md3">
-                    <div class="layui-card">
-                        <div class="layui-card-header">
-                            收集客户数
-                            <span class="layui-badge layui-bg-blue layuiadmin-badge">总</span>
-                        </div>
-                        <div class="layui-card-body layuiadmin-card-list">
-                            <p class="layuiadmin-big-font">2</p>
-
-                        </div>
-                    </div>
-                </div>
+              
 
 
-                <div class="layui-col-sm6 layui-col-md3">
-                    <div class="layui-card">
-                        <div class="layui-card-header">
-                            产品数
-                            <span class="layui-badge layui-bg-blue layuiadmin-badge">总</span>
-                        </div>
-                        <div class="layui-card-body layuiadmin-card-list">
-                            <p class="layuiadmin-big-font">2</p>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="layui-col-sm6 layui-col-md3">
-                    <div class="layui-card">
-                        <div class="layui-card-header">
-                            已发营销邮件
-                            <span class="layui-badge layui-bg-blue layuiadmin-badge">总</span>
-                        </div>
-                        <div class="layui-card-body layuiadmin-card-list">
-                            <p class="layuiadmin-big-font">2</p>
-
-                        </div>
-                    </div>
-                </div>
             </div>
-           
-            <div class="power-box  fb-clearfix">
+			<div class="layui-card-box fb-clearfix layui-col-space15">
+				
+				  <div class="  layui-col-sm6 layui-col-md6">
+				  <div class="power-box fb-clearfix">
                 <p>常用功能</p>
                 <div class="power-box-con">
-                    <div class="power-box-item layui-col-md2">
+                    <div class="power-box-item layui-col-md6">
                         <a href="{{ guard_url('news') }}">
                             {{ trans('news.name') }}
                         </a>
                     </div>
 
-                    <div class="power-box-item layui-col-md2">
+                    <div class="power-box-item layui-col-md6">
                         <a href="{{ guard_url('video') }}">
                             {{ trans('video.name') }}
                         </a>
                     </div>
 
-                    <div class="power-box-item layui-col-md2">
+                    <div class="power-box-item layui-col-md6">
                         <a href="{{ guard_url('product') }}">
                             {{ trans('product.name') }}
                         </a>
                     </div>
 
-                    <div class="power-box-item layui-col-md2">
-                        <a href="{{ guard_url('page/scientific_research_team') }}">
-                            {{ trans('scientific_research_team.name') }}
+                    <div class="power-box-item layui-col-md6">
+                        <a href="{{ guard_url('page/company_announcement') }}">
+                            {{ trans('company_announcement.name') }}
                         </a>
                     </div>
                 </div>
             </div>
+			</div>
+				<div class="layui-col-sm6 layui-col-md6">
+				<div class="message">
+					<div class="message-t">最新留言</div>
+					<div class="message-con">
+					 <div class="message-item fb-clearfix">
+						<div class="message-item-l layui-col-sm6 layui-col-md6">时间</div>
+						<div class="message-item-l layui-col-sm6 layui-col-md6"><a href="#">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</a></div>
+					 </div>
+					 <div class="message-item fb-clearfix">
+						<div class="message-item-l layui-col-sm6 layui-col-md6">时间</div>
+						<div class="message-item-l layui-col-sm6 layui-col-md6">内容</div>
+					 </div>
+					 <div class="message-item fb-clearfix">
+						<div class="message-item-l layui-col-sm6 layui-col-md6">时间</div>
+						<div class="message-item-l layui-col-sm6 layui-col-md6">内容</div>
+					 </div>
+					 <div class="message-item fb-clearfix">
+						<div class="message-item-l layui-col-sm6 layui-col-md6">时间</div>
+						<div class="message-item-l layui-col-sm6 layui-col-md6">内容</div>
+					 </div>
+					 <div class="message-item fb-clearfix">
+						<div class="message-item-l layui-col-sm6 layui-col-md6">时间</div>
+						<div class="message-item-l layui-col-sm6 layui-col-md6">内容</div>
+					 </div>
+					 <div class="message-item fb-clearfix">
+						<div class="message-item-l layui-col-sm6 layui-col-md6">时间</div>
+						<div class="message-item-l layui-col-sm6 layui-col-md6">内容</div>
+					 </div>
+					 <div class="message-item fb-clearfix">
+						<div class="message-item-l layui-col-sm6 layui-col-md6">时间</div>
+						<div class="message-item-l layui-col-sm6 layui-col-md6">内容</div>
+					 </div>
+					 <div class="message-item fb-clearfix">
+						<div class="message-item-l layui-col-sm6 layui-col-md6">时间</div>
+						<div class="message-item-l layui-col-sm6 layui-col-md6">内容</div>
+					 </div>
+					 <div class="message-item fb-clearfix">
+						<div class="message-item-l layui-col-sm6 layui-col-md6">时间</div>
+						<div class="message-item-l layui-col-sm6 layui-col-md6">内容</div>
+					 </div>
+				
+					 </div>
+				</div>
+				</div>
+			
+			</div>
+          
         </div>
     </div>
 </div>
