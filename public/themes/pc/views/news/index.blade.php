@@ -28,7 +28,7 @@
                                 <div class="title transition500 fb-overflow-2">
                                     {{ $news_item->title }}
                                 </div>
-                                <div class="date">{{ $news_item->updated_at->format('Y-m-d') }}</div>
+                                <div class="date">{{ $news_item->created_at->format('Y-m-d') }}</div>
 
                                 <div class="con fb-overflow-2">{{ $news_item->description }}</div>
                                 <div class="btn">了解更多</div>

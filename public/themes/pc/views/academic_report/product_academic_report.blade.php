@@ -16,7 +16,7 @@
                             <a href="{{ '/image/original'.$academic_report->file }}" target="_blank">
                                 <div class="report-bg transition500">
                                     <div class="test fb-overflow-2">{{ $academic_report->title }}</div>
-                                    <div class="date">{{ $academic_report->updated_at->format("y-m-d") }}</div>
+                                    <div class="date">{{ $academic_report->created_at->format("y-m-d") }}</div>
                                 </div>
                             </a>
                         </li>

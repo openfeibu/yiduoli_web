@@ -57,7 +57,7 @@
                                 <div class="img"><img class="transition500" src="{{ '/image/original'.$product->image }}" alt=""></div>
                                 <div class="test">
                                     <p class="fb-overflow-2">{{ $product->title }}</p>
-                                    <span>{{ $product->updated_at->format('Y-m-d') }}</span>
+                                    <span>{{ $product->created_at->format('Y-m-d') }}</span>
                                 </div>
                             </a>
                         </div>

@@ -7,7 +7,7 @@
         <div class="news-detail clearfix">
             <div class="news-detail-title  wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".4s">{{ $news->title }}</div>
             <div class="news-detail-left pull-left  wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".5s">
-                <div class="news-detail-date">{{ $news->updated_at->format('Y-m-d') }}</div>
+                <div class="news-detail-date">{{ $news->created_at->format('Y-m-d') }}</div>
                 <div class="news-detail-c">
                     {!! $news->content !!}
                 </div>
@@ -33,7 +33,7 @@
                             <div class="img"><img class="transition500" src="{{ $news_item->image_url }}" alt=""></div>
                             <div class="test">
                                 <p class="fb-overflow-2">{{ get_substr($news_item->title,50) }}</p>
-                                <span>{{ $news_item->updated_at->format('Y-m-d') }}</span>
+                                <span>{{ $news_item->created_at->format('Y-m-d') }}</span>
                             </div>
                         </a>
                     </div>

@@ -16,7 +16,7 @@
                         </div>
                         <div class="test">
                             <div class="title transition500">{{ $hot_recommend_video->title }}</div>
-                            <div class="date">{{ $hot_recommend_video->updated_at->format('Y-m-d') }}</div>
+                            <div class="date">{{ $hot_recommend_video->created_at->format('Y-m-d') }}</div>
                             <div class="con fb-overflow-3">{{ $hot_recommend_video->description }}</div>
 
                         </div>
@@ -32,7 +32,7 @@
                                 <div class="title transition500 fb-overflow-2">
                                     {{ $video->title }}
                                 </div>
-                                <div class="date">{{ $video->updated_at->format('Y-m-d') }}</div>
+                                <div class="date">{{ $video->created_at->format('Y-m-d') }}</div>
                             </div>
                         </div>
                     </div>

@@ -9,7 +9,7 @@
 
                     <div class="report-bg transition500 video" vid = "{{ $product->vid }}" des="{{ $product->description }}">
                         <div class="test fb-overflow-2">{{ $product->title }}</div>
-                        <div class="date">{{ $product->updated_at->format('Y-m-d') }}</div>
+                        <div class="date">{{ $product->created_at->format('Y-m-d') }}</div>
                     </div>
 
                 </li>
@@ -19,7 +19,7 @@
                     <a href="{{ '/image/original/'.$product->instruction }}" target="_blank">
                         <div class="report-bg transition500">
                             <div class="test fb-overflow-2">{{ $product->instruction_title }}</div>
-                            <div class="date">{{ $product->updated_at->format('Y-m-d') }}</div>
+                            <div class="date">{{ $product->created_at->format('Y-m-d') }}</div>
                         </div>
                     </a>
                 </li>

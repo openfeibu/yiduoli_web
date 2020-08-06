@@ -10,7 +10,7 @@
                 <div class="company-announcement-item clearfix">
                     <a class="clearfix" target="_black" href="{{ '/image/original'.$page->file }}">
                         <p>{{ $page->title }}</p>
-                        <span>[{{ $page->updated_at->format('Y-m-d') }}]</span>
+                        <span>[{{ $page->created_at->format('Y-m-d') }}]</span>
                     </a>
                 </div>
                 @endforeach
