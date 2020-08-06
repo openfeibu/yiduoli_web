@@ -43,7 +43,7 @@ class PageBaseResourceController extends BaseController
             $data = $this->repository
                 ->setPresenter(\App\Repositories\Presenter\PageListPresenter::class)
                 ->orderBy('order','desc')
-                ->orderBy('updated_at','desc')
+                //->orderBy('updated_at','desc')
                 ->orderBy('id','desc')
                 ->getDataTable($limit);
             return $this->response

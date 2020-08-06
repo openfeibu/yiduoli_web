@@ -49,7 +49,7 @@ class ProductController extends BaseController
             return $query->where('title','like','%'.$search_key.'%');
         });
         $products = $products->orderBy('order','desc')
-            ->orderBy('updated_at','desc')
+            ->orderBy('created_at','desc')
             ->orderBy('id','desc')
             ->paginate(12);
 
@@ -76,11 +76,11 @@ class ProductController extends BaseController
     {
         $related_products = $this->product_repository
             ->where('product_category_id',$product->product_category_id)
-            ->orderBy('updated_at','desc')
+            ->orderBy('created_at','desc')
             ->orderBy('id','desc')
             ->limit(5)
             ->get();
-        $academic_reports = $this->academicReportRepository->where('product_id',$product->id)->orderBy('updated_at','desc')->orderBy('id','desc')->get();
+        $academic_reports = $this->academicReportRepository->where('product_id',$product->id)->orderBy('created_at','desc')->orderBy('id','desc')->get();
         return $this->response->title($product['title'])
             ->view('product.show')
             ->data(compact('product','related_products','academic_reports'))

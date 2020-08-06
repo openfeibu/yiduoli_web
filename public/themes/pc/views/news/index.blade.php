@@ -14,7 +14,7 @@
                             <div class="img pull-left"><img class="transition500" src="{{ $news_item->image_url }}" alt=""></div>
                             <div class="test">
                                 <div class="title transition500"> {{ $news_item->title }}</div>
-                                <div class="date">{{ $news_item->updated_at->format('Y-m-d') }}</div>
+                                <div class="date">{{ $news_item->created_at->format('Y-m-d') }}</div>
                                 <div class="con fb-overflow-3">{{ $news_item->description }}</div>
                                 <div class="btn">了解更多</div>
                             </div>

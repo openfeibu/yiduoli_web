@@ -50,14 +50,14 @@ class AcademicReportController extends BaseController
         $products = $products
             ->groupBy('products.id')
             ->orderBy('order','desc')
-            ->orderBy('updated_at','desc')
+            ->orderBy('created_at','desc')
             ->orderBy('id','desc')
             ->paginate(10,['products.*']);
 
         foreach ($products as $key => $product)
         {
             $product->academic_reports = AcademicReport::where('product_id',$product->id)
-                ->orderBy('updated_at','desc')
+                ->orderBy('created_at','desc')
                 ->orderBy('id','desc')
                 ->get();
         }
@@ -92,7 +92,7 @@ class AcademicReportController extends BaseController
         $academic_reports = $academic_reports->where('product_id',$product_id);
 
         $academic_reports = $academic_reports
-            ->orderBy('updated_at','desc')
+            ->orderBy('created_at','desc')
             ->orderBy('id','desc')
             ->get();
 

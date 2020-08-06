@@ -35,7 +35,7 @@ class VideoResourceController extends BaseController
         if ($this->response->typeIs('json')) {
             $videos = $this->repository
                 ->orderBy('order','desc')
-                ->orderBy('updated_at','desc')
+                //->orderBy('updated_at','desc')
                 ->orderBy('id','desc')
                 ->paginate($limit);
 

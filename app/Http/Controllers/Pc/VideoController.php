@@ -26,7 +26,7 @@ class VideoController extends BaseController
             ->where('hot_recommend',1)
             ->orderBy('hot_recommend','desc')
             ->orderBy('order','desc')
-            ->orderBy('updated_at','desc')
+            ->orderBy('created_at','desc')
             ->orderBy('id','desc')->first();
 
         $videos = $this->repository;
@@ -37,7 +37,7 @@ class VideoController extends BaseController
 
         $videos = $videos->orderBy('hot_recommend','desc')
             ->orderBy('order','desc')
-            ->orderBy('updated_at','desc')
+            ->orderBy('created_at','desc')
             ->orderBy('id','desc')
             ->paginate(9);
 

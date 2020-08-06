@@ -34,7 +34,7 @@ class NewsController extends BaseController
             ->where(['category_id' => $this->category_id])
             ->orderBy('hot_recommend','desc')
             ->orderBy('order','desc')
-            ->orderBy('updated_at','desc')
+            ->orderBy('created_at','desc')
             ->orderBy('id','desc')
             ->paginate(6);
 
@@ -52,7 +52,7 @@ class NewsController extends BaseController
             ->where([['id','<',$news->id]])
             ->orderBy('hot_recommend','desc')
             ->orderBy('order','desc')
-            ->orderBy('updated_at','desc')
+            ->orderBy('created_at','desc')
             ->orderBy('id','desc')
             ->first();
         $next = $this->page_repository
@@ -60,7 +60,7 @@ class NewsController extends BaseController
             ->where('id','>',$news->id)
             ->orderBy('hot_recommend','desc')
             ->orderBy('order','desc')
-            ->orderBy('updated_at','desc')
+            ->orderBy('created_at','desc')
             ->orderBy('id','desc')
             ->first();
 
@@ -69,7 +69,7 @@ class NewsController extends BaseController
             ->where('hot_recommend',1)
             ->orderBy('hot_recommend','desc')
             ->orderBy('order','desc')
-            ->orderBy('updated_at','desc')
+            ->orderBy('created_at','desc')
             ->orderBy('id','desc')
             ->limit(5)
             ->get();

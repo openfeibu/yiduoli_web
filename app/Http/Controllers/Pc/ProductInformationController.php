@@ -46,7 +46,7 @@ class ProductInformationController extends BaseController
             $query->whereNotNull('instruction')->orWhereNotNull('vid');
         })
             ->orderBy('order','desc')
-            ->orderBy('updated_at','desc')
+            ->orderBy('created_at','desc')
             ->orderBy('id','desc')
             ->paginate(10);
         if ($this->response->typeIs('json')) {
