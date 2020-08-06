@@ -19,14 +19,14 @@ class SubsidiaryResourceController extends BaseController
     public function index(Request $request)
     {
         if ($this->response->typeIs('json')) {
-            $data = $this->repository
+            $subsidiaries = $this->repository
                 ->orderBy('order','desc')
                 ->orderBy('id','asc')
                 ->get();
 
             return $this->response
                 ->success()
-                ->data($data['data'])
+                ->data($subsidiaries->toArray())
                 ->output();
         }
         return $this->response->title(trans('subsidiary.name'))
@@ -52,7 +52,7 @@ class SubsidiaryResourceController extends BaseController
             return $this->response->message(trans('messages.success.created', ['Module' => trans('subsidiary.name')]))
                 ->code(0)
                 ->status('success')
-                ->url(guard_url('subsidiary/' . $subsidiary->id))
+                ->url(guard_url('subsidiary'))
                 ->redirect();
         } catch (Exception $e) {
             return $this->response->message($e->getMessage())
@@ -85,7 +85,7 @@ class SubsidiaryResourceController extends BaseController
             return $this->response->message(trans('messages.success.created', ['Module' => trans('subsidiary.name')]))
                 ->code(0)
                 ->status('success')
-                ->url(guard_url('subsidiary/' . $subsidiary->id))
+                ->url(guard_url('subsidiary' ))
                 ->redirect();
         } catch (Exception $e) {
             return $this->response->message($e->getMessage())

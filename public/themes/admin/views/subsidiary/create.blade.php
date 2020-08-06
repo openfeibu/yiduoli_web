@@ -4,23 +4,23 @@
         {!! Theme::partial('message') !!}
         <div class="layui-col-md12">
             <div class="fb-main-table">
-                <form class="layui-form" action="{{guard_url('banner')}}" method="POST" lay-filter="fb-form">
+                <form class="layui-form" action="{{guard_url('subsidiary')}}" method="POST" lay-filter="fb-form">
                     <div class="layui-form-item">
-                        <label class="layui-form-label">标题</label>
+                        <label class="layui-form-label">* {{ trans('subsidiary.label.name') }}</label>
                         <div class="layui-input-inline">
-                            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入标题" class="layui-input" >
+                            <input type="text" name="name" lay-verify="required" autocomplete="off" placeholder="请输入{{ trans('subsidiary.label.name') }}" class="layui-input" >
                         </div>
                     </div>
                     <div class="layui-form-item">
-                        <label class="layui-form-label">图片</label>
-                        {!! $banner->files('image')
-                        ->url($banner->getUploadUrl('image'))
+                        <label class="layui-form-label">* {{ trans('app.image') }}</label>
+                        {!! $subsidiary->files('image')
+                        ->url($subsidiary->getUploadUrl('image'))
                         ->uploader()!!}
                     </div>
                     <div class="layui-form-item">
-                        <label class="layui-form-label">路径</label>
+                        <label class="layui-form-label">{{ trans('subsidiary.label.url') }}</label>
                         <div class="layui-input-inline">
-                            <input type="text" name="url" placeholder="请输入路径" autocomplete="off" class="layui-input">
+                            <input type="text" name="url" placeholder="请输入{{ trans('subsidiary.label.url') }}" autocomplete="off" class="layui-input">
                         </div>
                         <div class="layui-form-mid layui-word-aux">必须含https://或http://</div>
                     </div>

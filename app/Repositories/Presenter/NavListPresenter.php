@@ -15,7 +15,7 @@ class NavListPresenter extends FractalPresenter
 
     public function __construct(NavRepository $navRepository)
     {
-
+        parent::__construct();
         $this->navRepository = $navRepository;
 
     }

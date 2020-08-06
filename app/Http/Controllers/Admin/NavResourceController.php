@@ -7,6 +7,7 @@ use App\Repositories\Eloquent\NavCategoryRepository;
 use App\Repositories\Eloquent\NavRepository;
 use Illuminate\Http\Request;
 use App\Models\Nav;
+use Tree;
 
 /**
  * Resource controller class for page.
@@ -17,7 +18,7 @@ class NavResourceController extends BaseController
     /**
      * Initialize page resource controller.
      *
-     *  @param type NavRepository $nav
+     * @param type NavRepository $nav
      * @param type NavCategoryRepository $category_repository
      *
      */
@@ -28,8 +29,7 @@ class NavResourceController extends BaseController
         $this->repository = $nav;
         $this->category_repository = $category_repository;
         $this->repository
-            ->pushCriteria(\App\Repositories\Criteria\RequestCriteria::class)
-            ->pushCriteria(\App\Repositories\Criteria\PageResourceCriteria::class);
+            ->pushCriteria(\App\Repositories\Criteria\RequestCriteria::class);
     }
 
     /**
@@ -40,22 +40,18 @@ class NavResourceController extends BaseController
      */
     public function index(Request $request)
     {
-        $limit = $request->input('limit',config('app.limit'));
-        $data = $this->repository
-            ->setPresenter(\App\Repositories\Presenter\NavListPresenter::class)
-            ->getDataTable($limit);
 
         if ($this->response->typeIs('json')) {
+            $data = $this->repository->allNavs()->toArray();
+            $data = Tree::getSameLevelWithSignTree($data);
             return $this->response
                 ->success()
-                ->count($data['recordsTotal'])
-                ->data($data['data'])
+                ->data($data)
                 ->output();
         }
-        $pages = $this->repository->paginate();
+
         return $this->response->title(trans('nav.names'))
             ->view('nav.index', true)
-            ->data(compact('pages','data'))
             ->output();
     }
 
@@ -125,9 +121,10 @@ class NavResourceController extends BaseController
         } else {
             $view = 'nav.new';
         }
+        $top_navs = $this->repository->top(3);
         $categories = $this->category_repository->all(['id','name'])->toArray();
         return $this->response->title(trans('app.view') . ' ' . trans('nav.name'))
-            ->data(compact('nav','categories'))
+            ->data(compact('nav','categories','top_navs'))
             ->view($view)
             ->output();
     }

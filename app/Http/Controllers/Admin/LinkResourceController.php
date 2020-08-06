@@ -5,11 +5,11 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Admin\ResourceController as BaseController;
 use App\Models\Link;
 use Illuminate\Http\Request;
-use App\Repositories\Eloquent\LinkRepositoryInterface;
+use App\Repositories\Eloquent\LinkRepository;
 
 class LinkResourceController extends BaseController
 {
-    public function __construct(LinkRepositoryInterface $link)
+    public function __construct(LinkRepository $link)
     {
         parent::__construct();
         $this->repository = $link;

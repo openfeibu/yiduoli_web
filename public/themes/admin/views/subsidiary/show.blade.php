@@ -4,30 +4,30 @@
         {!! Theme::partial('message') !!}
         <div class="layui-col-md12">
             <div class="fb-main-table">
-                <form class="layui-form" action="{{guard_url('banner/'.$banner->id)}}" method="post" lay-filter="fb-form">
+                <form class="layui-form" action="{{guard_url('subsidiary/'.$subsidiary->id)}}" method="POST" lay-filter="fb-form">
                     <div class="layui-form-item">
-                        <label class="layui-form-label">标题</label>
+                        <label class="layui-form-label">* {{ trans('subsidiary.label.name') }}</label>
                         <div class="layui-input-inline">
-                            <input type="text" name="title" value="{{ $banner->title }}" lay-verify="title" autocomplete="off" placeholder="请输入标题" class="layui-input" >
+                            <input type="text" name="name" lay-verify="required" autocomplete="off" placeholder="请输入{{ trans('subsidiary.label.name') }}" class="layui-input" value="{{ $subsidiary->name }}">
                         </div>
                     </div>
                     <div class="layui-form-item">
-                        <label class="layui-form-label">图片</label>
-                        {!! $banner->files('image')
-                        ->url($banner->getUploadUrl('image'))
+                        <label class="layui-form-label">* {{ trans('app.image') }}</label>
+                        {!! $subsidiary->files('image')
+                        ->url($subsidiary->getUploadUrl('image'))
                         ->uploader()!!}
                     </div>
                     <div class="layui-form-item">
-                        <label class="layui-form-label">路径</label>
+                        <label class="layui-form-label">{{ trans('subsidiary.label.url') }}</label>
                         <div class="layui-input-inline">
-                            <input type="text" name="url" value="{{ $banner->url }}" placeholder="请输入路径" autocomplete="off" class="layui-input">
+                            <input type="text" name="url" placeholder="请输入{{ trans('subsidiary.label.url') }}" autocomplete="off" class="layui-input" value="{{ $subsidiary->url }}">
                         </div>
                         <div class="layui-form-mid layui-word-aux">必须含https://或http://</div>
                     </div>
                     <div class="layui-form-item">
                         <label class="layui-form-label">排序</label>
                         <div class="layui-input-inline">
-                            <input type="text" name="order" autocomplete="off" placeholder="" class="layui-input" value="{{$banner['order']}}" lay-verify="number">
+                            <input type="text" name="order" autocomplete="off" placeholder="" class="layui-input" value="0" lay-verify="number"  value="{{ $subsidiary->order }}">
                         </div>
                     </div>
                     <div class="layui-form-item button-group"><div class="layui-input-block"><button class="layui-btn layui-btn-normal layui-btn-lg" lay-submit="" lay-filter="demo1">{{ trans('app.submit_now') }}</button></div></div>

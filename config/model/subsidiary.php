@@ -23,7 +23,7 @@ return [
         'guarded'      => ['*'],
         'fillable'     => ['name', 'url', 'image', 'order'],
         'translate'    => ['name', 'url', 'image', 'order'],
-        'upload_folder' => '/page/subsidiary',
+        'upload_folder' => '/subsidiary',
         'encrypt'      => ['id'],
         'revision'     => ['name'],
         'perPage'      => '20',

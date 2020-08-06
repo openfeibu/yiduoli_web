@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Admin\ResourceController as BaseController;
 use App\Models\Banner;
-use App\Repositories\Eloquent\BannerRepositoryInterface;
+use App\Repositories\Eloquent\BannerRepository;
 use Illuminate\Http\Request;
 use Mockery\CountValidator\Exception;
 
@@ -16,10 +16,10 @@ class BannerResourceController extends BaseController
     /**
      * Initialize page resource controller.
      *
-     * @param type BannerRepositoryInterface $banner
+     * @param type BannerRepository $banner
      *
      */
-    public function __construct(BannerRepositoryInterface $banner)
+    public function __construct(BannerRepository $banner)
     {
         parent::__construct();
         $this->repository = $banner;

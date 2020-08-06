@@ -16,5 +16,11 @@ class SubsidiaryRepository extends BaseRepository implements SubsidiaryRepositor
     {
         return config('model.subsidiary.subsidiary.model');
     }
-
+    public function getAll()
+    {
+        return $this->model
+            ->orderBy('order','desc')
+            ->orderBy('id','asc')
+            ->get();
+    }
 }

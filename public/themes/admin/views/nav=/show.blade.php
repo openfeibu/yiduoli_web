@@ -6,6 +6,16 @@
             <div class="fb-main-table">
                 <form class="layui-form" action="{{guard_url('nav/nav/'.$nav->id)}}" method="post" lay-filter="fb-form">
                     <div class="layui-form-item">
+                        <label class="layui-form-label">{{ trans('nav_category.name') }}</label>
+                        <div class="layui-input-block">
+                            <?php $i=1;?>
+                            @foreach($categories as $key => $category)
+                                <input type="radio" name="category_id" value="{{$category['id']}}" title="{{$category['name']}}" @if($i==1) checked @endif>
+                                <?php $i++;?>
+                            @endforeach
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
                         <label class="layui-form-label">上级</label>
                         <div class="layui-input-inline">
                             <select name="parent_id" class="layui-select">
@@ -25,13 +35,13 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label">* {{ trans('nav.label.en_name') }}</label>
                         <div class="layui-input-inline">
-                            <input type="text" name="en_name" autocomplete="off" placeholder="请输入{{ trans('nav.label.en_name') }}" class="layui-input"  value="{{$nav->en_name}}">
+                            <input type="text" name="en_name" autocomplete="off" placeholder="请输入{{ trans('nav.label.en_name') }}" class="layui-input" >
                         </div>
                     </div>
                     <div class="layui-form-item">
                         <label class="layui-form-label">{{ trans('nav.label.slug') }}</label>
                         <div class="layui-input-inline">
-                            <input type="text" name="slug" autocomplete="off" placeholder="请输入{{ trans('nav.label.slug') }}" class="layui-input" value="{{$nav->slug}}">
+                            <input type="text" name="slug" autocomplete="off" placeholder="请输入{{ trans('nav.label.slug') }}" class="layui-input" >
                         </div>
                     </div>
                     <div class="layui-form-item">
