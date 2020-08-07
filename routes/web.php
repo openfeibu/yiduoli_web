@@ -175,7 +175,8 @@ Route::group([
     Route::resource('subsidiary', 'SubsidiaryResourceController');
     Route::post('/subsidiary/destroyAll', 'SubsidiaryResourceController@destroyAll')->name('subsidiary.destroy_all');
 
-
+    Route::resource('feedback', 'FeedbackResourceController');
+    Route::post('/feedback/destroyAll', 'FeedbackResourceController@destroyAll')->name('feedback.destroy_all');
 
 
 });

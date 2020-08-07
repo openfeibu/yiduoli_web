@@ -3,16 +3,16 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Admin\ResourceController as BaseController;
-use App\Models\Link;
+use App\Models\Feedback;
 use Illuminate\Http\Request;
-use App\Repositories\Eloquent\LinkRepository;
+use App\Repositories\Eloquent\FeedbackRepository;
 
-class LinkResourceController extends BaseController
+class FeedbackResourceController extends BaseController
 {
-    public function __construct(LinkRepository $link)
+    public function __construct(FeedbackRepository $feedback)
     {
         parent::__construct();
-        $this->repository = $link;
+        $this->repository = $feedback;
         $this->repository
             ->pushCriteria(\App\Repositories\Criteria\RequestCriteria::class);
     }
@@ -20,28 +20,26 @@ class LinkResourceController extends BaseController
     {
         $limit = $request->input('limit',config('app.limit'));
         if ($this->response->typeIs('json')) {
-            $data = $this->repository
-                ->setPresenter(\App\Repositories\Presenter\LinkListPresenter::class)
-                ->orderBy('order','asc')
-                ->orderBy('id','asc')
-                ->getDataTable($limit);
+            $feedbacks = $this->repository
+                ->orderBy('id','desc')
+                ->paginate($limit);
             return $this->response
                 ->success()
-                ->count($data['recordsTotal'])
-                ->data($data['data'])
+                ->count($feedbacks->total())
+                ->data($feedbacks->toArray()['data'])
                 ->output();
         }
-        return $this->response->title(trans('link.name'))
-            ->view('link.index')
+        return $this->response->title(trans('app.admin.panel'))
+            ->view('feedback.index')
             ->output();
     }
     public function create(Request $request)
     {
-        $link = $this->repository->newInstance([]);
+        $feedback = $this->repository->newInstance([]);
 
-        return $this->response->title(trans('link.name'))
-            ->view('link.create')
-            ->data(compact('link'))
+        return $this->response->title(trans('app.admin.panel'))
+            ->view('feedback.create')
+            ->data(compact('feedback'))
             ->output();
     }
     public function store(Request $request)
@@ -49,63 +47,63 @@ class LinkResourceController extends BaseController
         try {
             $attributes = $request->all();
 
-            $link = $this->repository->create($attributes);
+            $feedback = $this->repository->create($attributes);
 
-            return $this->response->message(trans('messages.success.created', ['Module' => trans('link.name')]))
+            return $this->response->message(trans('messages.success.created', ['Module' => trans('feedback.name')]))
                 ->code(0)
                 ->status('success')
-                ->url(guard_url('link/' . $link->id))
+                ->url(guard_url('feedback/' . $feedback->id))
                 ->redirect();
         } catch (Exception $e) {
             return $this->response->message($e->getMessage())
                 ->code(400)
                 ->status('error')
-                ->url(guard_url('link'))
+                ->url(guard_url('feedback'))
                 ->redirect();
         }
     }
-    public function show(Request $request,Link $link)
+    public function show(Request $request,Feedback $feedback)
     {
-        if ($link->exists) {
-            $view = 'link.show';
+        if ($feedback->exists) {
+            $view = 'feedback.show';
         } else {
-            $view = 'link.create';
+            $view = 'feedback.create';
         }
 
-        return $this->response->title(trans('app.view') . ' ' . trans('link.name'))
-            ->data(compact('link'))
+        return $this->response->title(trans('app.view') . ' ' . trans('feedback.name'))
+            ->data(compact('feedback'))
             ->view($view)
             ->output();
     }
-    public function update(Request $request,Link $link)
+    public function update(Request $request,Feedback $feedback)
     {
         try {
             $attributes = $request->all();
 
-            $link->update($attributes);
+            $feedback->update($attributes);
 
-            return $this->response->message(trans('messages.success.created', ['Module' => trans('link.name')]))
+            return $this->response->message(trans('messages.success.created', ['Module' => trans('feedback.name')]))
                 ->code(0)
                 ->status('success')
-                ->url(guard_url('link/' . $link->id))
+                ->url(guard_url('feedback/' . $feedback->id))
                 ->redirect();
         } catch (Exception $e) {
             return $this->response->message($e->getMessage())
                 ->code(400)
                 ->status('error')
-                ->url(guard_url('link/' . $link->id))
+                ->url(guard_url('feedback/' . $feedback->id))
                 ->redirect();
         }
     }
-    public function destroy(Request $request,Link $link)
+    public function destroy(Request $request,Feedback $feedback)
     {
         try {
-            $this->repository->forceDelete([$link->id]);
+            $this->repository->forceDelete([$feedback->id]);
 
-            return $this->response->message(trans('messages.success.deleted', ['Module' => trans('link.name')]))
+            return $this->response->message(trans('messages.success.deleted', ['Module' => trans('feedback.name')]))
                 ->status("success")
                 ->http_code(202)
-                ->url(guard_url('link'))
+                ->url(guard_url('feedback'))
                 ->redirect();
 
         } catch (Exception $e) {
@@ -113,7 +111,7 @@ class LinkResourceController extends BaseController
             return $this->response->message($e->getMessage())
                 ->status("error")
                 ->code(400)
-                ->url(guard_url('link'))
+                ->url(guard_url('feedback'))
                 ->redirect();
         }
     }
@@ -124,17 +122,17 @@ class LinkResourceController extends BaseController
             $ids = $data['ids'];
             $this->repository->forceDelete($ids);
 
-            return $this->response->message(trans('messages.success.deleted', ['Module' => trans('link.name')]))
+            return $this->response->message(trans('messages.success.deleted', ['Module' => trans('feedback.name')]))
                 ->status("success")
                 ->http_code(202)
-                ->url(guard_url('link'))
+                ->url(guard_url('feedback'))
                 ->redirect();
 
         } catch (Exception $e) {
             return $this->response->message($e->getMessage())
                 ->status("error")
                 ->code(400)
-                ->url(guard_url('link'))
+                ->url(guard_url('feedback'))
                 ->redirect();
         }
     }

@@ -12,7 +12,7 @@
                             <span class="layui-badge layui-bg-blue layuiadmin-badge">总</span>
                         </div>
                         <div class="layui-card-body layuiadmin-card-list">
-                            <p class="layuiadmin-big-font">212</p>
+                            <p class="layuiadmin-big-font">{{ $product_count }}</p>
 
                         </div>
                     </div>
@@ -25,7 +25,7 @@
                             <span class="layui-badge layui-bg-blue layuiadmin-badge">总</span>
                         </div>
                         <div class="layui-card-body layuiadmin-card-list">
-                            <p class="layuiadmin-big-font">12</p>
+                            <p class="layuiadmin-big-font">{{ $news_count }}</p>
 
                         </div>
                     </div>
@@ -39,7 +39,7 @@
                             <span class="layui-badge layui-bg-blue layuiadmin-badge">总</span>
                         </div>
                         <div class="layui-card-body layuiadmin-card-list">
-                            <p class="layuiadmin-big-font">1</p>
+                            <p class="layuiadmin-big-font">{{ $video_count }}</p>
 
                         </div>
                     </div>
@@ -52,7 +52,7 @@
                             <span class="layui-badge layui-bg-blue layuiadmin-badge">总</span>
                         </div>
                         <div class="layui-card-body layuiadmin-card-list">
-                            <p class="layuiadmin-big-font">12</p>
+                            <p class="layuiadmin-big-font">{{ $company_announcement_count }}</p>
 
                         </div>
                     </div>
@@ -97,43 +97,12 @@
 				<div class="message">
 					<div class="message-t">最新留言</div>
 					<div class="message-con">
-					 <div class="message-item fb-clearfix">
-						<div class="message-item-l layui-col-sm6 layui-col-md6">时间</div>
-						<div class="message-item-l layui-col-sm6 layui-col-md6"><a href="#">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</a></div>
-					 </div>
-					 <div class="message-item fb-clearfix">
-						<div class="message-item-l layui-col-sm6 layui-col-md6">时间</div>
-						<div class="message-item-l layui-col-sm6 layui-col-md6">内容</div>
-					 </div>
-					 <div class="message-item fb-clearfix">
-						<div class="message-item-l layui-col-sm6 layui-col-md6">时间</div>
-						<div class="message-item-l layui-col-sm6 layui-col-md6">内容</div>
-					 </div>
-					 <div class="message-item fb-clearfix">
-						<div class="message-item-l layui-col-sm6 layui-col-md6">时间</div>
-						<div class="message-item-l layui-col-sm6 layui-col-md6">内容</div>
-					 </div>
-					 <div class="message-item fb-clearfix">
-						<div class="message-item-l layui-col-sm6 layui-col-md6">时间</div>
-						<div class="message-item-l layui-col-sm6 layui-col-md6">内容</div>
-					 </div>
-					 <div class="message-item fb-clearfix">
-						<div class="message-item-l layui-col-sm6 layui-col-md6">时间</div>
-						<div class="message-item-l layui-col-sm6 layui-col-md6">内容</div>
-					 </div>
-					 <div class="message-item fb-clearfix">
-						<div class="message-item-l layui-col-sm6 layui-col-md6">时间</div>
-						<div class="message-item-l layui-col-sm6 layui-col-md6">内容</div>
-					 </div>
-					 <div class="message-item fb-clearfix">
-						<div class="message-item-l layui-col-sm6 layui-col-md6">时间</div>
-						<div class="message-item-l layui-col-sm6 layui-col-md6">内容</div>
-					 </div>
-					 <div class="message-item fb-clearfix">
-						<div class="message-item-l layui-col-sm6 layui-col-md6">时间</div>
-						<div class="message-item-l layui-col-sm6 layui-col-md6">内容</div>
-					 </div>
-				
+                        @foreach($feedbacks as $key => $feedback)
+                         <div class="message-item fb-clearfix">
+                            <div class="message-item-l layui-col-sm6 layui-col-md6">{{ $feedback->created_at }}</div>
+                            <div class="message-item-l layui-col-sm6 layui-col-md6">{{ $feedback->content }}</div>
+                         </div>
+                        @endforeach
 					 </div>
 				</div>
 				</div>

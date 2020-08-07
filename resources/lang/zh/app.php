@@ -124,4 +124,6 @@ return [
     'year' => '年',
     'month' => '月',
 
+    'phone' => '手机号码',
+    'email' => '邮箱',
 ];
