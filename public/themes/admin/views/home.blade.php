@@ -86,7 +86,7 @@
 
                     <div class="power-box-item layui-col-md6">
                         <a href="{{ guard_url('page/company_announcement') }}">
-                            {{ trans('company_announcement	.name') }}
+                            {{ trans('company_announcement.name') }}
                         </a>
                     </div>
                 </div>
