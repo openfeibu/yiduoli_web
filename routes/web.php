@@ -88,9 +88,21 @@ Route::group([
 
 
         /*公司公告*/
+        Route::get('/company_announcement', 'CompanyAnnouncementResourceController@show')->name('company_announcement.index');
+        Route::get('/company_announcement/show', 'CompanyAnnouncementResourceController@show')->name('company_announcement.show');
+        Route::post('/company_announcement/store', 'CompanyAnnouncementResourceController@store')->name('company_announcement.store');
+        Route::put('/company_announcement/update/{page}', 'CompanyAnnouncementResourceController@update')->name('company_announcement.update');
+
+        /*互动问答*/
+        Route::get('/interactive', 'InteractiveResourceController@show')->name('interactive.index');
+        Route::get('/interactive/show', 'InteractiveResourceController@show')->name('interactive.show');
+        Route::post('/interactive/store', 'InteractiveResourceController@store')->name('interactive.store');
+        Route::put('/interactive/update/{page}', 'InteractiveResourceController@update')->name('interactive.update');
+        /*公司公告*/
+        /*
         Route::resource('company_announcement', 'CompanyAnnouncementResourceController');
         Route::post('/company_announcement/destroyAll', 'CompanyAnnouncementResourceController@destroyAll')->name('company_announcement.destroy_all');
-
+*/
         /*服务理念*/
         Route::get('/service_concept', 'ServiceConceptResourceController@show')->name('service_concept.index');
         Route::get('/service_concept/show', 'ServiceConceptResourceController@show')->name('service_concept.show');

@@ -33,6 +33,27 @@ class InvestorRelationController extends BaseController
     public function company_announcement(Request $request)
     {
         $slug = 'company_announcement';
+        $page =  $this->page_repository->findBySlug($slug);
+
+        return $this->response->title($page['title'])
+            ->view('page.show')
+            ->data(compact('page'))
+            ->output();
+    }
+    public function interactive(Request $request)
+    {
+        $slug = 'interactive';
+        $page =  $this->page_repository->findBySlug($slug);
+
+        return $this->response->title($page['title'])
+            ->view('page.show')
+            ->data(compact('page'))
+            ->output();
+    }
+    /*
+    public function company_announcement(Request $request)
+    {
+        $slug = 'company_announcement';
         $category = $this->category_repository->where(['slug' => $slug])->first();
 
         $pages = $this->page_repository
@@ -46,4 +67,5 @@ class InvestorRelationController extends BaseController
             ->data(compact('pages'))
             ->output();
     }
+    */
 }

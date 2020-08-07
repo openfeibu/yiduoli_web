@@ -11,15 +11,15 @@ use App\Models\Page;
 /**
  * Resource controller class for page.
  */
-class CompanyAnnouncementResourceController extends BaseController
+class InteractiveResourceController extends BaseController
 {
     public function __construct(PageRepository $page)
     {
         parent::__construct($page);
-        $this->slug = 'company_announcement';
-        $this->category_id = 30;
-        $this->url = guard_url('page/company_announcement');
-        $this->title = trans('company_announcement.name');
+        $this->slug = 'interactive';
+        $this->category_id = 23;
+        $this->url = guard_url('page/interactive');
+        $this->title = trans('interactive.name');
         $this->view_folder = 'page.common';
     }
 }
