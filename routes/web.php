@@ -239,6 +239,7 @@ Route::group([
     })->name('investor_relations');
     Route::get('/investor_relations/company_information','InvestorRelationController@company_information')->name('company_information');
     Route::get('/investor_relations/company_announcement','InvestorRelationController@company_announcement')->name('company_announcement');
+    Route::get('/investor_relations/interactive','InvestorRelationController@interactive')->name('interactive');
 
     Route::get('/customer_service',function (){
         return redirect('/customer_service/company_information');
