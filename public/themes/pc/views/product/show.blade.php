@@ -24,10 +24,10 @@
                         <div class="btn-video transition page-news-video" vid = "{{ $product->vid }}" des="{{ $product->description }}">产品视频</div>
                         @endif
                         @if($product->instruction)
-                        <div class="btn-dz transition"><a href="{{ '/image/original'.$product->instruction }}" target="_black">电子说明书</a></div>
+                        <div class="btn-dz transition"><a href="{{ '/image/original'.$product->instruction }}" target="_blank">电子说明书</a></div>
                         @endif
                         @if($academic_reports)
-                        <div class="btn-bg transition"><a href="{{ route('pc.academic_report') }}?product_id={{ $product->id }}" target="_black">学术报告</a></div>
+                        <div class="btn-bg transition"><a href="{{ route('pc.academic_report') }}?product_id={{ $product->id }}" target="_blank">学术报告</a></div>
                         @endif
                     </div>
                 </div>

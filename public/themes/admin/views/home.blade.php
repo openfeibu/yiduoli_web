@@ -94,7 +94,7 @@
 			</div>
 				<div class="layui-col-sm6 layui-col-md6">
 				<div class="message">
-					<div class="message-t">最新留言</div>
+					<div class="message-t"><a href="{{ guard_url('feedback') }}">最新留言</a></div>
 					<div class="message-con">
                         @foreach($feedbacks as $key => $feedback)
                          <div class="message-item fb-clearfix">

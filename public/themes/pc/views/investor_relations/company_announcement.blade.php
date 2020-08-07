@@ -8,7 +8,7 @@
             <div class="company-announcement">
                 @foreach($pages as $key=> $page)
                 <div class="company-announcement-item clearfix">
-                    <a class="clearfix" target="_black" href="{{ '/image/original'.$page->file }}">
+                    <a class="clearfix" target="_blank" href="{{ '/image/original'.$page->file }}">
                         <p>{{ $page->title }}</p>
                         <span>[{{ $page->created_at->format('Y-m-d') }}]</span>
                     </a>
