@@ -10,7 +10,7 @@
         @foreach ($elements as $element)
             {{-- "Three Dots" Separator --}}
             @if (is_string($element))
-                <div class="page-item transition500 active"><a ajax_href="javascript:;">{{ $element }}</a></div>
+                <div class="page-item transition500"><a ajax_href="javascript:;">{{ $element }}</a></div>
             @endif
             {{-- Array Of Links --}}
             @if (is_array($element))
