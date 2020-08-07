@@ -23,12 +23,12 @@ return [
         'guarded'      => ['*'],
         'fillable'     => ['name', 'phone','email','content', 'ip'],
         'translate'    => [],
-        'upload_folder' => '/page/feedback',
+        'upload_folder' => '/feedback',
         'encrypt'      => ['id'],
         'revision'     => ['name'],
         'perPage'      => '20',
         'search'        => [
-            'title'  => 'like',
+            'name'  => 'like',
         ],
     ],
 

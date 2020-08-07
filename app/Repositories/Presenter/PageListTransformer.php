@@ -13,7 +13,7 @@ class PageListTransformer extends TransformerAbstract
             'slug'    => $page->slug,
             'url'     => $page->slug . '.html',
             'name'    => $page->name,
-            'image'   => $page->image ? url("/image/sm".$page->image) : '',
+            'image'   => $page->image ? url("/image/original".$page->image) : '',
             'image_url'   => $page->image_url ? $page->image_url  : '',
             'file'    => $page->file,
             'heading' => $page->heading,
