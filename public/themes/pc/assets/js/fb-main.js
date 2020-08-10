@@ -104,9 +104,20 @@ $(function(){
 })
  //显示加载
   function showLoading(){
-	  $(".fb-loading").fadeIn(200)
+	  $(".fb-loading").fadeIn(200);
   }
     //隐藏加载
   function hideLoading(){
-	  $(".fb-loading").fadeOut(200)
+	  $(".fb-loading").fadeOut(200);
   }
+  
+  
+  //fuwenben tiaozhuang
+  $(function(){
+	  $(".goWin").on("click",function(){
+	 	
+		  var src = $(this).attr("href");
+		  window.open(src);
+		  return false;
+	})  
+  })
