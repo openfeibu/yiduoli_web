@@ -1,4 +1,5 @@
 <div class="page-product-con clearfix wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".5s">
+    @if($products)
     @foreach($products as $key => $product)
         <div class="page-product-item clearfix col-lg-3 col-md-3 col-sm-6 col-xs-6">
             <a href="{{ route('pc.product.show',$product->id) }}">
@@ -13,9 +14,11 @@
             </a>
         </div>
     @endforeach
-	<div class="nodata">
-		 <div class="img "><img class="transition500" src="{{ '/themes/pc/assets/images/logo.png' }}" alt=" "></div>
-		 <div class="test">该分类没有产品，如有任何问题请联系我们</div>
-	</div>
+	@else
+        <div class="nodata">
+            <div class="img "><img class="transition500" src="{{ '/image/original'.setting('logo') }}" alt=" "></div>
+            <div class="test">该分类没有产品，如有任何问题请联系我们</div>
+        </div>
+    @endif
 </div>
 {!! $products->links('common.ajax_pagination') !!}

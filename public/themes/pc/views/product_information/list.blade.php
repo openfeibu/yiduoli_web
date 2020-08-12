@@ -1,5 +1,6 @@
 <div class="report-list clearfix wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".3s">
     <div class="container w1400">
+        @if($products)
         @foreach($products as $key => $product)
         <div class="report-item">
             <div class="report-item-type">{{ $product->title }}</div>
@@ -27,6 +28,12 @@
             </ul>
         </div>
         @endforeach
+        @else
+            <div class="nodata">
+                <div class="img "><img class="transition500" src="{{ '/image/original'.setting('logo') }}" alt=" "></div>
+                <div class="test">该分类没有产品，如有任何问题请联系我们</div>
+            </div>
+        @endif
     </div>
 </div>
 {!! $products->links('common.ajax_pagination') !!}
