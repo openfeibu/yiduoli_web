@@ -1,6 +1,6 @@
 <div class="report-list clearfix wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".3s">
     <div class="container w1400">
-        @if($products)
+        @if(count($products))
         @foreach($products as $key => $product)
         <div class="report-item">
             <div class="report-item-type">{{ $product->title }}</div>

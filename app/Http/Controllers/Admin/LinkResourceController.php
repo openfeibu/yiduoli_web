@@ -84,7 +84,7 @@ class LinkResourceController extends BaseController
 
             $link->update($attributes);
 
-            return $this->response->message(trans('messages.success.created', ['Module' => trans('link.name')]))
+            return $this->response->message(trans('messages.success.updated', ['Module' => trans('link.name')]))
                 ->code(0)
                 ->status('success')
                 ->url(guard_url('link/' . $link->id))

@@ -14,7 +14,7 @@
 		</div>
 		{!!Form::vertical_open()->id('login')->method('POST')->class('layui-form')->action(guard_url('login')) !!}
 
-		<input name="username" placeholder="邮箱"  type="text" lay-verify="required|username" class="layui-input" >
+		<input name="username" placeholder="{{ trans('admin_user.label.username') }}"  type="text" lay-verify="required|username" class="layui-input" >
 		<input name="password" placeholder="密码"  type="password" lay-verify="pass" class="layui-input">
 		<div class="login_btn-box">
 			<input value="登录" lay-submit lay-filter="login" style="width:100%;" type="submit" class="login_btn">

@@ -51,7 +51,7 @@ class SettingResourceController extends BaseController
             {
                 Setting::where('slug',$key)->update(['value' => $attribute]);
             }
-            return $this->response->message(trans('messages.success.created'))
+            return $this->response->message(trans('messages.success.updated'))
                 ->success()
                 ->url(guard_url('setting/company'))
                 ->redirect();
@@ -90,7 +90,7 @@ class SettingResourceController extends BaseController
             {
                 Setting::where('slug',$key)->update(['value' => $attribute]);
             }
-            return $this->response->message(trans('messages.success.created'))
+            return $this->response->message(trans('messages.success.updated'))
                 ->success()
                 ->url(guard_url('setting/station'))
                 ->redirect();
@@ -123,7 +123,7 @@ class SettingResourceController extends BaseController
             {
                 Setting::where('slug',$key)->update(['value' => $attribute]);
             }
-            return $this->response->message(trans('messages.success.created'))
+            return $this->response->message(trans('messages.success.updated'))
                 ->success()
                 ->url(guard_url('setting/publicityVideo'))
                 ->redirect();

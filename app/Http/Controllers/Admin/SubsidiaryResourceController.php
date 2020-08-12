@@ -82,7 +82,7 @@ class SubsidiaryResourceController extends BaseController
 
             $subsidiary->update($attributes);
 
-            return $this->response->message(trans('messages.success.created', ['Module' => trans('subsidiary.name')]))
+            return $this->response->message(trans('messages.success.updated', ['Module' => trans('subsidiary.name')]))
                 ->code(0)
                 ->status('success')
                 ->url(guard_url('subsidiary' ))

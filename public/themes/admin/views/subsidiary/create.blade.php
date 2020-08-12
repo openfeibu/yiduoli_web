@@ -24,6 +24,14 @@
                         </div>
                         <div class="layui-form-mid layui-word-aux">必须含https://或http://</div>
                     </div>
+                    <div class="layui-form-item layui-form-text">
+                        <label class="layui-form-label">{{ trans('app.content') }}</label>
+                        <div class="layui-input-block">
+                            <script type="text/plain" id="content" name="content" style="height:240px;">
+
+                            </script>
+                        </div>
+                    </div>
                     <div class="layui-form-item">
                         <label class="layui-form-label">排序</label>
                         <div class="layui-input-inline">
@@ -38,5 +46,16 @@
         </div>
     </div>
 </div>
+{!! Theme::asset()->container('ueditor')->scripts() !!}
+<script>
+    var ue = getUe();
+
+    layui.use(['form','jquery'], function(){
+        var form = layui.form;
+        var $ = layui.$;
+
+    });
+
+</script>
 
 

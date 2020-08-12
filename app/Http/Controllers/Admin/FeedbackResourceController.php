@@ -82,7 +82,7 @@ class FeedbackResourceController extends BaseController
 
             $feedback->update($attributes);
 
-            return $this->response->message(trans('messages.success.created', ['Module' => trans('feedback.name')]))
+            return $this->response->message(trans('messages.success.updated', ['Module' => trans('feedback.name')]))
                 ->code(0)
                 ->status('success')
                 ->url(guard_url('feedback/' . $feedback->id))
