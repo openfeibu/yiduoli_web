@@ -19,7 +19,7 @@
                 <div class="footer-info">
                     地址：{{ setting('address') }}   <br>
                     电子邮箱： {{ setting('email') }}<br>
-                    电话总机：（{{ setting('tel') }}  <br>
+                    电话总机：{{ setting('tel') }}  <br>
                     传真：{{ setting('fax') }}  <br>
                     营销服务中心：传真 {{ setting('marketing_center_fax') }}
                 </div>
@@ -33,7 +33,7 @@
         <div class="container w1400">
             <div class="footer-copy clearfix  wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".5s">
                 <div class="pull-left">{!! setting('right') !!} </div>
-                <div class="pull-right">技术支持：<a href="http://www.feibu.info">飞步科技</a></div>
+                <div class="pull-right">技术支持：<a target="_blank" href="http://www.feibu.info">飞步科技</a></div>
             </div>
         </div>
     </div>

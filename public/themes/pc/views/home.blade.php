@@ -78,8 +78,8 @@
                 <div class="product-item-box">
                     <a href="/product">
                         <div class="img" ><img class="transition500"  src="{!! theme_asset('images/p1.png') !!}" alt=""></div>
-                        <p class="transition500 fb-overflow-2">生物农牧</p>
-                        <span class="fb-overflow-3">根据畜禽饲料的原料结构，应用现代固体发酵，液体发酵等生物工程技术和先进的配方剂型技术</span>
+                        <p class="transition500 fb-overflow-2">生物医药</p>
+                       
                     </a>
                 </div>
             </div>
@@ -87,8 +87,8 @@
                 <div class="product-item-box">
                     <a href="/product">
                         <div class="img"><img  class="transition500" src="{!! theme_asset('images/p2.png') !!}" alt=""></div>
-                        <p class="transition500 fb-overflow-2">生物医药</p>
-                        <span class="fb-overflow-3">根据畜禽饲料的原料结构，应用现代固体发酵，液体发酵等生物工程技术和先进的配方剂型技术</span>
+                        <p class="transition500 fb-overflow-2">生物酶制剂</p>
+                      
                     </a>
                 </div>
             </div>
@@ -96,8 +96,8 @@
                 <div class="product-item-box">
                     <a href="/product">
                         <div class="img"><img  class="transition500" src="{!! theme_asset('images/p3.png') !!}" alt=""></div>
-                        <p class="transition500 fb-overflow-2">生物酶制剂（工业酶）</p>
-                        <span class="fb-overflow-3">根据畜禽饲料的原料结构，应用现代固体发酵，液体发酵等生物工程技术和先进的配方剂型技术</span>
+                        <p class="transition500 fb-overflow-2">功能性饲用产品</p>
+                       
                     </a>
                 </div>
             </div>
@@ -105,8 +105,8 @@
                 <div class="product-item-box">
                     <a href="/product">
                         <div class="img"><img  class="transition500" src="{!! theme_asset('images/p4.png') !!}" alt=""></div>
-                        <p class="transition500 fb-overflow-2">生物农牧</p>
-                        <span class="fb-overflow-3">根据畜禽饲料的原料结构，应用现代固体发酵，液体发酵等生物工程技术和先进的配方剂型技术</span>
+                        <p class="transition500 fb-overflow-2">动保用品</p>
+                    
                     </a>
                 </div>
             </div>
