@@ -13,7 +13,7 @@
 <div class="about">
     <div class="container w1400">
         <div class="about-left col-lg-6 col-md-6 col-sm-12 wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".3s">
-            <a href="#">
+            <a href="{{ setting('vr') }}">
                 <img class="transition" src="{!! theme_asset('images/vrBg.png') !!}" alt="" />
                 <div class="vr-text" >
                     <div class="img animated fb-bounceIn " style='animation-iteration-count: infinite;'><img src="{!! theme_asset('images/VR.png') !!}" alt=""></div>
