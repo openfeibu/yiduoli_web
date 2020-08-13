@@ -37,37 +37,7 @@
 <!-- 移动端导航 -->
 {!! Theme::partial('mobile_header') !!}
 
-<div class="fixed-nav">
-    <div class="fixed-nav-item">
-        <div class="fixed-nav-item-search">
-
-        </div>
-    </div>
-    <div class="fixed-nav-item">
-        <div class="fixed-nav-item-code">
-            <div class="code-img"><img src="{!! theme_asset('images/code.jpg') !!}" alt=""></div>
-        </div>
-    </div>
-    <div class="fixed-nav-item">
-        <div class="fixed-nav-item-contact">
-            <a href="客户服务-联系我们.html"></a>
-        </div>
-    </div>
-    <div class="fixed-nav-item scrollT">
-        <div class="fixed-nav-item-top">
-
-        </div>
-    </div>
-</div>
-<div class="fixed-search">
-    <div class="fixed-search-close"></div>
-    <div class="fixed-search-form">
-        <form action="#">
-            <div class="fixed-search-form-input"><input type="text" placeholder="请输入搜索的内容" name="name"></div>
-            <div class="fixed-search-form-submit"><button type="submit">搜索</button></div>
-        </form>
-    </div>
-</div>
+{!! Theme::partial('fixed_nav') !!}
 </body>
 
 
