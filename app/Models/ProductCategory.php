@@ -15,4 +15,5 @@ class ProductCategory extends BaseModel
 
     protected $config = 'model.product.product_category';
 
+    public $timestamps = false;
 }
