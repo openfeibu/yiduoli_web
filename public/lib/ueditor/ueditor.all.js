@@ -1849,7 +1849,7 @@ var dtd = dom.dtd = (function() {
         pre : X( G, C ),
         p : X(_({'a':1}),L),
         em :L,
-        dfn : L
+        dfn : L,
     });
 })();
 
@@ -3040,7 +3040,6 @@ var domUtils = dom.domUtils = {
                     arr.push(ci);
             }
         }
-
         return arr;
     },
     /**
@@ -7964,6 +7963,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
          * @see UE.Editor:addInputRule
          */
         filterInputRule: function (root) {
+            return; //修改
             for (var i = 0, ci; ci = this.inputRules[i++];) {
                 ci.call(this, root)
             }
@@ -8051,7 +8051,7 @@ UE.Editor.defaultOptions = function(editor){
         textarea: 'editorValue',
         focus: false,
         focusInEnd: true,
-        autoClearEmptyNode: true,
+        autoClearEmptyNode: false,
         fullscreen: false,
         readonly: false,
         zIndex: 999,
@@ -8432,6 +8432,7 @@ var filterWord = UE.filterWord = function () {
 
     //是否是word过来的内容
     function isWordDocument( str ) {
+        return false;
         return /(class="?Mso|style="[^"]*\bmso\-|w:WordDocument|<(v|o):|lang=)/ig.test( str );
     }
     //去掉小数
@@ -9965,6 +9966,7 @@ var LocalStorage = UE.LocalStorage = (function () {
 ///plugin 编辑器默认的过滤转换机制
 
 UE.plugins['defaultfilter'] = function () {
+    return ; //修改
     var me = this;
     me.setOpt({
         'allowDivTransToP':false,
@@ -25196,7 +25198,6 @@ UE.ui = baidu.editor.ui = {};
         render:function (holder) {
             var html = this.renderHtml();
             var el = uiUtils.createElementByHtml(html);
-
             //by xuheng 给每个node添加class
             var list = domUtils.getElementsByTagName(el, "*");
             var theme = "edui-" + (this.theme || this.editor.options.theme);
