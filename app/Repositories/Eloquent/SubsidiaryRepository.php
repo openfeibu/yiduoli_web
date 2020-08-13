@@ -79,4 +79,9 @@ class SubsidiaryRepository extends BaseRepository implements SubsidiaryRepositor
         }
         return $sub_ids;
     }
+    public function getSubsidiary($parent_id=0)
+    {
+        return $this->where('parent_id',$parent_id)->orderBy('order','desc')->orderBy('id','asc')->get();
+    }
+
 }
