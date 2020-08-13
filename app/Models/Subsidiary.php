@@ -15,4 +15,10 @@ class Subsidiary extends BaseModel
 
     protected $config = 'model.subsidiary.subsidiary';
 
+    protected $appends = ['parent_name'];
+
+    public function getParentNameAttribute()
+    {
+        return $this->attributes ? Subsidiary::where('id',$this->attributes['parent_id'])->value('name') : '';
+    }
 }

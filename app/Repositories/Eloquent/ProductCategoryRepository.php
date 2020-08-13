@@ -86,7 +86,6 @@ class ProductCategoryRepository extends BaseRepository implements ProductCategor
                 'id' => $category->id,
                 'parent_id' => $category->parent_id,
                 'order' => $category->order,
-                'attribute_id' => $category->attribute_id,
                 'spread' => false
             ];
             $data[$key]['children'] = $this->getCategoriesSelectTree($category->id);

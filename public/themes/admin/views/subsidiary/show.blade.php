@@ -5,6 +5,12 @@
         <div class="layui-col-md12">
             <div class="fb-main-table">
                 <form class="layui-form" action="{{guard_url('subsidiary/'.$subsidiary->id)}}" method="POST" lay-filter="fb-form">
+                    <div class="layui-form-item fb-form-item2">
+                        <label class="layui-form-label">上级 *</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="parent_id" id="subsidiary_tree" lay-verify="tree" autocomplete="off" placeholder="请选择分类(加载中)" class="layui-input" value="{{ $subsidiary->parent_id }}">
+                        </div>
+                    </div>
                     <div class="layui-form-item">
                         <label class="layui-form-label">* {{ trans('subsidiary.label.name') }}</label>
                         <div class="layui-input-inline">
@@ -58,3 +64,37 @@
 
 </script>
 
+<script>
+    var sizes = {};
+    layui.use(['treeSelect', 'form', 'layer'], function () {
+        var treeSelect= layui.treeSelect,
+                form = layui.form,
+                $ = layui.jquery,
+                layer = layui.layer;
+
+        treeSelect.render({
+            elem: '#subsidiary_tree',
+            data: '/subsidiary_tree',
+            headers: {},
+            type: 'get',
+            // 占位符
+            placeholder: "{!! $subsidiary->parent_name !!}",
+            //多选
+            showCheckbox: false,
+            //连线
+            showLine: true,
+            //选中节点(依赖于 showCheckbox 以及 key 参数)。
+            //checked: [11, 12],
+            //展开节点(依赖于 key 参数)
+            spread: [{{ $subsidiary->parent_id }}],
+            // 点击回调
+            click: function(obj){
+
+            },
+            // 加载完成后的回调函数
+            success: function (d) {
+                console.log(d);
+            }
+        });
+    });
+</script>

@@ -5,6 +5,19 @@
         <div class="layui-col-md12">
             <div class="fb-main-table">
                 <form class="layui-form" action="{{guard_url('subsidiary')}}" method="POST" lay-filter="fb-form">
+                    <div class="layui-form-item fb-form-item2">
+                        <label class="layui-form-label">* 上级</label>
+
+                        <div class="layui-input-block">
+                            <select name="parent_id" id="parent_id" lay-filter="parent_id">
+                                <option value="0">顶级</option>
+                                @foreach($subsidiaries as $key => $subsidiary_item)
+                                    <option value="{{ $subsidiary_item['id'] }}">{!! $subsidiary_item['name'] !!}</option>
+                                @endforeach
+                            </select>
+                        </div>
+
+                    </div>
                     <div class="layui-form-item">
                         <label class="layui-form-label">* {{ trans('subsidiary.label.name') }}</label>
                         <div class="layui-input-inline">
@@ -53,9 +66,11 @@
     layui.use(['form','jquery'], function(){
         var form = layui.form;
         var $ = layui.$;
-
+        $(document).ready(function(){
+            $("#parent_id").val("{{ $parent_id }}");
+            form.render('select','parent_id');
+        })
     });
 
 </script>
-
 
