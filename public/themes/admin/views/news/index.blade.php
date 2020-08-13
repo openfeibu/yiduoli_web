@@ -29,7 +29,7 @@
     <input type="checkbox" name="hot_recommend" value="@{{d.id}}" lay-skin="switch" lay-text="是|否" lay-filter="hot_recommend" @{{ d.hot_recommend ? 'checked' : '' }}>
 </script>
 <script type="text/html" id="barDemo">
-    <a class="layui-btn layui-btn-sm" lay-event="edit">{{ trans('app.edit') }}</a>
+    <a class="layui-btn layui-btn-sm" href="{{ guard_url('news') }}/@{{ d.id }}">{{ trans('app.edit') }}</a>
     <a class="layui-btn layui-btn-danger layui-btn-sm" lay-event="del">{{ trans('app.delete') }}</a>
 </script>
 <script type="text/html" id="imageTEM">
