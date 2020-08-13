@@ -128,7 +128,7 @@ class NavListPresenter extends FractalPresenter
 
                 $html .= '<li class="'.$class.'">';
                 $href = ($nav->slug == '#') || (!Route::has($nav->slug)) ? 'javascript:;' : $nav->url;
-                $html .= sprintf('<a href="%s">%s %s</a><span class="caret "></span>', $href, $nav->icon_html, $nav->name);
+                $html .= sprintf('<a href="%s">%s %s</a>', $href, $nav->icon_html, $nav->name);
 
                 if(!isset($nav->sub)) {
                     $html .= '</li>';
@@ -148,7 +148,7 @@ class NavListPresenter extends FractalPresenter
                     }
                     if($i == 0)
                     {
-                        $html .= '<dl>';
+                        $html .= '<span class="caret "></span><dl>';
                     }
                     $href = ($sub->slug == '#') || ($sub->slug == '')? 'javascript:;' : $sub->url;
                     $icon = $sub->icon_html ? $sub->icon_html : '';
