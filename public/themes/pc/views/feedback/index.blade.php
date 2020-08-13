@@ -68,7 +68,7 @@
                 {
                     alert(data.message);
                 }else{
-                    alert("{{ trans('app.success.action') }}");
+                    alert("{{ trans('message.submit.success') }}");
                 }
             },
             error : function (jqXHR, textStatus, errorThrown) {
