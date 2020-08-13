@@ -23,6 +23,7 @@
 
 <script>
     var url = "{{ route('pc.academic_report') }}"
+    var category_id;
 </script>
 
 @include('common.product_ajax')
@@ -35,12 +36,14 @@
             {
                 return ;
             }
+            showLoading();
             $.ajax({
                 url : ajax_href,
                 data : {'product_category_id' : category_id,'_token':"{!! csrf_token() !!}"},
                 type : 'get',
                 dataType : "json",
                 success : function (data) {
+                    hideLoading();
                     var html = data.data.content;
                     console.log(html);
                     if(html)

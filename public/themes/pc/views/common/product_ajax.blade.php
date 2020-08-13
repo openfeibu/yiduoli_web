@@ -2,7 +2,7 @@
     $(function() {
         //商品筛选
         var page = 1;
-        var category_id = {{ $product_category_id  }};
+        category_id = {{ $product_category_id  }};
 
         var  tab_num_arr = {'1':'one','2':'two' ,'3':'three','4':'four','5':'five'};
         $("body").on("click",".screen .category-tab li", function () {

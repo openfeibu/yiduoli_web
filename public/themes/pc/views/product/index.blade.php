@@ -30,9 +30,11 @@
 </div>
 <script>
     var url = "{{ route('pc.product.index') }}"
+    var category_id;
 </script>
 
 @include('common.product_ajax')
+
 <script>
 
     $(function() {
@@ -43,12 +45,14 @@
             {
                 return ;
             }
+            showLoading();
             $.ajax({
                 url : ajax_href,
                 data : {'product_category_id' : category_id,'_token':"{!! csrf_token() !!}"},
                 type : 'get',
                 dataType : "json",
                 success : function (data) {
+                    hideLoading();
                     var html = data.data.content;
                     console.log(html);
                     if(html)
