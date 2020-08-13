@@ -1243,3 +1243,8 @@ header.active .headerRight{margin-top:5px}
 .nodata .test{text-align:center;font-size:14px;color:#999;padding:20px 0}
 .autoWidth{width:auto !important; margin:0 auto;display:block}
 .news-detail-c iframe{max-width:100%}
+
+.alertBox{position:fixed;z-index:9999;background:rgba(0,79,225,0.1);width:100%;height:100%;top:0;left:0}
+.alertBox-b{position:relative;width:90%;max-width:400px;background:#fff;border-radius:5px;overflow:hidden;margin:0 auto;top:40%;}
+.alertBox-b .msg{padding:40px 0;line-height:42px;font-size:14px;color:#000;text-align:center;}
+.alertBox-b .alertClose{width:100%;height:60px;background:#00e0e0;color:#333;font-size:14px;text-align:center;line-height:60px;cursor:pointer;}

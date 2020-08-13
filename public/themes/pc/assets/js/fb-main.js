@@ -112,12 +112,8 @@ $(function(){
   }
   
   
-  //fuwenben tiaozhuang
-  $(function(){
-	  $(".goWin").on("click",function(){
-	 	
-		  var src = $(this).attr("href");
-		  window.open(src);
-		  return false;
-	})  
-  })
+   function fbAlert(msg){
+	   var html = '<div class="alertBox"><div class="alertBox-b"><div class="msg">'+msg+'</div><div class="alertClose" onclick="$(\'.alertBox\').remove()">关闭</div></div></div>';
+	   $("body").append(html);
+   }
+   

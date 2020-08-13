@@ -34,6 +34,7 @@
 </div>
 <script>
 
+	
     function postFeedback(){
         var name = $(".feedback-name").val();
         var phone = $(".feedback-phone").val();
@@ -66,9 +67,9 @@
             success : function (data) {
                 if(data.code != 0)
                 {
-                    alert(data.message);
+                    	fbAlert(data.message);
                 }else{
-                    alert("{{ trans('messages.submit.success') }}");
+                    	fbAlert("{{ trans('message.submit.success') }}");
                 }
             },
             error : function (jqXHR, textStatus, errorThrown) {
