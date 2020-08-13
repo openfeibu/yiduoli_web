@@ -14,12 +14,12 @@
                 <div class="news-page">
                     @if($previous)
                     <div class="news-prev col-lg-6 col-md-6 col-sm-12 col-xs-12 nopadding">
-                        <a href="{{ route('pc.news.show',$previous->id) }}">上一篇：{{ get_substr($previous->title,50) }}</a>
+                        <a href="{{ route('pc.news.show',$previous->id) }}">上一篇：{{ get_substr($previous->title,45) }}</a>
                     </div>
                     @endif
                     @if($next)
                     <div class="news-next col-lg-6 col-md-6 col-sm-12 col-xs-12 nopadding">
-                        <a href="{{ route('pc.news.show',$next->id) }}">下一篇：{{ get_substr($next->title,50) }}</a>
+                        <a href="{{ route('pc.news.show',$next->id) }}">下一篇：{{ get_substr($next->title,45) }}</a>
                     </div>
                     @endif
                 </div>
