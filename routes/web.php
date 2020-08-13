@@ -266,6 +266,8 @@ Route::group([
     Route::get('/product/{product}','ProductController@show')->name('product.show');
 
     Route::get('/scientific/academic_report','AcademicReportController@index')->name('academic_report');
+    Route::get('/subsidiary','SubsidiaryController@index')->name('subsidiary.index');
+    Route::get('/subsidiary/{subsidiary}','SubsidiaryController@show')->name('subsidiary.show');
     /*
 
     Auth::routes();
