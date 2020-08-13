@@ -9986,6 +9986,7 @@ UE.plugins['defaultfilter'] = function () {
         }
         //进行默认的处理
         root.traversal(function (node) {
+
             if (node.type == 'element') {
                 if (!dtd.$cdata[node.tagName] && me.options.autoClearEmptyNode && dtd.$inline[node.tagName] && !dtd.$empty[node.tagName] && (!node.attrs || utils.isEmptyObject(node.attrs))) {
                     if (!node.firstChild()) node.parentNode.removeChild(node);
@@ -9995,6 +9996,7 @@ UE.plugins['defaultfilter'] = function () {
                     }
                     return;
                 }
+
                 switch (node.tagName) {
                     case 'style':
                     case 'script':
@@ -10047,6 +10049,7 @@ UE.plugins['defaultfilter'] = function () {
 //                            node.setAttr('style', cssStyle)
 //
 //                        }
+                        /*
                         //p标签不允许嵌套
                         utils.each(node.children,function(n){
                             if(n.type == 'element' && n.tagName == 'p'){
@@ -10062,6 +10065,7 @@ UE.plugins['defaultfilter'] = function () {
                                 return false;
                             }
                         });
+                        */
                         if (!node.firstChild()) {
                             node.innerHTML(browser.ie ? '&nbsp;' : '<br/>')
                         }

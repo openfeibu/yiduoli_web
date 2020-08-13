@@ -29,7 +29,7 @@ return [
         'guarded'      => ['*'],
         'slugs'        => [],
         'dates'        => ['deleted_at'],
-        'fillable'     => ['meta_title', 'meta_keyword','meta_description','title', 'category_id','slug', 'order', 'view', 'compile', 'status','upload_folder','file', 'image','images','description','content','recommend_type','home_recommend','hot_recommend'],
+        'fillable'     => ['meta_title', 'meta_keyword','meta_description','title', 'category_id','slug', 'order', 'view', 'compile', 'status','upload_folder','file', 'image','images','description',/*'content',*/ 'recommend_type','home_recommend','hot_recommend'],
         'translate'    => [],
         'upload_folder' => '/page',
         'uploads'      => [
