@@ -180,7 +180,7 @@
 <div class="branch">
     <div class="container w1400">
         <div class="con-title tip-title wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".3s">
-            <span  class="transition500">BTRANCH</span>
+            <span  class="transition500">BRANCH</span>
             <h1>溢多利旗下公司</h1>
         </div>
         <div class="branch-con">

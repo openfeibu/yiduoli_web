@@ -23,6 +23,7 @@
                             <textarea name="description" placeholder="请输入{{ trans('app.description') }}" class="layui-textarea layui-block-textarea">{{$page->description}}</textarea>
                         </div>
                     </div>
+					
                     <div class="layui-form-item layui-form-text">
                         <label class="layui-form-label">{{ trans('app.content') }}</label>
                         <div class="layui-input-block">
