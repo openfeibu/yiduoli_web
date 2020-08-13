@@ -52,6 +52,6 @@ class Page extends BaseModel
             }
             return  $this->attributes['image'];
         }
-        return '';
+        return url("image/original").setting('default_image');
     }
 }

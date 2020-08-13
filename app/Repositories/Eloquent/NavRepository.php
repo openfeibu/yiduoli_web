@@ -30,7 +30,7 @@ class NavRepository extends BaseRepository implements NavRepositoryInterface
     }
     public function top($category_id)
     {
-        return $this->where(['parent_id' => 0,'category_id' =>$category_id])->orderBy('order','asc')->orderBy('id','asc')->get();
+        return $this->where(['parent_id' => 0,'category_id' =>$category_id,'is_menu' => 1])->orderBy('order','asc')->orderBy('id','asc')->get();
     }
 
     public function topParent($id)
