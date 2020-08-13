@@ -4,7 +4,7 @@
             <div class="logo pull-left fadeInUp animated transition500">
                 <a href="{{ route('pc.home') }}">
                     <h1 hidden="">{{ setting('station_name') }}</h1>
-                    <img class="logo1" src="{!! theme_asset('images/foter-logo.png') !!}" alt="{{ setting('station_name') }}" class="block">
+                    <img class="logo1" src="{{ '/image/original'.setting('logo') }}" alt="{{ setting('station_name') }}" class="block">
                     <img class="logo2" src="{{ '/image/original'.setting('logo') }}" alt="{{ setting('station_name') }}" class="block">
                 </a>
             </div>
