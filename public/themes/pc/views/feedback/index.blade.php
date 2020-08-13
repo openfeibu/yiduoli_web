@@ -69,7 +69,7 @@
                 {
                     	fbAlert(data.message);
                 }else{
-                    	fbAlert("{{ trans('message.submit.success') }}");
+                    	fbAlert("{{ trans('messages.submit.success') }}");
                 }
             },
             error : function (jqXHR, textStatus, errorThrown) {
