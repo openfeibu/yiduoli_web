@@ -184,7 +184,7 @@
             <h1>溢多利旗下公司</h1>
         </div>
         <div class="branch-con">
-            @foreach(app('subsidiary_repository')->getSubsidiary(0) as $key => $subsidiary)
+            @foreach(app('subsidiary_repository')->where('parent_id',$parent_id)->orderBy('order','desc')->orderBy('id','asc')->limit(8)->get() as $key => $subsidiary)
             <div class="branch-item col-lg-3 col-md-3 col-sm-6 col-xs-6 wow bounceIn animated" data-wow-duration=".6s" data-wow-delay=".4s">
                 <a href="{{ route('pc.subsidiary.show',['id' => $subsidiary->id]) }}">
                     <div class="img"><img class="transition500" src="{{ url('image/original'.$subsidiary->image) }}" alt="{{ $subsidiary->name }}"></div>
