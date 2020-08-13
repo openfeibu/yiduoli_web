@@ -69,6 +69,7 @@
                     });
 
                 } else if(type === 'del'){ //删除节点
+                    var res = true;
                     layer.confirm('将删除该分类（包括子分类）及该分类下（包括子分类下）的产品，确定删除？', function(index){
                         layer.close(index);
                         var load = layer.load();
@@ -76,6 +77,7 @@
                             url : "{{ guard_url('product_category') }}"+'/'+data.id,
                             data : ajax_data,
                             type : 'delete',
+                            async:false,
                             success : function (data) {
                                 layer.close(load);
                                 if(data.code == 0)
@@ -83,16 +85,17 @@
 
                                 }else{
                                     layer.msg(data.message);
-                                    return false;
+                                    res = false;
                                 }
                             },
                             error : function (jqXHR, textStatus, errorThrown) {
+                                res = false;
                                 layer.close(load);
                                 $.ajax_error(jqXHR, textStatus, errorThrown);
                             }
                         });
                     })
-                    return false;
+                    return res;
                 };
             }
         });

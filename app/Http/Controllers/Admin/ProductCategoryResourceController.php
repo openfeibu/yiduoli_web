@@ -126,13 +126,8 @@ class ProductCategoryResourceController extends BaseController
     public function destroy(Request $request,ProductCategory $product_category)
     {
         try {
-            $goods_ids = Goods::whereRaw("FIND_IN_SET('".$product_category->id."',`category_ids`)")->pluck('id')->toArray();
             $sub_ids = $this->repository->getSubIds($product_category->id);
 
-            if($goods_ids)
-            {
-                $this->goodsRepository->forceDelete($goods_ids);
-            }
             if($sub_ids)
             {
                 $this->repository->forceDelete($sub_ids);
