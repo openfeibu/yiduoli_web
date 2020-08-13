@@ -2,7 +2,7 @@
     <div class="nav-box transition500">
         <div class="wap-header">
             <span class="wapNav-close icon_close"></span>
-            <img src="{{ '/image/original'.setting('logo') }}" alt="Logo" class="wow rubberBand animated" data-wow-delay="0.5s" />
+            <img src="{{ '/image/original'.setting('logo') }}" alt="Logo" class="wow fadeInUp animated"  />
         </div>
 
         <ul>

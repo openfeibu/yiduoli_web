@@ -187,7 +187,8 @@
             @foreach(app('subsidiary_repository')->getSubsidiary(0) as $key => $subsidiary)
             <div class="branch-item col-lg-3 col-md-3 col-sm-6 col-xs-6 wow bounceIn animated" data-wow-duration=".6s" data-wow-delay=".4s">
                 <a href="{{ route('pc.subsidiary.show',['id' => $subsidiary->id]) }}">
-                    <div class="img"><img class="transition500" src="{{ url('image/original'.$subsidiary->image) }}" alt="{{ $subsidiary->name }}">{{ $subsidiary->name }}</div>
+                    <div class="img"><img class="transition500" src="{{ url('image/original'.$subsidiary->image) }}" alt="{{ $subsidiary->name }}"></div>
+					<p class="transition500">{{ $subsidiary->name }}</p>
                 </a>
             </div>
             @endforeach

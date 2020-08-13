@@ -15,7 +15,7 @@
 
             <div class="news-detail-content pull-right nopadding">
                 <div class="news-detail-article">
-                    {!! $subsidiary->name !!}
+                    <div class="subsidiary-title">{!! $subsidiary->name !!}</div>
                     {!! $subsidiary->content !!}
                 </div>
                 <ul>

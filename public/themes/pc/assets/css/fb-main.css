@@ -108,7 +108,7 @@ header .nav ul li dl dd a{color: #333;}
 header .nav ul li dl dd a:hover{color: #4083ff !important;}
 
 header.active{height: 60px;}
-header.active .logo{padding-top:5px;width: 100px;}
+header.active .logo{padding-top:5px;width: 110px;}
 header.active .headerRight{margin-top:5px}
 
 #allmap{margin-top:100px;height:300px;border-radius:10px;box-shadow:0 5px 10px #eee;border:1px solid #eee}
@@ -214,11 +214,14 @@ header.active .headerRight{margin-top:5px}
 
 /* 子公司 */
 .branch-con{padding: 90px 0;}
-.branch-con .branch-item {}
-.branch-con .branch-item a{display: block;height: 60px;;}
+.branch-con .branch-item {margin:30px 0}
+.branch-con .branch-item a{display: block;height: auto;;}
 .branch-con .branch-item img{display: block;height: 60px;margin:0 auto;}
-
+.branch-con .branch-item p{text-align:center;font-size:16px;line-height:32px;padding-top:10px;}
+.branch-con .branch-item:hover p{color:#4083ff;}
+.subsidiary-title{font-size:32px;text-align:center;margin:30px 0;}
 /* 新闻中心 */
+
 .new{background: rgba(240, 240, 242, 0.45);padding:60px 0 ;margin-bottom: 0;}
 .new-con{padding: 88px  0;}
 .new-right{padding: 0;}
@@ -493,7 +496,7 @@ header.active .headerRight{margin-top:5px}
 /* 企业概况 */
 .news-detail-tab{min-height:950px;padding:20px;background: #fff url(../images/tabBg.png) no-repeat center / cover;width: 20%;}
 .news-detail-tab ul{}
-.news-detail-tab ul li{width:100%;height:54px;line-height:54px;background: #FFFFFF;border-radius: 5px;text-align: center;margin:24px 0;box-shadow: 0 5px 20px #eee;}
+.news-detail-tab ul li{width:100%;height:auto;line-height:30px;background: #FFFFFF;border-radius: 5px;text-align: center;margin:24px 0;box-shadow: 0 5px 20px #eee;padding:8px 0;}
 .news-detail-tab ul li a{color:#5E5E5E;font-size:16px;display: block;}
 .news-detail-tab ul li:hover{background:#4083ff}
 .news-detail-tab ul li:hover a{color:#fff}
@@ -740,9 +743,14 @@ header.active .headerRight{margin-top:5px}
     .innovate-con .innovate-item .name{color: #d9d9d9;font-size: 0.24rem;margin-top: 0.1rem;}
     .branch-con{padding: 0.6rem 0;}
     .branch-con .branch-item {margin: 0.3rem 0;}
-    .branch-con .branch-item a{display: block;height: 0.6rem;;}
+    .branch-con .branch-item a{display: block;}
     .branch-con .branch-item img{display: block;height: 0.6rem;margin:0 auto;}
     
+	
+.branch-con .branch-item p{text-align:center;font-size:0.2rem;line-height:0.36rem;padding-top:0.1rem;}
+
+.subsidiary-title{font-size:32px;text-align:center;margin:30px 0;}
+	
     .new{padding:0.6rem 0 ;}
     .new-con{padding: 0.88rem  0;}
     .new-left{padding:0 0.1rem;margin-bottom: 0.2rem;}
@@ -788,7 +796,8 @@ header.active .headerRight{margin-top:5px}
     .footer-con-left:after{display: none;}
     .headerRight{display: none;}
     header{height: 0.88rem !important;}
-    header .logo{width: 1.2rem !important;padding-top: 0.1rem;}
+    header .logo{width: 1.5rem !important;padding-top: 0.15rem;}
+	header.active .logo{padding-top: 0.15rem;}
     .menu{display: block;width: 0.6rem;height: 0.6rem;background: url(../images/caidan.png) no-repeat center/ 100% 100%;position: absolute;right:0.3rem;top: 0.14rem;}
     .swiper-pagination-bullet{
         width: 0.16rem !important;
