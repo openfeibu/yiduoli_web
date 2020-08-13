@@ -3,6 +3,7 @@
 <div class="main">
     <div class="container w1400">
         {!! Theme::widget('WebBreadcrumb')->render() !!}
+        {!! Theme::widget('NavTabShow')->render() !!}
         <div class="article-detail clearfix  wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".5s">
             <div class="news-detail-tab pull-left ">
                 <ul>
@@ -14,6 +15,7 @@
 
             <div class="news-detail-content pull-right nopadding">
                 <div class="news-detail-article">
+                    {!! $subsidiary->name !!}
                     {!! $subsidiary->content !!}
                 </div>
                 <ul>
