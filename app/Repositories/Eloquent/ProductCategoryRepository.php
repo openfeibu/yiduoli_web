@@ -30,7 +30,7 @@ class ProductCategoryRepository extends BaseRepository implements ProductCategor
     }
     public function getAllCategories()
     {
-        $categories = $this->orderBy('order','asc')->orderBy('id','asc')->get()->toArray();
+        $categories = $this->orderBy('order','desc')->orderBy('id','asc')->get()->toArray();
         return $categories;
     }
     public function getCategoriesCache($parent_id=0)
@@ -44,12 +44,12 @@ class ProductCategoryRepository extends BaseRepository implements ProductCategor
     }
     public function getListCategories($parent_id)
     {
-        return $this->where('parent_id',$parent_id)->orderBy('order','asc')->orderBy('id','asc')->get();
+        return $this->where('parent_id',$parent_id)->orderBy('order','desc')->orderBy('id','asc')->get();
     }
     public function getCategories($parent_id=0)
     {
         $data = [];
-        $categories = $this->where('parent_id',$parent_id)->orderBy('order','asc')->orderBy('id','asc')->get();
+        $categories = $this->where('parent_id',$parent_id)->orderBy('order','desc')->orderBy('id','asc')->get();
         foreach ($categories as $key => $category)
         {
             $data[$key] = [
@@ -77,7 +77,7 @@ class ProductCategoryRepository extends BaseRepository implements ProductCategor
     {
 
         $data = [];
-        $categories = $this->where('parent_id',$parent_id)->orderBy('order','asc')->orderBy('id','asc')->get();
+        $categories = $this->where('parent_id',$parent_id)->orderBy('order','desc')->orderBy('id','asc')->get();
         foreach ($categories as $key => $category)
         {
             $data[$key] = [

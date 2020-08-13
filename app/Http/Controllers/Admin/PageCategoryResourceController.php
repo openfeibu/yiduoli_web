@@ -32,7 +32,7 @@ class PageCategoryResourceController extends BaseController
     {
         $categories = $this->repository
             ->orderBy('parent_id','asc')
-            ->orderBy('order','asc')
+            ->orderBy('order','desc')
             ->get()
             ->toArray();
         $categories = Tree::getTree($categories);

@@ -48,6 +48,12 @@
                     </div>
                     -->
                     <div class="layui-form-item">
+                        <label class="layui-form-label">排序</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="order" autocomplete="off" placeholder="" class="layui-input" value="0" lay-verify="number"  value="0">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
                         <div class="layui-input-block">
                             <button class="layui-btn layui-btn-submit" lay-submit="" lay-filter="demo1">{{ trans('app.submit_now') }}</button>
                         </div>
