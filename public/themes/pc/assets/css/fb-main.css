@@ -386,7 +386,7 @@ header.active .headerRight{margin-top:5px}
 .page-news-video-small .img{width: 100%;overflow: hidden;}
 .page-news-video-small .img img{width: 100%;}
 .page-news-video-small .test{padding: 18px;}
-.page-news-video-small .test .title{color: #3C3C3C;font-size: 18px;line-height: 28px;}
+.page-news-video-small .test .title{color: #3C3C3C;font-size: 18px;line-height: 28px;height:56px}
 .page-news-video-small .test .date{color: #3C3C3C;color: #999999;font-size: 14px;line-height: 30px;background: url(../images/play2.png) no-repeat right center/30px 30px;}
 
 .page-news-video-big{margin-bottom: 20px ;cursor: pointer;}

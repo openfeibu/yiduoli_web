@@ -61,7 +61,8 @@
 <script>
     $(function() {
         $(".video-detail .video-detail-close,#video-detail-con .video-close").on("click",function(){
-            $(".video-detail").fadeOut(200)
+            $(".video-detail").hide();
+			$("#player").html("")
         })
         $(".page-news-video").on("click",function(){
             var vid = $(this).attr("vid");
