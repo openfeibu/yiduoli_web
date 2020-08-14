@@ -13,8 +13,8 @@ class PageRequest extends FormRequest
      */
     public function authorize()
     {
-        return true;
         $this->model = $this->route('page');
+        return true;
         if (is_null($this->model)) {
             // Determine if the user is authorized to access page module,
             return $this->formRequest->user($this->guard)->canDo('page.page.view');
