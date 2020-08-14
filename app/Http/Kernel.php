@@ -63,6 +63,6 @@ class Kernel extends HttpKernel
 
         'active' => \App\Http\Middleware\Roles\VerifyLogin::class,
         'role' => \App\Http\Middleware\Roles\VerifyRole::class,
-        'permission' => \App\Http\Middleware\Roles\VerifyPermission::class,
+        //'permission' => \App\Http\Middleware\Roles\VerifyPermission::class,
     ];
 }
