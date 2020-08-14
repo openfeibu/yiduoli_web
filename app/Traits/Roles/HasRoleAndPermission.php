@@ -200,16 +200,19 @@ trait HasRoleAndPermission
                 ->orderBy('id', 'asc')
                 ->get();
         }
-        return $permissionModel::select(['permissions.slug', 'permissions.name','permissions.icon','permissions.id'])
+
+        $permissions = $permissionModel::select(['permissions.*'])
             ->join('permission_role', 'permission_role.permission_id', '=', 'permissions.id')
             ->join('roles', 'roles.id', '=', 'permission_role.role_id')
             //->where('is_menu', 1)
             ->where('parent_id', $parent_id)
             ->whereIn('roles.id', $this->getRoles()->pluck('id')->toArray())
-            ->orWhere('roles.level', '<', $this->level())
+            //->orWhere('roles.level', '<', $this->level())
             //->groupBy(['permissions.slug'])
             ->orderBy('order', 'asc')
             ->get();
+        return $permissions;
+        var_dump($permissions->toArray());exit;
     }
 
     /**
