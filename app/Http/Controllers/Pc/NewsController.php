@@ -34,7 +34,7 @@ class NewsController extends BaseController
             ->where(['category_id' => $this->category_id])
             ->orderBy('hot_recommend','desc')
             //->orderBy('order','desc')
-            ->orderBy('created_at','desc')
+            //->orderBy('created_at','desc')
             ->orderBy('id','desc')
             ->paginate(6);
 
