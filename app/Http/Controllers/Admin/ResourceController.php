@@ -6,7 +6,7 @@ use App\Models\Feedback;
 use App\Models\Page;
 use App\Models\Product;
 use App\Models\Video;
-use Route;
+use Route,Auth;
 use App\Http\Controllers\Admin\Controller as BaseController;
 use App\Traits\AdminUser\AdminUserPages;
 use App\Http\Response\ResourceResponse;
