@@ -126,4 +126,5 @@ return [
 
     'phone' => '手机号码',
     'email' => '邮箱',
+    'views_count' => '阅读量',
 ];
