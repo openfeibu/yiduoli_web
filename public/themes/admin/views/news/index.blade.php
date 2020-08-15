@@ -54,7 +54,8 @@
                 ,{field:'image',title:'{{ trans('page.label.image') }}', toolbar:'#imageTEM', width:120}
                 ,{field:'home_recommend',title:'{{ trans('app.home_recommend') }}', width:120,toolbar:'#checkboxHomeRecommendTEM' }
                 ,{field:'hot_recommend',title:'{{ trans('app.hot_recommend') }}', width:120,toolbar:'#checkboxHotRecommendTEM' }
-//                ,{field:'order',title:'排序', width:80, sort: true}
+                ,{field:'order',title:'排序', width:80}
+                ,{field:'views_count',title:'{{ trans('page.label.views_count') }}'}
                 ,{field:'updated_at',title:'{{ trans('app.updated_at') }}', width:250}
                 ,{field:'score',title:'{{ trans('app.actions') }}', width:200, align: 'right',fixed: 'right',toolbar:'#barDemo'}
             ]]

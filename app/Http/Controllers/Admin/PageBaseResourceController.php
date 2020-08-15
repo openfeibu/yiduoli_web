@@ -42,6 +42,7 @@ class PageBaseResourceController extends BaseController
         if ($this->response->typeIs('json')) {
             $data = $this->repository
                 ->setPresenter(\App\Repositories\Presenter\PageListPresenter::class)
+                ->orderBy('hot_recommend','desc')
                 ->orderBy('order','desc')
                 //->orderBy('updated_at','desc')
                 ->orderBy('id','desc')
