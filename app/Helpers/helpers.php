@@ -504,6 +504,47 @@ if (!function_exists('get_substr')) {
         return $re;
     }
 }
+/*截取 不带html*/
+if (!function_exists('truncate')) {
+    function truncate($string, $length = 12, $append = true)
+    {
+
+        $string = trim(strip_tags($string));
+        $strlength = strlen($string);
+        if ($length == 0 || $length >= $strlength) {
+            return $string;
+        } elseif ($length < 0) {
+            $length = $strlength + $length;
+            if ($length < 0) {
+                $length = $strlength;
+            }
+        }
+        if (function_exists('mb_substr')) {
+            $newstr = mb_substr($string, 0, $length, "UTF-8");
+        } elseif (function_exists('iconv_substr')) {
+            $newstr = iconv_substr($string, 0, $length, "UTF-8");
+        } else {
+            for ($i = 0; $i < $length; $i++) {
+                $tempstring = substr($string, 0, 1);
+                if (ord($tempstring) > 127) {
+                    $i++;
+                    if ($i < $length) {
+                        $newstring[] = substr($string, 0, 3);
+                        $string = substr($string, 3);
+                    }
+                } else {
+                    $newstring[] = substr($string, 0, 1);
+                    $string = substr($string, 1);
+                }
+            }
+            $newstr = join($newstring);
+        }
+        if ($append && $string != $newstr) {
+            $newstr .= '...';
+        }
+        return $newstr;
+    }
+}
 if (!function_exists('handle_image_url')) {
     function handle_image_url($image_url = '', $host = '')
     {

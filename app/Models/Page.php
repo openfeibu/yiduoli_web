@@ -21,7 +21,7 @@ class Page extends BaseModel
      */
     protected $config = 'model.page.page';
 
-    protected $appends = ['image_url'];
+    protected $appends = ['image_url','Desc'];
 
     /**
      * Set the pages title and heading.
@@ -53,5 +53,9 @@ class Page extends BaseModel
             return  $this->attributes['image'];
         }
         return url("image/original").setting('default_image');
+    }
+    public function getDescriptionAttribute()
+    {
+        return isset($this->attributes['description']) && !empty($this->attributes['description']) ? $this->attributes['description'] : truncate($this->attributes['content'],50);
     }
 }
