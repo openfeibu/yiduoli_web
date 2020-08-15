@@ -4,8 +4,21 @@
     <div class="container w1400">
         {!! Theme::widget('WebBreadcrumb')->render() !!}
         @if(!$search_key)
-        <div class="screen wow fadeInUp animated " style="box-shadow: none;" data-wow-duration=".6s" data-wow-delay=".5s" id="category_html">
-            @include('product.category_html')
+        <div class="screen wow fadeInUp animated " style="box-shadow: none;" data-wow-duration=".6s" data-wow-delay=".5s">
+            <ul class="one-tab clearfix category-tab">
+                <li @if($product_category_id == 0)class="active"@endif category_id='0' type="parent">全部</li>
+                @foreach($top_categories as $key => $category)
+                <li category_id="{{ $category->id }}" type="child" @if($category->id == $product_category_id) class="active" @endif>{{ $category->name }}</li>
+                @endforeach
+            </ul>
+            @if($product_category_id && isset($children) && $children)
+                <ul class="two-tab clearfix category-tab" style="display:block">
+                    <li class="active" category_id='{{$product_category_id}}' type="parent">全部</li>
+                    @foreach($children as $key => $child)
+                        <li category_id="{{ $child->id }}" type="child">{{ $child->name }}</li>
+                    @endforeach
+                </ul>
+            @endif
         </div>
         @endif
     </div>

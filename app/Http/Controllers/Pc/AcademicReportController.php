@@ -39,6 +39,10 @@ class AcademicReportController extends BaseController
         }
         $top_categories = $this->category_repository->getListCategories(0);
         $product_category_id = $request->get('product_category_id','0');
+        $product_category_id = $this->category_repository->getLastFirstCategoryId($product_category_id);
+
+        $lists = $this->category_repository->getLastFirstCategoryLists($product_category_id);
+
         $search_key = $request->get('search_key',"");
         $products = app(Product::class)->join('academic_reports','academic_reports.product_id','=','products.id');
         if($product_category_id)
@@ -65,13 +69,16 @@ class AcademicReportController extends BaseController
             $data['content'] = $this->response->layout('render')
                 ->view('academic_report.list')
                 ->data(compact('products'))->render()->getContent();
-            if($product_category_id)
-            {
-                $categories = $this->category_repository->getListCategories($product_category_id)->toArray();
-            }else{
-                $categories = [];
-            }
-            $data['categories'] = $categories;
+            $data['category_html'] = $this->response->layout('render')
+                ->view('product.category_html')
+                ->data(compact('lists'))->render()->getContent();
+//            if($product_category_id)
+//            {
+//                $categories = $this->category_repository->getListCategories($product_category_id)->toArray();
+//            }else{
+//                $categories = [];
+//            }
+//            $data['categories'] = $categories;
 
             return $this->response
                 ->success()
@@ -80,7 +87,7 @@ class AcademicReportController extends BaseController
         }
         return $this->response->title(trans('academic_report.name'))
             ->view('academic_report.index')
-            ->data(compact('products','top_categories','product_category_id','search_key'))
+            ->data(compact('products','top_categories','product_category_id','search_key','lists'))
             ->output();
 
     }

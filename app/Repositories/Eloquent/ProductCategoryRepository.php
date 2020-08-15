@@ -181,4 +181,38 @@ class ProductCategoryRepository extends BaseRepository implements ProductCategor
         }
         return $sub_ids;
     }
+    public function getLastFirstCategoryId($parent_id=0)
+    {
+        $category = ProductCategory::where('parent_id',$parent_id)->orderBy('order','desc')->orderBy('id','asc')->first();
+        if(!$category)
+        {
+            return $parent_id;
+        }
+        return $this->getLastFirstCategoryId($category->id);
+    }
+
+    public function getLastFirstCategoryLists($id,$list=[])
+    {
+        $category = ProductCategory::where('id',$id)->first();
+
+        if(!$category)
+        {
+            return $list;
+        }
+        $siblings =  ProductCategory::where('parent_id',$category->parent_id)->orderBy('order','desc')->orderBy('id','asc')->get()->toArray();
+
+        foreach ($siblings as $key => $sibling)
+        {
+            $siblings[$key]['active'] = $sibling['id'] == $id ? true : false;
+        }
+        if(!$siblings)
+        {
+            return $list;
+        }
+        array_unshift($list,$siblings);
+
+        return $this->getLastFirstCategoryLists($category->parent_id,$list);
+
+    }
+
 }

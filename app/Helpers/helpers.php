@@ -845,3 +845,10 @@ if (!function_exists('get_nav')) {
         return $nav;
     }
 }
+if (!function_exists('num_to_eng')) {
+    function num_to_eng_tab($num)
+    {
+        $eng = ['one','two','three','four','five'];
+        return $eng[$num].'-tab';
+    }
+}

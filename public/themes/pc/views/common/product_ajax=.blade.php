@@ -32,7 +32,28 @@
                         }
                     });
 
-                    $("#category_html").html(data.data.category_html);
+                    if(type == 'child')
+                    {
+                        if(data.data.categories.length > 0)
+                        {
+                            var tab_class =tab_num_arr[this_index+2]+"-tab";
+                            var category_tab_html = "<ul class='"+tab_class+" clearfix category-tab '>";
+                            //category_tab_html += "<li category_id='"+category_id+"' type='parent' class='active'>全部</li>";
+                            $.each(data.data.categories,function (i,item) {
+                                if(i == 0)
+                                {
+                                    category_tab_html += "<li category_id='"+item.id+"' type='child' class='active'>"+item.name+"</li>";
+                                }else{
+                                    category_tab_html += "<li category_id='"+item.id+"' type='child'>"+item.name+"</li>";
+                                }
+
+
+                            })
+                            category_tab_html += '</ul>';
+                            that.parent().after(category_tab_html);
+                            $('.screen .'+tab_class).fadeIn();
+                        }
+                    }
 
                 },
                 error : function (jqXHR, textStatus, errorThrown) {

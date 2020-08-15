@@ -34,10 +34,6 @@ class ProductController extends BaseController
     {
         $top_categories = $this->category_repository->getListCategories(0);
         $product_category_id = $request->get('product_category_id','0');
-        $product_category_id = $this->category_repository->getLastFirstCategoryId($product_category_id);
-
-        $lists = $this->category_repository->getLastFirstCategoryLists($product_category_id);
-
         $search_key = $request->get('search_key',"");
         $products = app(Product::class);
         $children = [];
@@ -46,6 +42,7 @@ class ProductController extends BaseController
             $ids = $this->category_repository->getSubIds($product_category_id);
             array_unshift($ids,$product_category_id);
             $products = $products->whereIn('product_category_id',$ids);
+
             $children = $this->category_repository->getListCategories($product_category_id);
         }
         $products = $products->when($search_key,function ($query) use ($search_key){
@@ -60,11 +57,8 @@ class ProductController extends BaseController
             $data['content'] = $this->response->layout('render')
                 ->view('product.list')
                 ->data(compact('products'))->render()->getContent();
-            $data['category_html'] = $this->response->layout('render')
-                ->view('product.category_html')
-                ->data(compact('lists'))->render()->getContent();
 
-            //$data['categories'] = $children;
+            $data['categories'] = $children;
 
             return $this->response
                 ->success()
@@ -74,7 +68,7 @@ class ProductController extends BaseController
 
         return $this->response->title(trans('product.name'))
             ->view('product.index')
-            ->data(compact('products','top_categories','product_category_id','children','search_key','lists'))
+            ->data(compact('products','top_categories','product_category_id','children','search_key'))
             ->output();
 
     }

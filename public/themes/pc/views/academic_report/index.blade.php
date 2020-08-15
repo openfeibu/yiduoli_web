@@ -4,15 +4,8 @@
         {!! Theme::widget('WebBreadcrumb')->render() !!}
         {!! Theme::widget('NavTab')->render() !!}
     </div>
-    <div class="screen wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".5s">
-        <div class="container w1400">
-            <ul class="one-tab clearfix category-tab">
-                <li @if($product_category_id == 0)class="active"@endif category_id='0' type="parent">全部</li>
-                @foreach($top_categories as $key => $category)
-                    <li category_id="{{ $category->id }}" type="child" @if($category->id == $product_category_id) class="active" @endif>{{ $category->name }}</li>
-                @endforeach
-            </ul>
-        </div>
+    <div class="screen wow fadeInUp animated " style="box-shadow: none;" data-wow-duration=".6s" data-wow-delay=".5s" id="category_html">
+        @include('product.category_html')
     </div>
 
     <div class="main product-list">
