@@ -39,7 +39,7 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label">排序</label>
                         <div class="layui-input-inline">
-                            <input type="text" name="order" autocomplete="off" placeholder="" class="layui-input" value="0" lay-verify="number"  value="{{ $subsidiary->order }}">
+                            <input type="text" name="order" autocomplete="off" placeholder="" class="layui-input"  lay-verify="number"  value="{{ $subsidiary->order }}">
                         </div>
                     </div>
                     <div class="layui-form-item button-group"><div class="layui-input-block"><button class="layui-btn layui-btn-normal layui-btn-lg" lay-submit="" lay-filter="demo1">{{ trans('app.submit_now') }}</button></div></div>

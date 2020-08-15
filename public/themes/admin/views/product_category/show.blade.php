@@ -25,7 +25,7 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label">排序</label>
                         <div class="layui-input-inline">
-                            <input type="text" name="order" autocomplete="off" placeholder="" class="layui-input" value="0" lay-verify="number"  value="{{$product_category->order}}">
+                            <input type="text" name="order" autocomplete="off" placeholder="" class="layui-input" lay-verify="number"  value="{{$product_category->order}}">
                         </div>
                     </div>
                     <div class="layui-form-item">
