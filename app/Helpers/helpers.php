@@ -509,7 +509,7 @@ if (!function_exists('truncate')) {
     function truncate($string, $length = 12, $append = true)
     {
 
-        $string = trim(strip_tags($string));
+        $string = trim(preg_replace("/(\s|\&nbsp\;|　|\xc2\xa0)/", " ", strip_tags($string)));
         $strlength = strlen($string);
         if ($length == 0 || $length >= $strlength) {
             return $string;
