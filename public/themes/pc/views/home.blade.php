@@ -73,22 +73,21 @@
         </div>
         <div class="product-con ">
 
-
+			<div class="product-item col-lg-3 col-md-3 col-sm-6 col-xs-6 wow bounceIn animated" data-wow-duration=".6s" data-wow-delay=".5s">
+                <div class="product-item-box">
+                    <a href="/product">
+                        <div class="img"><img  class="transition500" src="{!! theme_asset('images/p2.png') !!}" alt=""></div>
+                        <p class="transition500 fb-overflow-2">生物酶制剂</p>
+                      
+                    </a>
+                </div>
+            </div>
             <div class="product-item col-lg-3 col-md-3 col-sm-6 col-xs-6 wow bounceIn animated" data-wow-duration=".6s" data-wow-delay=".4s">
                 <div class="product-item-box">
                     <a href="/product">
                         <div class="img" ><img class="transition500"  src="{!! theme_asset('images/p1.png') !!}" alt=""></div>
                         <p class="transition500 fb-overflow-2">生物医药</p>
                        
-                    </a>
-                </div>
-            </div>
-            <div class="product-item col-lg-3 col-md-3 col-sm-6 col-xs-6 wow bounceIn animated" data-wow-duration=".6s" data-wow-delay=".5s">
-                <div class="product-item-box">
-                    <a href="/product">
-                        <div class="img"><img  class="transition500" src="{!! theme_asset('images/p2.png') !!}" alt=""></div>
-                        <p class="transition500 fb-overflow-2">生物酶制剂</p>
-                      
                     </a>
                 </div>
             </div>

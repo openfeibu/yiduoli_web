@@ -15,7 +15,7 @@
     <div class="footer-con clearfix">
         <div class="container w1400">
             <div class="footer-con-left col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".3s">
-                <div class="footer-logo"><img  src="{{ '/themes/pc/assets/images/footer-logo.png' }}" alt=""></div>
+                <div class="footer-logo"><img  src="{{ '/image/original'.setting('logo') }}" alt=""></div>
                 <div class="footer-info">
                     地址：{{ setting('address') }}   <br>
                     电子邮箱： {{ setting('email') }}<br>
