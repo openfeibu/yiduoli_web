@@ -24,7 +24,7 @@ return [
         'visible'      => [],
         'guarded'      => ['*'],
         'dates'        => ['deleted_at'],
-        'fillable'     => ['product_category_id','order','title','description','content','image','vid','instruction','instruction_title','parameters'],
+        'fillable'     => ['product_category_id','order','title','description','content','image','vid','instruction','instruction_title','parameters','order'],
         'translate'    => ['product_category_id','order','title','description','content','image','vid','instruction'],
         'upload_folder' => '/product',
         'encrypt'      => ['id'],

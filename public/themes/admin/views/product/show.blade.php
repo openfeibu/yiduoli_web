@@ -74,6 +74,12 @@
                             <script type="text/plain" id="content" name="content" style="height:240px;">{!! $product->content !!}</script>
                         </div>
                     </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">排序</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="order" autocomplete="off" placeholder="" class="layui-input" lay-verify="number"  value="{{$product->order}}">
+                        </div>
+                    </div>
                     <div class="layui-form-item button-group"><div class="layui-input-block"><button class="layui-btn layui-btn-normal layui-btn-lg" lay-submit="" lay-filter="demo1">{{ trans('app.submit_now') }}</button></div></div>
                     {!!Form::token()!!}
                     <input type="hidden" name="_method" value="PUT">

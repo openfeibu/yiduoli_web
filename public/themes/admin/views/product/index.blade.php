@@ -82,6 +82,7 @@
                 ,{field:'id',title:'ID', width:80, sort: true}
                 ,{field:'title',title:'{!! trans('app.title')!!}',edit:'text'}
                 ,{field:'vid',title:'{!! trans('product.label.vid')!!}',edit:'text'}
+                ,{field:'order',title:'{!! trans('app.order')!!}',edit:'text'}
                 ,{field:'score',title:'{{ trans('app.actions') }}', width:280, align: 'right',toolbar:'#barDemo'}
             ]]
             ,id: 'fb-table'
