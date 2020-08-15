@@ -60,7 +60,7 @@ class ProductResourceController extends BaseController
                     }
                 })
                 ->groupBy('products.id')
-                ->orderBy('products.updated_at','desc')
+                ->orderBy('products.order','desc')
                 ->orderBy('products.id','desc')
                 ->paginate($limit,['products.*','product_categories.name']);
 
