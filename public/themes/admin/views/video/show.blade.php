@@ -42,7 +42,12 @@
                             <input type="checkbox" name="hot_recommend" lay-filter="hot_recommend" lay-skin="switch" lay-text="是|否" value="1" @if($video->hot_recommend) checked  @endif >
                         </div>
                     </div>
-
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">排序</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="order" autocomplete="off" placeholder="" class="layui-input" lay-verify="number"  value="{{ $video->order }}">
+                        </div>
+                    </div>
                     <div class="layui-form-item button-group"><div class="layui-input-block"><button class="layui-btn layui-btn-normal layui-btn-lg" lay-submit="" lay-filter="demo1">{{ trans('app.submit_now') }}</button></div></div>
                     {!!Form::token()!!}
                     <input type="hidden" name="_method" value="PUT">

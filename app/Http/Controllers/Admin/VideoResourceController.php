@@ -34,6 +34,7 @@ class VideoResourceController extends BaseController
 
         if ($this->response->typeIs('json')) {
             $videos = $this->repository
+                ->orderBy('hot_recommend','desc')
                 ->orderBy('order','desc')
                 //->orderBy('updated_at','desc')
                 ->orderBy('id','desc')
