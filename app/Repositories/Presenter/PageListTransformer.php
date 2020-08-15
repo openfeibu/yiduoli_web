@@ -25,6 +25,7 @@ class PageListTransformer extends TransformerAbstract
             'home_recommend' => $page->home_recommend,
             'hot_recommend' => $page->hot_recommend,
             'category_id' => $page->category_id,
+            'views_count' => $page->views_count,
             'created_at' => format_date($page->created_at,'Y-m-d H:i:s'),
             'updated_at' => format_date($page->updated_at,'Y-m-d H:i:s'),
             'category_name' => $page->category->name,
