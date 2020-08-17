@@ -15,7 +15,7 @@ return [
 
 // Modale variables for page module.
     'subsidiary'     => [
-        'model'        => 'App\Models\subsidiary',
+        'model'        => 'App\Models\Subsidiary',
         'table'        => 'subsidiaries',
         'primaryKey'   => 'id',
         'hidden'       => [],
