@@ -70,6 +70,9 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind('product_repository',function($app){
             return new \App\Repositories\Eloquent\ProductRepository($app);
         });
+        $this->app->bind('product_category_repository',function($app){
+            return new \App\Repositories\Eloquent\ProductCategoryRepository($app);
+        });
         $this->app->bind('page_repository',function($app){
             return new \App\Repositories\Eloquent\PageRepository($app);
         });
