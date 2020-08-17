@@ -56,6 +56,6 @@ class Page extends BaseModel
     }
     public function getDescriptionAttribute()
     {
-        return isset($this->attributes['description']) && !empty($this->attributes['description']) ? $this->attributes['description'] : truncate($this->attributes['content'],50);
+        return isset($this->attributes['description']) && !empty($this->attributes['description']) ? $this->attributes['description'] : isset($this->attributes['content']) && !empty($this->attributes['content']) ? truncate($this->attributes['content'],50) : '';
     }
 }
