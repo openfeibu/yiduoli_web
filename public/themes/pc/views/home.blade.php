@@ -17,7 +17,7 @@
                 <img class="transition" src="{!! theme_asset('images/vrBg.png') !!}" alt="" />
                 <div class="vr-text" >
                     <div class="img animated fb-bounceIn " style='animation-iteration-count: infinite;'><img src="{!! theme_asset('images/VR.png') !!}" alt=""></div>
-                    <span>VR720</span>
+                    <span>溢多利集团720°全景展示</span>
                 </div>
             </a>
         </div>

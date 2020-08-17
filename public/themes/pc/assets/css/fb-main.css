@@ -140,8 +140,8 @@ header.active .headerRight{margin-top:5px}
 }
 .about-left{position: relative;}
 .about-left img{width: 100%;}
-.about-left .vr-text{position: absolute;width: 117px;top: 30%;left: 50%;margin-left: -58.5px;text-align: center;}
-.about-left .vr-text .img{width: 100%;}
+.about-left .vr-text{position: absolute;width: 100%;top: 30%;text-align: center;}
+.about-left .vr-text .img{width: 117px;margin:0 auto;}
 .about-left .vr-text .img img{width: 100%;}
 .about-left .vr-text span{color: #fff;font-size: 30px;line-height: 80px;}
 
@@ -713,7 +713,8 @@ header.active .headerRight{margin-top:5px}
     .about-con{font-size: 0.26rem;line-height: 0.42rem;margin-bottom: 0.3rem;}
     .about-icon li{padding: 0 0.05rem !important;}
     .about-icon li p{font-size: 0.24rem;}
-    .about-left .vr-text{width: 1.17rem;top: 30%;left: 50%;margin-left: -0.58rem;text-align: center;}
+    .about-left .vr-text{top: 30%;text-align: center;}
+	.about-left .vr-text .img{width:1.17rem;}
     .about-left .vr-text span{color: #fff;font-size: 0.3rem;line-height: 0.8rem;}
     .product-item{padding: 0.1rem 0.1rem;}
     .product-con{margin-top: 0.5rem;}
