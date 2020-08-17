@@ -73,43 +73,45 @@
         </div>
         <div class="product-con ">
 
+            @foreach(app('product_category_repository')->where('parent_id',0)->orderBy('order','desc')->orderBy('id','asc')->limit(4)->get() as $key => $category)
+            @if($key == 0)
 			<div class="product-item col-lg-3 col-md-3 col-sm-6 col-xs-6 wow bounceIn animated" data-wow-duration=".6s" data-wow-delay=".5s">
                 <div class="product-item-box">
-                    <a href="/product">
+                    <a href="{{ route('pc.product.index',['product_category_id' => $category->id]) }}">
                         <div class="img"><img  class="transition500" src="{!! theme_asset('images/p2.png') !!}" alt=""></div>
-                        <p class="transition500 fb-overflow-2">生物酶制剂</p>
-                      
+                        <p class="transition500 fb-overflow-2">{{ $category->name }}</p>
                     </a>
                 </div>
             </div>
+            @elseif($key == 1)
             <div class="product-item col-lg-3 col-md-3 col-sm-6 col-xs-6 wow bounceIn animated" data-wow-duration=".6s" data-wow-delay=".4s">
                 <div class="product-item-box">
-                    <a href="/product">
+                    <a href="{{ route('pc.product.index',['product_category_id' => $category->id]) }}">
                         <div class="img" ><img class="transition500"  src="{!! theme_asset('images/p1.png') !!}" alt=""></div>
-                        <p class="transition500 fb-overflow-2">生物医药</p>
-                       
+                        <p class="transition500 fb-overflow-2">{{ $category->name }}</p>
                     </a>
                 </div>
             </div>
+            @elseif($key == 2)
             <div class="product-item col-lg-3 col-md-3 col-sm-6 col-xs-6 wow bounceIn animated" data-wow-duration=".6s" data-wow-delay=".6s">
                 <div class="product-item-box">
-                    <a href="/product">
+                    <a href="{{ route('pc.product.index',['product_category_id' => $category->id]) }}">
                         <div class="img"><img  class="transition500" src="{!! theme_asset('images/p3.png') !!}" alt=""></div>
-                        <p class="transition500 fb-overflow-2">功能性饲用产品</p>
-                       
+                        <p class="transition500 fb-overflow-2">{{ $category->name }}</p>
                     </a>
                 </div>
             </div>
+            @elseif($key == 3)
             <div class="product-item col-lg-3 col-md-3 col-sm-6 col-xs-6 wow bounceIn animated" data-wow-duration=".6s" data-wow-delay=".7s">
                 <div class="product-item-box">
-                    <a href="/product">
+                    <a href="{{ route('pc.product.index',['product_category_id' => $category->id]) }}">
                         <div class="img"><img  class="transition500" src="{!! theme_asset('images/p4.png') !!}" alt=""></div>
-                        <p class="transition500 fb-overflow-2">动保用品</p>
-                    
+                        <p class="transition500 fb-overflow-2">{{ $category->name }}</p>
                     </a>
                 </div>
             </div>
-
+            @endif
+            @endforeach
         </div>
     </div>
 </div>
