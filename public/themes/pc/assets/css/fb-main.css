@@ -91,6 +91,7 @@ header{height: 100px;}
 
 .headerBg{background-color:rgba(7, 9, 28, 0.08);height: 100%;}
 header .logo{width: 120px;padding-top: 23px;}
+header .newLogo{width:180px;padding-top:40px;}
 header .logo1{display: block;}
 header .logo2{display: none;}
 header .logo img{width: 90%;}
@@ -109,6 +110,7 @@ header .nav ul li dl dd a:hover{color: #4083ff !important;}
 
 header.active{height: 60px;}
 header.active .logo{padding-top:5px;width: 110px;}
+header.active .logo{padding-top:20px;width: 160px;}
 header.active .headerRight{margin-top:5px}
 
 #allmap{margin-top:100px;height:300px;border-radius:10px;box-shadow:0 5px 10px #eee;border:1px solid #eee}
@@ -774,7 +776,7 @@ header.active .headerRight{margin-top:5px}
 
     .footer-con{padding: 0.46rem 0 0 0;}
     .footer-con-left:after{display: none;}
-    .footer-con-left .footer-logo{width: 1.9rem;}
+    .footer-con-left .footer-logo{width: 3rem;}
     .footer-con-left .footer-logo img{width: 100%;}
     .footer-con-left .footer-info{font-size: 0.24rem;line-height: 0.42rem;margin-top: 0.2rem;padding-right: 0.5rem;}
     .footer-con-right{display: none;}
@@ -800,7 +802,8 @@ header.active .headerRight{margin-top:5px}
     .headerRight{display: none;}
     header{height: 0.88rem !important;}
     header .logo{width: 1.5rem !important;padding-top: 0.15rem;}
-	header.active .logo{padding-top: 0.05rem;}
+	 header .newLogo{width: 1.8rem !important;padding-top: 0.25rem;}
+	header.active .logo{padding-top: 0.25rem;}
     .menu{display: block;width: 0.6rem;height: 0.6rem;background: url(../images/caidan.png) no-repeat center/ 100% 100%;position: absolute;right:0.3rem;top: 0.14rem;}
     .swiper-pagination-bullet{
         width: 0.16rem !important;
@@ -828,7 +831,7 @@ header.active .headerRight{margin-top:5px}
     .wapNav-close{width: 0.4rem;height: 0.4rem;background: url(../images/close.png) no-repeat center/100% 100%;display: block;float: right;margin-top: 0.2rem;cursor: pointer;;}
     #wap-nav .nav-box{width: 3.6rem;background: #fff;position: absolute;height: 100%;right: 0;padding:0 0.3rem;right:-4rem}
     .wap-header{height: 1rem;}
-    .wap-header img{height: 0.6rem;margin-top: 0.2rem;}
+    .wap-header img{height: 0.3rem;margin-top: 0.2rem;}
     #wap-nav ul{margin-top: 0.3rem;}
     #wap-nav ul li{width: 100%;line-height: 0.82rem;color: #333;font-size: 0.26rem;cursor: pointer;}
     #wap-nav ul li.active > a{color: #4083ff;}
