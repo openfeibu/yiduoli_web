@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
     <meta name="format-detection" content="telephone=no">
-    <title>{{ setting('station_name') }} {!! Theme::getTitle() !!}</title>
+    <title>{{ setting('station_name') }}</title>
     <meta name="description" content="广东溢多利生物科技股份有限公司">
     <meta name="keywords" content="广东溢多利生物科技股份有限公司,溢多利">
     {!! Theme::asset()->styles() !!}
