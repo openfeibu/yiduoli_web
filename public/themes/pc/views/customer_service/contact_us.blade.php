@@ -42,11 +42,11 @@
                         <div class="contact-b-item-test contact-icon1 clearfix">
                             <div class="t">证券部</div>
                             <div class="contact-b-item-des">
-                                <div class="contact-t-info col-lg-6 col-md-6 col-sm-6 col-xs-6 nopadding">
+                                <div class="contact-t-info col-lg-6 col-md-6 col-sm-12 col-xs-12 nopadding">
                                     <p>联系方式</p>
                                     <span>{{ setting('bond_tel') }}</span>
                                 </div>
-                                <div class="contact-t-info col-lg-6 col-md-6 col-sm-6 col-xs-6 nopadding">
+                                <div class="contact-t-info col-lg-6 col-md-6 col-sm-12 col-xs-12 nopadding">
                                     <p>电子邮箱</p>
                                     <span>{{ setting('bond_email') }}</span>
                                 </div>
@@ -58,11 +58,11 @@
                         <div class="contact-b-item-test contact-icon2 clearfix">
                             <div class="t">人力资源部</div>
                             <div class="contact-b-item-des">
-                                <div class="contact-t-info col-lg-6 col-md-6 col-sm-6 col-xs-6 nopadding">
+                                <div class="contact-t-info col-lg-6 col-md-6 col-sm-12 col-xs-12 nopadding">
                                     <p>联系方式</p>
                                     <span>{{ setting('hr_tel') }}</span>
                                 </div>
-                                <div class="contact-t-info col-lg-6 col-md-6 col-sm-6 col-xs-6 nopadding">
+                                <div class="contact-t-info col-lg-6 col-md-6 col-sm-12 col-xs-12 nopadding">
                                     <p>电子邮箱</p>
                                     <span>{{ setting('hr_email') }}</span>
                                 </div>

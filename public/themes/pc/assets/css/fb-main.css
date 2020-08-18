@@ -1010,7 +1010,8 @@ header.active .headerRight{margin-top:5px}
     .course .con{font-size: 16px;color: #666;line-height: 26px;}
     
     .news-detail-tab{min-height:auto;padding:0.2rem;width: 100%;}
-    .news-detail-tab ul li{width:45%;height:auto;line-height:0.4rem;min-height:1rem;padding:0.1rem 0;background: #FFFFFF;border-radius: 5px;text-align: center;margin:0.1rem 2%;float: left;}
+    .news-detail-tab ul li{width:45%;height:auto;line-height:0.4rem;padding:0.1rem 0;background: #FFFFFF;border-radius: 5px;text-align: center;margin:0.1rem 2%;float: left;}
+	.subsidiary .news-detail-tab ul li{min-height:1rem;}
     .news-detail-tab ul li a{color:#5E5E5E;font-size:0.24rem;display: block;}
 
     .news-detail-content{width: 100%;margin-top:0.3rem;}
@@ -1072,7 +1073,7 @@ header.active .headerRight{margin-top:5px}
     .contact-t-info span{font-size: 0.28rem;line-height: 0.42rem;}
     .contact-t-right img{width: 100%;}
     .contact-b{margin-top: 0.6rem;}
-    .contact-b-item{width:100%}
+    .contact-b-item{width:100%;margin-bottom:0.2rem}
     .contact-b-item .contact-b-item-test{padding:0.45rem}
     .contact-icon1 .t{background: url(../images/zqIcon.png) no-repeat left top / 0.8rem 0.8rem ;height: auto;line-height:0.8rem;padding-left: 1rem;font-size: 0.36rem;padding-bottom: 0.1rem;}
     .contact-icon2 .t{background: url(../images/zpIcon.png) no-repeat left top / 0.8rem 0.8rem ;height: auto;line-height:0.8rem;padding-left: 1rem;font-size: 0.36rem;padding-bottom: 0.1rem;}

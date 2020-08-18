@@ -1,6 +1,6 @@
 
 <!-- 内容 -->
-<div class="main">
+<div class="main subsidiary">
     <div class="container w1400">
         {!! Theme::widget('WebBreadcrumb')->render() !!}
         {!! Theme::widget('NavTabShow')->render() !!}
