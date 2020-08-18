@@ -579,7 +579,8 @@ header.active .headerRight{margin-top:5px}
     /* 招聘信息 */
     .join{padding:0 60px}
     .join-form{margin-bottom:60px;}
-    .join-form-item{padding:20px 5px;margin-top: 20px;}
+	.join-form .company-info-t{margin-bottom:50px;}
+    .join-form-item{padding:10px 5px;margin-top: 0px;}
     .join-form-item a{box-shadow: 0 5px 20px #eee;display: block;padding:30px 0}
     .join-form-item img{height: 80px;display: block;margin:0 auto;width:auto}
 
@@ -752,7 +753,7 @@ header.active .headerRight{margin-top:5px}
     .branch-con .branch-item img{display: block;height: 0.6rem;margin:0 auto;}
     
 	
-.branch-con .branch-item p{text-align:center;font-size:0.2rem;line-height:0.36rem;padding-top:0.1rem;}
+.branch-con .branch-item p{text-align:center;font-size:0.2rem;line-height:0.36rem;padding-top:0.1rem;height:0.72rem;}
 
 .subsidiary-title{font-size:0.32rem;text-align:center;margin:0.3rem 0;}
 
@@ -1079,7 +1080,8 @@ header.active .headerRight{margin-top:5px}
   /* 招聘信息 */
   .join{padding:0 0}
   .join-form{margin-bottom:0.6rem;}
-  .join-form-item{padding:0.2rem 0.2rem;margin-top: 0.2rem;}
+  .join-form .company-info-t{margin-bottom:0.5rem}
+  .join-form-item{padding:0.1rem 0.2rem;margin-top: 0;}
   .join-form-item a{padding:0.3rem 0}
   .join-form-item img{height: 0.8rem;display: block;margin:0 auto;width:auto}
 
