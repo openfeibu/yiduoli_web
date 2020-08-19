@@ -1181,7 +1181,7 @@ header.active .headerRight{margin-top:5px}
       width: 100px;
       top: 10px;
       left: 10px;
-	  background:#fff url(http://yiduoli.feibu.info/image/original/setting/20200813211221733395.png) no-repeat center / 80% auto;
+	  background:#fff url(../images/loadingLogo.png) no-repeat center / 80% auto;
       -webkit-animation: scale 1s 0s cubic-bezier(.09, .57, .49, .9) infinite;
               animation: scale 1s 0s cubic-bezier(.09, .57, .49, .9) infinite; }
     .ball-clip-rotate-pulse > div:last-child {
