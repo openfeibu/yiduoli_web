@@ -90,7 +90,6 @@
         var form = layui.form;
         form.render();
         var $ = layui.$;
-
     });
 
 </script>
