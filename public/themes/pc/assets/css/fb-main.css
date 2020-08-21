@@ -122,6 +122,7 @@ header.active .headerRight{margin-top:5px}
 .lang  dl dd a:hover{color: #4083ff;}
 
 .menu{display: none;}
+.m_en{display: none;}
 .swiper-pagination-banner{left: auto !important;right: 5% !important;width: 10px !important;top: 40%;}
 .swiper-pagination-bullet{width: 12px !important;height: 12px !important;background:none !important; border:1px solid #fff;opacity: 1 !important;margin:5px 0 !important;}
 .swiper-pagination-bullet-active{width: 16px !important;height: 16px !important;position: relative;left: -2px;top: 2px;}
@@ -806,6 +807,8 @@ header.active .headerRight{margin-top:5px}
 	 header .newLogo{width: 1.8rem !important;padding-top: 0.25rem;}
 	header.active .logo{padding-top: 0.25rem;}
     .menu{display: block;width: 0.6rem;height: 0.6rem;background: url(../images/caidan.png) no-repeat center/ 100% 100%;position: absolute;right:0.3rem;top: 0.14rem;}
+	.m_en{display: block;width: 0.6rem;height: 0.6rem;background:#fff;border-radius:50%;position: absolute;right:1rem;top: 0.14rem;line-height:0.6rem;font-size:0.3rem;text-align:center;}
+	.m_en a{}
     .swiper-pagination-bullet{
         width: 0.16rem !important;
         height: 0.16rem !important;
@@ -823,7 +826,7 @@ header.active .headerRight{margin-top:5px}
         border-radius: 50%;
         top: 0.02rem;
         left: 0.02rem;
-    }
+    }	
     .swiper-pagination-bullet-active{
         top:0;
         left: 0;
@@ -1261,7 +1264,7 @@ header.active .headerRight{margin-top:5px}
 .nodata .test{text-align:center;font-size:14px;color:#999;padding:20px 0}
 .autoWidth{width:auto !important; margin:0 auto;display:block}
 .news-detail-c iframe{max-width:100%}
-.news-detail-c video{width:100% !important;height:auto !important;}
+.news-detail-c video{width:100% !important;height:auto !important;background:#333 !important}
 .alertBox{position:fixed;z-index:9999;background:rgba(0,79,225,0.1);width:100%;height:100%;top:0;left:0}
 .alertBox-b{position:relative;width:90%;max-width:400px;background:#fff;border-radius:5px;overflow:hidden;margin:0 auto;top:40%;}
 .alertBox-b .msg{padding:40px 0;line-height:42px;font-size:14px;color:#000;text-align:center;}
