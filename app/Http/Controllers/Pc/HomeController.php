@@ -26,15 +26,21 @@ class HomeController extends BaseController
         if($http_host == setting('website'))
         {
             $lang = $request->get('lang','');
-            if(empty($lang) || ($lang != 'cn'))
+            if($lang)
             {
                 $ip = $request->getClientIp();
                 $is_ip_in_china = is_ip_in_china($ip);
-                if(!$is_ip_in_china)
-                {
-                    return redirect(setting('sea_website'));
-                }
+                var_dump($is_ip_in_china);exit;
             }
+//            if(empty($lang) || ($lang != 'cn'))
+//            {
+//                $ip = $request->getClientIp();
+//                $is_ip_in_china = is_ip_in_china($ip);
+//                if(!$is_ip_in_china)
+//                {
+//                    return redirect(setting('sea_website'));
+//                }
+//            }
         }
 
         $banners = Banner::orderBy('order','asc')->orderBy('id','asc')->get();
