@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Request;
 use App\Facades\Hashids;
 use App\Facades\Trans;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Redis;
 
 if (!function_exists('hashids_encode')) {
     /**
@@ -892,4 +893,64 @@ if (!function_exists('num_to_eng')) {
         $eng = ['one','two','three','four','five'];
         return $eng[$num].'-tab';
     }
+}
+
+//判断一个ip是否属于china
+function is_ip_in_china($ip) {
+    $ip = trim($ip);
+    $first_a = explode(".", $ip);
+    if (!isset($first_a[0]) || $first_a[0] == "") {
+        //ip有误，按国外算
+        return false;
+    }
+    $first = $first_a[0];
+
+    $arr_range = hash_get("china_ip_hash",$first);
+    if (!is_array($arr_range) || sizeof($arr_range) == 0) {
+        return false;
+    }
+
+    if (is_ip_in_arr_range($ip,$arr_range) == true) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+//判断一个ip是否属于ip的range数组
+function is_ip_in_arr_range($ip,$arr_range) {
+    $ip_long = (double) (sprintf("%u", ip2long($ip)));
+
+
+    foreach ($arr_range as $k => $one) {
+        $one = trim($one);
+        //echo $one.":\n";
+        $arr_one = explode("--", $one);
+
+        if (!isset($arr_one[0]) || !isset($arr_one[1])) {
+            continue;
+        }
+
+        $begin = $arr_one[0];
+        $end = $arr_one[1];
+
+        if ($ip_long >= $begin && $ip_long <= $end) {
+            return true;
+        }
+    }
+    return false;
+}
+
+
+//得到一个hash中对应key的value
+function hash_get($hash_name,$key_name){
+    /*
+    global $redis_link;
+    $str = $redis_link->hget($hash_name, $key_name);
+    $arr = json_decode($str,true);
+    return $arr;
+     */
+    $str = Redis::hget($hash_name, $key_name);
+    $arr = json_decode($str,true);
+    return $arr;
 }
