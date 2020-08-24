@@ -3,8 +3,10 @@
 
 ip_txt_path=/ipdata/txt/china_ip.txt;
 ip_url='http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest';
-php_path=/usr/bin/php7.1
-script_path=/home/vagrant/Code/yiduoli_web/isipinchina-master/putip2redis.php
+//php_path=/usr/bin/php7.1
+//script_path=/home/vagrant/Code/yiduoli_web/isipinchina-master/putip2redis.php
+php_path=/usr/bin/php
+script_path=/www/wwwroot/www.yiduoli.com/isipinchina-master/putip2redis.php
 
 #mv old txt
 
