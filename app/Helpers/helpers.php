@@ -900,14 +900,15 @@ function is_ip_in_china($ip) {
     $ip = trim($ip);
     $first_a = explode(".", $ip);
     if (!isset($first_a[0]) || $first_a[0] == "") {
-        //ip有误，按国外算
-        return false;
+        //ip有误，按国内算
+        return true;
     }
     $first = $first_a[0];
 
     $arr_range = hash_get("china_ip_hash",$first);
     if (!is_array($arr_range) || sizeof($arr_range) == 0) {
-        return false;
+        //没有设置redis，按国内算
+        return true;
     }
 
     if (is_ip_in_arr_range($ip,$arr_range) == true) {
