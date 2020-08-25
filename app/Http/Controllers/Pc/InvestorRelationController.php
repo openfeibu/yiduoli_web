@@ -37,7 +37,7 @@ class InvestorRelationController extends BaseController
         return $this->response->title($page['title'])
             ->setReferrer('never')
             ->view('page.show')
-            ->data(compact('page','no_referrer'))
+            ->data(compact('page'))
             ->output();
     }
     public function interactive(Request $request)
