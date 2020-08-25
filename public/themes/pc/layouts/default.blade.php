@@ -3,7 +3,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="referrer" content="never">
+    @if(Theme::has('referrer'))
+        <meta name="referrer" content="{{ Theme::getReferrer() }}">
+    @endif
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
@@ -19,23 +21,16 @@
     <script>
         csrf_token = "{!! csrf_token() !!}";
     </script>
-	<script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?96c9f02e3f20796d1da3cd08ef96540c";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
 
-	var _hmt = _hmt || [];
-
-	(function() {
-
-	  var hm = document.createElement("script");
-
-	  hm.src = "https://hm.baidu.com/hm.js?96c9f02e3f20796d1da3cd08ef96540c";
-
-	  var s = document.getElementsByTagName("script")[0]; 
-
-	  s.parentNode.insertBefore(hm, s);
-
-	})();
-
-	</script>
 </head>
 <!--[if lte IE 9]>
 <div class="text-xs-center marginBottom0 bg-blue-grey-100 alert">

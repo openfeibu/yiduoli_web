@@ -34,10 +34,10 @@ class InvestorRelationController extends BaseController
     {
         $slug = 'company_announcement';
         $page =  $this->page_repository->findBySlug($slug);
-
         return $this->response->title($page['title'])
+            ->setReferrer('never')
             ->view('page.show')
-            ->data(compact('page'))
+            ->data(compact('page','no_referrer'))
             ->output();
     }
     public function interactive(Request $request)
@@ -46,6 +46,7 @@ class InvestorRelationController extends BaseController
         $page =  $this->page_repository->findBySlug($slug);
 
         return $this->response->title($page['title'])
+            ->setReferrer('never')
             ->view('page.show')
             ->data(compact('page'))
             ->output();
