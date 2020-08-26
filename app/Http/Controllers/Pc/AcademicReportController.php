@@ -52,7 +52,7 @@ class AcademicReportController extends BaseController
             $products = $products->whereIn('product_product_category.product_category_id',$ids);
         }
         $products = $products
-            ->groupBy('products.products.id')
+            ->groupBy('products.id')
             ->orderBy('products.order','desc')
             ->orderBy('products.created_at','desc')
             ->orderBy('products.id','desc')
