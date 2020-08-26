@@ -101,7 +101,7 @@ class ProductResourceController extends BaseController
         } else {
             $view = 'product.new';
         }
-        $product_categories = $this->categoryRepository->getCategoriesSelectTree(0,explode(',',$product->product_category_id));
+        $product_categories = $this->categoryRepository->getCategoriesSelectTree(0,$product->product_category_ids);
         $product_categories = json_encode($product_categories);
         return $this->response->title(trans('app.view') . ' ' . trans('product.name'))
             ->data(compact('product','product_categories'))

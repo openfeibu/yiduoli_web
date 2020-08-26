@@ -15,7 +15,7 @@ class Product extends BaseModel
 
     protected $config = 'model.product.product';
 
-    protected $appends = ['images','image','product_category_name'];
+    protected $appends = ['images','image','product_category_name','product_category_ids'];
 
     public function getImagesAttribute()
     {
@@ -36,6 +36,10 @@ class Product extends BaseModel
     }
     public function product_categories()
     {
-        return $this->belongsToMany(config('model.product.product_category.model'))->withTimestamps();
+        return $this->belongsToMany(config('model.product.product_category.model'));
+    }
+    public function getProductCategoryIdsAttribute()
+    {
+        return $this->attributes ? $this->product_categories()->pluck('product_category_id')->toArray() : [];
     }
 }
