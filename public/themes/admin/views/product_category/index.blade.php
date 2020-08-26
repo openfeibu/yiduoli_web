@@ -14,7 +14,7 @@
 
             </table>
 
-            <div id="product_category" class="demo-tree demo-tree-box" style="man-width: 200px;"></div>
+            <div id="product_category" class="demo-tree demo-tree-box" style="min-width: 200px;"></div>
         </div>
     </div>
 </div>

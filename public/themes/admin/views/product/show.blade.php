@@ -5,10 +5,11 @@
         <div class="layui-col-md12">
             <div class="fb-main-table">
                 <form class="layui-form" action="{{guard_url('product/'.$product->id)}}" method="POST" lay-filter="fb-form">
-                    <div class="layui-form-item fb-form-item2">
+                    <div class="layui-form-item fb-form-item">
                         <label class="layui-form-label">选择分类 *</label>
                         <div class="layui-input-inline">
-                            <input type="text" name="product_category_id" id="category_tree" lay-verify="tree" autocomplete="off" placeholder="请选择分类(加载中)" class="layui-input" value="{{ $product->product_category_id }}">
+                            <input type="hidden" name="product_category_id" >
+                            <div id="product_category" class="demo-tree demo-tree-box" style="min-width: 200px;"></div>
                         </div>
                     </div>
                     <div class="layui-form-item">
@@ -103,35 +104,56 @@
 </script>
 <script>
     var sizes = {};
-    layui.use(['treeSelect', 'form', 'layer'], function () {
+    layui.use(['treeSelect', 'form', 'layer','tree'], function () {
         var treeSelect= layui.treeSelect,
-                form = layui.form,
+                tree = layui.tree
+        form = layui.form,
                 $ = layui.jquery,
                 layer = layui.layer;
+        var data = {!! $product_categories !!};
+        tree.render({
+            elem: '#product_category'
+            ,id: 'product_category' //定义索引
+            ,data: data
+            ,showCheckbox: true
 
-        treeSelect.render({
-            elem: '#category_tree',
-            data: '/product_categories_tree',
-            headers: {},
-            type: 'get',
-            // 占位符
-            placeholder: "{!! $product->product_category_name !!}",
-            //多选
-            showCheckbox: false,
-            //连线
-            showLine: true,
-            //选中节点(依赖于 showCheckbox 以及 key 参数)。
-            //checked: [11, 12],
-            //展开节点(依赖于 key 参数)
-            spread: [{{ $product->product_category_id }}],
-            // 点击回调
-            click: function(obj){
-
-            },
-            // 加载完成后的回调函数
-            success: function (d) {
-                console.log(d);
-            }
         });
+        //监听提交
+        form.on('submit(demo1)', function(data) {
+            //获得选中的节点
+
+            var checkData = tree.getChecked('product_category');
+
+            var list = new Array();
+
+            list = getChecked_list(checkData);
+
+            console.log(checkData)
+
+            console.log(list);
+
+            $('input[name="product_category_id"]').val(list);
+
+
+        });
+
+
+        // 获取选中节点的id
+        function getChecked_list(data) {
+            var id = "";
+            $.each(data, function (index, item) {
+                if (id != "") {
+                    id = id + "," + item.id;
+                }
+                else {
+                    id = item.id;
+                }
+                var i = getChecked_list(item.children);
+                if (i != "") {
+                    id = id + "," + i;
+                }
+            });
+            return id;
+        }
     });
 </script>

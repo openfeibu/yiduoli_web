@@ -38,19 +38,19 @@ class ProductInformationController extends BaseController
 
         $lists = $this->category_repository->getLastFirstCategoryLists($product_category_id);
         $search_key = $request->get('search_key',"");
-        $products = app(Product::class);
+        $products = app(Product::class)->join('product_product_category','product_product_category.product_id','=','products.id');
         if($product_category_id)
         {
             $ids = $this->category_repository->getSubIds($product_category_id);
             array_unshift($ids,$product_category_id);
-            $products = $products->whereIn('product_category_id',$ids);
+            $products = $products->whereIn('product_product_category.product_category_id',$ids);
         }
         $products = $products->where(function ($query){
-            $query->whereNotNull('instruction')->orWhereNotNull('vid');
+            $query->whereNotNull('products.instruction')->orWhereNotNull('vid');
         })
-            ->orderBy('order','desc')
-            ->orderBy('created_at','desc')
-            ->orderBy('id','desc')
+            ->orderBy('products.order','desc')
+            ->orderBy('products.created_at','desc')
+            ->orderBy('products.id','desc')
             ->paginate(10);
         if ($this->response->typeIs('json')) {
             $data['content'] = $this->response->layout('render')

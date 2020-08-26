@@ -22,7 +22,7 @@ class ProductCategoryController extends BaseController
     }
     public function getCategoriesTree(Request $request)
     {
-        $categories = $this->repository->getCategoriesSelectTreeCache();
+        $categories = $this->repository->getCategoriesSelectTree();
         return $categories;
     }
 }

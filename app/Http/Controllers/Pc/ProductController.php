@@ -39,22 +39,22 @@ class ProductController extends BaseController
         $lists = $this->category_repository->getLastFirstCategoryLists($product_category_id);
 
         $search_key = $request->get('search_key',"");
-        $products = app(Product::class);
+        $products = app(Product::class)->join('product_product_category','product_product_category.product_id','=','products.id');
         $children = [];
         if($product_category_id)
         {
             $ids = $this->category_repository->getSubIds($product_category_id);
             array_unshift($ids,$product_category_id);
-            $products = $products->whereIn('product_category_id',$ids);
+            $products = $products->whereIn('product_product_category.product_category_id',$ids);
             $children = $this->category_repository->getListCategories($product_category_id);
         }
         $products = $products->when($search_key,function ($query) use ($search_key){
-            return $query->where('title','like','%'.$search_key.'%');
+            return $query->where('products.title','like','%'.$search_key.'%');
         });
-        $products = $products->orderBy('order','desc')
-            ->orderBy('created_at','desc')
-            ->orderBy('id','desc')
-            ->paginate(12);
+        $products = $products->groupBy('products.id')->orderBy('products.order','desc')
+            ->orderBy('products.created_at','desc')
+            ->orderBy('products.id','desc')
+            ->paginate(12,['products.*']);
 
         if ($this->response->typeIs('json')) {
             $data['content'] = $this->response->layout('render')

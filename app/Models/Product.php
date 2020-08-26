@@ -34,4 +34,8 @@ class Product extends BaseModel
     {
         return $this->attributes ? unserialize($this->attributes['parameters']) : [];
     }
+    public function product_categories()
+    {
+        return $this->belongsToMany(config('model.product.product_category.model'))->withTimestamps();
+    }
 }

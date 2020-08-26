@@ -44,18 +44,18 @@ class AcademicReportController extends BaseController
         $lists = $this->category_repository->getLastFirstCategoryLists($product_category_id);
 
         $search_key = $request->get('search_key',"");
-        $products = app(Product::class)->join('academic_reports','academic_reports.product_id','=','products.id');
+        $products = app(Product::class)->join('product_product_category','product_product_category.product_id','=','products.id')->join('academic_reports','academic_reports.product_id','=','products.id');
         if($product_category_id)
         {
             $ids = $this->category_repository->getSubIds($product_category_id);
             array_unshift($ids,$product_category_id);
-            $products = $products->whereIn('product_category_id',$ids);
+            $products = $products->whereIn('product_product_category.product_category_id',$ids);
         }
         $products = $products
-            ->groupBy('products.id')
-            ->orderBy('order','desc')
-            ->orderBy('created_at','desc')
-            ->orderBy('id','desc')
+            ->groupBy('products.products.id')
+            ->orderBy('products.order','desc')
+            ->orderBy('products.created_at','desc')
+            ->orderBy('products.id','desc')
             ->paginate(10,['products.*']);
 
         foreach ($products as $key => $product)

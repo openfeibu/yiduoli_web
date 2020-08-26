@@ -73,7 +73,7 @@ class ProductCategoryRepository extends BaseRepository implements ProductCategor
         Cache::forever('categories_select_tree', $data);
         return $data;
     }
-    public function getCategoriesSelectTree($parent_id=0)
+    public function getCategoriesSelectTree($parent_id=0,$check_ids=[])
     {
 
         $data = [];
@@ -86,9 +86,14 @@ class ProductCategoryRepository extends BaseRepository implements ProductCategor
                 'id' => $category->id,
                 'parent_id' => $category->parent_id,
                 'order' => $category->order,
-                'spread' => false
+                'spread' => true,
+                'checked' => false,
             ];
-            $data[$key]['children'] = $this->getCategoriesSelectTree($category->id);
+            if(!$this->where('parent_id',$category->id)->first(['id']))
+            {
+                $data[$key]['checked'] = in_array($category->id,$check_ids) ? true : false;
+            }
+            $data[$key]['children'] = $this->getCategoriesSelectTree($category->id,$check_ids);
         }
         return $data;
     }
@@ -213,6 +218,17 @@ class ProductCategoryRepository extends BaseRepository implements ProductCategor
 
         return $this->getLastFirstCategoryLists($category->parent_id,$list);
 
+    }
+    public function removeParentId($ids)
+    {
+        foreach ($ids as $key => $id)
+        {
+            if($this->where('parent_id',$id)->first(['id']))
+            {
+                unset($ids[$key]);
+            }
+        }
+        return $ids;
     }
 
 }
