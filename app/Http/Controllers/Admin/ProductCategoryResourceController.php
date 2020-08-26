@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Exceptions\OutputServerMessageException;
 use App\Http\Controllers\Admin\ResourceController as BaseController;
+use App\Models\Product;
 use App\Models\ProductCategory;
+use App\Repositories\Eloquent\ProductRepository;
 use Illuminate\Http\Request;
 use App\Repositories\Eloquent\ProductCategoryRepository;
 use Tree;
@@ -11,10 +14,12 @@ use Tree;
 class ProductCategoryResourceController extends BaseController
 {
     public function __construct(
+        ProductRepository $productRepository,
         ProductCategoryRepository $product_category
     )
     {
         parent::__construct();
+        $this->productRepository = $productRepository;
         $this->repository = $product_category;
         $this->repository
             ->pushCriteria(\App\Repositories\Criteria\RequestCriteria::class);
@@ -128,8 +133,16 @@ class ProductCategoryResourceController extends BaseController
         try {
             $sub_ids = $this->repository->getSubIds($product_category->id);
 
+            $ids = $sub_ids;
+            array_unshift($ids,$product_category->id);
+            $products = Product::join('product_product_category','product_product_category.product_id','=','products.id')->whereIn('product_product_category.product_category_id',$ids)->first(['products.id']);
+            if($products)
+            {
+                throw new OutputServerMessageException('请先移除该分类及子分类下的产品');
+            }
             if($sub_ids)
             {
+
                 $this->repository->forceDelete($sub_ids);
             }
             $this->repository->forceDelete([$product_category->id]);
