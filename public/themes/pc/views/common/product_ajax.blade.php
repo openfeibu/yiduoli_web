@@ -33,7 +33,7 @@
                     });
 
                     $("#category_html").html(data.data.category_html);
-
+                    $(".top_product_category_name").html(data.data.top_product_category_name);
                 },
                 error : function (jqXHR, textStatus, errorThrown) {
                     responseText = $.parseJSON(jqXHR.responseText);

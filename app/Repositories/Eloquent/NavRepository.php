@@ -91,7 +91,7 @@ class NavRepository extends BaseRepository implements NavRepositoryInterface
         {
             return $list;
         }
-        array_unshift($list,$nav);
+        array_unshift($list,$nav->toArray());
         if($nav->parent_id)
         {
             return $this->navList($nav->parent_id,$list);

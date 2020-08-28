@@ -1,6 +1,7 @@
 <?php namespace App\Widgets;
 
 use App\Models\Permission;
+use App\Models\ProductCategory;
 use App\Repositories\Eloquent\NavRepository;
 use Tree,Route;
 use Teepluss\Theme\Theme;
@@ -69,6 +70,26 @@ class WebBreadcrumb extends Widget {
         }
         else{
             $breadcrumbs = app(NavRepository::class)->navList($nav->id);
+        }
+        if(isset($this->attributes['product_category_id']) && $this->attributes['product_category_id'])
+        {
+            $top_product_category_id = app(ProductCategory::class)->where('id',$this->attributes['product_category_id'])->value('top_parent_id');
+            $top_product_category_id = $top_product_category_id ? $top_product_category_id : $this->attributes['product_category_id'];
+            if($top_product_category_id)
+            {
+                $top_product_category = app(ProductCategory::class)->where('id',$top_product_category_id)->first();
+                if($top_product_category)
+                {
+                    $arr[] = [
+                        'is_menu' => 1,
+                        'name' => $top_product_category->name ,
+                        'url' => '/product?product_category_id='.$top_product_category->id,
+                        'class' => 'top_product_category_name'
+                    ];
+                    $breadcrumbs = array_merge($breadcrumbs,$arr);
+                }
+            }
+
         }
         $count = count($breadcrumbs);
 

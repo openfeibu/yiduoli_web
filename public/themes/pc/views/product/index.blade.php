@@ -2,7 +2,8 @@
 <div class="main">
 
     <div class="container w1400">
-        {!! Theme::widget('WebBreadcrumb')->render() !!}
+        {!! Theme::widget('WebBreadcrumb',['product_category_id' => $product_category_id])->render() !!}
+
         @if(!$search_key)
         <div class="screen wow fadeInUp animated " style="box-shadow: none;" data-wow-duration=".6s" data-wow-delay=".5s" id="category_html">
             @include('product.category_html')

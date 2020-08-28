@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Pc;
 
+use App\Models\ProductCategory;
 use App\Repositories\Eloquent\AcademicReportRepository;
 use App\Repositories\Eloquent\ProductCategoryRepository;
 use App\Repositories\Eloquent\ProductRepository;
@@ -48,6 +49,11 @@ class ProductController extends BaseController
             $products = $products->whereIn('product_product_category.product_category_id',$ids);
             $children = $this->category_repository->getListCategories($product_category_id);
         }
+        $top_product_category_id = ProductCategory::where('id',$product_category_id)->value('top_parent_id');
+        $top_product_category_id = $top_product_category_id ? $top_product_category_id : $product_category_id;
+
+        $top_product_category = $this->category_repository->where('id',$top_product_category_id)->first();
+
         $products = $products->when($search_key,function ($query) use ($search_key){
             return $query->where('products.title','like','%'.$search_key.'%');
         });
@@ -60,6 +66,9 @@ class ProductController extends BaseController
             $data['content'] = $this->response->layout('render')
                 ->view('product.list')
                 ->data(compact('products'))->render()->getContent();
+
+            $data['top_product_category_name'] = $top_product_category->name;
+
             $data['category_html'] = $this->response->layout('render')
                 ->view('product.category_html')
                 ->data(compact('lists'))->render()->getContent();
