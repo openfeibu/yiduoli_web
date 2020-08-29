@@ -36,7 +36,7 @@
             showLoading();
             $.ajax({
                 url : ajax_href,
-                data : {'product_category_id' : category_id,'_token':"{!! csrf_token() !!}"},
+                data : {'product_category_id' : category_id,'search_key':"{{ $search_key }}",'_token':"{!! csrf_token() !!}"},
                 type : 'get',
                 dataType : "json",
                 success : function (data) {
