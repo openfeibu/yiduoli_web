@@ -10,7 +10,7 @@
 
                     <div class="report-bg transition500 video" vid = "{{ $product->vid }}" des="{{ $product->description }}">
                         <div class="test fb-overflow-2">{{ $product->title }}</div>
-                        <div class="date">{{ $product->created_at->format('Y-m-d') }}</div>
+                        @if($product->created_at)<div class="date">{{  $product->created_at->format('Y-m-d') }}</div>@endif
                     </div>
 
                 </li>
