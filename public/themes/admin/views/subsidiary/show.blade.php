@@ -18,7 +18,7 @@
                         </div>
                     </div>
                     <div class="layui-form-item">
-                        <label class="layui-form-label">* {{ trans('app.image') }}</label>
+                        <label class="layui-form-label">* {{ trans('app.image') }}<br>(240 X 60)</label>
                         {!! $subsidiary->files('image')
                         ->url($subsidiary->getUploadUrl('image'))
                         ->uploader()!!}

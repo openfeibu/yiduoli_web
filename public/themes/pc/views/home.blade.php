@@ -201,7 +201,7 @@
     <div class="container w1400">
         <div class="con-title tip-title  wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".3s">
             <span  class="transition500">NEW</span>
-            <h1>新闻中心</h1>
+            <a href="/news_center/news"><h1>新闻中心</h1></a>
         </div>
         <div class="new-con clearfix">
             @foreach(app('page_repository')->where('category_id',1)->where('home_recommend',1)->orderBy('created_at','desc')->limit(5)->get() as $key => $news)

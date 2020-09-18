@@ -12,7 +12,7 @@
                         </div>
                     </div>
                     <div class="layui-form-item">
-                        <label class="layui-form-label">图片</label>
+                        <label class="layui-form-label">图片<br>(1920 X 926)</label>
                         {!! $banner->files('image')
                         ->url($banner->getUploadUrl('image'))
                         ->uploader()!!}

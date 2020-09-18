@@ -1269,3 +1269,5 @@ header.active .headerRight{margin-top:5px}
 .alertBox-b{position:relative;width:90%;max-width:400px;background:#fff;border-radius:5px;overflow:hidden;margin:0 auto;top:40%;}
 .alertBox-b .msg{padding:40px 0;line-height:42px;font-size:14px;color:#000;text-align:center;}
 .alertBox-b .alertClose{width:100%;height:60px;background:#00e0e0;color:#333;font-size:14px;text-align:center;line-height:60px;cursor:pointer;}
+
+.course .course-item img{max-width:100%}

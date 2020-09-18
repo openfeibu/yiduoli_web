@@ -26,7 +26,7 @@
                         </div>
                     </div>
                     <div class="layui-form-item">
-                        <label class="layui-form-label">{{  trans('product.label.images') }}</label>
+                        <label class="layui-form-label">{{  trans('product.label.images') }}<br>(640 X 450)</label>
                         {!! $product->files('images')
                         ->url($product->getUploadURL('images'))
                         ->uploaders()!!}

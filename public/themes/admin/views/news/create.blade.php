@@ -12,10 +12,11 @@
                         </div>
                     </div>
                     <div class="layui-form-item">
-                        <label class="layui-form-label">{{ trans('page.label.image') }}</label>
+                        <label class="layui-form-label">{{ trans('page.label.image') }} <br>(400 X 230)</label>
                         {!! $page->files('image')
                         ->url($page->getUploadUrl('image'))
                         ->uploader()!!}
+						
                     </div>
                     <div class="layui-form-item layui-form-text">
                         <label class="layui-form-label">{{ trans('app.description') }}</label>
