@@ -52,19 +52,20 @@ class ProductResourceController extends BaseController
                 ->when($search ,function ($query) use ($search){
                     foreach($search as $field => $value)
                     {
-                        if($field == 'product_category_id')
+                        if($value)
                         {
-                            $query->where(function ($query) use ($value){
-                                $ids = $this->categoryRepository->getSubIds($value);
-                                array_unshift($ids,$value);
-                               // $query->whereRaw(" FIND_IN_SET ('".$value."',`products`.`product_category_id`)")->orWhereIn('product_product_category.product_category_id',$ids)->orWhereIn('products.product_category_id',$ids);
-                                $query->whereIn('product_product_category.product_category_id',$ids);
-                            });
-
-                        }else{
-                            if($value)
+                            if($field == 'product_category_id')
                             {
-                                $query->where('products.'.$field,'like','%'.$value.'%');
+                                $query->where(function ($query) use ($value){
+                                    $ids = $this->categoryRepository->getSubIds($value);
+                                    array_unshift($ids,$value);
+                                   // $query->whereRaw(" FIND_IN_SET ('".$value."',`products`.`product_category_id`)")->orWhereIn('product_product_category.product_category_id',$ids)->orWhereIn('products.product_category_id',$ids);
+                                    $query->whereIn('product_product_category.product_category_id',$ids);
+                                });
+                            }else{
+
+                                    $query->where('products.'.$field,'like','%'.$value.'%');
+
                             }
                         }
                     }
