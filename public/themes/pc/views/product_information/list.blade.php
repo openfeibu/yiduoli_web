@@ -20,7 +20,7 @@
                     <a href="{{ '/image/original/'.$product->instruction }}" target="_blank">
                         <div class="report-bg transition500">
                             <div class="test fb-overflow-2">{{ $product->instruction_title }}</div>
-                            <div class="date">{{ $product->created_at->format('Y-m-d') }}</div>
+                            @if($product->created_at)<div class="date">{{ $product->created_at->format('Y-m-d') }}</div>@endif
                         </div>
                     </a>
                 </li>
