@@ -45,5 +45,6 @@
 			<div></div>
 	</div>
 </div>
+<script src="http://player.polyv.net/script/polyvplayer.min.js"></script>
 
 
