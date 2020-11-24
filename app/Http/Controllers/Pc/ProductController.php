@@ -41,12 +41,15 @@ class ProductController extends BaseController
 
         $search_key = $request->get('search_key',"");
         $products = app(Product::class)->join('product_product_category','product_product_category.product_id','=','products.id');
-        $children = [];
+
         if($product_category_id)
         {
             $ids = $this->category_repository->getSubIds($product_category_id);
             array_unshift($ids,$product_category_id);
-            $products = $products->whereIn('product_product_category.product_category_id',$ids);
+            if(!$search_key)
+            {
+                $products = $products->whereIn('product_product_category.product_category_id',$ids);
+            }
             $children = $this->category_repository->getListCategories($product_category_id);
         }
         $top_product_category_id = ProductCategory::where('id',$product_category_id)->value('top_parent_id');
