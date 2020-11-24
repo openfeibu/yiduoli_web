@@ -1,7 +1,7 @@
 <!-- 内容 -->
 <div class="main">
     <div class="container w1400">
-        {!! Theme::widget('WebBreadcrumb')->render() !!}
+        {!! Theme::widget('WebBreadcrumb',['product_category_id' => $product->product_category_id])->render() !!}
         <div class="pro-detail-con">
             <div class="pro-detail-con-t clearfix  wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".4s">
                 <div class="pro-detail-img pull-left ">
