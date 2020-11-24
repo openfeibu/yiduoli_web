@@ -86,7 +86,7 @@ class ProductController extends BaseController
 
         return $this->response->title(trans('product.name'))
             ->view('product.index')
-            ->data(compact('products','top_categories','product_category_id','children','search_key','lists'))
+            ->data(compact('products','top_categories','product_category_id','top_product_category_id','children','search_key','lists'))
             ->output();
 
     }
