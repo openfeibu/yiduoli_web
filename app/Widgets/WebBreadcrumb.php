@@ -4,6 +4,8 @@ use App\Models\Permission;
 use App\Models\ProductCategory;
 use App\Repositories\Eloquent\NavRepository;
 use App\Repositories\Eloquent\ProductCategoryRepository;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 use Tree,Route;
 use Teepluss\Theme\Theme;
 use Teepluss\Theme\Widget;
@@ -72,13 +74,13 @@ class WebBreadcrumb extends Widget {
         else{
             $breadcrumbs = app(NavRepository::class)->navList($nav->id);
         }
-        if(isset($this->attributes['product_category_id']) && $this->attributes['product_category_id'])
+        if(isset($this->attributes['product_category_id']) && $this->attributes['product_category_id'] && !Input::get('search_key'))
         {
             $product_category_breadcrumbs = app(ProductCategoryRepository::class)->getBreadCrumbs([],$this->attributes['product_category_id']);
             $breadcrumbs = array_merge($breadcrumbs,$product_category_breadcrumbs);
 
         }
-        if(isset($this->attributes['top_product_category_id']) && $this->attributes['top_product_category_id'])
+        if(isset($this->attributes['top_product_category_id']) && $this->attributes['top_product_category_id'] && !Input::get('search_key'))
         {
 
             $top_product_category = app(ProductCategory::class)->where('id',$this->attributes['top_product_category_id'])->first();
