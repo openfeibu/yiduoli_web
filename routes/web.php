@@ -14,7 +14,7 @@
 Route::get('/product_categories', 'ProductCategoryController@getCategories')->name('product_categories');
 Route::get('/product_categories_tree', 'ProductCategoryController@getCategoriesTree')->name('product_categories_tree');
 Route::get('/subsidiary_tree', 'SubsidiaryController@getSubsidiaryTree')->name('subsidiary_tree');
-
+Route::get('/href', 'HomeController@href')->name('href');
 // Admin  routes  for user
 Route::group([
     'namespace' => 'Admin',
