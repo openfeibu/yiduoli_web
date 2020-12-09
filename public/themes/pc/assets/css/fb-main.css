@@ -88,9 +88,11 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #
 
 .w1400{max-width: 1400px;margin: 0 auto;}
 header{height: 100px;}
-
+.m-lang {display:none;}
 .headerBg{background-color:rgba(7, 9, 28, 0.08);height: 100%;}
-header .logo{width: 120px;padding-top: 23px;}
+header .logo{width: 120px;padding-top: 23px;position:relative;}
+header .logo .companycode{position:absolute;right:-150px;bottom:0;color:#004fe0;font-size:16px;line-height:16px;}
+header .logo .companycode a{color:#004fe0}
 header .newLogo{width:180px;padding-top:40px;}
 header .logo1{display: block;}
 header .logo2{display: none;}
@@ -115,10 +117,30 @@ header.active .headerRight{margin-top:5px}
 
 #allmap{margin-top:100px;height:300px;border-radius:10px;box-shadow:0 5px 10px #eee;border:1px solid #eee}
 .BMap_Marker img{width:auto !important}
+
 .lang{position: relative;}
-.lang  dl{background-color: #f9f9f9;color: #333;position: absolute;top: 50px;width: 120px;padding:10px 20px;left: 50%;margin-left: -60px;text-align: center;border-radius: 5px;display: none;}
-.lang  dl dd {line-height: 40px;font-size: 14px;}
-.lang  dl dd a{color: #333;}
+.lang  dl{background-color: #f9f9f9;color: #333;position: absolute;top: 50px;width: 120px;padding:10px 25px;left: 50%;margin-left: -60px;text-align: left;border-radius: 5px;display: none;}
+.lang  dl dd {line-height: 40px;font-size: 14px;text-indent:0;}
+/* .lang  dl dd:nth-of-type(1){
+	background:url("../images/cn.png") no-repeat 0 center/25px auto;
+}
+.lang  dl dd:nth-of-type(2){
+	background:url("../images/en.png") no-repeat 0 center/25px auto;
+}
+.lang  dl dd:nth-of-type(3){
+	background:url("../images/ru.png") no-repeat 0 center/25px auto;
+}
+.lang  dl dd:nth-of-type(4){
+	background:url("../images/es.png") no-repeat 0 center/25px auto;
+}
+.lang  dl dd:nth-of-type(5){
+	background:url("../images/fa.png") no-repeat 0 center/25px auto;
+}
+.lang  dl dd:nth-of-type(6){
+	background:url("../images/pt.png") no-repeat 0 center/25px auto;
+} */
+.lang  dl dd a{color: #333;width: 7	0px;
+    display: block;}
 .lang  dl dd a:hover{color: #4083ff;}
 
 .menu{display: none;}
@@ -133,7 +155,7 @@ header.active .headerRight{margin-top:5px}
 .headerBg.active .nav li a,.headerBg.fixedActive .nav li a{color: #000;}
 .headerBg.active .lang,.headerBg.fixedActive .lang{color: #666;}
 .headerBg .lang{height: 50px;line-height: 50px;color: #fff;font-size: 16px;margin-left: 20px;cursor: pointer;;}
-
+.headerBg .lang .lang-con{	padding-left:30px;padding-right:10px;}
 /* 关于我们 */
 .about,.product,.innovate,.new{
     margin: 125px 0;
@@ -659,6 +681,7 @@ header.active .headerRight{margin-top:5px}
     .course .course-item{max-width: 850px;}
 }
 @media (max-width: 1460px){
+	header .logo .companycode{right:-120px;font-size:14px;line-height:14px;}
     .fixed-nav{width: 60px;}
     .fixed-nav .fixed-nav-item{height: 60px;}
     .fixed-nav .fixed-nav-item:after{content:"";position: absolute;width: 40px;height: 1px;background-color: #eee;bottom: 0;left: 10px;}
@@ -670,6 +693,7 @@ header.active .headerRight{margin-top:5px}
 
 }
 @media (max-width: 1200px){
+	header .logo .companycode{right:-120px;font-size:14px;line-height:14px;}
     .container{width: 100% !important}
     .con-title{height: 60px;}
     .con-title h1{font-size: 26px;line-height: 60px;}
@@ -704,6 +728,44 @@ header.active .headerRight{margin-top:5px}
     @media only screen and (min-width:481px) {html {font-size:470%!important}}
     @media only screen and (min-width:561px) {html {font-size:545%!important}}
     @media only screen and (min-width:641px) {html {font-size:625%!important}}
+	
+	
+	.m-lang {
+    height: 0.6rem;
+    line-height: 0.6rem;
+    color: #333;
+    font-size: 0.28rem;
+    margin-left: 0;
+    cursor: pointer;
+	padding-left:0.3rem;
+	margin:0.15rem 0.7rem 0 0;
+	background:#fff;
+	width:1.2rem;
+	border-radius:0.2rem;
+	position:relative;
+	display:block;
+}
+	.m-lang:hover dl{display:block}
+.m-lang dl {
+    background-color: #f9f9f9;
+    color: #333;
+    position: absolute;
+    top: 0.8rem;
+    width: 2rem;
+    padding: 0.2rem 0.3rem;
+    left: 50%;
+    margin-left: -1rem;
+    text-align: left;
+    border-radius: 5px;
+    display: none;
+}
+
+.m-lang dl dd{
+   line-height:0.6rem;
+   font-size:0.28rem;
+} 
+.m-lang dl dd a{display:block;}
+
     .about,.product,.branch,.innovate{margin: 0.8rem 0;}
     .new{margin:0.8rem 0 0  0}
     .branch{margin: 0.8rem 0;}
@@ -803,11 +865,12 @@ header.active .headerRight{margin-top:5px}
     .footer-con-left:after{display: none;}
     .headerRight{display: none;}
     header{height: 0.88rem !important;}
-    header .logo{width: 1.5rem !important;padding-top: 0.15rem;}
+    header .logo{width: 1.5rem !important;padding-top: 0.15rem;position:relative;}
+	
 	 header .newLogo{width: 1.8rem !important;padding-top: 0.25rem;}
 	header.active .logo{padding-top: 0.25rem;}
     .menu{display: block;width: 0.6rem;height: 0.6rem;background:#fff url(../images/caidan.png) no-repeat center/ 100% 100%;position: absolute;right:0.3rem;top: 0.14rem;border-radius:50%;}
-	.m_en{display: block;width: 0.6rem;height: 0.6rem;background:#fff;border-radius:50%;position: absolute;right:1rem;top: 0.14rem;line-height:0.6rem;font-size:0.3rem;text-align:center;}
+	.m_en{display: none;width: 0.6rem;height: 0.6rem;background:#fff;border-radius:50%;position: absolute;right:1rem;top: 0.14rem;line-height:0.6rem;font-size:0.3rem;text-align:center;}
 	.m_en a{}
     .swiper-pagination-bullet{
         width: 0.16rem !important;

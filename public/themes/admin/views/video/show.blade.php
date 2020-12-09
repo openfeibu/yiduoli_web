@@ -18,7 +18,7 @@
                         </div>
                     </div>
                     <div class="layui-form-item">
-                        <label class="layui-form-label">{{ trans('video.label.image') }}<br>(400 X 230)</label>
+                        <label class="layui-form-label">{{ trans('video.label.image') }}<br>(660 X 380)</label>
                         {!! $video->files('image')
                         ->url($video->getUploadUrl('image'))
                         ->uploader()!!}
