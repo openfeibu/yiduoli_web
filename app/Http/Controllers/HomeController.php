@@ -23,4 +23,5 @@ class HomeController extends BaseController
         header('location:'.$url);exit();
         return redirect($url);
     }
+
 }

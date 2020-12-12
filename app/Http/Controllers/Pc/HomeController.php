@@ -45,4 +45,13 @@ class HomeController extends BaseController
             ->output();
     }
 
+    public function anniversary()
+    {
+        $banners = Banner::orderBy('order','asc')->orderBy('id','asc')->get();
+        return $this->response->title('专题页')
+            ->layout('home')
+            ->view('anniversary')
+            ->data(compact('banners'))
+            ->output();
+    }
 }

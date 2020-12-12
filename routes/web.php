@@ -15,6 +15,7 @@ Route::get('/product_categories', 'ProductCategoryController@getCategories')->na
 Route::get('/product_categories_tree', 'ProductCategoryController@getCategoriesTree')->name('product_categories_tree');
 Route::get('/subsidiary_tree', 'SubsidiaryController@getSubsidiaryTree')->name('subsidiary_tree');
 Route::get('/href', 'HomeController@href')->name('href');
+
 // Admin  routes  for user
 Route::group([
     'namespace' => 'Admin',
@@ -268,6 +269,8 @@ Route::group([
     Route::get('/scientific/academic_report','AcademicReportController@index')->name('academic_report');
     Route::get('/subsidiary','SubsidiaryController@index')->name('subsidiary.index');
     Route::get('/subsidiary/{subsidiary}','SubsidiaryController@show')->name('subsidiary.show');
+
+    Route::get('/anniversary', 'HomeController@anniversary')->name('anniversary');
     /*
 
     Auth::routes();
