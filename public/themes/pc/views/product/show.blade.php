@@ -9,7 +9,7 @@
                         <div class="swiper-wrapper">
                             @foreach($product->images as $key => $image)
                             <div class="swiper-slide">
-                                <a href="{{ '/image/original'.$image }}"><img src="{{ '/image/original'.$image }}" width="100%"></a>
+                                <a href="{{ '/image/original'.$image }}"><img alt="{{ $product->title }}" src="{{ '/image/original'.$image }}" width="100%"></a>
                             </div>
                             @endforeach
                         </div>
