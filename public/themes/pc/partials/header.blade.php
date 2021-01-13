@@ -16,10 +16,10 @@
                     </div>
                     <dl>
                         <dd><a href="http://intl.yiduoli.com/">English</a></dd>
-						<dd style="text-align:right;display:none;"><a href="http://intl.yiduoli.com/fa">فارسی</a></dd>
-						<dd style="display:none;"><a href="http://intl.yiduoli.com/pt">Português</a></dd>		
-						<dd style="display:none;"><a href="http://intl.yiduoli.com/ru">Русский</a></dd>
-						<dd style="display:none;"><a href="http://intl.yiduoli.com/es">Español</a></dd>	
+						<dd style="text-align:left;font-size:18px;"><a href="http://intl.yiduoli.com/fa">فارسی</a></dd>
+						<dd ><a href="http://intl.yiduoli.com/pt">Português</a></dd>		
+						<dd ><a href="http://intl.yiduoli.com/ru">Русский</a></dd>
+						<dd ><a href="http://intl.yiduoli.com/es">Español</a></dd>	
                     </dl>
 
                 </div>
@@ -38,12 +38,19 @@
                     </div>
                     <dl>
                         <dd><a href="http://intl.yiduoli.com/">English</a></dd>
-						<dd style="text-align:right;display:none;"><a href="http://intl.yiduoli.com/fa">فارسی</a></dd>
-						<dd style="display:none;"><a href="http://intl.yiduoli.com/pt">Português</a></dd>		
-						<dd style="display:none;"><a href="http://intl.yiduoli.com/ru">Русский</a></dd>
-						<dd style="display:none;"><a href="http://intl.yiduoli.com/es">Español</a></dd>	
-                    </dl>
-
+						<dd style="text-align:left;"><a href="http://intl.yiduoli.com/fa">فارسی</a></dd>
+						<dd ><a href="http://intl.yiduoli.com/pt">Português</a></dd>		
+						<dd ><a href="http://intl.yiduoli.com/ru">Русский</a></dd>
+						<dd ><a href="http://intl.yiduoli.com/es">Español</a></dd>	
+                    </dl>	
+	<script>
+	$(function(){
+		$(".m-lang-con").on("click",function(){
+			$(".m-lang dl").slideToggle(200)
+			
+		})
+	})
+	</script>
 			</div>
 			<div class="m_en"><a href="http://intl.yiduoli.com/">EN</a></div>
             <div class="menu"></div>

@@ -91,7 +91,7 @@ header{height: 100px;}
 .m-lang {display:none;}
 .headerBg{background-color:rgba(7, 9, 28, 0.08);height: 100%;}
 header .logo{width: 120px;padding-top: 23px;position:relative;}
-header .logo .companycode{position:absolute;right:-150px;bottom:0;color:#004fe0;font-size:16px;line-height:16px;}
+header .logo .companycode{position:absolute;right:-130px;bottom:0;color:#004fe0;font-size:16px;line-height:16px;}
 header .logo .companycode a{color:#004fe0}
 header .newLogo{width:180px;padding-top:40px;}
 header .logo1{display: block;}
@@ -681,7 +681,7 @@ header.active .headerRight{margin-top:5px}
     .course .course-item{max-width: 850px;}
 }
 @media (max-width: 1460px){
-	header .logo .companycode{right:-120px;font-size:14px;line-height:14px;}
+	header .logo .companycode{right:-110px;font-size:14px;line-height:14px;}
     .fixed-nav{width: 60px;}
     .fixed-nav .fixed-nav-item{height: 60px;}
     .fixed-nav .fixed-nav-item:after{content:"";position: absolute;width: 40px;height: 1px;background-color: #eee;bottom: 0;left: 10px;}
@@ -693,7 +693,7 @@ header.active .headerRight{margin-top:5px}
 
 }
 @media (max-width: 1200px){
-	header .logo .companycode{right:-120px;font-size:14px;line-height:14px;}
+	header .logo .companycode{right:-110px;font-size:14px;line-height:14px;}
     .container{width: 100% !important}
     .con-title{height: 60px;}
     .con-title h1{font-size: 26px;line-height: 60px;}
@@ -729,7 +729,8 @@ header.active .headerRight{margin-top:5px}
     @media only screen and (min-width:561px) {html {font-size:545%!important}}
     @media only screen and (min-width:641px) {html {font-size:625%!important}}
 	
-	
+	header .logo .companycode{position:absolute;right: -1.7rem;
+    bottom: -0.02rem;;color:#004fe0;font-size:0.2rem;line-height:0.2rem;}
 	.m-lang {
     height: 0.6rem;
     line-height: 0.6rem;
@@ -740,12 +741,12 @@ header.active .headerRight{margin-top:5px}
 	padding-left:0.3rem;
 	margin:0.15rem 0.7rem 0 0;
 	background:#fff;
-	width:1.2rem;
+	width:1.4rem;
 	border-radius:0.2rem;
 	position:relative;
 	display:block;
 }
-	.m-lang:hover dl{display:block}
+	
 .m-lang dl {
     background-color: #f9f9f9;
     color: #333;
@@ -1334,3 +1335,8 @@ header.active .headerRight{margin-top:5px}
 .alertBox-b .alertClose{width:100%;height:60px;background:#00e0e0;color:#333;font-size:14px;text-align:center;line-height:60px;cursor:pointer;}
 
 .course .course-item img{max-width:100%}
+
+
+
+
+

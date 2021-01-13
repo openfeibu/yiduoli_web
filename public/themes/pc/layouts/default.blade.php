@@ -10,9 +10,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
     <meta name="format-detection" content="telephone=no">
-    <title>{{ setting('station_name') }} {!! Theme::getTitle() !!}</title>
-    <meta name="description" content="广东溢多利生物科技股份有限公司">
-    <meta name="keywords" content="广东溢多利生物科技股份有限公司,溢多利">
+    <title>{{ setting('station_name') }}_{!! Theme::getTitle() !!}_生物酶制剂_功能性饲料_功能性饲用产品</title>
+    <meta name="description" content="广东溢多利生物科技股份有限公司成立于1991年，总部位于广东省珠海市。公司专注于生物工程领域，围绕生物医药和生物农牧两大产业，研发并形成了生物酶制剂、甾体激素原料药、功能性饲料添加剂三大系列产品线，同时为行业客户持续提供整体生物技术解决方案，是我国生物酶制剂行业首家上市企业，全球极具竞争力的甾体激素医药企业。">
+     <meta name="keywords" content="广东溢多利生物科技股份有限公司,溢多利,生物酶制剂,甾体激素原料药,功能性饲料,博溢康,溢倍康,威特能,杜力锭,溢多利博落回散,功能性饲用产品,">
+	 <link rel="canonical" href="{!! url()->full() !!}">
     {!! Theme::asset()->styles() !!}
     {!! Theme::asset()->scripts() !!}
     <!--[if lte IE 9]>
