@@ -271,6 +271,8 @@ Route::group([
     Route::get('/subsidiary/{subsidiary}','SubsidiaryController@show')->name('subsidiary.show');
 
     Route::get('/anniversary', 'HomeController@anniversary')->name('anniversary');
+    Route::get('/thirtieth_anniversary', 'HomeController@thirtiethAnniversary')->name('thirtieth_anniversary');
+    Route::get('/thirtieth_anniversary/course', 'HomeController@thirtiethAnniversaryCourse')->name('thirtieth_anniversary_course');
     /*
 
     Auth::routes();

@@ -54,4 +54,18 @@ class HomeController extends BaseController
             ->data(compact('banners'))
             ->output();
     }
+    public function thirtiethAnniversary()
+    {
+        return $this->response->title('三十周年纪念日专题页')
+            ->layout('home')
+            ->view('thirtieth_anniversary')
+            ->output();
+    }
+    public function thirtiethAnniversaryCourse()
+    {
+        return $this->response->title('三十周年纪念日专题页-发展历程')
+            ->layout('home')
+            ->view('thirtieth_anniversary_course')
+            ->output();
+    }
 }
