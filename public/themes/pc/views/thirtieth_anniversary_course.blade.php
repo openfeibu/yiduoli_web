@@ -1,4 +1,5 @@
 <style>
+body,p{font-family:"Microsoft YaHei" !important}
     .pcImg {
         display: block;
     }
@@ -11,12 +12,15 @@
         max-width: 1200px !important;
     }
 
-    .about, .product, .innovate, .new {
+    .product, .innovate, .new {
         margin-top: 100px;
     }
-
+	
     .about {
-        margin-bottom: 0
+		  margin-top: 120px;
+		  padding-bottom:100px;
+        margin-bottom: 0;
+		
     }
 
     .about-left {
@@ -24,24 +28,24 @@
         position: relative;
         z-index: 999;
         cursor: pointer;
+		padding-left:40px;
+		float:right;
     }
 
     .about-right {
-        padding: 0 0 0 50px;
+        padding: 30px 15px 0 25px;
     }
 
-    .about {
-    }
-
+ 
     .about-con {
-        font-size: 16px;
+        font-size: 20px;
         margin-top: 0;
         margin-bottom: 0
     }
 
     .about-con p {
         text-indent: 2em;
-        line-height: 32px;
+        line-height: 35px;
         text-align: justify
     }
 
@@ -54,12 +58,12 @@
     .about-right .more {
 
         cursor: pointer;
-        line-height: 42px;
-        width: 120px;
-        height: 42px;
-        background: url(/themes/pc/assets/images/btn.png) no-repeat center / 100% 100%;
+        line-height: 33px;
+        width: 138px;
+        height: 33px;
+        background: #e60012;
         color: #fff;
-        font-size: 14px;
+        font-size: 16px;
         margin: 10px 0;
         text-indent: 1.5em;
         text-align: left;
@@ -77,35 +81,49 @@
       // cursor: pointer;
       //
       }
-
+	  .about-right{position:relative}
+	.about-bg{position:absolute;width:765px;height:375px;background: url("{!! theme_asset('images/30/videoBg.png') !!}") no-repeat center / 100% 100%;left:-57px;top:70px}
+	.con-title{height:80px}
     .con-title h1 {
+		height:80px;
+		line-height:80px;
         font-size: 50px;
         color: #3e3f3f;
     }
-
-    .tip-title:before {
+	.tip-title2{text-align:center; vertical-align: top;line-height:50px}
+	.tip-title2 h1{
+		display:inline-block;
+		*display:inline-block;
+		*zoom:1;
+		vertical-align: middle;
+		color:#3e3a39;font-szie:50px;font-weight:bold;
+	}
+    .tip-title2:before {
         content: "";
-        width: 100px;
-        height: 5px;
-        background: #4083ff;
-        border-radius: 5px 0 0 5px;
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        margin-left: -100px;
+        width: 10px;
+        height: 10px;
+        background: #3e3a39;
+		margin-right:10px;
+		vertical-align: middle;
+        border-radius: 50%;
+		display:inline-block;
+		*display:inline-block;
+		*zoom:1;
     }
 
-    .tip-title:after {
-        content: "";
-        width: 100px;
-        height: 5px;
-        background: #00e0e0;
-        border-radius: 0 5px 5px 0;
-        position: absolute;
-        bottom: 0;
-        left: 50%;
+    .tip-title2:after {
+       content: "";
+        width: 10px;
+        height: 10px;
+margin-left:10px;
+		vertical-align: middle;
+        background: #3e3a39;
+        border-radius: 50%;
+		display:inline-block;
+		*display:inline-block;
+		*zoom:1;
     }
-
+	.tip-title2-des{color:#dcdddd;font-size:28px;text-align:center;font-weight:bold;}
     .mt10 {
         margin-top: 10px
     }
@@ -505,6 +523,7 @@
 
         .h5Img {
             display: block;
+			height:2.5rem
         }
 
         .about-left {
@@ -532,17 +551,19 @@
         }
 
         .about-right .more {
-            line-height: 0.8rem;
-            width: 2.528rem;
-            height: 0.8rem;
-            background: url("{!! theme_asset('images/btn.png') !!}") no-repeat center / 100% 100%;
-            color: #fff;
-            font-size: 0.28rem;
-            margin: 0.1rem auto;
-            text-indent: 2em;
-            text-align: left;
-            cursor: pointer;
-            display: block;
+           
+			 cursor: pointer;
+			line-height: 0.6rem;
+			width: 2.5rem;
+			height: 0.6rem;
+			background: #e60012;
+			color: #fff;
+			font-size: 0.28rem;
+			margin: 0.3rem 0;
+			text-indent: 1.5em;
+			text-align: left;
+			cursor: pointer;
+			display: block;
         }
 
         .con-title {
@@ -550,35 +571,37 @@
         }
 
         .con-title h1 {
+			height:1rem;line-height:1rem;
             font-size: 0.5rem
         }
+		.tip-title2:before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        background: #3e3a39;
+		margin-right:10px;
+		vertical-align: middle;
+        border-radius: 50%;
+		display:inline-block;
+		*display:inline-block;
+		*zoom:1;
+    }
 
-        .tip-title:before {
-            content: "";
-            width: 1rem;
-            height: 3px;
-            background: #4083ff;
-            border-radius: 3px 0 0 3px;
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            margin-left: -1rem;
-        }
+    .tip-title2:after {
+       content: "";
+        width: 10px;
+        height: 10px;
+margin-left:10px;
+		vertical-align: middle;
+        background: #3e3a39;
+        border-radius: 50%;
+		display:inline-block;
+		*display:inline-block;
+		*zoom:1;
+    }
+ 
 
-        .tip-title:after {
-            content: "";
-            width: 1rem;
-            height: 3px;
-            background: #00e0e0;
-            border-radius: 0 3px 3px 0;
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-        }
-
-        .about, .product, .branch, .innovate {
-            margin: 0.5rem 0;
-        }
+        
 
         .wkNew .product-item {
             height: auto;
@@ -737,8 +760,8 @@
             height: 4.5rem
         }
 
-        .about, .product, .innovate, .new {
-            margin-top: 0.8rem
+        .about, .product, .innovate, .new,.vision {
+            margin: 1.2rem 0 ;
         }
 
         .wkMt .test {
@@ -769,325 +792,393 @@
 
 
 </style>
-<div class="banner">
-    <img class="pcImg" src="{!! theme_asset('images/wk/wk-banner.jpg') !!}" width="100%" alt="" />
-    <img class="h5Img" src="{!! theme_asset('images/wk/h5banner.jpeg') !!}" width="100%" alt="" />
-</div>
-<!--<div class="banner">
-    <div class="swiper-container swiper-container-banner">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"><a href="#"><img src="{!! theme_asset('images/wk/wk-banner.jpg') !!}" width="100%" alt=""></a></div>
+
+<style>
+.developmentCourse-con{
+ background: url("{!! theme_asset('images/30/bg.jpg') !!}") no-repeat top center / 100% auto;
+ padding:75px 0;
+ margin:75px 0 0 0;
+ position:relative;
+ transition:height 0.5s;
+}
+
+.developmentCourse-item{height:185px;position:relative;z-index:100;display:none;}
+
+.developmentCourse-item .time{color:#e60012;font-size:30px}
+.developmentCourse-item .des{color:#595757;font-size:20px;line-height:34px;}
+.developmentCourse-item .img{height:150px;margin:15px 0 0  0}
+.developmentCourse-item .img img{height:150px;}
+.developmentCourse-item .des{text-align:justify}
+.developmentCourse-item .developmentCourse-item-left{ position:relative;padding-right:65px;}
+.developmentCourse-item .developmentCourse-item-left:before{content:"";position:absolute;width:28px;height:28px; background: url("{!! theme_asset('images/30/dian.png') !!}") no-repeat center / 100% 100%;right:-14px;top:5px;}
+.developmentCourse-item .developmentCourse-item-right{float:right;padding-left:65px;}
+.developmentCourse-item .developmentCourse-item-right:before{content:"";position:absolute;width:28px;height:28px; background: url("{!! theme_asset('images/30/dian.png') !!}") no-repeat center / 100% 100%;left:-14px;top:10px;z-index:100}
+.developmentCourse-more{
+	position:absolute;
+    line-height: 33px;
+    width: 138px;
+    height: 33px;
+    background: #e60012;
+    color: #fff;
+    font-size: 16px;
+    margin: 10px 0;
+    text-indent: 1.5em;
+    text-align: left;
+    cursor: pointer;
+    display: block;
+	left:50%;
+	margin-left:150px;
+	bottom:100px
+}
+.developmentCourse-more a{color:#fff;font-size:16px;}
+.car{position:absolute;width:60px;left:0;right:0;margin:0 auto;height:200px;background:#fff url("{!! theme_asset('images/30/carBg.png') !!}") repeat-y center / 100% auto;z-index:99;top:-35px; transition:all 0.5s;}
+
+
+.carLogo{background:#fff url("{!! theme_asset('images/loadingLogo.png') !!}") no-repeat center / 40px auto; width:50px;height:50px;border-radius:50%;box-shadow: 0 5px 20px #eee;position:absolute;top:0;z-index:101;left:50%;margin-left:-25px; }
+ @media (max-width: 1200px) {
+		
+    }	
+
+@media (max-width: 992px) {
+		.car{position:absolute;width:0.8rem;left:0.1rem;margin:0;height:2rem;background:#fff url("{!! theme_asset('images/30/carBg.png') !!}") repeat-y center / 100% auto;z-index:99;top:-0.35rem; transition:all 0.5s;}
+
+
+		.carLogo{background:#fff url("{!! theme_asset('images/loadingLogo.png') !!}") no-repeat center / 0.5rem auto; width:0.6rem;height:0.6rem;border-radius:50%;box-shadow: 0 0.05rem 0.2rem #eee;position:absolute;top:0;z-index:101;left:0.2rem;margin-left:0; }
+		
+		.developmentCourse-con{
+			 padding:20px 0;
+			 margin:0.8rem 0 0 0;
+		}
+		.tip-title2-des{font-size:0.35rem}
+	
+		.developmentCourse-item{height:auto;position:relative;}
+		.developmentCourse-item .time{color:#e60012;font-size:0.4rem}
+		.developmentCourse-item .des{color:#595757;font-size:0.26rem;line-height:0.42rem;}
+		.developmentCourse-item .img{height:1.8rem;margin:0.15rem 0 0  0}
+		.developmentCourse-item .img img{height:1.8rem;}
+		.developmentCourse-item .developmentCourse-item-left{padding-right:0;padding-left:0.8rem;margin-bottom:0.5rem;}
+		.developmentCourse-item .developmentCourse-item-left:before{content:"";position:absolute;width:0.4rem;height:0.4rem; background: url("{!! theme_asset('images/30/dian.png') !!}") no-repeat center / 100% 100%;left:-0.05rem;top:5px;}
+		.developmentCourse-item .developmentCourse-item-right{float:left;padding-left:0.8rem;margin-bottom:0.5rem;}
+		.developmentCourse-item .developmentCourse-item-right:before{content:"";position:absolute;width:0.4rem;height:0.4rem; background: url("{!! theme_asset('images/30/dian.png') !!}") no-repeat center / 100% 100%;left:-0.05rem;top:5px;}
+		.developmentCourse-more{
+			position:relative;
+			    cursor: pointer;
+				line-height: 0.6rem;
+				width: 2.5rem;
+				height: 0.6rem;
+				background: #e60012;
+				color: #fff;
+				font-size: 0.28rem;
+				margin: 0.3rem 0;
+				text-indent: 1.5em;
+				text-align: left;
+				cursor: pointer;
+				display: block;
+				top:0;
+				left:1rem;
+				float:left
+
+		}
+		.developmentCourse-more a{color:#fff;font-size:0.28rem;}
+
+
+	}
+</style>
+
+<div class="product developmentCourse">
+
+        <div class="con-title tip-title2 wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".3s">
+            <h1>发展历程</h1>
         </div>
-        <div class="swiper-pagination swiper-pagination-banner"></div>
-    </div>
-</div>
-<div class="h5banner">
-    <div class="swiper-container swiper-container-banner">
-        <div class="swiper-wrapper">
-			<div class="swiper-slide"><a href="#"><img src="{!! theme_asset('images/wk/h5banner.jpeg') !!}" width="100%" alt=""></a></div>
-        </div>
-        <div class="swiper-pagination swiper-pagination-banner"></div>
-    </div>
-</div> -->
-<!-- 关于我们 -->
-<div class="about">
-    <div class="container w1200">
-        <div class="page-news-video about-left col-lg-5 col-md-5 col-sm-12 wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".3s"  vid="ad514bee27b33a2c5572c56f97e62c5b_a" des="纵观全球养殖业，饲料中添加抗生素曾风靡一时。随着细菌耐药性、食品安全及环境污染等问题愈发突出，世界各国已相继采取饲料“禁抗”措施。2019年7月，中国农业农村部发布第194号公告，宣布除中药外的促生长类药物饲料添加剂在2020年全部退出市场。作为国内率先探索并布局饲料“无抗”领域的企业之一，溢多利积极响应国家号召，推动中国饲料“无抗”政策施行落地，为世界提供来自中国的“无抗”方案。">
-
-            <img class="transition" src="{!! theme_asset('images/wk/wk-video.jpg') !!}" alt="" />
-
-        </div>
-        <div class="about-right col-lg-7 col-md-7 col-sm-12" style="padding-right:0;">
-
-            <div class="about-con  wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".5s">
-                <p>纵观全球养殖业，饲料中添加抗生素曾风靡一时。随着细菌耐药性、食品安全及环境污染等问题愈发突出，世界各国已相继采取饲料“禁抗”措施。2019年7月，中国农业农村部发布第194号公告，宣布除中药外的促生长类药物饲料添加剂在2020年全部退出市场。作为国内率先探索并布局饲料“无抗”领域的企业之一，溢多利积极响应国家号召，推动中国饲料“无抗”政策施行落地，为世界提供来自中国的“无抗”方案。
-                </p>
-                <p class="mhidden" style="margin-top:20px">溢多利分子公司长沙世唯生物科技有限公司是国内最早的药用植物提取物生产厂家之一，公司研发的“博落回散”（商品名：美佑壮）是我国首个获得国家二类新中兽药证书的产品，具有极强的抗炎活性。溢多利充分发挥原本在酶制剂方面的优势，与药用植物提取物领域的成果完美结合，诞生了“博落回+酶制剂”组合方案，可产生1+1＞2的“抗炎、整肠、促生长”效果，极大推动了我国饲料“无抗”的进程，并在海外多个国家作为饲用抗生素替代方案稳定使用。溢多利，助力养殖业在饲料“无抗”背景下实现转型升级与绿色发展，助力人类实现更加健康、美好的生活。</p>
-                <!-- <p class="hiddle">......</p>-->
-            </div>
-            <div class="more  wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".6s">了解详情</div>
-        </div>
-    </div>
-</div>
-<!-- 溢多利推进“无抗”养殖大事记 -->
-<div class="product wkNew">
-    <div class="container w1200">
-        <div class="con-title tip-title wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".3s">
-
-            <h1>溢多利推进饲料“无抗”大事记</h1>
-        </div>
-        <div class="product-con clearfix">
-            <div class="product-item col-lg-3 col-md-3 col-sm-12 col-xs-12 wow bounceIn animated" data-wow-duration=".6s" data-wow-delay=".5s">
-                <div class="product-item-b product-item-1">
-                    <a target="_black" href="http://www.micolta.cn/intro/2.html">
-                        <p class="time ">2011</span></p>
-                        <p class="t1 mt10">悉心研发</p>
-                        <p class="t2 ">曾建国教授作为国家中药材生产（湖南）技术中心主任，是享誉国内外的中草药博落回研究领域专家，其团队历经20年时间研制的“博落回散”（商品名：美佑壮）取得国家首个二类新中兽药证书。</p>
-                    </a>
-                </div>
-                <div class="product-item-b product-item-2">
-                    <a target="_black" href="http://www.micolta.cn/intro/1.html">
-                        <p class="time "style="font-size:18px;line-height:14px"></br>2012<br>-</br>2014</span></p>
-                        <p class="t1 mt10">首度获批</p>
-                        <p class="t2 ">“博落回散”被批准为我国首个中兽药类药物饲料添加剂，为国家禁用抗生素战略的早日施行提供了技术支持和产品储备。国家发改委批准设立兽用中药资源与中兽药创制国家地方联合工程中心，由湖南农业大学牵头，联合湖南美可达和湖南省中药提取工程研究中心有限公司等单位联合组建。</p>
-                    </a>
-                </div>
-
-            </div>
-            <div class="product-item col-lg-3 col-md-3 col-sm-12 col-xs-12 wow bounceIn animated" data-wow-duration=".6s" data-wow-delay=".5s">
-                <div class="product-item-b product-item-1">
-                    <a target="_black" href="http://www.yiduoli.com/news_center/news/372">
-                        <p class="time ">2016</span></p>
-                        <p class="t1 mt10">加大科研投入</p>
-                        <p class="t2 ">溢多利加大对“替抗”产品的科研投入，发布葡萄糖氧化酶等多款产品，其通过剂型处理，显著提高了耐温性，综合性能远超同类产品，对于替代抗生素的使用具有重要意义。</p>
-                    </a>
-                </div>
-                <div class="product-item-b product-item-2">
-                    <a target="_black" href="http://www.yiduoli.com/news_center/news/396">
-                        <p class="time ">2017</span></p>
-                        <p class="t1 mt10">举办新品发布会</p>
-                        <p class="t2 ">溢多利举办“替抗”新品发布会，发布创新型酶制剂及高效植物提取系列明星产品“美佑壮”、“威特能”。</p>
-                    </a>
-                </div>
-            </div>
-            <div class="product-item col-lg-3 col-md-3 col-sm-12 col-xs-12 wow bounceIn animated" data-wow-duration=".6s" data-wow-delay=".5s">
-                <div class="product-item-b product-item-1">
-                    <a  target="_black" href="http://www.yiduoli.com/about/profile/170">
-                        <p class="time ">2018</span></p>
-                        <p class="t1 mt10">战略布局</p>
-                        <p class="t2 ">溢多利并购重组长沙世唯科技有限公司，进一步丰富了饲用抗生素替代产品线。</p>
-                    </a>
-                </div>
-                <div class="product-item-b product-item-2">
-                    <a target="_black" href="http://www.yiduoli.com/news_center/news/440">
-                        <p class="time ">2019</span></p>
-                        <p class="t1 mt10">再度获批</p>
-                        <p class="t2 ">2019年7月，农业农村部发布第194号公告，停止生产含有促生长类药物饲料添加剂的商品饲料。同月，溢多利召开2019“无抗”组合产品发布会，生物酶制剂与植物提取物双擎并发。9月，溢多利植物提取物板块产品“博普总碱”及“博普总碱散”获批第2个国家二类新中兽药。</p>
-                    </a>
-                </div>
-            </div>
-            <div class="product-item col-lg-3 col-md-3 col-sm-12 col-xs-12 wow bounceIn animated" data-wow-duration=".6s" data-wow-delay=".5s">
-                <div class="product-item-b product-item-1">
-                    <a target="_black" href="https://mp.weixin.qq.com/s/ULMMuoLrtm8s0klYUU6lqw">
-                        <p class="time ">2020</span></p>
-                        <p class="t1 mt10">“无抗”正当时</p>
-                        <p class="t2 ">6月，农业农村部发布第307号公告：养殖场自配料不得违规添加禁用的抗生素。7月1日，溢多利在“无抗”日开展“无抗”宣言；9月，溢多利携“替抗”明星产品及方案亮相颐和论坛、2020中国畜牧业博览会、2020太阳鸟·养与创新大会，引起行业高度关注。</p>
-                    </a>
-                </div>
-                <div class="product-item-b product-item-2">
-                    <a >
-                        <p class="time ">2021<span>......</span></p>
-                        <p class="t1 mt10">未完待续</p>
-                        <p class="t2 ">我们的脚步坚定且有力，未来将持续助力生态文明建设，共享绿色健康中国。</p>
-                    </a>
-                </div>
-
-            </div>
-
-        </div>
-    </div>
-</div>
-<div class="product wkProduct">
-    <div class="container w1200">
-        <div class="con-title tip-title wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".3s">
-            <h1>溢多利“替抗”明星产品</h1>
-        </div>
-        <div class="product-con clearfix">
-            <div class="product-item col-lg-3 col-md-3 col-sm-6 col-xs-6 wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".5s">
-                <div class="product-item-box2">
-                    <a target="_black" href="http://www.yiduoli.com/product/27">
-                        <div class="img"><img  class="transition500" src="{!! theme_asset('images/wk/product1.jpg') !!}" alt=""></div>
-                        <div class="transition500 test">
-                            <p>我国首个二类中兽药制剂产品</p>
-                            <p>第一个中兽药类药物饲料添加剂产品</p>
-                            <p>100%纯植物提取，无休药期</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="product-item col-lg-3 col-md-3 col-sm-6 col-xs-6 wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".5s">
-                <div class="product-item-box2">
-                    <a target="_black" href="http://www.yiduoli.com/product/64">
-                        <div class="img"><img  class="transition500" src="{!! theme_asset('images/wk/product3.jpg') !!}" alt=""></div>
-                        <div class="transition500 test">
-                            <p>抑制有害菌生长繁殖</p>
-                            <p>替抗促生长</p>
-                            <p>调节畜禽肠道环境,改善肠道微生态平衡</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="product-item col-lg-3 col-md-3 col-sm-6 col-xs-6 wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".5s">
-                <div class="product-item-box2">
-                    <a target="_black" href="http://www.yiduoli.com/product/65">
-                        <div class="img"><img  class="transition500" src="{!! theme_asset('images/wk/product2.jpg') !!}" alt=""></div>
-                        <div class="transition500 test">
-                            <p>提升饲料利用率</p>
-                            <p>维持动物肠道微生态平衡</p>
-                            <p>增强动物免疫力</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="product-item col-lg-3 col-md-3 col-sm-6 col-xs-6 wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".5s">
-                <div class="product-item-box2">
-                    <a target="_black" href="http://www.yiduoli.com/product/32">
-                        <div class="img"><img  class="transition500" src="{!! theme_asset('images/wk/product4.jpg') !!}" alt=""></div>
-                        <div class="transition500 test">
-                            <p>修复受损肠道</p>
-                            <p>加强肠道免疫功能</p>
-                            <p>提高动物生长性能</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div>
-
-<div class="new wkMt">
-    <div class="container w1200">
-        <div class="con-title tip-title  wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".3s">
-            <a href="#"><h1>媒体报道</h1></a>
-        </div>
-        <div class="new-con clearfix">
-
-            <div class="new-item2 col-lg-6 col-md-6 col-sm-12 col-xs-12 wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".5s">
-                <a target="_black" href="http://szb.farmer.com.cn/2020/20200829/20200829_008/20200829_008_4.htm?from=groupmessage">
-                    <div class="img col-lg-6 col-md-6 col-sm-6 col-xs-6 "><img class="transition500" src="{!! theme_asset('images/wk/wk-n1.jpg') !!}"/></div>
-                    <div class="test col-lg-6 col-md-6 col-sm-6 col-xs-6">
-
-                        <div class="t1">农民日报</div>
-                        <div class="t2">博落回：种植效益高　产品能“替抗”</div>
-                    </div>
-                </a>
-            </div>
-            <div class="new-item2 col-lg-6 col-md-6 col-sm-12 col-xs-12 wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".5s">
-                <a target="_black" href="https://mp.weixin.qq.com/s/0ET3uixRxtpmJZSkm9lEVA">
-                    <div class="img col-lg-6 col-md-6 col-sm-6 col-xs-6 "><img class="transition500" src="{!! theme_asset('images/wk/wk-n2.jpg') !!}"/></div>
-                    <div class="test col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                        <div class="t1">饲料行业信息网</div>
-                        <div class="t2">揭开博落回散的神秘面纱！探访溢多利“
-                            替抗组合”背后的技术力量（二）</div>
-                    </div>
-                </a>
-            </div>
-            <div class="new-item2 col-lg-6 col-md-6 col-sm-12 col-xs-12 wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".5s">
-                <a target="_black" href="https://mp.weixin.qq.com/s/aNkTTF96G7bg_nWECrZhCQ">
-
-                    <div class="test col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                        <div class="t1">中国饲料工业信息网</div>
-                        <div class="t2">溢多利替抗方案助力猪业发展</div>
-                    </div>
-                    <div class="img col-lg-6 col-md-6 col-sm-6 col-xs-6 "><img class="transition500" src="{!! theme_asset('images/wk/wk-n3.jpg') !!}"/></div>
-                </a>
-            </div>
-            <div class="new-item2 col-lg-6 col-md-6 col-sm-12 col-xs-12 wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".5s">
-                <a target="_black" href="https://mp.weixin.qq.com/s/remowap9FaZIEOD7D-sNFg">
-
-                    <div class="test col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                        <div class="t1">新饲料newfeed</div>
-                        <div class="t2">呕心沥血三十年，“溢”马当先谱新篇<br>
-                            ——记深入广东溢多利参观交流学习</div>
-                    </div>
-                    <div class="img col-lg-6 col-md-6 col-sm-6 col-xs-6 "><img class="transition500" src="{!! theme_asset('images/wk/wk-n4.jpg') !!}"/></div>
-                </a>
-            </div>
-            <div class="new-item2 col-lg-6 col-md-6 col-sm-12 col-xs-12 wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".5s">
-                <a target="_black" href="https://mp.weixin.qq.com/s/Nx1r6Flq3IXHEVwuzJw86Q">
-                    <div class="img col-lg-6 col-md-6 col-sm-6 col-xs-6 "><img class="transition500" src="{!! theme_asset('images/wk/wk-n5.jpg') !!}"/></div>
-                    <div class="test col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                        <div class="t1">国外畜牧学猪与禽</div>
-                        <div class="t2">科研为本，品质为先，一劳永“溢”</div>
-                    </div	>
-                </a>
-            </div>
-            <div class="new-item2 col-lg-6 col-md-6 col-sm-12 col-xs-12 wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".5s">
-                <a target="_black" href="https://mp.weixin.qq.com/s/Jccs1Drd3Z6gN_HUp81MbQ">
-                    <div class="img col-lg-6 col-md-6 col-sm-6 col-xs-6 "><img class="transition500" src="{!! theme_asset('images/wk/wk-n6.jpg') !!}"/></div>
-                    <div class="test col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                        <div class="t1">农牧舆情</div>
-                        <div class="t2">为什么说溢多利是替抗企业的优秀样本？</div>
-                    </div>
-                </a>
-
-            </div>
-        </div>
-    </div>
+		<div class="tip-title2-des wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".5s">DEVELOPMENT HISTORY</div> 
+		
+		<div class="developmentCourse-con clearfix">
+			<div class="car">
+				
+			</div>
+			<div class="carLogo"></div>
+			<div class="container w1200">
+				<div class="developmentCourse-item  col-lg-12 col-md-12 col-sm-12 col-xs-12 wow bounceIn animated" data-wow-duration=".6s" data-wow-delay=".5s">
+					<div class=" developmentCourse-item-left col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					   <div class="time">1991年</div>
+					   <div class="des">珠海经济特区溢多利酶制剂有限公司成立，标志中国饲用酶制剂工业的起步，从此打破国外企业垄断的市场格局。</div>
+					   <div class="img">
+						<img  class="" src="{!! theme_asset('images/30/1991.png') !!}" alt="" />
+					   </div>
+				   </div>
+				</div>
+				<div class="developmentCourse-item  col-lg-12 col-md-12 col-sm-12 col-xs-12 wow bounceIn animated" data-wow-duration=".6s" data-wow-delay=".5s">
+					<div class="developmentCourse-item-right col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					   <div class="time">1997年</div>
+					   <div class="des">溢多利位于珠海南屏科技工业园的生产基地一期工程竣工。</div>
+					</div>
+				</div>
+				<div class="developmentCourse-item  col-lg-12 col-md-12 col-sm-12 col-xs-12 wow bounceIn animated" data-wow-duration=".6s" data-wow-delay=".5s">
+					<div class=" developmentCourse-item-left col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					   <div class="time">1998年</div>
+					   <div class="des">溢多利被认定为广东省高新技术企业。</div>
+					  
+				   </div>
+				</div>
+				<div class="developmentCourse-item  col-lg-12 col-md-12 col-sm-12 col-xs-12 wow bounceIn animated" data-wow-duration=".6s" data-wow-delay=".5s">
+					<div class="developmentCourse-item-right col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					   <div class="time">1999年</div>
+					   <div class="des">溢多利在中国农业大学、南京农业大学等十几所高等院校捐资设立溢多利教育基金。</div>
+					</div>
+				</div>
+				<div class="developmentCourse-item  col-lg-12 col-md-12 col-sm-12 col-xs-12 wow bounceIn animated" data-wow-duration=".6s" data-wow-delay=".5s">
+					<div class=" developmentCourse-item-left col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					   <div class="time">2001年</div>
+					   <div class="des">珠海经济特区溢多利有限公司完成股份改制，整体变更设立为广东溢多利生物科技股份有限公司，为公司迈向资本市场奠定基础</div>
+					  
+				   </div>
+				</div>
+				<div class="developmentCourse-item  col-lg-12 col-md-12 col-sm-12 col-xs-12 wow bounceIn animated" data-wow-duration=".6s" data-wow-delay=".5s">
+					<div class="developmentCourse-item-right col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					   <div class="time">2003年</div>
+					   <div class="des">广东省饲料添加剂生物工程技术研究开发中心依托溢多利组建成立；溢多利负责起草的《饲料用酶制剂通则》由农业部颁布施行；“溢多酶”被认定为“广东省名牌产品”</div>
+					   <div class="img">
+							<img  class="" src="{!! theme_asset('images/30/2003.png') !!}" alt="" />
+					   </div>
+					</div>
+				</div>
+				<div class="developmentCourse-item  col-lg-12 col-md-12 col-sm-12 col-xs-12 wow bounceIn animated" data-wow-duration=".6s" data-wow-delay=".5s">
+					<div class=" developmentCourse-item-left col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					   <div class="time">2005年</div>
+					   <div class="des">溢多利被评为“全国三十强饲料企业”。</div>
+					  
+				   </div>
+				</div>
+				<div class="developmentCourse-item  col-lg-12 col-md-12 col-sm-12 col-xs-12 wow bounceIn animated" data-wow-duration=".6s" data-wow-delay=".5s">
+					<div class="developmentCourse-item-right col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					   <div class="time">2008年</div>
+					   <div class="des">溢多利被认定为行业首批国家级高新技术企业。</div>
+					   <div class="img">
+							<img  class="" src="{!! theme_asset('images/30/2008.png') !!}" alt="" />
+					   </div>
+					</div>
+				</div>
+				<div class="developmentCourse-item  col-lg-12 col-md-12 col-sm-12 col-xs-12 wow bounceIn animated" data-wow-duration=".6s" data-wow-delay=".5s">
+					<div class=" developmentCourse-item-left col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					   <div class="time">2014年</div>
+					   <div class="des">溢多利在深交所挂牌上市，成为中国首家酶制剂上市企业；溢多利成功并购重组湖南鸿鹰生物科技有限公司，酶制剂产品从饲用延伸至食品、能源、洗涤、纺织等其他工业用酶制剂领域。</div>
+					   <div class="img">
+							<img  class="" src="{!! theme_asset('images/30/2014.png') !!}" alt="" />
+					   </div>
+					  
+				   </div>
+				</div>
+				<div class="developmentCourse-item  col-lg-12 col-md-12 col-sm-12 col-xs-12 wow bounceIn animated" data-wow-duration=".6s" data-wow-delay=".5s">
+					<div class="developmentCourse-item-right col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					   <div class="time">2015年</div>
+					   <div class="des">溢多利国家级博士后科研工作站获批成立；溢多利成功并购重组湖南新合新生物医药有限公司、河南利华制药有限公司，正式进入生物医药产业，步入跨越式发展快车道。</div>
+					</div>
+				</div>
+				<div class="developmentCourse-item  col-lg-12 col-md-12 col-sm-12 col-xs-12 wow bounceIn animated" data-wow-duration=".6s" data-wow-delay=".5s">
+					<div class=" developmentCourse-item-left col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					   <div class="time">2016年</div>
+					   <div class="des">溢多利总部研发与办公大楼落成；新产学研示范基地建成并投入使用。</div>
+					   <div class="img">
+							<img  class="" src="{!! theme_asset('images/30/2016.png') !!}" alt="" />
+					   </div>
+					  
+				   </div>
+				</div>
+				<div class="developmentCourse-item  col-lg-12 col-md-12 col-sm-12 col-xs-12 wow bounceIn animated" data-wow-duration=".6s" data-wow-delay=".5s">
+					<div class="developmentCourse-item-right col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					   <div class="time">2017年</div>
+					   <div class="des">溢多利在湖南全面启动“溢多利生物医药产业园”投资建设，打造全球一流的产业基地；溢多利荣登福布斯2017年中国上市公司潜力百强企业榜。</div>
+					   
+					</div>
+				</div>
+				<div class="developmentCourse-item  col-lg-12 col-md-12 col-sm-12 col-xs-12 wow bounceIn animated" data-wow-duration=".6s" data-wow-delay=".5s">
+					<div class=" developmentCourse-item-left col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					   <div class="time">2018年</div>
+					   <div class="des">溢多利荣获“国家认定企业技术中心”；并购重组长沙世唯科技有限公司，提前布局饲用替抗产品。</div>
+					   <div class="img">
+							<img  class="" src="{!! theme_asset('images/30/2018.png') !!}" alt="" />
+					   </div>
+					  
+				   </div>
+				</div>
+				<div class="developmentCourse-item  col-lg-12 col-md-12 col-sm-12 col-xs-12 wow bounceIn animated" data-wow-duration=".6s" data-wow-delay=".5s">
+					<div class="developmentCourse-item-right col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					   <div class="time">2019年</div>
+					   <div class="des">溢多利饲用替抗产品发布会备受行业及媒体广泛关注，迎接饲料无抗新时代。</div>
+					   <div class="img">
+							<img  class="" src="{!! theme_asset('images/30/2019.png') !!}" alt="" />
+					   </div>
+					</div>
+				</div>
+				<div class="developmentCourse-item  col-lg-12 col-md-12 col-sm-12 col-xs-12 wow bounceIn animated" data-wow-duration=".6s" data-wow-delay=".5s">
+					<div class=" developmentCourse-item-left col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					   <div class="time">2020年</div>
+					   <div class="des">新年伊始，应对新冠疫情，溢多利第一时间复工复产，全力保障客户产品需求。7月1日中国饲料禁抗政策正式施行，溢多利率先推出多种饲用替抗产品和解决方案，深受客户好评和认可。</div>
+					   
+					  
+				   </div>
+				</div>
+				<div class="developmentCourse-item  col-lg-12 col-md-12 col-sm-12 col-xs-12 wow bounceIn animated" data-wow-duration=".6s" data-wow-delay=".5s">
+					<div class="developmentCourse-item-right col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					   <div class="time">2021年</div>
+					   <div class="des">溢多利成立30周年</div>
+					   
+					</div>
+				</div>
+			
+			</div>
+		</div>
 </div>
 
-<div class="branch wk-gg">
-    <div class="container w1200">
-        <div class="con-title tip-title wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".3s">
-            <h1>中国农业农村部禁抗公告</h1>
-        </div>
 
-    </div>
-</div>
-<div class="gg-img wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".5s">
-    <img src="{!! theme_asset('images/wk/wk-gg.jpg') !!}"/>
-</div>
 
 <script>
     $(function() {
-        $("title").text('“无抗”时代 "溢"马当先 - 溢多利')
-        var mySwiper = new Swiper('.swiper-container-banner', {
-            // loop: true,
-            // autoplay: 6000,
-            pagination: '.swiper-pagination-banner',
-            paginationClickable :true
-        })
-        var hiddenHeight = '';
-        $(".about-right .more").on("click",function(){
-            if($(this).hasClass("active")){
+        $("title").text('30th而溢 扬帆奋进 - 溢多利');
+		setTimeout(function(){$(window).scrollTop(0)},100)
+		
+		 var screen_width = window.screen.width;
+		 var screen_height = window.screen.height;    
 
-                $(".about-con .mhidden").css("height",hiddenHeight);
-                $(this).removeClass("active").text("了解详情");
-            }else{
-                hiddenHeight = $(".about-con .mhidden").css("height");
-                $(".about-con .mhidden").css("height","auto");
-                $(this).addClass("active").text("收起详情");
-            }
-        })
+		 //根据屏幕分辨率判断是否是手机
+		 if(screen_width < 750 ){
+			
+	
+			var index = 0;
+			var timr=null;
+			var runing =  false;
+			var over = false;
+			var carLogoHeight = 15;
+			function getScrollTop() {  
+				var scrollPos;  
+				if (window.pageYOffset) {  
+				scrollPos = window.pageYOffset; }  
+				else if (document.compatMode && document.compatMode != 'BackCompat')  
+				{ scrollPos = document.documentElement.scrollTop; }  
+				else if (document.body) { scrollPos = document.body.scrollTop; }   
+				return scrollPos;   
+			}
+			
+			function run(){
+				console.log(index)
+				$(".developmentCourse-item").eq(index).show();
+				
+				if(index != 0){
+					carLogoHeight += parseFloat($(".developmentCourse-item").eq(index-1).height());
+				}
+				console.log(carLogoHeight)
+
+				
+				$(".carLogo").animate({"top":carLogoHeight+'px'},1000,function(){		
+					runing = false;
+					if(index == 15){
+						over = true;
+					}
+				})
+				$(".car").css({'height':carLogoHeight+150+'px'})
+				timr = setTimeout(function(){
+					
+					if(ifGo()){
+						if(!runing && !over){
+							runing = true;
+							index++;
+							run();
+							}
+						}
+					
+				},1200)
+				
+			}
+				function ifGo(){
+					var footerHeight = parseFloat($(".footer").height());
+					var scrollTop = parseFloat(getScrollTop());
+					var windowHeight = parseFloat($(window).height());
+					var bodyHeight = parseFloat($(document.body).outerHeight(true));
+				
+					if(bodyHeight - footerHeight -scrollTop <= windowHeight+10){
+						return true;
+					}
+					return false;
+				}
+				$(window).scroll(function(){
+					if(ifGo()){
+						if(!runing && !over){
+							clearTimeout(timr);
+							runing = true;
+							index++;
+							run();
+						}
+					}
+					
+				})
+				run();
+		 }else{
+		
+		
+			var index = 0;
+			var timr=null;
+			var runing =  false;
+			var over = false;
+			function getScrollTop() {  
+				var scrollPos;  
+				if (window.pageYOffset) {  
+				scrollPos = window.pageYOffset; }  
+				else if (document.compatMode && document.compatMode != 'BackCompat')  
+				{ scrollPos = document.documentElement.scrollTop; }  
+				else if (document.body) { scrollPos = document.body.scrollTop; }   
+				return scrollPos;   
+			}
+			
+			function run(){
+				console.log(index)
+				var carLogoHeight = index*185+80;
+
+				$(".developmentCourse-item").eq(index).show();
+				$(".carLogo").animate({"top":carLogoHeight+'px'},1000,function(){		
+					runing = false;
+					if(index == 15){
+						over = true;
+					}
+				})
+				$(".car").css({'height':(index+1)*185+80+'px'})
+				timr = setTimeout(function(){
+					
+					if(ifGo()){
+						if(!runing && !over){
+							runing = true;
+							index++;
+							run();
+							}
+						}
+					
+				},1200)
+				
+			}
+				function ifGo(){
+					var footerHeight = parseFloat($(".footer").height());
+					var scrollTop = parseFloat(getScrollTop());
+					var windowHeight = parseFloat($(window).height());
+					var bodyHeight = parseFloat($(document.body).outerHeight(true));
+					console.log(footerHeight,scrollTop,windowHeight,bodyHeight)
+					if(bodyHeight - footerHeight -scrollTop <= windowHeight+50){
+						return true;
+					}
+					return false;
+				}
+				$(window).scroll(function(){
+					if(ifGo()){
+						if(!runing && !over){
+							clearTimeout(timr);
+							runing = true;
+							index++;
+							run();
+						}
+					}
+					
+				})
+				run();
+		 }
     })
 </script>
-<div class="video-detail">
-    <div class="video-detail-close"></div>
-    <div id="video-detail-con">
-        <div class="video-close"></div>
-        <div id="playerBox">
-            <div id='player'></div>
-            <div class="des"></div>
-        </div>
 
-    </div>
-
-</div>
-<script>
-    $(function() {
-        $(".video-detail .video-detail-close,#video-detail-con .video-close").on("click",function(){
-            $(".video-detail").hide();
-            $("#player").html("")
-        })
-        $(".page-news-video").on("click",function(){
-            var vid = $(this).attr("vid");
-            var des = $(this).attr("des");
-            $("#player").html("")
-            $(".video-detail").fadeIn(200)
-            var width = document.getElementById("playerBox").scrollWidth;
-            var height = width*0.5625; // 16/9 = 0.5625;
-            var player = polyvPlayer({
-                wrap: '#player',
-                autoplay:false,
-                'width':width,
-                'height':height,
-                'vid' : vid
-            });
-            $("#playerBox .des").text(des)
-        })
-
-    })
-</script>
 
