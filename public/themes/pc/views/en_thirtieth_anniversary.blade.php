@@ -1,12 +1,25 @@
 <link rel="stylesheet" href="{!! theme_asset('css/30th.css') !!}">   
+<style>
+.live-test-item h3{font-size:20px;line-height:30px}
+.gallery-top .label{display:none;}
+.vision-con .vision-item p{min-height:100px;height:150px}
+@media (max-width: 992px){
+.live-test-item h3 {
+    font-size: 0.32rem;
+    line-height: 0.46rem;
+    padding: 0.08rem 0;
+}
+body{padding:0 0 1rem 0}
+}
+</style>
 <div class="banner">
-    <img class="pcImg" src="{!! theme_asset('images/30/banner.png') !!}" width="100%" alt="" />
-    <div class="h5Img" width="100%" alt="" style="background:url({!! theme_asset('images/30/banner.png') !!}) no-repeat center / cover"></div>
+    <img class="pcImg" src="{!! theme_asset('images/30/en-banner.png') !!}" width="100%" alt="" />
+    <div class="h5Img" width="100%" alt="" style="background:url({!! theme_asset('images/30/en-banner.png') !!}) no-repeat center / cover"></div>
 </div>
 <!-- 直播-->
 <div class="live">
 	<div class=" tip-title2 wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".3s">
-           <img  class="" src="{!! theme_asset('images/30/live.png') !!}" alt="">
+           <img  class="" src="{!! theme_asset('images/30/en-t1.png') !!}" alt="">
 	</div>
 	    <div class="container w1200 live-con" style="max-width:1320px !important">	
 	
@@ -18,37 +31,37 @@
 					<a target="_black" href="https://wx.vzan.com/live/tvchat-526384769?v=1616488728261"><img class="transition" src="{!! theme_asset('images/30/liveimg2.jpg') !!}" alt="" /></a>
 				</div>
 				<div class="live-img-item">
-					<a  target="_black"><img class="transition" src="{!! theme_asset('images/30/liveimg.png') !!}" alt="" /></a>
+					<a  target="_black" href="https://www.pailixiang.com/album_ia1180856897.html"><img class="transition" src="{!! theme_asset('images/30/liveimg3.jpg') !!}" alt="" /></a>
 				</div>
 
 			</div>
 			<div class="live-right col-xs-12  col-sm-12" style="padding-right:0;">
 				<div class="live-test-item active  wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".3s">
-					<h3>溢多利成立三十周年庆典活动直播</h3>
+					<h3>Live broadcast of the celebration of the 30th anniversary of the founding of VTR</h3>
 					<p>
-						<span>地点：</span>
-						广东溢多利总部
+						<span>Venue：</span>
+						Head Office of VTR  
 					</p>
 					<p>
-						<span>时间：</span>
-						2021年3月30日 08:30-11:00
+						<span>Time：</span>
+						08:30-11:00 on March 30, 2021
 					</p>
 				</div>
 				<div class="live-test-item  wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".4s">
-					<h3>粤港澳大湾区无抗饲料国际论坛直播</h3>
+					<h3>Live broadcast of the International Forum on Antimicrobial-free Feed in the Guangdong-Hong Kong-Macao Greater Bay Area </h3>
 					<p>
-						<span>地点：</span>
-						珠海长隆横琴湾酒店会议厅
+						<span>Venue：</span>
+						Conference Hall of Zhuhai Chimelong Hengqin Bay Hotel
 					</p>
 					<p>
-						<span>时间：</span>
-						2021年3月30日 14:00-18:00
+						<span>Time：</span>
+						 14:00-18:00 on March 30, 2021
 					</p>
 				</div>
 				<div class="live-test-item  wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".5s">
-					<h3>三十周年庆典活动与高端论坛<br>现场图片云直播</h3>
+					<h3>Cloud-live of the pictures about the 30th anniversary celebration and high-end forum</h3>
 					<p>
-						云呈现活动现场的精彩瞬间
+						Cloud rendering of the highlights of the event
 					</p>
 					
 				</div>
@@ -62,7 +75,7 @@
 <!--祝福-->
 <div class="greetings">
 	<div class=" tip-title2 wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".3s">
-           <img  class="" src="{!! theme_asset('images/30/khzf.png') !!}" alt="">
+           <img  class="" src="{!! theme_asset('images/30/en-t2.png') !!}" alt="">
 	</div>
 	<div class="greetings-con container w1200">
 		<div id="greetingsPlayer"></div>
@@ -71,11 +84,11 @@
 <!-- 关于我们 -->
 <div class="about">
 	<div class=" tip-title2 wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".3s">
-           <img  class="" src="{!! theme_asset('images/30/qyxcp.png') !!}" alt="">
+           <img  class="" src="{!! theme_asset('images/30/en-t3.png') !!}" alt="">
 	</div>
     <div class="container qy-con w1200" style="max-width:1382px !important">
 	
-	 <div class="page-news-video about-left col-lg-6 col-md-6 col-sm-12 wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".3s"  vid="ad514bee27df5403bbb3853da464dcdd_a" des="三十而“溢”正当时，扬帆奋进开新局！2021年，溢多利正式迎来公司成立30周年的特殊时刻。1991年，在珠海经济特区，溢多利酶制剂有限公司（溢多利的前身）诞生，打破了过去由外企垄断市场的格局，中国饲用酶制剂工业就此起航。经过30年跨越式发展，溢多利已经成为中国生物酶制剂领域首家上市企业、全球极具竞争力的甾体激素医药企业、饲料“无抗”领军企业。2021年是国家“十四五”规划的开局之年，在更高的起点，溢多利作为粤港澳大湾区的生物技术领军企业，将持续进行生物技术的革新，立足生物酶制剂、生物医药、动物营养与健康领域，结合政策与行业发展趋势等推出更具有前瞻性的产品，以卓越的产品与服务满足行业需求，为建设人类绿色、健康的美好生活而不懈努力 ！">
+	 <div class="page-news-video about-left col-lg-6 col-md-6 col-sm-12 wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".3s"  vid="ad514bee27f277d57283a05c13846c1e_a" des=" ">
 
             <img class="transition" src="{!! theme_asset('images/30/video.png') !!}" alt="" />
 
@@ -83,13 +96,12 @@
 		<div class="about-right col-lg-6 col-md-6 col-sm-12" style="padding-right:0;">
 		
             <div class="about-con  wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".5s">
-				<div class="t">三十而“溢”正当时 <br> 扬帆奋进开新局！</div>
-                <p>2021年，溢多利正式迎来公司成立30周年的特殊时刻。1991年，在珠海经济特区，溢多利酶制剂有限公司（溢多利的前身）诞生，打破了过去由外企垄断市场的格局，中国饲用酶制剂工业就此起航。经过30年跨越式发展，溢多利已经成为中国生物酶制剂领域首家上市企业、全球极具竞争力的甾体激素医药企业、饲料“无抗”领军企业。2021年是国家“十四五”规划的开局之年，在更高的起点，溢多利作为粤港澳大湾区的生物技术领军企业，将持续进行生物技术的革新，立足生物酶制剂、生物医药、动物营养与健康领域，结合政策与行业发展趋势等推出更具有前瞻性的产品，以卓越的产品与服务满足行业需求，为建设人类绿色、健康的美好生活而不懈努力 ！
+				<div class="t">At the prime time after 30 years of development, forge ahead to open up a new situation!</div>
+                <p>In 2021, VTR officially ushered in the special moment of its 30th anniversary. In 1991, in Zhuhai Special Economic Zone, VTR Enzyme Preparation Co., Ltd. (VTR’s predecessor) was established, which broke the pattern that foreign enterprises monopolized the market in the past, thus China's forage enzyme preparation industry started its development. After 30 years of leapfrog development, VTR has become the first listed enterprise in the field of biological enzyme preparation in China, a highly competitive steroid hormone pharmaceutical enterprise in the world, and a leading enterprise in the field of “antimicrobial-free” feed. The year 2021 is the first year of China’s 14th Five-year Plan”. At a higher starting point, VTR, as a leading biotechnology enterprise in the Guangdong-Hong Kong-Macao Greater Bay Area, will continue to carry out biotechnology innovation. Based on the fields of biological enzyme preparation, biomedicine, animal nutrition and health, VTR will launch more forward-looking products in combination with policies, industry development trends, etc., so as to meet the needs of the industry with excellent products and services and make unremitting efforts to build a green and healthy life for mankind! 
                 </p>
-                 <!--<p class="mhidden" style="margin-top:20px">溢多利分子公司长沙世唯生物科技有限公司是国内最早的药用植物提取物生产厂家之一，公司研发的“博落回散”（商品名：美佑壮）是我国首个获得国家二类新中兽药证书的产品，具有极强的抗炎活性。溢多利充分发挥原本在酶制剂方面的优势，与药用植物提取物领域的成果完美结合，诞生了“博落回+酶制剂”组合方案，可产生1+1＞2的“抗炎、整肠、促生长”效果，极大推动了我国饲料“无抗”的进程，并在海外多个国家作为饲用抗生素替代方案稳定使用。溢多利，助力养殖业在饲料“无抗”背景下实现转型升级与绿色发展，助力人类实现更加健康、美好的生活。</p>
-                <!-- <p class="hiddle">......</p>-->
+             
             </div>
-            <div class="more  wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".6s">查看全部</div>
+            <div class="more  wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".6s">Show all</div>
         </div>
        
 		
@@ -98,7 +110,7 @@
 <div class="product developmentCourse">
 
         <div class=" tip-title2 wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".3s">
-           <img  class="" src="{!! theme_asset('images/30/fzlc.png') !!}" alt="">
+           <img  class="" src="{!! theme_asset('images/30/en-t4.png') !!}" alt="">
         </div>
 
 		<div class="developmentCourse-con clearfix">
@@ -114,151 +126,151 @@
 						  <!-- Slides -->
 							 <div class="swiper-slide ">
 								
-								<div class="img col-lg-7 col-md-7 col-sm-12 col-xs-12">
+								<div class="img col-lg-6  col-md-6  col-sm-12 col-xs-12">
 									<img  class="" src="{!! theme_asset('images/30/1991.jpg') !!}" alt="" />
 								 </div>
 								  <div class="test col-lg-5 col-md-5 col-sm-12 col-xs-12">
 									<div class="time"></div>
-									<div class="des">1991年，溢多利创立，标志中国饲用酶制剂工业起步</div>
+									<div class="des">In 1991, VTR was founded, marking the beginning of China’s feed enzyme preparation industry.</div>
 								</div>	
 							 </div>
 							 <div class="swiper-slide ">
-							 <div class="img col-lg-7 col-md-7 col-sm-12 col-xs-12">
+							 <div class="img col-lg-6  col-md-6  col-sm-12 col-xs-12">
 									<img  class="" src="{!! theme_asset('images/30/1997.jpg') !!}" alt="" />
 								 </div>
 								 <div class="test col-lg-5 col-md-5 col-sm-12 col-xs-12">
 								   <div class="time"></div>
-								   <div class="des">1997年，溢多利珠海生产基地一期工程竣工。</div>
+								   <div class="des">In 1997, the first phase of VTR’s production base in Zhuhai was completed.</div>
 								</div>
 							</div>
 							<div class="swiper-slide ">
-								<div class="img col-lg-7 col-md-7 col-sm-12 col-xs-12">
+								<div class="img col-lg-6  col-md-6  col-sm-12 col-xs-12">
 									<img  class="" src="{!! theme_asset('images/30/1998.jpg') !!}" alt="" />
 								 </div>
 								 <div class="test col-lg-5 col-md-5 col-sm-12 col-xs-12">
 								   <div class="time"></div>
-								   <div class="des">1998年，溢多利被认定为广东省高新技术企业。</div>
+								   <div class="des">In 1998, VTR was recognized as a high-tech enterprise in Guangdong Province. </div>
 								 
 							   </div>
 							</div>
 							<div class="swiper-slide ">
-								<div class="img col-lg-7 col-md-7 col-sm-12 col-xs-12">
+								<div class="img col-lg-6  col-md-6  col-sm-12 col-xs-12">
 									<img  class="" src="{!! theme_asset('images/30/1999.jpg') !!}" alt="" />
 								 </div>
 								 <div class="test col-lg-5 col-md-5 col-sm-12 col-xs-12">
 								   <div class="time"></div>
-								   <div class="des">1999年，溢多利在中国农业大学等多所高校捐资设立溢多利教育基金。</div>
+								   <div class="des">In 1999, VTR donated funds to set up VTR Education Fund in China Agricultural University and many other universities.</div>
 								</div>
 							</div>
 							<div class="swiper-slide ">
-								<div class="img col-lg-7 col-md-7 col-sm-12 col-xs-12">
+								<div class="img col-lg-6  col-md-6  col-sm-12 col-xs-12">
 									<img  class="" src="{!! theme_asset('images/30/2001.jpg') !!}" alt="" />
 								 </div>
 								 <div class="test col-lg-5 col-md-5 col-sm-12 col-xs-12">
 								   <div class="time"></div>
-								   <div class="des">2001年，溢多利完成股份改制，为迈向资本市场奠定基础。</div>
+								   <div class="des">In 2001, VTR completed its share restructuring, which laid the foundation for stepping into the capital market.</div>
 								  
 							   </div>
 							</div>
 							<div class="swiper-slide ">
-								<div class="img col-lg-7 col-md-7 col-sm-12 col-xs-12">
+								<div class="img col-lg-6  col-md-6  col-sm-12 col-xs-12">
 									<img  class="" src="{!! theme_asset('images/30/2003.jpg') !!}" alt="" />
 								 </div>
 								 <div class="test col-lg-5 col-md-5 col-sm-12 col-xs-12">
 								   <div class="time"></div>
-								   <div class="des">2003年，溢多利组建成立我国首个饲添省级工程中心；溢多利起草的《饲料用酶制剂通则》由农业部颁布施行。</div>
+								   <div class="des">In 2003, VTR established China’s first provincial engineering center for feed additives; and the General Rules for Feed Enzyme Preparations drafted by VTR was promulgated and implemented by the Ministry of Agriculture.</div>
 								  
 							   </div>
 							</div>
 							<div class="swiper-slide ">
-								<div class="img col-lg-7 col-md-7 col-sm-12 col-xs-12">
+								<div class="img col-lg-6  col-md-6  col-sm-12 col-xs-12">
 									<img  class="" src="{!! theme_asset('images/30/2005.jpg') !!}" alt="" />
 								 </div>
 								 <div class="test col-lg-5 col-md-5 col-sm-12 col-xs-12">
 								   <div class="time"></div>
-								   <div class="des">2005年，溢多利被评为“全国三十强饲料企业”。</div>
+								   <div class="des">In 2005, VTR was rated as one of the “Top 30 National Feed Enterprises”.</div>
 								</div>
 								
 							</div>
 							<div class="swiper-slide ">
-								<div class="img col-lg-7 col-md-7 col-sm-12 col-xs-12">
+								<div class="img col-lg-6  col-md-6  col-sm-12 col-xs-12">
 									<img  class="" src="{!! theme_asset('images/30/2008.jpg') !!}" alt="" />
 								 </div>
 								 <div class="test col-lg-5 col-md-5 col-sm-12 col-xs-12">
 								   <div class="time"></div>
-								   <div class="des">2008年，溢多利被认定为行业首批国家高新技术企业。</div>
+								   <div class="des">In 2008, VTR was recognized as one of the first national high-tech enterprises in the industry.</div>
 								  
 							   </div>
 							</div>
 							<div class="swiper-slide ">
-								<div class="img col-lg-7 col-md-7 col-sm-12 col-xs-12">
+								<div class="img col-lg-6  col-md-6  col-sm-12 col-xs-12">
 									<img  class="" src="{!! theme_asset('images/30/2014.jpg') !!}" alt="" />
 								 </div>
 								 <div class="test col-lg-5 col-md-5 col-sm-12 col-xs-12">
 								   <div class="time"></div>
-								   <div class="des">2014年，溢多利在深交所上市，成为中国生物酶制剂行业首家上市企业；并购湖南鸿鹰，拓宽酶制剂产品应用领域。</div>
+								   <div class="des">In 2014, VTR was listed in Shenzhen Stock Exchange, becoming the first listed company in China’s biological enzyme preparation industry; and acquired Hunan Hongying to broaden the application field of enzyme preparation products.</div>
 								   
 								</div>
 							
 							</div>
 							<div class="swiper-slide ">
-								<div class="img col-lg-7 col-md-7 col-sm-12 col-xs-12">
+								<div class="img col-lg-6  col-md-6  col-sm-12 col-xs-12">
 									<img  class="" src="{!! theme_asset('images/30/2015.jpg') !!}" alt="" />
 								 </div>
 								 <div class="test col-lg-5 col-md-5 col-sm-12 col-xs-12">
 								   <div class="time"></div>
-								   <div class="des">2015年，溢多利博士后科研工作站获批成立；并购湖南新合新、河南利华，进入生物医药领域，步入跨越式发展快车道</div>
+								   <div class="des">In 2015, VTR Postdoctoral Research Station was approved to be established; and acquired Hunan Xinhe New and Henan Lihua, entering the biomedical industry and stepping into the fast track of leapfrog development.</div>
 								</div>
 								
 							</div>
 							<div class="swiper-slide ">
-							<div class="img col-lg-7 col-md-7 col-sm-12 col-xs-12">
+							<div class="img col-lg-6  col-md-6  col-sm-12 col-xs-12">
 									<img  class="" src="{!! theme_asset('images/30/2016.jpg') !!}" alt="" />
 								 </div>
 								 <div class="test col-lg-5 col-md-5 col-sm-12 col-xs-12">
 								   <div class="time"></div>
-								   <div class="des">2016年，溢多利总部研发与办公大楼落成；新产学研示范基地建成并投入使用。</div>
+								   <div class="des">In 2016, the R&D and office building of VTR headquarters was completed; a new industry-university-research cooperation demonstration base was completed and put into use.</div>
 								</div>
 							</div>
 							<div class="swiper-slide ">
-								<div class="img col-lg-7 col-md-7 col-sm-12 col-xs-12">
+								<div class="img col-lg-6  col-md-6  col-sm-12 col-xs-12">
 									<img  class="" src="{!! theme_asset('images/30/2017.jpg') !!}" alt="" />
 								 </div>
 								 <div class="test col-lg-5 col-md-5 col-sm-12 col-xs-12">
 								   <div class="time"></div>
-								   <div class="des">2017年，公司启动“溢多利生物医药产业园”投资建设，打造全球一流产业基地。</div>
+								   <div class="des">In 2017, the company launched the investment and construction of “VTR Biomedical Industrial Park” to build a world-class industrial base.</div>
 								</div>
 								
 							</div>
 							<div class="swiper-slide ">
-								<div class="img col-lg-7 col-md-7 col-sm-12 col-xs-12">
+								<div class="img col-lg-6  col-md-6  col-sm-12 col-xs-12">
 									<img  class="" src="{!! theme_asset('images/30/2018.jpg') !!}" alt="" />
 								 </div>
 								 <div class="test col-lg-5 col-md-5 col-sm-12 col-xs-12">
 								   <div class="time"></div>
-								   <div class="des">2018年，溢多利荣获“国家认定企业技术中心”；并购长沙世唯，布局饲用替抗市场。</div>
+								   <div class="des">In 2018, VTR was awarded the “National Enterprise Technology Center”; and acquired Changsha Shiwei to deploy the alternative feed antibiotics market.</div>
 								   
 								</div>
 							</div>
 							<div class="swiper-slide ">
-								<div class="img col-lg-7 col-md-7 col-sm-12 col-xs-12">
+								<div class="img col-lg-6  col-md-6  col-sm-12 col-xs-12">
 									<img  class="" src="{!! theme_asset('images/30/2020.jpg') !!}" alt="" />
 								 </div>
 								<div class="test col-lg-5 col-md-5 col-sm-12 col-xs-12">
 								   <div class="time"></div>
-								   <div class="des">2020年，溢多利推出饲用替抗产品，迎接饲料无抗新时代；溢多利“抗疫情，保生产”，全力保障客户产品需求。</div>
+								   <div class="des">In 2020, VTR launched the alternative feed antibiotics, ushering in a new era of antibiotic-free feed; and had fought against the epidemic and ensured production to fully protect customers’ product demand.</div>
 								   
 								  
 								</div>
 								
 							</div>
 							<div class="swiper-slide ">
-								<div class="img col-lg-7 col-md-7 col-sm-12 col-xs-12">
+								<div class="img col-lg-6  col-md-6  col-sm-12 col-xs-12">
 									<img  class="" src="{!! theme_asset('images/30/2021.jpg') !!}" alt="" />
 								 </div>
 								 <div class="test col-lg-5 col-md-5 col-sm-12 col-xs-12">
 								   <div class="time"></div>
-								   <div class="des">2021年，溢多利成立30周年，开启新征程。</div>
+								   <div class="des">In 2021, VTR marks its 30th anniversary and embarks on a new journey.</div>
 								   
 								</div>
 								
@@ -335,7 +347,7 @@
 <div class=" vision">
     <div class="container w1200">
         <div class=" tip-title2 wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".3s">
-           <img  class="" src="{!! theme_asset('images/30/qywh.png') !!}" alt="">
+           <img  class="" src="{!! theme_asset('images/30/en-t5.png') !!}" alt="">
         </div>
         <div class="vision-con clearfix">
 			<div class="vision-item col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".5s">
@@ -346,9 +358,9 @@
 							  <img  class="" src="{!! theme_asset('images/30/culture1.png') !!}" alt="">
 							</div>
 							<div class="t" >
-							  企业愿景
+							  Corporate vision
 							</div>
-							<p>成为世界领先的生物技术企业 </p>
+							<p>Become the world’s leading biotechnology enterprise </p>
 						</a>
 					
 					
@@ -360,9 +372,9 @@
 							  <img  class="" src="{!! theme_asset('images/30/culture2.png') !!}" alt="">
 							</div>
 						   <div class="t" >
-							  企业使命
+							  Corporate mission
 							</div>
-							<p>致力于生物技术的研究与应用，以卓越的产品与服务满足客户需求，不断提升人类生活品质 </p>
+							<p>Be committed to the research and application of biotechnology, meet customer needs with excellent products and services, and constantly improve the quality of human life</p>
 						</a>
 				
 					
@@ -375,9 +387,9 @@
 							  <img  class="" src="{!! theme_asset('images/30/culture3.png') !!}" alt="">
 							</div>
 							 <div class="t" >
-							  核心价值观
+							  Core values
 							</div>
-							<p> 客户为先  科技为本 诚信务实  和谐共赢</p>
+							<p>Customer first    Technology-based   Honesty and pragmatism   All-win harmony</p>
 						</a>
 			
 					
@@ -391,7 +403,7 @@
             <h1><b>不忘初心"溢"往无前</b>图片展</h1>
         </div> -->
 		<div class=" tip-title2 wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".3s">
-           <img  class="" src="{!! theme_asset('images/30/bwcx.png') !!}" alt="">
+           <img  class="" src="{!! theme_asset('images/30/en-t6.png') !!}" alt="">
         </div>
 		
         <div class="photoE-con clearfix  wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".7s">
@@ -418,100 +430,11 @@
 <style>
 
 </style>
-<div class="rcICon">
-	庆典日程
-</div>
-<div class="rc-con" style="display:block;"> 
-	<div class="rc-bg">
-		<div class="rc-table">
-			<div class="rc-close"></div>
-			<div class="rc-table-t">“溢多利生物产业发展与行业高端论坛<br>暨成立三十周年庆典”活动日程</div>
-			<div class="container w1200">
-				 <table style="width:100%;" border="1"  cellpadding="5" align="center">
-					<tr align="center" class="tr1">
-					  <th>日期</th>
-					  <th>活动时间</th>
-					  <th>活动内容</th>
-					  <th>活动地点</th>
-					</tr>
-					<tr align="center">
-					  <td>03.29</td>
-					  <td>全天</td>
-					 
-					  <td align="left" style="padding-left:5px">嘉宾报到</td>
-					  <td>横琴湾酒店大堂</td>
-					</tr>
-					<tr align="center">
-					   <td  rowspan="11" >03.30</td>
-					  <td>07:00-07:50</td>
-					  <td align="left" style="padding-left:5px">自助早餐</td>
-					  <td>横琴湾酒店自助餐厅</td>
-					</tr>
-					<tr align="center">
-					  <td>07:50</td>
-					  <td align="left" style="padding-left:5px">统一乘车前往溢多利。</td>
-					  <td>横琴湾酒店团队大厅</td>
-					</tr>
-					<tr align="center">
-					  <td>08:30-11:30</td>
-					  <td align="left" style="padding-left:5px">“溢多利生物产业发展与行业高端论坛暨成立三十周年庆典”开幕仪式</td>
-					  <td>溢多利公司</td>
-					</tr>
-					<tr align="center">
-					  <td>11:30</td>
-					  <td align="left" style="padding-left:5px">统一乘车前往横琴湾酒店。</td>
-					  <td>溢多利公司</td>
-					</tr>
-					<tr align="center">
-					  <td>12:00-14:00</td>
-					  <td align="left" style="padding-left:5px">自助午餐</td>
-					  <td>横琴湾酒店自助餐厅</td>
-					</tr>
-					<tr align="center">
-					  <td  colspan="3" >溢多利生物产业发展与行业高端论坛</td>
-					  
-					</tr>
-					<tr align="center">
-					  <td>13:30-18:30</td>
-					  <td align="left" style="padding-left:5px">第一会场：<br>粤港澳大湾区无抗饲料国际论坛</td>
-					  <td>横琴湾酒店水晶殿</td>
-					</tr>
-					<tr align="center">
-					  <td>14:30-17:30</td>
-					  <td align="left" style="padding-left:5px">第二会场：<br>溢多利生物医药发展高端论坛</td>
-					  <td>横琴湾酒店307-309厅</td>
-					</tr>
-					<tr align="center">
-					  <td>13:30-18:00</td>
-					  <td align="left" style="padding-left:5px">第三会场：生物酶技术在工业领域的应用高端论坛</td>
-					  <td>横琴湾酒店301-303厅</td>
-					</tr>
-					<tr align="center">
-					  <td>16:00-17:30</td>
-					  <td align="left" style="padding-left:5px">第四会场：溢多利投资者交流会</td>
-					  <td>横琴湾酒店311-312厅</td>
-					</tr>
-					<tr align="center">
-					  <td>18:30-21:00</td>
-					  <td align="left" style="padding-left:5px">“溢多利生物产业发展与行业高端论坛暨成立三十周年庆典”招待晚宴</td>
-					  <td>横琴湾酒店海洋厅</td>
-					</tr>
-					<tr align="center">
-						<td>03.31</td>
-					  <td>全天</td>
-					  <td align="left" style="padding-left:5px">参观珠海横琴自贸区</td>
-					  <td>珠海横琴</td>
-					</tr>
-				  </table>
-				</div>
-		</div>
-	</div>
-</div>
 <link rel="stylesheet" href="{!! theme_asset('images/30/swiper-bundle.min.css') !!}">     
 <script src="{!! theme_asset('images/30/swiper.min.js') !!}"> </script>
 <script>
     $(function() {
-        $("title").text('30th而溢 扬帆奋进 - 溢多利')
+        $("title").text('Forge ahead after 30 years of development and expansion - VTR')
         var mySwiper = new Swiper('.swiper-container-banner', {
             // loop: true,
             // autoplay: 6000,
@@ -564,11 +487,11 @@
             if($(this).hasClass("active")){
 
                 $(".about-con p").css("height",hiddenHeight);
-                $(this).removeClass("active").text("查看全部");
+                $(this).removeClass("active").text("Show all");
             }else{
                 hiddenHeight = $(".about-con p").css("height");
                 $(".about-con p").css("height","auto");
-                $(this).addClass("active").text("收起信息");
+                $(this).addClass("active").text("Folded");
             }
         })
     })
@@ -591,9 +514,9 @@
 
 		{
 
-				title:"溢多利创立原址",
+				title:"Original site of VTR",
 
-				des:"1991年，珠海经济特区溢多利酶制剂有限公司成立，标志着中国饲用酶制剂工业的起步。",
+				des:"In 1991, Zhuhai Special Economic Zone VTR Enzyme Co., Ltd. was established, marking the start of China's feed enzyme industry.",
 
 				url:"{!! theme_asset('images/30/01.jpg') !!}"
 
@@ -601,9 +524,9 @@
 
 			{
 
-				title:"溢多利创立初期生产厂房原貌",
+				title:"Workshops in the early stage of VTR",
 
-				des:"1991年，溢多利创立初期生产厂房原貌，主要进行饲用酶制剂产品的生产。",
+				des:"This is the workshops in the early stage (1991) of VTR, mainly for the production of feed enzyme products.",
 
 				url:"{!! theme_asset('images/30/02.jpg') !!}"
 
@@ -611,9 +534,9 @@
 
 			{
 
-				title:"溢多利第一期新厂奠基仪式",
+				title:"The cornerstone laying ceremony of phase i new factory of VTR",
 
-				des:"1996年，在溢多利第一期新厂动工修建之际， 陈少美董事长为新厂奠基。",
+				des:"On the cornerstone laying ceremony of phase i new factory of VTR in 1996, Chairman Chen Shaomei laid the foundation for the new factory. ",
 
 				url:"{!! theme_asset('images/30/03.jpg') !!}"
 
@@ -621,9 +544,9 @@
 
 			{
 
-				title:"溢多利第一期公司全貌",
+				title:"Phase I general view of VTR ",
 
-				des:"1997年，溢多利建成了具有办公、生产等综合功能的现代化工业园。",
+				des:"In 1997, VTR built a modern industrial park with comprehensive functions such as office and production.",
 
 				url:"{!! theme_asset('images/30/04.jpg') !!}"
 
@@ -631,9 +554,9 @@
 
 			{
 
-				title:"溢多利第一期工厂落成典礼",
+				title:"The inauguration ceremony of phase i factory of VTR",
 
-				des:"1997年10月9日，溢多利举行第一期工厂落成典礼。",
+				des:"On October 9, 1997, VTR held the inauguration ceremony of its phase i factory.",
 
 				url:"{!! theme_asset('images/30/05.jpg') !!}"
 
@@ -641,9 +564,9 @@
 
 			{
 
-				title:"原农业部饲料用酶首个行标文件",
+				title:"The first feed enzyme standard document issued by the former Ministry of Agriculture ",
 
-				des:"1999年，溢多利承担农业部“1999年第一批农业行业标准制、修订项目计划”中的饲料酶制剂行业标准通则的制订工作，于2001年底获得通过。",
+				des:'In 1999, VTR was assigned by the Ministry of Agriculture to prepare the general feed enzyme industry standard for "the first batch of agricultural industry standards preparation and revision program in 1999", and its results got adopted at the end of 2001.',
 
 				url:"{!! theme_asset('images/30/06.jpg') !!}"
 
@@ -651,9 +574,9 @@
 
 			{
 
-				title:"溢多利产品鉴定会",
+				title:"VTR product appraising meeting",
 
-				des:"1993年，溢多利进行“饲用复合酶制剂”产品鉴定会。",
+				des:'In 1993, VTR carried out an appraising meeting on "feed complex enzymes".',
 
 				url:"{!! theme_asset('images/30/07.jpg') !!}"
 
@@ -661,9 +584,9 @@
 
 			{
 
-				title:"溢多利通过兽药GMP验收",
+				title:"VTR gets accepted by GMP for veterinary drugs",
 
-				des:"2003年7月25日，溢多利通过兽药GMP验收。",
+				des:"On July 25, 2003, VTR got accepted by GMP for veterinary drugs.",
 
 				url:"{!! theme_asset('images/30/08.jpg') !!}"
 
@@ -671,9 +594,9 @@
 
 			{
 
-				title:"溢多利成立10周年庆典",
+				title:"10th Anniversary Celebration of VTR",
 
-				des:"2001年8月8日，溢多利举行公司成立十周年庆典。",
+				des:"On August 8, 2001, VTR celebrated its 10th founding anniversary.",
 
 				url:"{!! theme_asset('images/30/09.jpg') !!}"
 
@@ -681,9 +604,9 @@
 
 			{
 
-				title:"溢多利成立15周年庆典",
+				title:"15th Anniversary Celebration of VTR",
 
-				des:"2006年10月12日，溢多利举行公司成立十五周年庆典。",
+				des:"On October 12, 2006, VTR celebrated its 15th founding anniversary.",
 
 				url:"{!! theme_asset('images/30/10.jpg') !!}"
 
@@ -691,9 +614,9 @@
 
 			{
 
-				title:"溢多利成立20周年庆典",
+				title:"20th Anniversary Celebration of VTR",
 
-				des:"2011年8月26日，溢多利举行公司成立二十周年庆典。",
+				des:"On August 26, 2011, VTR celebrated its 20th founding anniversary.",
 
 				url:"{!! theme_asset('images/30/11.jpg') !!}"
 
@@ -701,9 +624,9 @@
 
 			{
 
-				title:"溢多利成立25周年庆典",
+				title:"25th Anniversary Celebration of VTR",
 
-				des:"2016年6月24日，溢多利举行“生物产业发展与行业高端论坛珠海峰会暨溢多利成立二十五周年庆典”。",
+				des:'On June 24, 2016, VTR held the "Zhuhai Summit of Top Forum on Biological Industry Development & 25th Founding Anniversary of VTR".',
 
 				url:"{!! theme_asset('images/30/12.jpg') !!}"
 
@@ -711,9 +634,9 @@
 
 			{
 
-				title:"原全国人大副委员长许嘉璐亲临溢多利指导工作",
+				title:"Xu Jialu, former Vice Chairman of the National People's Congress, comes to VTR to give instructions",
 
-				des:"2000年4月21日，原全国人大副委员长许嘉璐亲临溢多利公司指导工作，与陈少美董事长等领导进行了详细、深入的交流。",
+				des:"On April 21, 2000, Xu Jialu, former Vice Chairman of the National People's Congress, came to VTR to give instructions. He had a detailed and in-depth exchange with the company leaders including Chairman Chen Shaomei.",
 
 				url:"{!! theme_asset('images/30/13.jpg') !!}"
 
@@ -721,9 +644,9 @@
 
 			{
 
-				title:"全国政协副主席、民建中央常务副主席辜胜阻莅临溢多利调研指导工作",
+				title:"Gu Shengzu, Vice Chairman of the CPPCC National Committee and Executive Vice Chairman of the Central Committee of China National Democratic Construction Association, come to VTR to give instructions.",
 
-				des:"2020年10月5日，全国政协副主席、民建中央常务副主席辜胜阻莅临溢多利进行调研指导工作，肯定了溢多利的高速发展及科研实力。",
+				des:"On October 5, 2020, Gu Shengzu, Vice Chairman of the CPPCC National Committee and Executive Vice Chairman of the Central Committee of China National Democratic Construction Association, came to VTR to give instructions. He affirmed the rapid development and research strength of VTR.",
 
 				url:"{!! theme_asset('images/30/14.jpg') !!}"
 
@@ -731,9 +654,9 @@
 
 			{
 
-				title:"原国家科技部部长徐冠华莅临溢多利视察",
+				title:"Xu Guanhua, former Minister of Science and Technology, investigates VTR",
 
-				des:"原国家科技部部长徐冠华在珠海市领导的陪同下莅临溢多利视察，对公司高速发展的现状表示肯定，同时勉励公司未来大力提升科研水平、再创佳绩。",
+				des:"Xu Guanhua, former Minister of Science and Technology, investigated VTR accompanied by the leaders of Zhuhai City. He affirmed the company's rapid development, and encouraged the company to vigorously improve its research level and make more achievements in the future.",
 
 				url:"{!! theme_asset('images/30/15.jpg') !!}"
 
@@ -741,9 +664,9 @@
 
 			{
 
-				title:"农业农村部副部长于康震及其他领导亲临溢多利展位考察指导",
+				title:"Yu Kangzhen, Vice Minister of Agriculture and Rural Affairs, and other leaders visit VTR’s booth",
 
-				des:"2014年中国饲料工业展览会，农业农村部副部长于康震等领导亲临溢多利展位并与陈少美董事长合影留念。",
+				des:"On China Feed Industry Exhibition 2014, Yu Kangzhen, Vice Minister of Agriculture and Rural Affairs, and other leaders visited VTR’s booth and took a photo with Chairman Chen Shaomei.",
 
 				url:"{!! theme_asset('images/30/16.jpg') !!}"
 
@@ -751,9 +674,9 @@
 
 			{
 
-				title:"陈少美董事长陪同原国家饲料办主任王维四在溢多利考察 ",
+				title:"Chairman Chen Shaomei accompanies former director of the State Feed Office Wang Weisi to inspect VTR ",
 
-				des:"创业早期，陈少美董事长陪同国家饲料办领导在溢多利考察，王维四主任一行对溢多利公司的各项工作给予充分肯定。",
+				des:"In the early days of entrepreneurship, Chairman Chen Shaomei accompanied the leaders of the State Feed Office to inspect VTR, and Director Wang Weisi and his party fully affirmed the work of VTR.",
 
 				url:"{!! theme_asset('images/30/17.jpg') !!}"
 
@@ -761,9 +684,9 @@
 
 			{
 
-				title:"原中国饲料工业协会会长白美清一行莅临溢多利视察工作",
+				title:"A party of former President of China Feed Industry Association-- Bai Meiqing visits VTR",
 
-				des:"2009年，原中国饲料工业协会白美清会长一行莅临溢多利公司视察工作，对公司取得的成绩表示充分认可。",
+				des:"In 2009, a party of former President of China Feed Industry Association Bai Meiqing visited VTR, and fully recognized the company’s achievements.",
 
 				url:"{!! theme_asset('images/30/18.jpg') !!}"
 
@@ -771,9 +694,9 @@
 
 			{
 
-				title:"全国畜牧总站站长、中国饲料工业协会秘书长王宗礼莅临溢多利视察",
+				title:"Wang Zongli, Head of the National Animal Husbandry General Station and Secretary-General of China Feed Industry Association, visits VTR ",
 
-				des:"2020年11月，全国畜牧总站站长、中国饲料工业协会秘书长王宗礼一行莅临溢多利视察，对公司的高速发展及科研实力表示肯定。",
+				des:"In November 2020, Wang Zongli, Head of the National Animal Husbandry General Station and Secretary-General of China Feed Industry Association, and his party visited VTR, and affirmed the company's rapid development and scientific research strength.",
 
 				url:"{!! theme_asset('images/30/19.jpg') !!}"
 
@@ -781,9 +704,9 @@
 
 			{
 
-				title:"原全国畜牧总站站长、中国饲料工业协会常务副会长兼秘书长李希荣等领导视察溢多利",
+				title:"Li Xirong, former Head of the National Animal Husbandry General Station and Executive Vice President and Secretary General of China Feed Industry Association, inspects VTR",
 
-				des:"2016年，原全国畜牧总站站长、中国饲料工业协会常务副会长兼秘书长李希荣等领导一行莅临溢多利视察，对公司的发展态势表示肯定。",
+				des:"In 2016, Li Xirong, former Head of the National Animal Husbandry General Station and Executive Vice President and Secretary General of China Feed Industry Association, and his party inspected VTR, and confirmed the company's development.",
 
 				url:"{!! theme_asset('images/30/20.jpg') !!}"
 
@@ -791,9 +714,9 @@
 
 			{
 
-				title:"原中国畜牧兽医学会动物营养分会会长许振英教授来溢多利指导工作",
+				title:"Professor Xu Zhenying, former Head of Animal Nutrition Branch of Chinese Association of Animal Science and Veterinary Medicine visits VTR",
 
-				des:"溢多利自1991年成立之初，董事长陈少美先生多次飞赴东北农业大学，与著名动物营养学家许振英教授进行深入的沟通交流，在推进企业的成长同时也推动了中国饲用酶制剂行业一步步朝前发展。",
+				des:"Since the establishment of VTR in 1991, Mr. Chen Shaomei, Chairman of the Board of Directors, has flown to Northeast Agricultural University many times to communicate deeply with Professor Xu Zhenying, a famous animal nutritionist. His visits promoted the growth of his enterprise, and also promoted the development of Chinese feed enzyme industry step by step.",
 
 				url:"{!! theme_asset('images/30/21.jpg') !!}"
 
@@ -801,9 +724,9 @@
 
 			{
 
-				title:"原中国畜牧兽医学会动物营养分会会长张子仪院士莅临溢多利并题词",
+				title:"Academician Zhang Ziyi, former Head of Animal Nutrition Branch of China Animal Husbandry and Veterinary Society, visits VTR and writes an inscription for it",
 
-				des:"原中国畜牧兽医学会动物营养分会会长张子仪院士莅临溢多利并挥毫题词，寄托了对公司的美好祝福。",
+				des:"Academician Zhang Ziyi, former Head of Animal Nutrition Branch of China Animal Husbandry and Veterinary Society, visited VTR and wrote an inscription to express his blessing for the company.",
 
 				url:"{!! theme_asset('images/30/22.jpg') !!}"
 
@@ -811,9 +734,9 @@
 
 			{
 
-				title:"中国工程院李德发院士参观溢多利并指导工作",
+				title:"Academician Li Defa of the Chinese Academy of Engineering visits VTR to guide work",
 
-				des:"中国工程院李德发院士作为我国动物营养与饲料科学领域的权威专家，到溢多利参观并指导工作。",
+				des:"Academician Li Defa of the Chinese Academy of Engineering, as an authoritative expert in the field of animal nutrition and feed science in China, visited VTR to guide work.",
 
 				url:"{!! theme_asset('images/30/23.jpg') !!}"
 
@@ -821,9 +744,9 @@
 
 			{
 
-				title:"麦康森院士莅临溢多利调研考察",
+				title:"Academician Mai Kangsen visits VTR",
 
-				des:"2018年，中国工程院麦康森院士莅临溢多利进行调研考察。",
+				des:"In 2018, Academician Mai Kangsen of the Chinese Academy of Engineering visited VTR for investigation.",
 
 				url:"{!! theme_asset('images/30/24.jpg') !!}"
 
@@ -831,9 +754,9 @@
 
 			{
 
-				title:"印遇龙院士在溢多利生物产业发展与行业高端论坛上作报告",
+				title:"Academician Yin Yulong reports on the high-end forum on biological industry development of VTR",
 
-				des:"2016年，中国工程院印遇龙院士在溢多利生物产业发展与行业高端论坛上作报告。",
+				des:"In 2016, Academician Yin Yulong reported on the high-end forum on biological industry development of VTR",
 
 				url:"{!! theme_asset('images/30/25.jpg') !!}"
 
@@ -841,9 +764,9 @@
 
 			{
 
-				title:"溢多利荣获中国饲料工业协会“全国三十强饲料企业”称号",
+				title:'VTR is entitled "China Top 30 Feed Enterprises" by China Feed Industry Association',
 
-				des:"2005年，溢多利荣获中国饲料工业协会颁发的“全国三十强饲料企业”称号，这是对公司实力的极大肯定。",
+				des:'In 2005, VTR was entitled "China Top 30 Feed Enterprises" by China Feed Industry Association. This is a great affirmation of the strength of the company.',
 
 				url:"{!! theme_asset('images/30/26.jpg') !!}"
 
@@ -851,9 +774,9 @@
 
 			{
 
-				title:"陈少美董事长参加全国饲料工业协会三十强企业会议",
+				title:'Chairman Chen Shaomei attends the meeting of "China Top 30 Feed Enterprises" held by China Feed Industry Association',
 
-				des:"2005年，陈少美董事长参加全国饲料工业协会三十强企业会议并获奖。",
+				des:'In 2005, Chairman Chen Shaomei attended the meeting of "China Top 30 Feed Enterprises" held by China Feed Industry Association, and got awarded',
 
 				url:"{!! theme_asset('images/30/27.jpg') !!}"
 
@@ -861,9 +784,9 @@
 
 			{
 
-				title:"陈少美董事长荣获“改革开放三十年推动饲料工业发展十大新锐人物",
+				title:'Chairman Chen Shaomei wins the title of "Top Ten New Players Advancing the Development of Feed Industry in the Thirty Years Since Reform and Opening up"',
 
-				des:"2009年6月30日，农业部全国饲料工业办公室在北京隆重召开了“改革开放三十年饲料工业回顾与展望总结”，溢多利陈少美董事长荣获“改革开放三十年推动饲料工业发展十大新锐人物”。",
+				des:'On June 30, 2009, the National Feed Industry Office of the Ministry of Agriculture held a grand "Review and Prospect of Feed Industry in Thirty Years since Reform and Opening Up". And Chairman Chen Shaomei won the title of "Top Ten New Players Advancing the Development of Feed Industry in the Thirty Years Since Reform and Opening up".',
 
 				url:"{!! theme_asset('images/30/28.jpg') !!}"
 
@@ -871,9 +794,9 @@
 
 			{
 
-				title:"溢多利荣获国家科技进步奖二等奖",
+				title:"VTR wins the second prize of National Prize for Progress in Science and Technology ",
 
-				des:"2014年12月，溢多利《饲料用酶制剂技术体系创新及重点产品创制》项目获得国家科学技术进步奖二等奖。据悉，中国农科院饲料研究所姚斌研究团队、溢多利研发中心李阳源博士等专家学者经过潜心研究，获得了具有自主知识产权和应用价值的新型饲料用酶基因百余个，创新了酶蛋白分子改良技术体系。",
+				des:'In December 2014, VTR won the second prize of National Prize for Progress in Science and Technology for its "Innovation of Feed Enzyme Preparation Technology System and Key Products Creation" project. It is reported that Yao Bin’s research team from the Feed Research Institute Chinese Academy of Agricultural Sciences, Dr. Li Yangyuan from VTR R & D Center and other experts and scholars, after intensive research, obtained more than 100 new feed enzyme genes with independent intellectual property rights and application value, and innovated the enzyme protein molecular improvement technology system.',
 
 				url:"{!! theme_asset('images/30/29.jpg') !!}"
 
@@ -881,9 +804,9 @@
 
 			{
 
-				title:"国家认定企业技术中心揭牌仪式",
+				title:"Inauguration Ceremony of VTR State Accredited Enterprise Technology Center",
 
-				des:"2018年11月，溢多利国家认定企业技术中心举行揭牌仪式，公司董事长陈少美先生及珠海市政府领导揭牌。",
+				des:"In November 2018, VTR State Accredited Enterprise Technology Center held an inauguration ceremony. The chairman of the company, Mr. Chen Shaomei, and the municipal government leaders of Zhuhai inaugurated the center.",
 
 				url:"{!! theme_asset('images/30/30.jpg') !!}"
 
@@ -891,9 +814,9 @@
 
 			{
 
-				title:"溢多利子公司湖南鸿鹰生物科技有限公司“陈坚院士工作站”揭牌成立",
+				title:'“Academician Chen Jian’s Workstation” under Hunan Hongying Biotech Co., Ltd., a subsidiary of VTR, is inaugurated ',
 
-				des:"2018年，溢多利子公司湖南鸿鹰生物科技有限公司“陈坚院士工作站”揭牌成立，标志着溢多利在推进产学研合作方面迈出了新步伐，在推动科技创新方面取得了新成效。",
+				des:'In 2018, “Academician Chen Jian’s Workstation” under Hunan Hongying Biotech Co., Ltd., a subsidiary of VTR, was inaugurated, marking a new step in promoting industry-school-research cooperation and a new achievement in promoting scientific and technological innovation of VTR.',
 
 				url:"{!! theme_asset('images/30/31.jpg') !!}"
 
@@ -901,9 +824,9 @@
 
 			{
 
-				title:"溢多利举行股份改制创立大会",
+				title:"VTR holds a share-holding reform and re-establishment conference",
 
-				des:"2001年，溢多利完成股份制改造，为公司加速迈向资本市场奠定基础，公司发展进入了新的阶段。",
+				des:"In 2001, VTR completed a share-holding reform, laying the foundation for the company to accelerate its march into the capital market and enter a new stage of development.",
 
 				url:"{!! theme_asset('images/30/32.jpg') !!}"
 
@@ -911,9 +834,9 @@
 
 			{
 
-				title:"湖南鸿鹰生物科技有限公司",
+				title:"Hunan Hong Ying Biotech Co., Ltd.",
 
-				des:"2014年，溢多利成功并购湖南鸿鹰生物科技有限公司，酶制剂产品全面进入饲料、能源、医药、食品、纺织、造纸等诸多工业领域。",
+				des:"In 2014, VTR successfully acquired Hunan Hong Ying Biotech Co., Ltd., extending its enzyme products to feed, energy, medicine, food, textile, papermaking and many other industrial fields.",
 
 				url:"{!! theme_asset('images/30/33.jpg') !!}"
 
@@ -921,9 +844,9 @@
 
 			{
 
-				title:"河南利华制药有限公司",
+				title:"Henan Lihua Pharmaceutical Co., Ltd.",
 
-				des:"2015年，溢多利成功并购河南利华制药有限公司，标志着公司正式进入生物医药产业。",
+				des:"In 2015, VTR successfully acquired Henan Lihua Pharmaceutical Co., Ltd., marking the company's official entry into the biomedical industry.",
 
 				url:"{!! theme_asset('images/30/34.jpg') !!}"
 
@@ -931,9 +854,9 @@
 
 			{
 
-				title:"湖南新合新生物医药有限公司",
+				title:"Hunan Norchem Pharmaceutical Co., Ltd.",
 
-				des:"2015年，溢多利并购湖南新合新生物医药有限公司，形成产业协同发展的新态势，步入跨越式发展快车道。",
+				des:"In 2015, VTR acquired Hunan Norchem Pharmaceutical Co., Ltd., forming a new momentum of coordinated industrial development and stepping into a fast track of leapfrog development.",
 
 				url:"{!! theme_asset('images/30/35.jpg') !!}"
 
@@ -941,9 +864,9 @@
 
 			{
 
-				title:"长沙世唯科技有限公司",
+				title:"World-Way Biotech Inc. (Changsha)",
 
-				des:"2018年，溢多利并购长沙世唯科技有限公司，正式进入药用植物提取领域。",
+				des:"In 2018, VTR acquired World-Way Biotech Inc. (Changsha), becoming a player in the field of medicinal plant extraction.",
 
 				url:"{!! theme_asset('images/30/36.jpg') !!}"
 
@@ -951,9 +874,9 @@
 
 			{
 
-				title:"溢多利资本化之路",
+				title:"VTR’s capitalization roadmap",
 
-				des:"2014年1月28日上午9时25分，溢多利成功登陆深圳证券交易所，成为中国生物酶制剂行业首家上市企业。",
+				des:"At 9:25 a.m. on January 28, 2014, VTR successfully debut on the Shenzhen Stock Exchange and became the first listed company in China's bioenzyme industry.",
 
 				url:"{!! theme_asset('images/30/37.jpg') !!}"
 
@@ -961,9 +884,9 @@
 
 			{
 
-				title:"溢多利总部大楼",
+				title:"VTR Headquarters Building",
 
-				des:"溢多利在珠海总部的统筹协调下，形成了生物酶制剂、生物医药、动物营养与健康三大产业协同发展的态势。",
+				des:"Under the coordination of Zhuhai Headquarters, VTR has formed a synergistic development pattern integrating three major industries: Bioenzymes, Biopharmaceuticals, as well as animal nutrition and health. ",
 
 				url:"{!! theme_asset('images/30/38.jpg') !!}"
 
@@ -971,9 +894,9 @@
 
 			{
 
-				title:"溢多利-内蒙古呼和浩特生产基地",
+				title:"VTR - Inner Mongolia Hohhot Production Base",
 
-				des:"内蒙古溢多利生物科技有限公司是溢多利在内蒙古建立的北方酶制剂发酵生产基地，位于呼和浩特市托克托工业园。",
+				des:"Located in Togtoh Industrial Park, Hohhot， Inner Mongolia VTR Biotechnology Co., Ltd. is the northern manufacturing base of enzyme preparation fermentation established by VTR in Inner Mongolia. ",
 
 				url:"{!! theme_asset('images/30/39.jpg') !!}"
 
@@ -981,9 +904,9 @@
 
 			{
 
-				title:"溢多利湖南生物医药产业园",
+				title:"VTR Hunan Biomedical Industrial Park",
 
-				des:"溢多利在湖南津市投产“溢多利生物医药产业园”，为我国医药产业建设做出了更大的贡献。",
+				des:'VTR has put into operation the VTR Biomedical Industrial Park in Jin City, Hunan, to make even greater contribution to the construction of pharmaceutical industry of China. ',
 
 				url:"{!! theme_asset('images/30/40.jpg') !!}"
 
@@ -991,9 +914,9 @@
 
 			{
 
-				title:"溢多利-河南安阳生物医药生产基地",
+				title:"VTR - Henan Anyang Biomedical Production Base",
 
-				des:"河南利华制药有限公司是广东溢多利的全资子公司，生产和销售皮质激素原料药和核心中间体，产品远销全球各地。",
+				des:"Henan Lihua Pharmaceutical Co., Ltd. is a wholly owned subsidiary of Guangdong VTR, and produces and sells corticosteroid APIs and core intermediates, which are exported worldwide. ",
 
 				url:"{!! theme_asset('images/30/41.jpg') !!}"
 
@@ -1001,9 +924,9 @@
 
 			{
 
-				title:"溢多利-湖南浏阳动物营养与健康生产基地",
+				title:"VTR-Hunan Liuyang Animal Nutrition and Health Production Base",
 
-				des:"湖南美可达生物资源股份有限公司是溢多利旗下分子公司，主营天然植物源饲料添加剂等产品的研发、生产及销售。",
+				des:"Hunan Micolta Bioresource Co., Ltd. is a subsidiary of VTR, and is mainly engaged in the R&D, production and sales of natural plant-derived feed additives and other products. ",
 
 				url:"{!! theme_asset('images/30/42.jpg') !!}"
 
@@ -1011,9 +934,9 @@
 
 			{
 
-				title:"生物酶制剂、动物营养与健康（珠海总部）生产基地",
+				title:"Biological enzyme preparation, animal nutrition and health (Zhuhai headquarters) production base",
 
-				des:"广东溢多利生物科技股份有限公司珠海总部主要进行生物酶制剂、动物营养与健康产品的生产。",
+				des:"The Zhuhai Headquarters of Guangdong VTR Biotechnology Co., Ltd. is mainly engaged in the production of biological enzyme preparations, animal nutrition and health products. ",
 
 				url:"{!! theme_asset('images/30/43.jpg') !!}"
 
@@ -1021,9 +944,9 @@
 
 			{
 
-				title:"溢多利国家认定企业技术中心概况",
+				title:"Overview of VTR National Certified Enterprise Technology Center",
 
-				des:"作为创新型生物技术企业，溢多利拥有雄厚的科研实力及创新研发平台优势。",
+				des:"As an innovative biotechnology company, VTR has strong research strength as well as innovative R&D platform superiorities. ",
 
 				url:"{!! theme_asset('images/30/44.jpg') !!}"
 
@@ -1031,9 +954,9 @@
 
 			{
 
-				title:"溢多利国家认定企业技术中心团队合影",
+				title:"Group Photo of Team of VTR National Certified Enterprise Technology Center",
 
-				des:"溢多利在30年的高速发展中建立起一支高素质、多层次、结构合理的技术研发队伍。公司研发团队现有研发人员约400名，博士、硕士学历占比30%以上。",
+				des:"VTR has established a high quality, multi-level and reasonable structured technical research and development team during its 30 years of rapid development.  The R&D team of the Company has about 400 R&D staffs, with over 30% of them holding doctoral or master degrees.",
 
 				url:"{!! theme_asset('images/30/45.jpg') !!}"
 
@@ -1041,9 +964,9 @@
 
 			{
 
-				title:"溢多利国家认定企业技术中心团队合影",
+				title:"Group Photo of Team of VTR National Certified Enterprise Technology Center",
 
-				des:"溢多利在30年的高速发展中建立起一支高素质、多层次、结构合理的技术研发队伍。公司研发团队现有研发人员约400名，博士、硕士学历占比30%以上。",
+				des:"VTR has established a high quality, multi-level and reasonable structured technical research and development team during its 30 years of rapid development.  The R&D team of the Company has about 400 R&D staffs, with over 30% of them holding doctoral or master degrees.",
 
 				url:"{!! theme_asset('images/30/45-1.jpg') !!}"
 
@@ -1051,9 +974,9 @@
 
 			{
 
-				title:"溢多利研究院——生物酶制剂研究中心",
+				title:"VTR Research Institute - Biological Enzyme Research Center",
 
-				des:"溢多利研究院生物酶制剂研究中心，主要进行饲料用酶制剂、食品用酶制剂、洗涤用酶制剂、纺织用酶制剂、能源用酶制剂、医药用酶制剂、造纸用酶制剂等产品的研发。",
+				des:"The Biological Enzyme Research Center of VTR Research Institute is mainly engaged in the research and development of enzyme preparation for feed, enzyme preparation for food, enzyme preparation for washing, enzyme preparation for textile, enzyme preparation for energy, enzyme preparation for medicine, enzyme preparation for paper making, etc. ",
 
 				url:"{!! theme_asset('images/30/46.jpg') !!}"
 
@@ -1061,9 +984,9 @@
 
 			{
 
-				title:"溢多利研究院——生物医药研究中心",
+				title:"VTR Research Institute - Biomedical Research Center",
 
-				des:"溢多利研究院生物医药研究中心，甾体激素生化合成技术世界领先，在国内率先形成从植物甾醇出发，开展甾体激素中间体、原料药、制剂全产业链技术的研发与产业化示范。",
+				des:"The steroid hormone biochemical synthesis technology of Biomedical Research Center of VTR Research Institute is the world leading, and the Center is the first in China to establish the research and development and industrialization demonstration of the whole industrial chain technology of steroid hormone intermediates, APIs and preparations starting from phytosterols. ",
 
 				url:"{!! theme_asset('images/30/47.jpg') !!}"
 
@@ -1071,9 +994,9 @@
 
 			{
 
-				title:"溢多利研究院——植物提取研究中心",
+				title:"VTR Research Institute - Plant Extract Research Center",
 
-				des:"溢多利研究院植物提取研究中心，研究开发“博落回提取物原料药及其制剂博落回散”，成为我国首个二类新中兽药，“博落回散”成为首个二类中兽药类药物饲料添加剂；此后，研究开发“博普总碱原料药及其制剂博普总碱散”再次获批为国家二类新中兽药。",
+				des:'The Plant Extract Research Center of VTR Research Institute has researched and developed "Macleaya Cordata Extract API and Its Preparation Macleaya Cordata Powder", which is the first Class II new Chinese veterinary drug in China, and "Macleaya Cordata Powder" has become the first Class II Chinese veterinary drug feed additive; after that, it has researched and developed "Macleaya Cordata Powder API and Its Preparation Macleaya Total Alkali Powder", which was approved again as Class II new Chinese veterinary drug in China. ',
 
 				url:"{!! theme_asset('images/30/48.jpg') !!}"
 
@@ -1081,9 +1004,9 @@
 
 			{
 
-				title:"溢多利先进研发设备",
+				title:"Advanced R&D Facilities of VTR",
 
-				des:"溢多利研发中心拥有国际先进的设备与一流的研发团队，极大地促进了公司科研实力的提升。",
+				des:"VTR R&D Center is equipped with international advanced equipment and first-class R&D team, greatly promoting the improvement of the scientific research strength of the Company. ",
 
 				url:"{!! theme_asset('images/30/49.jpg') !!}"
 
@@ -1091,9 +1014,9 @@
 
 			{
 
-				title:"溢多利先进研发设备",
+				title:"Advanced R&D Facilities of VTR",
 
-				des:"溢多利研发中心拥有国际先进的设备与一流的研发团队，极大地促进了公司科研实力的提升。",
+				des:"VTR R&D Center is equipped with international advanced equipment and first-class R&D team, greatly promoting the improvement of the scientific research strength of the Company. ",
 
 				url:"{!! theme_asset('images/30/49-1.jpg') !!}"
 
@@ -1101,9 +1024,9 @@
 
 			{
 
-				title:"溢多利研发中心",
+				title:"VTR R&D Center",
 
-				des:"溢多利将重研发、促创新视为安身立命之根本，历经三十载耕耘，现已构建一套以溢多利研究院为核心的研发体系。",
+				des:"VTR regards R&D and innovation as the foundation of the Company, and after thirty years of hard work, it has built a set of R&D system with VTR Research Institute as the core.  ",
 
 				url:"{!! theme_asset('images/30/50.jpg') !!}"
 
@@ -1111,9 +1034,9 @@
 
 			{
 
-				title:"溢多利参与精准扶贫献爱心活动",
+				title:"VTR participates in the precise poverty alleviation and donation activities ",
 
-				des:"溢多利对口帮扶贫困家庭，参与精准扶贫献爱心活动。公司自成立以来，始终秉持奉献精神，传递社会大爱。",
+				des:"VTR helps poor families in a targeted manner and participates in precise poverty alleviation and donation activities. Since its establishment, the Company has been upholding the spirit of devotion and relaying the greatest love to the society. ",
 
 				url:"{!! theme_asset('images/30/51.jpg') !!}"
 
@@ -1121,9 +1044,9 @@
 
 			{
 
-				title:"溢多利第一届奖学金、奖教金颁奖现场",
+				title:"Awarding Ceremony of the First Student Fellowship and Faculty Fellowship of VTR",
 
-				des:"自1999年至今，溢多利在全国多所农业类高校设立“溢多利奖学金、奖教金”，为数千名莘莘学子提供了经济帮助。",
+				des:'Since 1999, VTR has established " VTR Student Fellowship and Faculty Fellowship in several agricultural colleges and universities in China, providing financial assistance to thousands of students.',
 
 				url:"{!! theme_asset('images/30/52.jpg') !!}"
 
@@ -1131,9 +1054,9 @@
 
 			{
 
-				title:"溢多利第一届奖学金、奖教金颁奖现场",
+				title:"Awarding Ceremony of the First Student Fellowship and Faculty Fellowship of VTR",
 
-				des:"自1999年至今，溢多利在全国多所农业类高校设立“溢多利奖学金、奖教金”，为数千名莘莘学子提供了经济帮助。",
+				des:'Since 1999, VTR has established " VTR Student Fellowship and Faculty Fellowship in several agricultural colleges and universities in China, providing financial assistance to thousands of students.',
 
 				url:"{!! theme_asset('images/30/52-1.jpg') !!}"
 
@@ -1141,9 +1064,9 @@
 
 			{
 
-				title:"溢多利扶贫助学活动",
+				title:"VTR's Poverty Alleviation and Education Activities",
 
-				des:"2006年5月31日，在珠海市红旗镇，溢多利举行扶贫助学活动。",
+				des:"On May 31, 2006, VTR holds a poverty relief and education assistance activity in Hongqi Town, Zhuhai.",
 
 				url:"{!! theme_asset('images/30/53.jpg') !!}"
 
@@ -1151,9 +1074,9 @@
 
 			{
 
-				title:"溢多利人向汶川灾区人民奉献爱心",
+				title:"VTR staff offer support to the people affected by the disaster in Wenchuan",
 
-				des:"2008年5月12日，四川汶川发生大地震，牵动着无数人的心。5月15日，全体溢多利人自发为灾区捐款。短短一小时，溢多利为汶川捐款达数十万元人民币。",
+				des:"On May 12, 2008, a major earthquake struck Wenchuan, Sichuan Province, which touched the hearts of countless people. On May 15, all VTR staff spontaneously donated to the disaster area. In just one hour, VTR donated hundreds of thousands of RMB to Wenchuan. ",
 
 				url:"{!! theme_asset('images/30/54.jpg') !!}"
 
@@ -1161,9 +1084,9 @@
 
 			{
 
-				title:"情系玉树",
+				title:"Cares and Concerns for Yushu",
 
-				des:"2010年4月14日，青海省玉树藏族自治州玉树县发生7.1级地震。15日，溢多利全体员工齐聚公司行政楼大厅进行捐款活动，陈少美董事长代表公司向玉树灾区捐款10万元人民币，珠海市有关领导全程参与。",
+				des:"On April 14, 2010, a 7.1 magnitude earthquake struck Yushu County, Yushu Tibetan Autonomous Prefecture, Qinghai Province. On the 15th, all the employees of VTR gathered in the hall of the administration building of the Company for donation activities, Chairman Chen Shaomei donated RMB 100,000 to Yushu disaster area on behalf of the Company, and related leaders from Zhuhai participated in the whole process. ",
 
 				url:"{!! theme_asset('images/30/55.jpg') !!}"
 
@@ -1171,18 +1094,18 @@
 
 			{
 
-				title:"营销团队冲刺业绩合影留念",
+				title:"Group Photo of Marketing Team Fighting for New Goals",
 
-				des:"2014年2月9日，溢多利全体营销团队再接再厉、创造辉煌，冲刺业绩“开门红”。",
+				des:"On February 9, 2014, all the marketing team members of VTR started new efforts for new achievements and new records of performance. ",
 				url:"{!! theme_asset('images/30/56.jpg') !!}"
 
 			},
 
 			{
 
-				title:"20周年优秀员工表彰",
+				title:"Commendation of 20th Anniversary Outstanding Employees",
 
-				des:"奋进数十载，缘聚溢多利。溢多利举办成立二十周年庆典暨总结表彰动员大会，在大会上表彰先进工作代表及优秀团队，同时勉励大家未来更加奋进。",
+				des:"Decades of Efforts and Brilliance with VTR VTR holds the 20th Anniversary Celebration & Summarization, Commendation and Mobilization Conference, at which model employee representatives and outstanding teams are rewarded and the staff are motivated to work harder in the future. ",
 
 				url:"{!! theme_asset('images/30/57.jpg') !!}"
 
@@ -1190,9 +1113,9 @@
 
 			{
 
-				title:"团建——东澳岛拓展训练",
+				title:"Team Construction - Dong'ao Island Outreach Training",
 
-				des:"作为一家高度重视人才团队建设的企业，溢多利常态化举行公司营销动员活动及团队建设活动等，进一步加强了人才团队建设，增强了团队凝聚力，提升了全员客户服务意识，丰富了员工业余生活。",
+				des:"As an enterprise attaching great importance to talent team building, VTR regularly holds company marketing mobilization activities, team building activities, etc., further strengthening the talent team building, enhancing team cohesion, improving the awareness of customer service of all staff, and enriching the spare time life of staff. ",
 
 				url:"{!! theme_asset('images/30/58.jpg') !!}"
 
@@ -1266,7 +1189,8 @@
 			
 			
 		
-		$(".fixed-nav").hide();
+		$(".fixed-nav,header,.footer,.rcICon").hide();
+		
 		
 		$(".rcICon").on("click",function(){
 			$(".rc-con").fadeIn(200)
@@ -1291,7 +1215,7 @@
                 autoplay:false,
                 'width':greetingsPlayerWidth,
                 'height':greetingsPlayerHeight,
-                'vid' : "ad514bee27df5403bbb3853da464dcdd_a"
+                'vid' : "ad514bee27a22874da353bdc254f27d2_a"
 		});
     })
 </script>

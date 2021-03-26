@@ -18,7 +18,7 @@
 					<a target="_black" href="https://wx.vzan.com/live/tvchat-526384769?v=1616488728261"><img class="transition" src="{!! theme_asset('images/30/liveimg2.jpg') !!}" alt="" /></a>
 				</div>
 				<div class="live-img-item">
-					<a  target="_black"><img class="transition" src="{!! theme_asset('images/30/liveimg.png') !!}" alt="" /></a>
+					<a  target="_black" href="https://www.pailixiang.com/album_ia1180856897.html"><img class="transition" src="{!! theme_asset('images/30/liveimg3.jpg') !!}" alt="" /></a>
 				</div>
 
 			</div>
@@ -75,7 +75,7 @@
 	</div>
     <div class="container qy-con w1200" style="max-width:1382px !important">
 	
-	 <div class="page-news-video about-left col-lg-6 col-md-6 col-sm-12 wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".3s"  vid="ad514bee27df5403bbb3853da464dcdd_a" des="三十而“溢”正当时，扬帆奋进开新局！2021年，溢多利正式迎来公司成立30周年的特殊时刻。1991年，在珠海经济特区，溢多利酶制剂有限公司（溢多利的前身）诞生，打破了过去由外企垄断市场的格局，中国饲用酶制剂工业就此起航。经过30年跨越式发展，溢多利已经成为中国生物酶制剂领域首家上市企业、全球极具竞争力的甾体激素医药企业、饲料“无抗”领军企业。2021年是国家“十四五”规划的开局之年，在更高的起点，溢多利作为粤港澳大湾区的生物技术领军企业，将持续进行生物技术的革新，立足生物酶制剂、生物医药、动物营养与健康领域，结合政策与行业发展趋势等推出更具有前瞻性的产品，以卓越的产品与服务满足行业需求，为建设人类绿色、健康的美好生活而不懈努力 ！">
+	 <div class="page-news-video about-left col-lg-6 col-md-6 col-sm-12 wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".3s"  vid="ad514bee27f277d57283a05c13846c1e_a" des="溢多利2021新版官方宣传片">
 
             <img class="transition" src="{!! theme_asset('images/30/video.png') !!}" alt="" />
 
@@ -114,7 +114,7 @@
 						  <!-- Slides -->
 							 <div class="swiper-slide ">
 								
-								<div class="img col-lg-7 col-md-7 col-sm-12 col-xs-12">
+								<div class="img col-lg-6 col-md-6 col-sm-12 col-xs-12">
 									<img  class="" src="{!! theme_asset('images/30/1991.jpg') !!}" alt="" />
 								 </div>
 								  <div class="test col-lg-5 col-md-5 col-sm-12 col-xs-12">
@@ -123,7 +123,7 @@
 								</div>	
 							 </div>
 							 <div class="swiper-slide ">
-							 <div class="img col-lg-7 col-md-7 col-sm-12 col-xs-12">
+							 <div class="img col-lg-6 col-md-6 col-sm-12 col-xs-12">
 									<img  class="" src="{!! theme_asset('images/30/1997.jpg') !!}" alt="" />
 								 </div>
 								 <div class="test col-lg-5 col-md-5 col-sm-12 col-xs-12">
@@ -132,7 +132,7 @@
 								</div>
 							</div>
 							<div class="swiper-slide ">
-								<div class="img col-lg-7 col-md-7 col-sm-12 col-xs-12">
+								<div class="img col-lg-6 col-md-6 col-sm-12 col-xs-12">
 									<img  class="" src="{!! theme_asset('images/30/1998.jpg') !!}" alt="" />
 								 </div>
 								 <div class="test col-lg-5 col-md-5 col-sm-12 col-xs-12">
@@ -142,7 +142,7 @@
 							   </div>
 							</div>
 							<div class="swiper-slide ">
-								<div class="img col-lg-7 col-md-7 col-sm-12 col-xs-12">
+								<div class="img col-lg-6 col-md-6 col-sm-12 col-xs-12">
 									<img  class="" src="{!! theme_asset('images/30/1999.jpg') !!}" alt="" />
 								 </div>
 								 <div class="test col-lg-5 col-md-5 col-sm-12 col-xs-12">
@@ -151,7 +151,7 @@
 								</div>
 							</div>
 							<div class="swiper-slide ">
-								<div class="img col-lg-7 col-md-7 col-sm-12 col-xs-12">
+								<div class="img col-lg-6 col-md-6 col-sm-12 col-xs-12">
 									<img  class="" src="{!! theme_asset('images/30/2001.jpg') !!}" alt="" />
 								 </div>
 								 <div class="test col-lg-5 col-md-5 col-sm-12 col-xs-12">
@@ -161,7 +161,7 @@
 							   </div>
 							</div>
 							<div class="swiper-slide ">
-								<div class="img col-lg-7 col-md-7 col-sm-12 col-xs-12">
+								<div class="img col-lg-6 col-md-6 col-sm-12 col-xs-12">
 									<img  class="" src="{!! theme_asset('images/30/2003.jpg') !!}" alt="" />
 								 </div>
 								 <div class="test col-lg-5 col-md-5 col-sm-12 col-xs-12">
@@ -171,7 +171,7 @@
 							   </div>
 							</div>
 							<div class="swiper-slide ">
-								<div class="img col-lg-7 col-md-7 col-sm-12 col-xs-12">
+								<div class="img col-lg-6 col-md-6 col-sm-12 col-xs-12">
 									<img  class="" src="{!! theme_asset('images/30/2005.jpg') !!}" alt="" />
 								 </div>
 								 <div class="test col-lg-5 col-md-5 col-sm-12 col-xs-12">
@@ -181,7 +181,7 @@
 								
 							</div>
 							<div class="swiper-slide ">
-								<div class="img col-lg-7 col-md-7 col-sm-12 col-xs-12">
+								<div class="img col-lg-6 col-md-6 col-sm-12 col-xs-12">
 									<img  class="" src="{!! theme_asset('images/30/2008.jpg') !!}" alt="" />
 								 </div>
 								 <div class="test col-lg-5 col-md-5 col-sm-12 col-xs-12">
@@ -191,7 +191,7 @@
 							   </div>
 							</div>
 							<div class="swiper-slide ">
-								<div class="img col-lg-7 col-md-7 col-sm-12 col-xs-12">
+								<div class="img col-lg-6 col-md-6 col-sm-12 col-xs-12">
 									<img  class="" src="{!! theme_asset('images/30/2014.jpg') !!}" alt="" />
 								 </div>
 								 <div class="test col-lg-5 col-md-5 col-sm-12 col-xs-12">
@@ -202,7 +202,7 @@
 							
 							</div>
 							<div class="swiper-slide ">
-								<div class="img col-lg-7 col-md-7 col-sm-12 col-xs-12">
+								<div class="img col-lg-6 col-md-6 col-sm-12 col-xs-12">
 									<img  class="" src="{!! theme_asset('images/30/2015.jpg') !!}" alt="" />
 								 </div>
 								 <div class="test col-lg-5 col-md-5 col-sm-12 col-xs-12">
@@ -212,7 +212,7 @@
 								
 							</div>
 							<div class="swiper-slide ">
-							<div class="img col-lg-7 col-md-7 col-sm-12 col-xs-12">
+							<div class="img col-lg-6 col-md-6 col-sm-12 col-xs-12">
 									<img  class="" src="{!! theme_asset('images/30/2016.jpg') !!}" alt="" />
 								 </div>
 								 <div class="test col-lg-5 col-md-5 col-sm-12 col-xs-12">
@@ -221,7 +221,7 @@
 								</div>
 							</div>
 							<div class="swiper-slide ">
-								<div class="img col-lg-7 col-md-7 col-sm-12 col-xs-12">
+								<div class="img col-lg-6 col-md-6 col-sm-12 col-xs-12">
 									<img  class="" src="{!! theme_asset('images/30/2017.jpg') !!}" alt="" />
 								 </div>
 								 <div class="test col-lg-5 col-md-5 col-sm-12 col-xs-12">
@@ -231,7 +231,7 @@
 								
 							</div>
 							<div class="swiper-slide ">
-								<div class="img col-lg-7 col-md-7 col-sm-12 col-xs-12">
+								<div class="img col-lg-6 col-md-6 col-sm-12 col-xs-12">
 									<img  class="" src="{!! theme_asset('images/30/2018.jpg') !!}" alt="" />
 								 </div>
 								 <div class="test col-lg-5 col-md-5 col-sm-12 col-xs-12">
@@ -241,7 +241,7 @@
 								</div>
 							</div>
 							<div class="swiper-slide ">
-								<div class="img col-lg-7 col-md-7 col-sm-12 col-xs-12">
+								<div class="img col-lg-6 col-md-6 col-sm-12 col-xs-12">
 									<img  class="" src="{!! theme_asset('images/30/2020.jpg') !!}" alt="" />
 								 </div>
 								<div class="test col-lg-5 col-md-5 col-sm-12 col-xs-12">
@@ -253,7 +253,7 @@
 								
 							</div>
 							<div class="swiper-slide ">
-								<div class="img col-lg-7 col-md-7 col-sm-12 col-xs-12">
+								<div class="img col-lg-6 col-md-6 col-sm-12 col-xs-12">
 									<img  class="" src="{!! theme_asset('images/30/2021.jpg') !!}" alt="" />
 								 </div>
 								 <div class="test col-lg-5 col-md-5 col-sm-12 col-xs-12">
@@ -421,11 +421,11 @@
 <div class="rcICon">
 	庆典日程
 </div>
-<div class="rc-con" style="display:block;"> 
+<div class="rc-con" > 
 	<div class="rc-bg">
 		<div class="rc-table">
 			<div class="rc-close"></div>
-			<div class="rc-table-t">“溢多利生物产业发展与行业高端论坛<br>暨成立三十周年庆典”活动日程</div>
+			<div class="rc-table-t">“溢多利生物产业发展与行业高端论坛暨成立三十周年庆典”活动日程</div>
 			<div class="container w1200">
 				 <table style="width:100%;" border="1"  cellpadding="5" align="center">
 					<tr align="center" class="tr1">
@@ -1291,7 +1291,7 @@
                 autoplay:false,
                 'width':greetingsPlayerWidth,
                 'height':greetingsPlayerHeight,
-                'vid' : "ad514bee27df5403bbb3853da464dcdd_a"
+                'vid' : "ad514bee27a22874da353bdc254f27d2_a"
 		});
     })
 </script>
