@@ -110,7 +110,7 @@ class ProductCategoryRepository extends BaseRepository implements ProductCategor
         {
             return 0;
         }
-        $parent = $this->where('id',$parent_id)->first(['id','parent_id']);
+        $parent = $this->where('id',$parent_id)->where('hide',0)->first(['id','parent_id']);
         if($parent->parent_id)
         {
             return $this->getTopParentId($parent->parent_id);
@@ -134,7 +134,7 @@ class ProductCategoryRepository extends BaseRepository implements ProductCategor
     }
     public function getFieldValue($category_id,$field)
     {
-        $category = $this->where('id',$category_id)->first(['id','parent_id',$field]);
+        $category = $this->where('id',$category_id)->where('hide',0)->first(['id','parent_id',$field]);
         if(!$category[$field])
         {
             if(!$category->parent_id)
@@ -188,7 +188,7 @@ class ProductCategoryRepository extends BaseRepository implements ProductCategor
     }
     public function getLastFirstCategoryId($parent_id=0)
     {
-        $category = ProductCategory::where('parent_id',$parent_id)->orderBy('order','desc')->orderBy('id','asc')->first();
+        $category = ProductCategory::where('parent_id',$parent_id)->where('hide',0)->orderBy('order','desc')->orderBy('id','asc')->first();
         if(!$category)
         {
             return $parent_id;
@@ -204,7 +204,7 @@ class ProductCategoryRepository extends BaseRepository implements ProductCategor
         {
             return $list;
         }
-        $siblings =  ProductCategory::where('parent_id',$category->parent_id)->orderBy('order','desc')->orderBy('id','asc')->get()->toArray();
+        $siblings =  ProductCategory::where('parent_id',$category->parent_id)->where('hide',0)->orderBy('order','desc')->orderBy('id','asc')->get()->toArray();
 
         foreach ($siblings as $key => $sibling)
         {
@@ -233,7 +233,7 @@ class ProductCategoryRepository extends BaseRepository implements ProductCategor
     public function getBreadCrumbs($breadcrumbs = [],$product_category_id)
     {
         if($product_category_id ) {
-            $product_category = app(ProductCategory::class)->where('id', $product_category_id)->first();
+            $product_category = app(ProductCategory::class)->where('id', $product_category_id)->where('hide',0)->first();
             $arr[] = [
                 'is_menu' => 1,
                 'name' => $product_category->name ,

@@ -96,12 +96,13 @@
             <div class="product-item col-lg-3 col-md-3 col-sm-6 col-xs-6 wow bounceIn animated" data-wow-duration=".6s" data-wow-delay=".6s">
                 <div class="product-item-box">
                     <a href="{{ route('pc.product.index',['product_category_id' => $category->id]) }}">
-                        <div class="img"><img  class="transition500" src="{!! theme_asset('images/p3.png') !!}" alt=""></div>
+                        <div class="img"><img  class="transition500" src="{!! theme_asset('images/p4.png') !!}" alt=""></div>
                         <p class="transition500 fb-overflow-2">{{ $category->name }}</p>
                     </a>
                 </div>
             </div>
             @elseif($key == 3)
+            <!--
             <div class="product-item col-lg-3 col-md-3 col-sm-6 col-xs-6 wow bounceIn animated" data-wow-duration=".6s" data-wow-delay=".7s">
                 <div class="product-item-box">
                     <a href="{{ route('pc.product.index',['product_category_id' => $category->id]) }}">
@@ -110,6 +111,7 @@
                     </a>
                 </div>
             </div>
+            -->
             @endif
             @endforeach
         </div>
