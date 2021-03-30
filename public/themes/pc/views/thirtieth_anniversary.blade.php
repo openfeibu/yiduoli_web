@@ -17,9 +17,9 @@
 				<div class="live-img-item">
 					<a target="_black" href="https://wx.vzan.com/live/tvchat-526384769?v=1616488728261"><img class="transition" src="{!! theme_asset('images/30/liveimg2.jpg') !!}" alt="" /></a>
 				</div>
-				<div class="live-img-item">
+				<!--<div class="live-img-item">
 					<a  target="_black" href="https://www.pailixiang.com/album_ia1180856897.html"><img class="transition" src="{!! theme_asset('images/30/liveimg3.jpg') !!}" alt="" /></a>
-				</div>
+				</div>-->
 
 			</div>
 			<div class="live-right col-xs-12  col-sm-12" style="padding-right:0;">
@@ -31,7 +31,7 @@
 					</p>
 					<p>
 						<span>时间：</span>
-						2021年3月30日 08:30-11:00
+						2021年3月30日 08:30-11:30
 					</p>
 				</div>
 				<div class="live-test-item  wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".4s">
@@ -42,16 +42,16 @@
 					</p>
 					<p>
 						<span>时间：</span>
-						2021年3月30日 14:00-18:00
+						2021年3月30日 13:30-18:30 
 					</p>
 				</div>
-				<div class="live-test-item  wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".5s">
+				<!--<div class="live-test-item  wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".5s">
 					<h3>三十周年庆典活动与高端论坛<br>现场图片云直播</h3>
 					<p>
 						云呈现活动现场的精彩瞬间
 					</p>
 					
-				</div>
+				</div>-->
 			</div>
 		   
 		
@@ -83,11 +83,10 @@
 		<div class="about-right col-lg-6 col-md-6 col-sm-12" style="padding-right:0;">
 		
             <div class="about-con  wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".5s">
-				<div class="t">三十而“溢”正当时 <br> 扬帆奋进开新局！</div>
-                <p>2021年，溢多利正式迎来公司成立30周年的特殊时刻。1991年，在珠海经济特区，溢多利酶制剂有限公司（溢多利的前身）诞生，打破了过去由外企垄断市场的格局，中国饲用酶制剂工业就此起航。经过30年跨越式发展，溢多利已经成为中国生物酶制剂领域首家上市企业、全球极具竞争力的甾体激素医药企业、饲料“无抗”领军企业。2021年是国家“十四五”规划的开局之年，在更高的起点，溢多利作为粤港澳大湾区的生物技术领军企业，将持续进行生物技术的革新，立足生物酶制剂、生物医药、动物营养与健康领域，结合政策与行业发展趋势等推出更具有前瞻性的产品，以卓越的产品与服务满足行业需求，为建设人类绿色、健康的美好生活而不懈努力 ！
+				<div class="t">三十而“利”正当时 <br> 扬帆奋进开新局！</div>
+                <p>2021年，溢多利正式迎来公司成立30周年的特殊时刻。1991年，在珠海经济特区，溢多利酶制剂有限公司（溢多利的前身）诞生，中国饲用酶制剂工业就此起航。经过30年跨越式发展，溢多利已经成为我国生物酶制剂行业龙头企业，中国动物营养与健康领域领军企业，全球极具竞争力的甾体激素医药企业。2021年是国家“十四五”规划的开局之年，在更高的起点，溢多利作为粤港澳大湾区的生物技术领军企业，将持续进行生物技术的革新，立足生物酶制剂、生物医药、动物营养与健康领域，结合政策与行业发展趋势等推出更具有前瞻性的产品，以卓越的产品与服务满足行业需求，为建设人类绿色、健康的美好生活而不懈努力！
                 </p>
-                 <!--<p class="mhidden" style="margin-top:20px">溢多利分子公司长沙世唯生物科技有限公司是国内最早的药用植物提取物生产厂家之一，公司研发的“博落回散”（商品名：美佑壮）是我国首个获得国家二类新中兽药证书的产品，具有极强的抗炎活性。溢多利充分发挥原本在酶制剂方面的优势，与药用植物提取物领域的成果完美结合，诞生了“博落回+酶制剂”组合方案，可产生1+1＞2的“抗炎、整肠、促生长”效果，极大推动了我国饲料“无抗”的进程，并在海外多个国家作为饲用抗生素替代方案稳定使用。溢多利，助力养殖业在饲料“无抗”背景下实现转型升级与绿色发展，助力人类实现更加健康、美好的生活。</p>
-                <!-- <p class="hiddle">......</p>-->
+         
             </div>
             <div class="more  wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".6s">查看全部</div>
         </div>
@@ -207,7 +206,7 @@
 								 </div>
 								 <div class="test col-lg-5 col-md-5 col-sm-12 col-xs-12">
 								   <div class="time"></div>
-								   <div class="des">2015年，溢多利博士后科研工作站获批成立；并购湖南新合新、河南利华，进入生物医药领域，步入跨越式发展快车道</div>
+								   <div class="des">2015年，溢多利博士后科研工作站获批成立；并购湖南新合新、河南利华，进入生物医药领域，步入跨越式发展快车道。</div>
 								</div>
 								
 							</div>
@@ -332,6 +331,36 @@
 			</div>
 		</div>
 </div>
+<div class="photoE wkMt" >
+    <div class="">
+        <!--  <div class="con-title tip-title2 wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".3s">
+            <h1><b>不忘初心"溢"往无前</b>图片展</h1>
+        </div> -->
+		<div class=" tip-title2 wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".3s">
+           <img  class="" src="{!! theme_asset('images/30/bwcx.png') !!}" alt="">
+        </div>
+		
+        <div class="photoE-con clearfix  wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".7s">
+				<div class="swiper-container-wrapper">
+					  <!-- Slider main container -->
+					  <div class="swiper-container gallery-top">
+						<!-- Additional required wrapper -->
+						<div class="swiper-wrapper">
+						  <!-- Slides -->
+						 
+						</div>
+						
+						<div class="swiper-button-prev photo-prev"></div>
+						<div class="swiper-button-next photo-next"></div>
+						<div class="label"><img src="{!! theme_asset('images/30/tpz-icon.png') !!}"></div></div>
+					  </div>
+					
+				</div>
+
+			
+        </div>
+    </div>
+</div>
 <div class=" vision">
     <div class="container w1200">
         <div class=" tip-title2 wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".3s">
@@ -385,36 +414,7 @@
         </div>
     </div>
 </div>
-<div class="photoE wkMt" >
-    <div class="">
-        <!--  <div class="con-title tip-title2 wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".3s">
-            <h1><b>不忘初心"溢"往无前</b>图片展</h1>
-        </div> -->
-		<div class=" tip-title2 wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".3s">
-           <img  class="" src="{!! theme_asset('images/30/bwcx.png') !!}" alt="">
-        </div>
-		
-        <div class="photoE-con clearfix  wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".7s">
-				<div class="swiper-container-wrapper">
-					  <!-- Slider main container -->
-					  <div class="swiper-container gallery-top">
-						<!-- Additional required wrapper -->
-						<div class="swiper-wrapper">
-						  <!-- Slides -->
-						 
-						</div>
-						
-						<div class="swiper-button-prev photo-prev"></div>
-						<div class="swiper-button-next photo-next"></div>
-						<div class="label"><img src="{!! theme_asset('images/30/tpz-icon.png') !!}"></div></div>
-					  </div>
-					
-				</div>
 
-			
-        </div>
-    </div>
-</div>
 <style>
 
 </style>
@@ -441,18 +441,9 @@
 					  <td align="left" style="padding-left:5px">嘉宾报到</td>
 					  <td>横琴湾酒店大堂</td>
 					</tr>
+		
 					<tr align="center">
-					   <td  rowspan="11" >03.30</td>
-					  <td>07:00-07:50</td>
-					  <td align="left" style="padding-left:5px">自助早餐</td>
-					  <td>横琴湾酒店自助餐厅</td>
-					</tr>
-					<tr align="center">
-					  <td>07:50</td>
-					  <td align="left" style="padding-left:5px">统一乘车前往溢多利。</td>
-					  <td>横琴湾酒店团队大厅</td>
-					</tr>
-					<tr align="center">
+					 <td  rowspan="8" >03.30</td>
 					  <td>08:30-11:30</td>
 					  <td align="left" style="padding-left:5px">“溢多利生物产业发展与行业高端论坛暨成立三十周年庆典”开幕仪式</td>
 					  <td>溢多利公司</td>
@@ -462,11 +453,7 @@
 					  <td align="left" style="padding-left:5px">统一乘车前往横琴湾酒店。</td>
 					  <td>溢多利公司</td>
 					</tr>
-					<tr align="center">
-					  <td>12:00-14:00</td>
-					  <td align="left" style="padding-left:5px">自助午餐</td>
-					  <td>横琴湾酒店自助餐厅</td>
-					</tr>
+				
 					<tr align="center">
 					  <td  colspan="3" >溢多利生物产业发展与行业高端论坛</td>
 					  
@@ -511,7 +498,7 @@
 <script src="{!! theme_asset('images/30/swiper.min.js') !!}"> </script>
 <script>
     $(function() {
-        $("title").text('30th而溢 扬帆奋进 - 溢多利')
+        $("title").text('溢多利三十周年庆典直播入口')
         var mySwiper = new Swiper('.swiper-container-banner', {
             // loop: true,
             // autoplay: 6000,
@@ -1291,7 +1278,7 @@
                 autoplay:false,
                 'width':greetingsPlayerWidth,
                 'height':greetingsPlayerHeight,
-                'vid' : "ad514bee27a22874da353bdc254f27d2_a"
+                'vid' : "ad514bee27a523f5e2fbce449dd6ce24_a"
 		});
     })
 </script>
