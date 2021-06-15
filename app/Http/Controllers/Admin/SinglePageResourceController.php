@@ -54,7 +54,6 @@ class SinglePageResourceController extends BaseController
             $page = $this->repository->newInstance([]);
             $view = $this->view_folder.'.create';
         }
-
         return $this->response->title($page->title)
             ->data([
                 'page' => $page,

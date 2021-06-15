@@ -79,6 +79,13 @@ Route::group([
         Route::post('/scientific_research_structure/store', 'ScientificResearchStructureResourceController@store')->name('scientific_research_structure.store');
         Route::put('/scientific_research_structure/update/{page}', 'ScientificResearchStructureResourceController@update')->name('scientific_research_structure.update');
 
+        /*科研设备概况*/
+        Route::get('/scientific_research_equipment', 'ScientificResearchEquipmentResourceController@show')->name('scientific_research_equipment.index');
+        Route::get('/scientific_research_equipment/show', 'ScientificResearchEquipmentResourceController@show')->name('scientific_research_equipment.show');
+        Route::post('/scientific_research_equipment/store', 'ScientificResearchEquipmentResourceController@store')->name('scientific_research_equipment.store');
+        Route::put('/scientific_research_equipment/update/{page}', 'ScientificResearchEquipmentResourceController@update')->name('scientific_research_equipment.update');
+
+
         /*联合研究机构*/
         Route::resource('joint_research_institute', 'JointResearchInstituteResourceController');
         Route::post('/joint_research_institute/destroyAll', 'JointResearchInstituteResourceController@destroyAll')->name('joint_research_institute.destroy_all');
@@ -234,7 +241,9 @@ Route::group([
     })->name('scientific.prowess');
     Route::get('/scientific/prowess/scientific_research_team','ScientificController@scientific_research_team')->name('scientific_research_team');
     Route::get('/scientific/prowess/scientific_research_structure','ScientificController@scientific_research_structure')->name('scientific_research_structure');
+    Route::get('/scientific/prowess/scientific_research_equipment','ScientificController@scientific_research_equipment')->name('scientific_research_equipment');
     Route::get('/scientific/prowess/joint_research_institute','ScientificController@joint_research_institute')->name('joint_research_institute');
+
     Route::get('/course/awards_honor','CourseController@awards_honor')->name('awards_honor');
 
     Route::get('/investor_relations',function (){
@@ -272,6 +281,7 @@ Route::group([
 
     Route::get('/anniversary', 'HomeController@anniversary')->name('anniversary');
     Route::get('/thirtieth_anniversary', 'HomeController@thirtiethAnniversary')->name('thirtieth_anniversary');
+    Route::get('/thirtieth_anniversary_test', 'HomeController@thirtiethAnniversaryTest')->name('thirtieth_anniversary_test');
     Route::get('/thirtieth_anniversary/course', 'HomeController@thirtiethAnniversaryCourse')->name('thirtieth_anniversary_course');
     Route::get('/en/thirtieth_anniversary', 'HomeController@enThirtiethAnniversary')->name('en_thirtieth_anniversary');
     /*
