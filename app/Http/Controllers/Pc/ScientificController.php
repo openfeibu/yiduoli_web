@@ -33,6 +33,11 @@ class ScientificController extends BaseController
         $slug = 'scientific_research_structure';
         return $this->left_page_show($request,$slug);
     }
+    public function scientific_research_equipment(Request $request)
+    {
+        $slug = 'scientific_research_equipment';
+        return $this->left_page_show($request,$slug);
+    }
 
     public function joint_research_institute(Request $request)
     {
