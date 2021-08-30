@@ -68,8 +68,8 @@
 <div class="product">
     <div class="container w1400">
         <div class="con-title tip-title wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".3s">
-            <span  class="transition500">PRODUCT</span>
-            <h1>产品中心</h1>
+            <span  class="transition500">CORE PLATE</span>
+            <h1>核心板块</h1>
         </div>
         <div class="product-con ">
 
