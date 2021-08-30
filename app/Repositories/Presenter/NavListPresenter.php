@@ -87,6 +87,7 @@ class NavListPresenter extends FractalPresenter
                     $html .= sprintf('<dd class=""><a href="%s">%s %s</a></dd>', route('pc.product.index',['product_category_id' => $category->id]), '', $category->name);
                     $i++;
                 }
+                $html .= sprintf('<dd class=""><a href="%s" target="_blank">%s %s</a></dd>', setting('gym_url'), '', setting('gym_name'));
                 if($i)
                 {
                     $html .= '</dl>';
@@ -176,11 +177,11 @@ class NavListPresenter extends FractalPresenter
                         $html .= sprintf('<li class=""><a href="%s">%s %s</a></li>', route('pc.product.index',['product_category_id' => $category->id]), '', $category->name);
                         $i++;
                     }
+                    $html .= sprintf('<li class=""><a href="%s" target="_blank">%s %s</a></li>', setting('gym_url'), '', setting('gym_name'));
                     if($i)
                     {
                         $html .= '</ul>';
                     }
-
 
                     $html .= '</div>';
                     continue;
@@ -264,6 +265,7 @@ class NavListPresenter extends FractalPresenter
                     $html .= sprintf('<dd class=""><a href="%s">%s %s</a></dd>', route('pc.product.index',['product_category_id' => $category->id]), '', $category->name);
                     $i++;
                 }
+                $html .= sprintf('<dd class=""><a href="%s" target="_blank">%s %s</a></dd>', setting('gym_url'), '', setting('gym_name'));
                 if($i)
                 {
                     $html .= '</dl>';
