@@ -164,7 +164,7 @@
                 </div>
                 <div class="innovate-item col-lg-3 col-md-3 col-sm-6 col-xs-6 wow bounceIn animated" data-wow-duration=".6s" data-wow-delay="1s">
                     <div class="number">
-                        <span >174</span>项
+                        <span >201</span>项
                     </div>
                     <div class="name">发明专利</div>
                 </div>
