@@ -202,7 +202,7 @@
 <div class="new">
     <div class="container w1400">
         <div class="con-title tip-title  wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".3s">
-            <span  class="transition500">NEW</span>
+            <span  class="transition500">NEWS</span>
             <a href="/news_center/news"><h1>新闻中心</h1></a>
         </div>
         <div class="new-con clearfix">
