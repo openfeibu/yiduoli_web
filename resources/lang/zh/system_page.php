@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'name'        => '资讯中心',
-    'names'       => '资讯中心',
+    'name'        => '系统文章',
+    'names'       => '系统文章',
     'label'       => [
 
     ],

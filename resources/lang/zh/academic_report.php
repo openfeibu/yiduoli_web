@@ -1,6 +1,9 @@
 <?php
 
 return [
-    'name'        => '学术报告',
-    'names'       => '学术报告',
+    'name'        => '产品文档',
+    'names'       => '产品文档',
+    'label'       => [
+        'title' => '文件标题'
+    ],
 ];
