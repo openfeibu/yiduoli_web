@@ -18,12 +18,17 @@
                         </div>
                     </div>
                     <div class="layui-form-item">
-                        <label class="layui-form-label">二维码</label>
+                        <label class="layui-form-label">二维码1</label>
                         {!! $company['wechat_qr_code']->files('value')->field('wechat_qr_code')
                         ->url($company['wechat_qr_code']->getUploadUrl('value'))
                         ->uploader()!!}
                     </div>
-
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">二维码2</label>
+                        {!! $company['wechat_qr_code_2']->files('value')->field('wechat_qr_code_2')
+                        ->url($company['wechat_qr_code_2']->getUploadUrl('value'))
+                        ->uploader()!!}
+                    </div>
                     <div class="layui-form-item">
                         <label class="layui-form-label">地址</label>
                         <div class="layui-input-inline">

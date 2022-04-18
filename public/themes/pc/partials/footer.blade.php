@@ -10,6 +10,11 @@
                     <img src="/image/original/{{ setting('wechat_qr_code') }}" alt="">
                 </div>
             </div>
+            <div class="vision-right col-lg-2 col-md-2 col-sm-12 col-xs-12">
+                <div class="code wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".3s">
+                    <img src="/image/original/{{ setting('wechat_qr_code_2') }}" alt="">
+                </div>
+            </div>
         </div>
     </div>
     <div class="footer-con clearfix">
