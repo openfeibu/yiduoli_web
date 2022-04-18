@@ -30,34 +30,40 @@
                 广东溢多利生物科技股份有限公司成立于1991年，总部位于广东省珠海市。公司专注于生物工程领域，研发并形成了生物酶制剂、生物医药、动物营养与健康三大系列产品线，同时为行业客户持续提供整体生物技术解决方案，是我国生物酶制剂行业龙头企业，全球极具竞争力的甾体激素医药企业，中国动物营养与健康领域领军企业。
             </div>
             <ul class="about-icon wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".6s">
-                <li class="col-lg-1-5 col-md-1-5 col-sm-1-5 col-xs-1-5">
+                <li class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
                     <a href="/about/profile">
                         <img class="transition500" src="{!! theme_asset('images/i1.png') !!}" alt="">
                         <p>企业概况</p>
                     </a>
                 </li>
-                <li class="col-lg-1-5 col-md-1-5 col-sm-1-5 col-xs-1-5">
+                <li class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
                     <a href="/about/profile/170">
                         <img class="transition500" src="{!! theme_asset('images/i3.png') !!}" alt="">
                         <p>产业布局</p>
                     </a>
                 </li>
-                <li class="col-lg-1-5 col-md-1-5 col-sm-1-5 col-xs-1-5">
+                <li class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
                     <a href="/course/development_course">
                         <img class="transition500" src="{!! theme_asset('images/i4.png') !!}" alt="">
                         <p>发展历程</p>
                     </a>
                 </li>
-                <li class="col-lg-1-5 col-md-1-5 col-sm-1-5 col-xs-1-5">
+                <li class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
                     <a href="/course/enterprise_honor">
                         <img class="transition500" src="{!! theme_asset('images/i5.png') !!}" alt="">
                         <p>企业荣誉</p>
                     </a>
                 </li>
-                <li class="col-lg-1-5 col-md-1-5 col-sm-1-5 col-xs-1-5">
+                <li class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
                     <a href="/news_center/video">
                         <img class="transition500" src="{!! theme_asset('images/i2.png') !!}" alt="">
                         <p>宣传视频</p>
+                    </a>
+                </li>
+				<li class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                    <a href="https://mp.weixin.qq.com/s?__biz=MjM5NzY4OTAyOA==&mid=2649859972&idx=1&sn=e9758b8161c8dc3c47cfbd4ec27ca687&chksm=bed3242f89a4ad39a8aaadd8578e537f8d8ff142223d6b92f97aafbd7615716790056184fb0b#rd">
+                        <img class="transition500" src="{!! theme_asset('images/i6.png') !!}" alt="">
+                        <p>学术活动</p>
                     </a>
                 </li>
             </ul>

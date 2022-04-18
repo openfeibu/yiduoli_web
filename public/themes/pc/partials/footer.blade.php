@@ -1,16 +1,16 @@
 <div class="footer clearfix">
     <div class="footer-vision">
         <div class="container w1400">
-            <div class="vision-left col-lg-10 col-md-10 col-sm-12 col-xs-12  wow fadeInUp animated" data-wow-duration="1s" data-wow-delay=".3s">
+            <div class="vision-left col-lg-8 col-md-8 col-sm-12 col-xs-12  wow fadeInUp animated" data-wow-duration="1s" data-wow-delay=".3s">
                 <div class="vision-tip"><span>TO BE THE WORLD'S LEADING BIOTECH COMPANY</span></div>
                 <div class="vision-span">成为世界领先的生物技术企业</div>
             </div>
-            <div class="vision-right col-lg-2 col-md-2 col-sm-12 col-xs-12">
+            <div class="vision-right col-lg-2 col-md-2 col-sm-6 col-xs-6">
                 <div class="code wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".3s">
                     <img src="/image/original/{{ setting('wechat_qr_code') }}" alt="">
                 </div>
             </div>
-            <div class="vision-right col-lg-2 col-md-2 col-sm-12 col-xs-12">
+            <div class="vision-right col-lg-2 col-md-2 col-sm-6 col-xs-6">
                 <div class="code wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".3s">
                     <img src="/image/original/{{ setting('wechat_qr_code_2') }}" alt="">
                 </div>
@@ -53,3 +53,4 @@
 <script src="https://player.polyv.net/script/player.js"></script>
 <script src="http://player.polyv.net/script/polyvplayer.min.js"></script>
 <script src="https://player.polyv.net/script/polyvplayer.min.js"></script>
+<script id="qd3009059092bbc44ee4bb98564e54b6f98853fa2140" src="https://wp.qiye.qq.com/qidian/3009059092/bbc44ee4bb98564e54b6f98853fa2140" charset="utf-8" async defer></script>
