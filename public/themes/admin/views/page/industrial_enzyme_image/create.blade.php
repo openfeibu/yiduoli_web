@@ -3,7 +3,7 @@
     <div class="main_full">
         <div class="layui-col-md12">
             <div class="fb-main-table">
-                <form class="layui-form" action="{{guard_url('page/about/store')}}" method="post" lay-filter="fb-form">
+                <form class="layui-form" action="{{guard_url('page/industrial_enzyme_image/store')}}" method="post" lay-filter="fb-form">
                     <div class="layui-form-item">
                         <label class="layui-form-label">{{  trans('app.title') }}</label>
                         <div class="layui-input-inline">

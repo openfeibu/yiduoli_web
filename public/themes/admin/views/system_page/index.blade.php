@@ -3,12 +3,15 @@
     <div class="main_full">
         {!! Theme::partial('message') !!}
         <div class="layui-col-md12">
-
             <div class="tabel-message">
                 <div class="layui-inline tabel-btn">
-                    <button class="layui-btn layui-btn-warm "><a href="{{guard_url('nav/nav/create')}}">{{ trans('app.add') }}</a></button>
+                    <button class="layui-btn layui-btn-warm "><a href="{{guard_url('system_page/create')}}">{{ trans('app.add') }}系统文章</a></button>
                     <button class="layui-btn layui-btn-primary " data-type="del" data-events="del">{{ trans('app.delete') }}</button>
                 </div>
+                <div class="layui-inline">
+                    <input class="layui-input search_key" name="title" id="demoReload" placeholder="{{ trans('app.search') }}标题" autocomplete="off">
+                </div>
+                <button class="layui-btn" data-type="reload">{{ trans('app.search') }}</button>
             </div>
 
             <table id="fb-table" class="layui-table"  lay-filter="fb-table">
@@ -25,12 +28,12 @@
     <a class="layui-btn layui-btn-danger layui-btn-sm" lay-event="del">{{ trans('app.delete') }}</a>
 </script>
 <script type="text/html" id="imageTEM">
-    <img src="/image/original/@{{d.image}}" alt="" height="28">
+    <img src="@{{d.image}}" alt="" height="28">
 </script>
 
 <script>
-    var main_url = "{{guard_url('nav/nav')}}";
-    var delete_all_url = "{{guard_url('nav/nav/destroyAll')}}";
+    var main_url = "{{guard_url('system_page')}}";
+    var delete_all_url = "{{guard_url('system_page/destroyAll')}}";
     layui.use(['jquery','element','table'], function(){
         var table = layui.table;
         var form = layui.form;
@@ -41,19 +44,23 @@
             ,cols: [[
                 {checkbox: true, fixed: true}
                 ,{field:'id',title:'ID', width:80, sort: true}
-                ,{field:'name',title:'{{ trans('nav.label.name') }}',edit:'text'}
-                ,{field:'en_name',title:'{{ trans('nav.label.en_name') }}',edit:'text'}
-                ,{field:'slug',title:'{{ trans('nav.label.slug') }}',edit:'text'}
-                ,{field:'image',title:'{{ trans('nav.label.image') }}', toolbar:'#imageTEM',width:120}
-                ,{field:'url',title:'{{ trans('nav.label.url') }}',edit:'text'}
-                ,{field:'order',title:'{{ trans('app.order') }}', width:100,edit:'text'}
-                ,{field:'score',title:'{{ trans('app.actions') }}', width:200, align: 'right',fixed: 'right',toolbar:'#barDemo'}
+                ,{field:'title',title:'标题', width:200}
+                ,{field:'slug',title:'标示', width:200}
+                ,{field:'image',title:'封面', toolbar:'#imageTEM',}
+                ,{field:'score',title:'{{ trans('app.actions') }}', width:200, align: 'right',toolbar:'#barDemo'}
             ]]
             ,id: 'fb-table'
-            ,page: false
+            ,page: true
             ,limit: 20
-            ,cellMinWidth:200
             ,height: 'full-200'
+        });
+
+        //监听锁定
+        form.on('switch(lock)', function(obj){
+            $.post("{{guard_url('business/updateRecommend')}}",{"id":this.value,"home_recommend":obj.elem.checked,'_token':"{!! csrf_token() !!}" },function(){
+
+            })
+            // layer.tips(this.value + ' ' + this.name + '：'+ obj.elem.checked, obj.othis);
         });
 
     });

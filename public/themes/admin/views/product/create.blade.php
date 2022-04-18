@@ -20,6 +20,14 @@
                         </div>
                     </div>
                     <div class="layui-form-item">
+                        <label class="layui-form-label"> {!! trans('product.label.tags')!!}</label>
+                        <div class="layui-input-inline" id="tags">
+                            <input type="text" name="" autocomplete="off" placeholder="请输入{!! trans('product.label.tags')!!}" class="layui-input" id="inputTags" >
+
+                        </div>
+                        <input type="hidden" name="tags" autocomplete="off" class="layui-input" id="inputTagsContent" >
+                    </div>
+                    <div class="layui-form-item">
                         <label class="layui-form-label">{!! trans('product.label.vid')!!}</label>
                         <div class="layui-input-inline">
                             <input type="text" name="vid" placeholder="请输入{!! trans('product.label.vid')!!}" autocomplete="off" class="layui-input">
@@ -31,30 +39,7 @@
                         ->url($product->getUploadURL('images'))
                         ->uploaders()!!}
                     </div>
-                    <div class="layui-form-item">
-                        <label class="layui-form-label">{!! trans('product.label.parameters')!!}</label>
-                        <div class="layui-input-block parameters" >
-                            @for($i=0;$i<10;$i++)
-                            <div class="parameters_group">
-                            <input type="text" name="parameters_name[]" autocomplete="off" placeholder="参数名" class="layui-input" >:
-                            <input type="text" name="parameters_value[]" autocomplete="off" placeholder="参数值" class="layui-input" >
-                            </div>
-                            @endfor
-                        </div>
-                    </div>
-                    <div class="layui-form-item">
-                        <label class="layui-form-label">{!! trans('product.label.instruction_title')!!}</label>
-                        <div class="layui-input-inline">
-                            <input type="text" name="instruction_title" autocomplete="off" placeholder="请输入{!! trans('product.label.instruction_title') !!}" class="layui-input" >
-                        </div>
-                    </div>
-                    <div class="layui-form-item">
-                        <label class="layui-form-label">{{  trans('product.label.instruction') }}</label>
-                        {!! $product->files('instruction')
-                        ->url($product->getFileURL('instruction'))
-                        ->exts('pdf')
-                        ->uploaderFile()!!}
-                    </div>
+
                     <div class="layui-form-item layui-form-text">
                         <label class="layui-form-label">{{ trans('app.description') }}</label>
                         <div class="layui-input-block">
@@ -96,7 +81,7 @@
 </script>
 <script>
     var sizes = {};
-    layui.use(['treeSelect', 'form', 'layer','tree'], function () {
+    layui.use(['treeSelect', 'form', 'layer','tree','inputTags'], function () {
         var treeSelect= layui.treeSelect,
                 tree = layui.tree
                 form = layui.form,
@@ -147,5 +132,14 @@
             });
             return id;
         }
+        var inputTags = layui.inputTags;
+        inputTags.render({
+            elem:'#inputTags',
+            content: {!! json_encode(product_tags()) !!},
+            aldaBtn: false,
+            done: function(value){
+                console.log(value)
+            }
+        })
     });
 </script>

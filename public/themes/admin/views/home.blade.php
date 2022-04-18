@@ -23,7 +23,7 @@
                 <div class="layui-col-sm6 layui-col-md3">
                     <div class="layui-card">
                         <div class="layui-card-header">
-                            <b>新闻总数</b>
+                            <b>资讯</b>
 							<label>(条)</label>
                             <span class="layui-badge layui-bg-blue layuiadmin-badge">总</span>
                         </div>
@@ -38,12 +38,12 @@
                 <div class="layui-col-sm6 layui-col-md3">
                     <div class="layui-card">
                         <div class="layui-card-header">
-                            <b>视频总量</b>
-                            <label>(个)</label>
+                            <b>今日留言</b>
+                            <label>(条)</label>
                             <span class="layui-badge layui-bg-blue layuiadmin-badge">总</span>
                         </div>
                         <div class="layui-card-body layuiadmin-card-list">
-                            <p class="layuiadmin-big-font">{{ $video_count }}</p>
+                            <p class="layuiadmin-big-font">{{ $today_feedback_count }}</p>
 
                         </div>
                     </div>
@@ -53,12 +53,12 @@
                 <div class="layui-col-sm6 layui-col-md3">
                     <div class="layui-card">
                         <div class="layui-card-header">
-                            <b>公告总数</b>
+                            <b>留言总数</b>
                             <label>(条)</label>
                             <span class="layui-badge layui-bg-blue layuiadmin-badge">总</span>
                         </div>
                         <div class="layui-card-body layuiadmin-card-list">
-                            <p class="layuiadmin-big-font">{{ $company_announcement_count }}</p>
+                            <p class="layuiadmin-big-font">{{ $feedback_count }}</p>
                         </div>
                     </div>
                 </div>
@@ -79,13 +79,6 @@
                                 </a>
                             </div>
                             @endif
-                            @if(Auth::user()->isSuperuser() || Auth::user()->hasPermission('video.index'))
-                            <div class="power-box-item layui-col-md6">
-                                <a href="{{ guard_url('video') }}">
-                                    {{ trans('video.name') }}
-                                </a>
-                            </div>
-                            @endif
                             @if(Auth::user()->isSuperuser() || Auth::user()->hasPermission('product.index'))
                             <div class="power-box-item layui-col-md6">
                                 <a href="{{ guard_url('product') }}">
@@ -95,25 +88,19 @@
                             @endif
                             @if(Auth::user()->isSuperuser() || Auth::user()->hasPermission('page.company_announcement.index'))
                             <div class="power-box-item layui-col-md6">
-                                <a href="{{ guard_url('page/company_announcement') }}">
-                                    {{ trans('company_announcement.name') }}
+                                <a href="{{ guard_url('feedback') }}">
+                                    {{ trans('feedback.name') }}
                                 </a>
                             </div>
                             @endif
                             @if(Auth::user()->isSuperuser() || Auth::user()->hasPermission('page.chairman.index'))
                                 <div class="power-box-item layui-col-md6">
-                                    <a href="{{ guard_url('page/chairman') }}">
-                                        {{ trans('chairman.name') }}
+                                    <a href="{{ guard_url('question') }}">
+                                        {{ trans('question.name') }}
                                     </a>
                                 </div>
                             @endif
-                            @if(Auth::user()->isSuperuser() || Auth::user()->hasPermission('page.profile.index'))
-                                <div class="power-box-item layui-col-md6">
-                                    <a href="{{ guard_url('page/profile') }}">
-                                        {{ trans('profile.name') }}
-                                    </a>
-                                </div>
-                            @endif
+
                         </div>
                     </div>
 
