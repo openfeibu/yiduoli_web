@@ -61,7 +61,7 @@
                     </a>
                 </li>
 				<li class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                    <a href="https://mp.weixin.qq.com/s?__biz=MjM5NzY4OTAyOA==&mid=2649859972&idx=1&sn=e9758b8161c8dc3c47cfbd4ec27ca687&chksm=bed3242f89a4ad39a8aaadd8578e537f8d8ff142223d6b92f97aafbd7615716790056184fb0b#rd">
+                    <a href="https://mp.weixin.qq.com/s?__biz=MjM5NzY4OTAyOA==&mid=2649860301&idx=1&sn=89be8d181a3e3951c1c20eae33d84b97&chksm=bed32b6689a4a2709c63b7e69dbc63f2f71893f9f4dadd983c2c593d8614fa4d827f8aeec9c6#rds">
                         <img class="transition500" src="{!! theme_asset('images/i6.png') !!}" alt="">
                         <p>学术活动</p>
                     </a>
