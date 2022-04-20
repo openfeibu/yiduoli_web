@@ -270,7 +270,7 @@ header.active .headerRight{margin-top:5px}
 /* 尾部 */
 .footer{background: url(../images/footerBg.jpg) no-repeat center /cover;}
 .footer-vision{background: rgba(7,9,5,0.8);padding: 120px 0 80px 0;}
-.footer-vision .code{width: 150px;margin:0 auto;}
+.footer-vision .code{width: 100%;margin:0 auto;}
 .footer-vision .code img{width: 100%;;}
 .vision-tip{font-size: 44px;color: #fff;position: relative;;}
 .vision-tip span{position: relative;z-index: 2;}
@@ -649,7 +649,7 @@ header.active .headerRight{margin-top:5px}
     .product-item-box span{font-size: 16px;margin:0 0 20px 0;}
     .new-con{padding: 50px 0;}
     .footer-vision{padding: 120px 0 80px 0;}
-    .footer-vision .code{width: 130px;;}
+    .footer-vision .code{width: 100%;;}
     .vision-tip{font-size: 38px;}
     .vision-tip:after{content: "";width: 640px;height: 12px;bottom: 5px;}
     .vision-span{font-size: 30px;}
