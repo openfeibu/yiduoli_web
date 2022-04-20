@@ -12,10 +12,10 @@
 	
 			<div class=" live-left col-xs-12 col-sm-12 wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".3s"  >
 				<div class="live-img-item " style="display:block;">
-					<a target="_black" href="https://wx.vzan.com/live/tvchat-674786388?v=1616488887521"><img class="transition" src="{!! theme_asset('images/30/liveimg1.jpg') !!}" alt="" /></a>
+					<a target="_black" href="https://mp.weixin.qq.com/s?__biz=MjM5NzY4OTAyOA==&mid=2649860284&idx=1&sn=c1e34130668ede15f6fc5c952ca7268e&chksm=bed32b1789a4a2010b7b8645fbfc562cbc17714ac2cdba44c11747522f7b6f9d830c18a74b56#rd"><img class="transition" src="{!! theme_asset('images/30/liveimg1.jpg') !!}" alt="" /></a>
 				</div>
 				<div class="live-img-item">
-					<a target="_black" href="https://wx.vzan.com/live/tvchat-526384769?v=1616488728261"><img class="transition" src="{!! theme_asset('images/30/liveimg2.jpg') !!}" alt="" /></a>
+					<a target="_black" href="https://mp.weixin.qq.com/s?__biz=MjM5NzY4OTAyOA==&mid=2649860282&idx=1&sn=906ae766e1d1543b47b383c0e931968d&chksm=bed32b1189a4a20745f8dae348cb81cda778910e5f0acafe9f866c6fd8735a76dc9d4fa36434#rd"><img class="transition" src="{!! theme_asset('images/30/liveimg2.jpg') !!}" alt="" /></a>
 				</div>
 				<!--<div class="live-img-item">
 					<a  target="_black" href="https://www.pailixiang.com/album_ia1180856897.html"><img class="transition" src="{!! theme_asset('images/30/liveimg3.jpg') !!}" alt="" /></a>
