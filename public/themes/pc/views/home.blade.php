@@ -31,37 +31,37 @@
             </div>
             <ul class="about-icon wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".6s">
                 <li class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                    <a href="/about/profile">
+                    <a target="_blank" href="/about/profile">
                         <img class="transition500" src="{!! theme_asset('images/i1.png') !!}" alt="">
                         <p>企业概况</p>
                     </a>
                 </li>
                 <li class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                    <a href="/about/profile/170">
+                    <a target="_blank" href="/about/profile/170">
                         <img class="transition500" src="{!! theme_asset('images/i3.png') !!}" alt="">
                         <p>产业布局</p>
                     </a>
                 </li>
                 <li class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                    <a href="/course/development_course">
+                    <a target="_blank" href="/course/development_course">
                         <img class="transition500" src="{!! theme_asset('images/i4.png') !!}" alt="">
                         <p>发展历程</p>
                     </a>
                 </li>
                 <li class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                    <a href="/course/enterprise_honor">
+                    <a target="_blank" href="/course/enterprise_honor">
                         <img class="transition500" src="{!! theme_asset('images/i5.png') !!}" alt="">
                         <p>企业荣誉</p>
                     </a>
                 </li>
                 <li class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                    <a href="/news_center/video">
+                    <a target="_blank" href="/news_center/video">
                         <img class="transition500" src="{!! theme_asset('images/i2.png') !!}" alt="">
                         <p>宣传视频</p>
                     </a>
                 </li>
 				<li class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                    <a href="http://www.yiduoli.com/VTRxueshu.html">
+                    <a target="_blank" href="http://www.yiduoli.com/VTRxueshu.html">
                         <img class="transition500" src="{!! theme_asset('images/i6.png') !!}" alt="">
                         <p>学术活动</p>
                     </a>
