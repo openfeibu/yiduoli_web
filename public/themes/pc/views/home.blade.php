@@ -14,7 +14,7 @@
     <div class="container w1400">
         <div class="about-left col-lg-6 col-md-6 col-sm-12 wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".3s">
             <a href="{{ setting('vr') }}" target="_blank">
-                <img class="transition" src="{!! theme_asset('images/vrBg.png') !!}" alt="" />
+                <img class="transition" src="{!! theme_asset('images/vrBg.jpg') !!}" alt="" />
                 <div class="vr-text" >
                     <div class="img animated fb-bounceIn " style='animation-iteration-count: infinite;'><img src="{!! theme_asset('images/VR.png') !!}" alt=""></div>
                     <span>溢多利集团720°全景展示</span>
@@ -27,7 +27,7 @@
                 <h1>广东溢多利生物科技股份有限公司</h1>
             </div>
             <div class="about-con  wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".5s">
-                广东溢多利生物科技股份有限公司成立于1991年，总部位于广东省珠海市。公司专注于生物工程领域，研发并形成了生物酶制剂、生物医药、动物营养与健康三大系列产品线，同时为行业客户持续提供整体生物技术解决方案，是我国生物酶制剂行业龙头企业，全球极具竞争力的甾体激素医药企业，中国动物营养与健康领域领军企业。
+                广东溢多利生物科技股份有限公司成立于1991年，总部位于广东省珠海市。公司专注于生物工程领域，研发并形成了研发并形成了生物酶制剂、动物营养与健康两大系列产品线，同时为行业客户持续提供整体生物技术解决方案，是我国生物酶制剂行业龙头企业，全球极具竞争力的甾体激素医药企业，中国动物营养与健康领域领军企业。
             </div>
             <ul class="about-icon wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".6s">
                 <li class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
@@ -78,7 +78,9 @@
             <h1>核心板块</h1>
         </div>
         <div class="product-con ">
-
+			<div class="product-item col-lg-2 col-md-2 col-sm-12 col-xs-12 " ">
+                
+            </div>
             @foreach(app('product_category_repository')->where('parent_id',0)->orderBy('order','desc')->orderBy('id','asc')->limit(4)->get() as $key => $category)
             @if($key == 0)
 			<div class="product-item col-lg-4 col-md-4 col-sm-6 col-xs-6 wow bounceIn animated" data-wow-duration=".6s" data-wow-delay=".5s">
