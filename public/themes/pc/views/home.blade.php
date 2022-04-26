@@ -27,8 +27,8 @@
                 <h1>广东溢多利生物科技股份有限公司</h1>
             </div>
             <div class="about-con  wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".5s">
-                广东溢多利生物科技股份有限公司成立于1991年，总部位于广东省珠海市。公司专注于生物工程领域，研发并形成了研发并形成了生物酶制剂、动物营养与健康两大系列产品线，同时为行业客户持续提供整体生物技术解决方案，是我国生物酶制剂行业龙头企业，全球极具竞争力的甾体激素医药企业，中国动物营养与健康领域领军企业。
-            </div>
+                广东溢多利生物科技股份有限公司成立于1991年，总部位于广东省珠海市。公司专注于生物工程领域，研发并形成了生物酶制剂、动物营养与健康两大系列产品线，同时为行业客户持续提供整体生物技术解决方案，是我国生物酶制剂行业龙头企业，中国动物营养与健康领域领军企业。
+            </div>	
             <ul class="about-icon wow fadeInUp animated" data-wow-duration=".6s" data-wow-delay=".6s">
                 <li class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
                     <a target="_blank" href="/about/profile">
