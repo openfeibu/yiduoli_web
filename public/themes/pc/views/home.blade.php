@@ -78,9 +78,7 @@
             <h1>核心板块</h1>
         </div>
         <div class="product-con ">
-			<div class="product-item col-lg-2 col-md-2 col-sm-12 col-xs-12 " ">
-                
-            </div>
+			
             @foreach(app('product_category_repository')->where('parent_id',0)->orderBy('order','desc')->orderBy('id','asc')->limit(4)->get() as $key => $category)
             @if($key == 0)
 			<div class="product-item col-lg-4 col-md-4 col-sm-6 col-xs-6 wow bounceIn animated" data-wow-duration=".6s" data-wow-delay=".5s">
